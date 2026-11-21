@@ -1,10 +1,11 @@
 //@version=6
-// TET Profile Model — XAUUSD (5m entry)  v2.0.1
-// Rules: research/RULES.md (section J) + research/DECISIONS.md (D1–D15)
-// Non-repainting: every signal fires on a confirmed (closed) 5m bar. Higher-timeframe candles
-// (W, D, 7H, 4H, 1H) are built from closed chart bars in New York time; pairs come from
-// request.security on the chart timeframe with lookahead off.
-indicator("TET Profile Model — XAUUSD", "TET PM", overlay = true, max_boxes_count = 300, max_lines_count = 300, max_labels_count = 300)
+// TET Profile Model — XAUUSD  v3.0
+// Rules: research/RULES.md + research/DECISIONS.md (D1–D16)
+// · 1H TSQ: TS → #1 → BRK → OTE → KOD → TG
+// · Entry always on 5 minutes: TS + SMT + Model #1 (+ purge hour, 1H key level, profile)
+// · The 5m engine runs inside request.security(…, "5"), so signals show on every timeframe.
+// · Non-repainting: signals are set only on confirmed 5m bars.
+indicator("TET Profile Model — XAUUSD", "TET PM", overlay = true, max_boxes_count = 200, max_lines_count = 200, max_labels_count = 300)
 
 const float RR = 3.0                        // D2: fixed 1:3
 
@@ -29,8 +30,6 @@ grpK     = "1H key levels — D5"
 useFVG   = input.bool(true, "Fair Value Gap", group = grpK)
 useOB    = input.bool(true, "Order Block", group = grpK)
 useBRK   = input.bool(true, "Breaker Block (broken OB)", group = grpK)
-showKL   = input.bool(true, "Show key level boxes", group = grpK)
-maxZones = input.int(30, "Max stored zones", minval = 4, maxval = 60, group = grpK)
 
 grpS     = "SMT (required) / PSP — D12–D14"
 sym1     = input.symbol("OANDA:XAUEUR", "Pair 1", group = grpS)
@@ -44,11 +43,10 @@ slBuf    = input.float(0.0, "SL buffer beyond TS wick (price)", minval = 0, grou
 maxDay   = input.int(3, "Max signals per day", minval = 1, maxval = 10, group = grpR)
 expiry   = input.int(36, "Setup expiry (5m bars after sweep)", minval = 6, maxval = 144, group = grpR)
 
-grpQ     = "1H TSQ re-entries (Breaker / KOD) — D11"
-useReent = input.bool(true, "Enable Breaker / KOD entries after Model #1", group = grpQ)
-
 grpV     = "Visuals"
 showPos  = input.bool(true, "Show SL / TP boxes", group = grpV)
+showKL   = input.bool(true, "Show the key level the TS touched", group = grpV)
+showTSQ  = input.bool(true, "Show 1H TSQ labels (TS / BRK / TG)", group = grpV)
 showTbl  = input.bool(true, "Show bias table", group = grpV)
 
 // ───────────────────────── Types ─────────────────────────
@@ -106,7 +104,7 @@ method roll(Agg a, bool isNew, float o_, float h_, float l_, float c_, int t_) =
             a.h := math.max(a.h, h_)
             a.l := math.min(a.l, l_)
             a.c := c_
-    true                                    // explicit return (CE10235)
+    true
 
 method eqCheck(Agg a, float c1h) =>
     if a.hasPrev and not na(c1h)
@@ -123,17 +121,11 @@ method bias(Agg a) =>
 type Zone
     float top
     float bot
-    int   dir
-    int   kind
-    box   bx
+    int   dir      // -1 resistance (sells), +1 support (buys)
+    int   kind     // 0 FVG, 1 OB, 2 Breaker
+    int   t0
 
-// ───────────────────────── Time buckets (NY) ─────────────────────────
-hNY = hour(time, tz)
-tShift = time + 7 * 3600000
-newDay  = na(hNY[1]) or dayofmonth(tShift, tz) != dayofmonth(tShift[1], tz)
-newWeek = na(hNY[1]) or weekofyear(tShift, tz) != weekofyear(tShift[1], tz)
-newH1   = na(hNY[1]) or hNY != hNY[1]
-
+// ───────────────────────── Helpers ─────────────────────────
 f4H(int hh) =>
     hh >= 17 and hh < 21 ? 17 : (hh >= 21 or hh < 1) ? 21 : hh < 5 ? 1 : hh < 9 ? 5 : hh < 13 ? 9 : 13
 
@@ -141,176 +133,25 @@ f7H(int hh) =>
     int s = (hh - sessOff + 24) % 24
     s >= 17 ? 17 : s < 7 ? 0 : s < 14 ? 7 : 14
 
-b4 = f4H(hNY)
-b7 = f7H(hNY)
-new4 = na(b4[1]) or b4 != b4[1]
-new7 = na(b7[1]) or b7 != b7[1]
-
 isPurge(int hh) =>
     (useAsia and hh >= 20 and hh <= 22) or (useLon and hh >= 2 and hh <= 4) or (useNY and hh >= 8 and hh <= 10)
 
 inSession(int hh) =>
     (useAsia and hh >= 20 and hh <= 23) or (useLon and hh >= 2 and hh <= 4) or (useNY and hh >= 8 and hh <= 11)
 
-// ───────────────────────── Aggregates ─────────────────────────
-var Agg wk = Agg.new()
-var Agg dy = Agg.new()
-var Agg s7 = Agg.new()
-var Agg f4 = Agg.new()
-var Agg h1 = Agg.new()
-var Agg q1 = Agg.new()
-var Agg q2 = Agg.new()
-var Agg q3 = Agg.new()
-
-[o1, hi1, lo1, c1] = request.security(sym1, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
-[o2, hi2, lo2, c2] = request.security(sym2, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
-[o3, hi3, lo3, c3] = request.security(sym3, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
-
-wk.roll(newWeek, open, high, low, close, time)
-dy.roll(newDay, open, high, low, close, time)
-s7.roll(new7, open, high, low, close, time)
-f4.roll(new4, open, high, low, close, time)
-h1.roll(newH1, open, high, low, close, time)
-q1.roll(newH1, o1, hi1, lo1, c1, time)
-q2.roll(newH1, o2, hi2, lo2, c2, time)
-q3.roll(newH1, o3, hi3, lo3, c3, time)
-
-var int sigToday = 0
-if newDay
-    sigToday := 0
-
-// 5m swing points for 5m SMT (confirmed pivots only)
-var float xPH = na
-var float xPL = na
-var float aPH = na
-var float aPL = na
-var float bPH = na
-var float bPL = na
-var float cPH = na
-var float cPL = na
-float tph  = ta.pivothigh(high, pivLen, pivLen)
-float tpl  = ta.pivotlow(low, pivLen, pivLen)
-float tph1 = ta.pivothigh(hi1, pivLen, pivLen)
-float tpl1 = ta.pivotlow(lo1, pivLen, pivLen)
-float tph2 = ta.pivothigh(hi2, pivLen, pivLen)
-float tpl2 = ta.pivotlow(lo2, pivLen, pivLen)
-float tph3 = ta.pivothigh(hi3, pivLen, pivLen)
-float tpl3 = ta.pivotlow(lo3, pivLen, pivLen)
-if not na(tph)
-    xPH := tph
-if not na(tpl)
-    xPL := tpl
-if not na(tph1)
-    aPH := tph1
-if not na(tpl1)
-    aPL := tpl1
-if not na(tph2)
-    bPH := tph2
-if not na(tpl2)
-    bPL := tpl2
-if not na(tph3)
-    cPH := tph3
-if not na(tpl3)
-    cPL := tpl3
-
-// ───────────────────────── 1H key levels + 1H structure ─────────────────────────
-var array<Zone>  zones = array.new<Zone>()
-var array<float> hO = array.new<float>()
-var array<float> hH = array.new<float>()
-var array<float> hL = array.new<float>()
-var array<float> hC = array.new<float>()
-var array<int>   hT = array.new<int>()
-var float swH = na
-var float swL = na
-var int   of1H = 0
-
-addZone(float top, float bot, int d, int k, int t0) =>
-    color cz = d == -1 ? color.new(color.red, 85) : color.new(color.teal, 85)
-    box b = showKL ? box.new(t0, top, t0 + 3 * 3600000, bot, xloc = xloc.bar_time, extend = extend.right, bgcolor = cz, border_color = color.new(cz, 50), text = k == 0 ? "FVG" : "OB", text_size = size.tiny, text_halign = text.align_right, text_color = color.gray) : na
-    zones.push(Zone.new(top, bot, d, k, b))
-    if zones.size() > maxZones
-        Zone old = zones.shift()
-        if not na(old.bx)
-            old.bx.delete()
-    true
-
-if newH1 and h1.hasPrev
-    float cc = h1.pc
-    if zones.size() > 0
-        for i = zones.size() - 1 to 0
-            Zone z = zones.get(i)
-            bool broken = (z.dir == -1 and cc > z.top) or (z.dir == 1 and cc < z.bot)
-            if broken
-                if z.kind == 1 and useBRK
-                    z.kind := 2
-                    z.dir := -z.dir
-                    if not na(z.bx)
-                        color cb = z.dir == -1 ? color.new(color.orange, 85) : color.new(color.blue, 85)
-                        z.bx.set_bgcolor(cb)
-                        z.bx.set_border_color(color.new(cb, 50))
-                        z.bx.set_text("BRK")
-                else
-                    if not na(z.bx)
-                        z.bx.delete()
-                    zones.remove(i)
-    hO.push(h1.po)
-    hH.push(h1.ph)
-    hL.push(h1.pl)
-    hC.push(h1.pc)
-    hT.push(h1.pt)
-    if hO.size() > 3
-        hO.shift()
-        hH.shift()
-        hL.shift()
-        hC.shift()
-        hT.shift()
-    if hO.size() == 3
-        float aH = hH.get(0)
-        float aL = hL.get(0)
-        float mO = hO.get(1)
-        float mH = hH.get(1)
-        float mL = hL.get(1)
-        float mC = hC.get(1)
-        float zH = hH.get(2)
-        float zL = hL.get(2)
-        float zO = hO.get(2)
-        float zC = hC.get(2)
-        if useFVG and aL > zH
-            addZone(aL, zH, -1, 0, hT.get(0))
-        if useFVG and aH < zL
-            addZone(zL, aH, 1, 0, hT.get(0))
-        if useOB and mC > mO and zC < zO and zC < mL
-            addZone(mH, mO, -1, 1, hT.get(1))
-        if useOB and mC < mO and zC > zO and zC > mH
-            addZone(mO, mL, 1, 1, hT.get(1))
-        if mH > aH and mH > zH
-            swH := mH
-        if mL < aL and mL < zL
-            swL := mL
-    if not na(swL) and cc < swL
-        of1H := -1
-    if not na(swH) and cc > swH
-        of1H := 1
-    wk.eqCheck(cc)
-    dy.eqCheck(cc)
-    s7.eqCheck(cc)
-    f4.eqCheck(cc)
-
-klHit(int d, float hi, float lo) =>
-    bool hit = false
-    if zones.size() > 0
-        for z in zones
-            if z.dir == d and hi >= z.bot and lo <= z.top
+klFind(array<Zone> zs, int d, float hi, float lo) =>
+    bool  hit = false
+    float zt = na
+    float zb = na
+    int   zt0 = na
+    if zs.size() > 0
+        for z in zs
+            if z.dir == d and hi >= z.bot and lo <= z.top and not hit
                 hit := true
-    hit
-
-brkHit(int d, float hi, float lo) =>
-    bool hit = false
-    if zones.size() > 0
-        for z in zones
-            if z.kind == 2 and z.dir == d and hi >= z.bot and lo <= z.top
-                hit := true
-    hit
+                zt := z.top
+                zb := z.bot
+                zt0 := z.t0
+    [hit, zt, zb, zt0]
 
 fail1H(Agg p, bool bear) =>
     int r = 0
@@ -326,248 +167,361 @@ fail5(float pHi, float pLo, float pivH, float pivL, bool bear) =>
         r := pLo >= pivL ? 1 : 0
     r
 
-pspHit(Agg p, bool bear) =>
+pspHit(Agg x, Agg p, bool bear) =>
     bool r = false
-    if p.hasPrev and not na(p.pc) and h1.hasPrev
-        r := bear ? (h1.pc < h1.po and p.pc > p.po) : (h1.pc > h1.po and p.pc < p.po)
+    if p.hasPrev and x.hasPrev and not na(p.pc)
+        r := bear ? (x.pc < x.po and p.pc > p.po) : (x.pc > x.po and p.pc < p.po)
     r
 
-// ───────────────────────── Profiles (D15) ─────────────────────────
-bW  = wk.bias()
-bD  = dy.bias()
-b7H = s7.bias()
-b4H = f4.bias()
-b1H = of1H
+// ───────────────────────── 5m engine ─────────────────────────
+engine() =>
+    hNY = hour(time, tz)
+    tShift = time + 7 * 3600000
+    newDay  = na(hNY[1]) or dayofmonth(tShift, tz) != dayofmonth(tShift[1], tz)
+    newWeek = na(hNY[1]) or weekofyear(tShift, tz) != weekofyear(tShift[1], tz)
+    newH1   = na(hNY[1]) or hNY != hNY[1]
+    b4 = f4H(hNY)
+    b7 = f7H(hNY)
+    new4 = na(b4[1]) or b4 != b4[1]
+    new7 = na(b7[1]) or b7 != b7[1]
 
-prof(int d) =>
-    useP1 and bD == d and b7H == d and b1H == d ? 1 : useP2 and b7H == d and b4H == d ? 2 : useP3 and bD == d and (b4H == d or b7H == d) ? 3 : useP4 and bD == d and b1H == d and b7H == d ? 4 : useP5 and bW == d and b4H == d ? 5 : 0
+    [o1, hi1, lo1, c1] = request.security(sym1, "5", [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+    [o2, hi2, lo2, c2] = request.security(sym2, "5", [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+    [o3, hi3, lo3, c3] = request.security(sym3, "5", [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
 
-int profS = prof(-1)
-int profB = prof(1)
+    var Agg wk = Agg.new()
+    var Agg dy = Agg.new()
+    var Agg s7 = Agg.new()
+    var Agg f4 = Agg.new()
+    var Agg h1 = Agg.new()
+    var Agg q1 = Agg.new()
+    var Agg q2 = Agg.new()
+    var Agg q3 = Agg.new()
+    wk.roll(newWeek, open, high, low, close, time)
+    dy.roll(newDay, open, high, low, close, time)
+    s7.roll(new7, open, high, low, close, time)
+    f4.roll(new4, open, high, low, close, time)
+    h1.roll(newH1, open, high, low, close, time)
+    q1.roll(newH1, o1, hi1, lo1, c1, time)
+    q2.roll(newH1, o2, hi2, lo2, c2, time)
+    q3.roll(newH1, o3, hi3, lo3, c3, time)
 
-// ───────────────────────── Setup state ─────────────────────────
-var float sTs = na
-var float sRef = na
-var bool  sSw = false
-var bool  sCf = false
-var bool  sPg = false
-var bool  sKL = false
-var bool  sSmt = false
-var int   sSmtN = 0
-var float sOB = na
-var int   sBar = na
-var float bTs = na
-var float bRef = na
-var bool  bSw = false
-var bool  bCf = false
-var bool  bPg = false
-var bool  bKL = false
-var bool  bSmt = false
-var int   bSmtN = 0
-var float bOB = na
-var int   bBar = na
+    var int sigToday = 0
+    if newDay
+        sigToday := 0
 
-var int   tDir = 0
-var float tE = na
-var float tSL = na
-var float tTP = na
-var int   tBar = na
-var int   wins = 0
-var int   losses = 0
+    // 5m swings for 5m SMT
+    var float xPH = na
+    var float xPL = na
+    var float aPH = na
+    var float aPL = na
+    var float bPH = na
+    var float bPL = na
+    var float cPH = na
+    var float cPL = na
+    float tph  = ta.pivothigh(high, pivLen, pivLen)
+    float tpl  = ta.pivotlow(low, pivLen, pivLen)
+    float tph1 = ta.pivothigh(hi1, pivLen, pivLen)
+    float tpl1 = ta.pivotlow(lo1, pivLen, pivLen)
+    float tph2 = ta.pivothigh(hi2, pivLen, pivLen)
+    float tpl2 = ta.pivotlow(lo2, pivLen, pivLen)
+    float tph3 = ta.pivothigh(hi3, pivLen, pivLen)
+    float tpl3 = ta.pivotlow(lo3, pivLen, pivLen)
+    if not na(tph)
+        xPH := tph
+    if not na(tpl)
+        xPL := tpl
+    if not na(tph1)
+        aPH := tph1
+    if not na(tpl1)
+        aPL := tpl1
+    if not na(tph2)
+        bPH := tph2
+    if not na(tpl2)
+        bPL := tpl2
+    if not na(tph3)
+        cPH := tph3
+    if not na(tpl3)
+        cPL := tpl3
 
-if tDir != 0 and bar_index > tBar
-    if tDir == -1
-        if high >= tSL
-            losses += 1
-            tDir := 0
-        else if low <= tTP
-            wins += 1
-            tDir := 0
-    else
-        if low <= tSL
-            losses += 1
-            tDir := 0
-        else if high >= tTP
-            wins += 1
-            tDir := 0
+    // 1H key levels + 1H structure (built from closed 1H candles)
+    var array<Zone>  zs = array.new<Zone>()
+    var array<float> hO = array.new<float>()
+    var array<float> hH = array.new<float>()
+    var array<float> hL = array.new<float>()
+    var array<float> hC = array.new<float>()
+    var array<int>   hT = array.new<int>()
+    var float swH = na
+    var float swL = na
+    var int   of1H = 0
+    if newH1 and h1.hasPrev
+        float cc = h1.pc
+        if zs.size() > 0
+            for i = zs.size() - 1 to 0
+                Zone z = zs.get(i)
+                bool broken = (z.dir == -1 and cc > z.top) or (z.dir == 1 and cc < z.bot)
+                if broken
+                    if z.kind == 1 and useBRK
+                        z.kind := 2
+                        z.dir := -z.dir
+                    else
+                        zs.remove(i)
+        hO.push(h1.po)
+        hH.push(h1.ph)
+        hL.push(h1.pl)
+        hC.push(h1.pc)
+        hT.push(h1.pt)
+        if hO.size() > 3
+            hO.shift()
+            hH.shift()
+            hL.shift()
+            hC.shift()
+            hT.shift()
+        if hO.size() == 3
+            float aH = hH.get(0)
+            float aL = hL.get(0)
+            float mO = hO.get(1)
+            float mH = hH.get(1)
+            float mL = hL.get(1)
+            float mC = hC.get(1)
+            float zH = hH.get(2)
+            float zL = hL.get(2)
+            float zO = hO.get(2)
+            float zC = hC.get(2)
+            if useFVG and aL > zH
+                zs.push(Zone.new(aL, zH, -1, 0, hT.get(0)))
+            if useFVG and aH < zL
+                zs.push(Zone.new(zL, aH, 1, 0, hT.get(0)))
+            if useOB and mC > mO and zC < zO and zC < mL
+                zs.push(Zone.new(mH, mO, -1, 1, hT.get(1)))
+            if useOB and mC < mO and zC > zO and zC > mH
+                zs.push(Zone.new(mO, mL, 1, 1, hT.get(1)))
+            if mH > aH and mH > zH
+                swH := mH
+            if mL < aL and mL < zL
+                swL := mL
+            while zs.size() > 40
+                zs.shift()
+        if not na(swL) and cc < swL
+            of1H := -1
+        if not na(swH) and cc > swH
+            of1H := 1
+        wk.eqCheck(cc)
+        dy.eqCheck(cc)
+        s7.eqCheck(cc)
+        f4.eqCheck(cc)
 
-if sSw and bar_index - sBar > expiry
-    sSw := false
-if bSw and bar_index - bBar > expiry
-    bSw := false
+    // Profiles (D15) — conflict = no trade (D16)
+    int bW  = wk.bias()
+    int bD  = dy.bias()
+    int b7H = s7.bias()
+    int b4H = f4.bias()
+    int b1H = of1H
+    int pS = useP1 and bD == -1 and b7H == -1 and b1H == -1 ? 1 : useP2 and b7H == -1 and b4H == -1 ? 2 : useP3 and bD == -1 and (b4H == -1 or b7H == -1) ? 3 : useP4 and bD == -1 and b1H == -1 and b7H == -1 ? 4 : useP5 and bW == -1 and b4H == -1 ? 5 : 0
+    int pB = useP1 and bD == 1 and b7H == 1 and b1H == 1 ? 1 : useP2 and b7H == 1 and b4H == 1 ? 2 : useP3 and bD == 1 and (b4H == 1 or b7H == 1) ? 3 : useP4 and bD == 1 and b1H == 1 and b7H == 1 ? 4 : useP5 and bW == 1 and b4H == 1 ? 5 : 0
+    int profS = pB > 0 ? 0 : pS
+    int profB = pS > 0 ? 0 : pB
 
-bool smt1S = h1.hasPrev and high > h1.ph and (fail1H(q1, true) + fail1H(q2, true) + fail1H(q3, true)) >= minFail
-bool smt1B = h1.hasPrev and low < h1.pl and (fail1H(q1, false) + fail1H(q2, false) + fail1H(q3, false)) >= minFail
-bool smt5S = not na(xPH) and high > xPH and (fail5(hi1, lo1, aPH, aPL, true) + fail5(hi2, lo2, bPH, bPL, true) + fail5(hi3, lo3, cPH, cPL, true)) >= minFail
-bool smt5B = not na(xPL) and low < xPL and (fail5(hi1, lo1, aPH, aPL, false) + fail5(hi2, lo2, bPH, bPL, false) + fail5(hi3, lo3, cPH, cPL, false)) >= minFail
+    // SMT on this 5m bar
+    bool smtS = (h1.hasPrev and high > h1.ph and (fail1H(q1, true) + fail1H(q2, true) + fail1H(q3, true)) >= minFail) or (not na(xPH) and high > xPH and (fail5(hi1, lo1, aPH, aPL, true) + fail5(hi2, lo2, bPH, bPL, true) + fail5(hi3, lo3, cPH, cPL, true)) >= minFail)
+    bool smtB = (h1.hasPrev and low < h1.pl and (fail1H(q1, false) + fail1H(q2, false) + fail1H(q3, false)) >= minFail) or (not na(xPL) and low < xPL and (fail5(hi1, lo1, aPH, aPL, false) + fail5(hi2, lo2, bPH, bPL, false) + fail5(hi3, lo3, cPH, cPL, false)) >= minFail)
 
-// SELL: TS of the previous 1H high at a bearish 1H key level, in a purge hour
-if h1.hasPrev
-    bool newHi = high > h1.ph and (not sSw or high > sTs)
-    if newHi
-        if not sSw
-            sRef := h1.ph
-            sSmtN := 0
-            sKL := false
-            sSmt := false
-        sTs := high
-        sBar := bar_index
-        sPg := isPurge(hNY)
-        sKL := sKL or klHit(-1, high, sRef)
-        if smt1S or smt5S
-            sSmt := true
-            sSmtN += 1
-        sOB := na
-        sCf := false
-        sSw := true
-    if sSw
-        if close < sRef
-            sCf := true
-        else if close > sRef
-            sCf := false
-        if close > open
-            sOB := open
-    bool newLo = low < h1.pl and (not bSw or low < bTs)
-    if newLo
-        if not bSw
-            bRef := h1.pl
-            bSmtN := 0
-            bKL := false
-            bSmt := false
-        bTs := low
-        bBar := bar_index
-        bPg := isPurge(hNY)
-        bKL := bKL or klHit(1, bRef, low)
-        if smt1B or smt5B
-            bSmt := true
-            bSmtN += 1
-        bOB := na
-        bCf := false
-        bSw := true
-    if bSw
-        if close > bRef
-            bCf := true
-        else if close < bRef
-            bCf := false
-        if close < open
-            bOB := open
+    // ── 1H TSQ state (one active sequence at a time)
+    var int   qDir = 0            // -1 sell TSQ, +1 buy TSQ
+    var int   qProf = 0
+    var float qTS = na            // TS extreme
+    var float qBrkLvl = na        // low (sell) / high (buy) of the 1H candle that made the TS
+    var bool  qBrk = false
+    var int   qStage = 0          // entries taken: 1 = TS, 2 = OTE, 3 = KOD
+    var float qTG = na
+    var int   evT = na
+    var float evP = na
+    var string evTag = ""
 
-bool room = barstate.isconfirmed and sigToday < maxDay and tDir == 0 and inSession(hNY)
-bool sellSig = room and profS > 0 and sSw and sCf and sPg and sKL and sSmt and not na(sOB) and close < sOB and close < open
-bool buySig  = room and profB > 0 and bSw and bCf and bPg and bKL and bSmt and not na(bOB) and close > bOB and close > open and not sellSig
+    // TSQ end: TG reached, or close beyond the TS
+    if qDir == -1 and (low <= qTG or close > qTS)
+        evT := time
+        evP := low <= qTG ? qTG : close
+        evTag := low <= qTG ? "TG" : "TSQ invalid"
+        qDir := 0
+    if qDir == 1 and (high >= qTG or close < qTS)
+        evT := time
+        evP := high >= qTG ? qTG : close
+        evTag := high >= qTG ? "TG" : "TSQ invalid"
+        qDir := 0
+    // BRK on a closed 1H candle
+    if newH1 and h1.hasPrev and qDir != 0 and not qBrk
+        if (qDir == -1 and h1.pc < qBrkLvl) or (qDir == 1 and h1.pc > qBrkLvl)
+            qBrk := true
+            evT := h1.pt
+            evP := qBrkLvl
+            evTag := "BRK"
 
-string tag = ""
-if sellSig
-    bool psp = pspHit(q1, true) or pspHit(q2, true) or pspHit(q3, true)
-    tag := "P" + str.tostring(profS) + " SELL" + (psp ? " +PSP" : "") + (sSmtN >= 2 ? " +2SSMT" : "")
-    tDir := -1
-    tE := close
-    tSL := sTs + slBuf
-    tTP := close - RR * (tSL - close)
-    tBar := bar_index
-    sigToday += 1
-    sSw := false
-if buySig
-    bool psp = pspHit(q1, false) or pspHit(q2, false) or pspHit(q3, false)
-    tag := "P" + str.tostring(profB) + " BUY" + (psp ? " +PSP" : "") + (bSmtN >= 2 ? " +2SSMT" : "")
-    tDir := 1
-    tE := close
-    tSL := bTs - slBuf
-    tTP := close + RR * (close - tSL)
-    tBar := bar_index
-    sigToday += 1
-    bSw := false
+    // ── 5m setup (TS → SMT → Model #1), mirrored for both directions
+    var float sX = na             // sweep extreme
+    var float sRef = na           // swept 1H level
+    var bool  sOn = false
+    var bool  sIn = false         // closed back inside
+    var bool  sPg = false
+    var bool  sKL = false
+    var bool  sSmt = false
+    var int   sSmtN = 0
+    var float sM1 = na            // Model #1 line (open of last opposite candle)
+    var int   sBar = na
+    var int   sTm = na
+    var int   sDir = 0
+    var float sKt = na
+    var float sKb = na
+    var int   sK0 = na
 
-// ───────────────────────── 1H TSQ re-entries: Breaker / KOD (D11, D12) ─────────────────────────
-var int   qDir = 0
-var int   qProf = 0
-var float qTop = na
-var float qDol = na
-var float rX = na
-var bool  rPg = false
-var bool  rSmt = false
-var float rOB = na
-var int   rBar = na
-bool reSell = false
-bool reBuy  = false
-float reX = na
+    // the direction we look for: an active TSQ keeps its own direction, otherwise the profile's
+    int want = qDir != 0 ? qDir : profS > 0 ? -1 : profB > 0 ? 1 : 0
+    if sOn and (sDir != want or bar_index - sBar > expiry)
+        sOn := false
 
-if qDir == -1 and (low <= qDol or close > qTop or profS == 0)
-    qDir := 0
-if qDir == 1 and (high >= qDol or close < qTop or profB == 0)
-    qDir := 0
+    if want != 0 and h1.hasPrev
+        float ext  = want == -1 ? high : low
+        float lvl  = want == -1 ? h1.ph : h1.pl
+        bool  swept = want == -1 ? ext > lvl : ext < lvl
+        bool  further = not sOn or (want == -1 ? ext > sX : ext < sX)
+        // in an active TSQ after BRK, the sweep must stay below the TS (sell) / above it (buy)
+        bool  inTsq = qDir != 0 and (want == -1 ? ext < qTS : ext > qTS)
+        bool  allowNew = qDir == 0 or (qBrk and inTsq and qStage < 3)
+        if swept and further and allowNew
+            if not sOn
+                sRef := lvl
+                sSmtN := 0
+                sKL := false
+                sSmt := false
+            sX := ext
+            sBar := bar_index
+            sTm := time
+            sDir := want
+            sPg := isPurge(hNY)
+            if qDir == 0
+                [kh, kt, kb, k0] = klFind(zs, want, want == -1 ? ext : sRef, want == -1 ? sRef : ext)
+                if kh and not sKL
+                    sKL := true
+                    sKt := kt
+                    sKb := kb
+                    sK0 := k0
+            else
+                sKL := true       // inside an active TSQ the 1H key level is the TSQ itself
+            bool smtNow = want == -1 ? smtS : smtB
+            if smtNow
+                sSmt := true
+                sSmtN += 1
+            sM1 := na
+            sIn := false
+            sOn := true
+        if sOn
+            if want == -1 ? close < sRef : close > sRef
+                sIn := true
+            else if want == -1 ? close > sRef : close < sRef
+                sIn := false
+            if want == -1 ? close > open : close < open
+                sM1 := open
 
-if useReent and qDir != 0 and tDir == 0 and not sellSig and not buySig
-    if qDir == -1
-        if na(rX) or high > rX
-            rX := high
-            rBar := bar_index
-            rPg := isPurge(hNY)
-            rSmt := smt1S or smt5S
-            rOB := na
-        if close > open
-            rOB := open
-        if barstate.isconfirmed and sigToday < maxDay and inSession(hNY) and rPg and rSmt and not na(rOB) and rX < qTop and close < rOB and close < open and bar_index > rBar
-            reSell := true
-            reX := rX
-    else
-        if na(rX) or low < rX
-            rX := low
-            rBar := bar_index
-            rPg := isPurge(hNY)
-            rSmt := smt1B or smt5B
-            rOB := na
-        if close < open
-            rOB := open
-        if barstate.isconfirmed and sigToday < maxDay and inSession(hNY) and rPg and rSmt and not na(rOB) and rX > qTop and close > rOB and close > open and bar_index > rBar
-            reBuy := true
-            reX := rX
+    // ── trade bookkeeping
+    var int   tDir = 0
+    var float tE = na
+    var float tSL = na
+    var float tTP = na
+    var int   tBar = na
+    var int   wins = 0
+    var int   losses = 0
+    if tDir != 0 and bar_index > tBar
+        if tDir == -1
+            if high >= tSL
+                losses += 1
+                tDir := 0
+            else if low <= tTP
+                wins += 1
+                tDir := 0
+        else
+            if low <= tSL
+                losses += 1
+                tDir := 0
+            else if high >= tTP
+                wins += 1
+                tDir := 0
 
-if sellSig
-    qDir := -1
-    qProf := profS
-    qTop := sTs
-    qDol := (profS == 2 or profS == 5) ? f4.pl : dy.pl
-if buySig
-    qDir := 1
-    qProf := profB
-    qTop := bTs
-    qDol := (profB == 2 or profB == 5) ? f4.ph : dy.ph
+    var int   sigT = na
+    var int   sigDir = 0
+    var float sigE = na
+    var float sigSL = na
+    var float sigTP = na
+    var string sigTag = ""
+    var float klTop = na
+    var float klBot = na
+    var int   klT0 = na
+    var int   tsT = na
+    var float tsP = na
 
-if reSell
-    tag := "P" + str.tostring(qProf) + (brkHit(-1, reX, reX) ? " BRK" : " KOD") + " SELL"
-    tDir := -1
-    tE := close
-    tSL := reX + slBuf
-    tTP := close - RR * (tSL - close)
-    tBar := bar_index
-    sigToday += 1
-if reBuy
-    tag := "P" + str.tostring(qProf) + (brkHit(1, reX, reX) ? " BRK" : " KOD") + " BUY"
-    tDir := 1
-    tE := close
-    tSL := reX - slBuf
-    tTP := close + RR * (close - tSL)
-    tBar := bar_index
-    sigToday += 1
-if sellSig or buySig or reSell or reBuy
-    rX := na
-    rOB := na
-    rPg := false
-    rSmt := false
+    bool m1Break = sOn and not na(sM1) and (sDir == -1 ? close < sM1 and close < open : close > sM1 and close > open)
+    bool fire = barstate.isconfirmed and sOn and sIn and sPg and sKL and sSmt and m1Break and inSession(hNY) and sigToday < maxDay and tDir == 0
+    if fire
+        int stg = qDir == 0 ? 1 : qStage + 1
+        int pf  = qDir == 0 ? (sDir == -1 ? profS : profB) : qProf
+        bool psp = pspHit(h1, q1, sDir == -1) or pspHit(h1, q2, sDir == -1) or pspHit(h1, q3, sDir == -1)
+        string stName = stg == 1 ? "" : stg == 2 ? " OTE" : " KOD"
+        sigT := time
+        sigDir := sDir
+        sigE := close
+        sigSL := sDir == -1 ? sX + slBuf : sX - slBuf
+        sigTP := close + sDir * RR * math.abs(close - sigSL)
+        sigTag := "P" + str.tostring(pf) + stName + (sDir == -1 ? " SELL" : " BUY") + (psp ? " +PSP" : "") + (sSmtN >= 2 ? " +2SSMT" : "")
+        tsT := sTm
+        tsP := sX
+        tDir := sDir
+        tE := sigE
+        tSL := sigSL
+        tTP := sigTP
+        tBar := bar_index
+        sigToday += 1
+        if qDir == 0
+            qDir := sDir
+            qProf := pf
+            qTS := sX
+            qBrkLvl := sDir == -1 ? h1.l : h1.h
+            qBrk := false
+            qStage := 1
+            qTG := sDir == -1 ? ((pf == 2 or pf == 5) ? f4.pl : dy.pl) : ((pf == 2 or pf == 5) ? f4.ph : dy.ph)
+            klTop := sKt
+            klBot := sKb
+            klT0 := sK0
+        else
+            qStage := stg
+        sOn := false
 
-// ───────────────────────── Drawing / alerts ─────────────────────────
-bool anySig = sellSig or buySig or reSell or reBuy
-bool isSell = sellSig or reSell
-if anySig
+    [sigT, sigDir, sigE, sigSL, sigTP, sigTag, tsT, tsP, klTop, klBot, klT0, evT, evP, evTag, bW, bD, b7H, b4H, b1H, profS, profB, wins, losses]
+
+[sigT, sigDir, sigE, sigSL, sigTP, sigTag, tsT, tsP, klTop, klBot, klT0, evT, evP, evTag, bW, bD, b7H, b4H, b1H, profS, profB, wins, losses] = request.security(syminfo.tickerid, "5", engine(), lookahead = barmerge.lookahead_off)
+
+// ───────────────────────── Drawing (any timeframe) ─────────────────────────
+bool newSig = not na(sigT) and (na(sigT[1]) or sigT != sigT[1])
+bool newEv  = not na(evT) and (na(evT[1]) or evT != evT[1] or evTag != evTag[1])
+int  span   = 3 * 3600000
+
+if newSig
+    bool isSell = sigDir == -1
+    color cs = isSell ? color.new(color.red, 15) : color.new(color.green, 15)
     if showPos
-        box.new(bar_index, tSL, bar_index + 36, tE, bgcolor = color.new(color.red, 80), border_color = color.new(color.red, 60))
-        box.new(bar_index, tE, bar_index + 36, tTP, bgcolor = color.new(color.green, 80), border_color = color.new(color.green, 60))
-    label.new(bar_index, isSell ? high : low, tag, style = isSell ? label.style_label_down : label.style_label_up, color = isSell ? color.new(color.red, 15) : color.new(color.green, 15), textcolor = color.white, size = size.small)
-    alert("TET " + tag + " " + syminfo.ticker + " | Entry " + str.tostring(tE, format.mintick) + " | SL " + str.tostring(tSL, format.mintick) + " | TP " + str.tostring(tTP, format.mintick), alert.freq_once_per_bar_close)
+        box.new(sigT, sigSL, sigT + span, sigE, xloc = xloc.bar_time, bgcolor = color.new(color.red, 82), border_color = color.new(color.red, 60))
+        box.new(sigT, sigE, sigT + span, sigTP, xloc = xloc.bar_time, bgcolor = color.new(color.green, 82), border_color = color.new(color.green, 60))
+    label.new(sigT, sigE, sigTag, xloc = xloc.bar_time, style = isSell ? label.style_label_down : label.style_label_up, color = cs, textcolor = color.white, size = size.small)
+    if showTSQ and not na(tsT)
+        label.new(tsT, tsP, "TS", xloc = xloc.bar_time, style = isSell ? label.style_label_down : label.style_label_up, color = color.new(color.gray, 40), textcolor = color.white, size = size.tiny)
+    line.new(sigT - span / 6, sigE, sigT + span / 6, sigE, xloc = xloc.bar_time, color = color.new(color.gray, 20), width = 1)
+    if showKL and not na(klTop) and not na(klT0)
+        box.new(klT0, klTop, sigT, klBot, xloc = xloc.bar_time, bgcolor = color.new(color.blue, 88), border_color = color.new(color.blue, 60), text = "KL", text_size = size.tiny, text_halign = text.align_left, text_color = color.gray)
+    alert("TET " + sigTag + " " + syminfo.ticker + " | Entry " + str.tostring(sigE, format.mintick) + " | SL " + str.tostring(sigSL, format.mintick) + " | TP " + str.tostring(sigTP, format.mintick), alert.freq_once_per_bar_close)
 
-alertcondition(sellSig or reSell, "TET Sell", "TET SELL on {{ticker}} at {{close}}")
-alertcondition(buySig or reBuy, "TET Buy", "TET BUY on {{ticker}} at {{close}}")
+if newEv and showTSQ
+    label.new(evT, evP, evTag, xloc = xloc.bar_time, style = label.style_label_left, color = color.new(color.gray, 70), textcolor = chart.fg_color, size = size.tiny)
+
+alertcondition(newSig and sigDir == -1, "TET Sell", "TET SELL on {{ticker}}")
+alertcondition(newSig and sigDir == 1, "TET Buy", "TET BUY on {{ticker}}")
 
 // ───────────────────────── Bias table ─────────────────────────
 bTxt(int b) =>
