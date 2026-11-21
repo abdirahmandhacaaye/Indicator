@@ -85,3 +85,16 @@
 | 14 | telegram 6030… | MT5 M5 12 Nov: sell ~3951 → ~3927 |
 | 15 | kax5pV0J (ZX) | ZX 5m 12 Nov 08:16 UTC-5: sell box SL 3955.91 / entry 3952.19 / TP 3924.75 (≈7.4R) + 1H candles |
 | 16 | image (ZX) | ZX 1h 12 Nov: swing kasta saacad: **8pm, 2am, 8am, 2am, 6am, 8am, 8pm, 2am, 6am, 8am** → DOL |
+
+## Batch 06 (16 sawir; #9–#16 waa NAZARIO 7H PROFILING pages — hore ayaa loo keydiyay `research/img_7H_PROFILING/`, lama keydin mar labaad) — 2026-11-21
+| # | Fayl | Waxa ku jira (akhris degdeg ah) |
+|---|---|---|
+| 01 | IMG_2916 | **ZX TET MODEL** 1h 19 Nov: swings: **8pm** (high), **3am** (lower high), **8am**, **9am** → hoos (CRT low) |
+| 02 | IMG_0839 | Discord **zaki-habiib** 09/09: "**2ssmt + psp + Time — The most high Prob setup**" (MT5 buy, SL 4390.26) |
+| 03 | IMG_0838 | Discord zaki-habiib 16/09: "**Asian Reversal, London Cont, NY continuation — Sida ugu fudud e suuqa lo akhriyo**" + 7H chart ("7H-M TET, Bias: Bullish") |
+| 04 | IMG_0837 | 7H chart zoom: "TET to the world", panel **7H-M TET / XAUUSD / 7H / 14D 05:03:19 / Bias: Bullish** (indicator kooda) |
+| 05 | IMG_6207 | XAUUSD **7h** chart: range high line, higher low (low line) |
+| 06 | IMG_0835 | Discord zaki-habiib 20/09: "**Daily-Bias, 7h-bias confirmation, 1h-key level. Confirmation for reversal: smt, psp, smt with psp, 2ssmt with psp.**" + "**Confirmation for entry: 1. kL 2. Purge time 3. Smt or Smt with psp or 2ssmt 4. #m1**" |
+| 07 | IMG_6511 | 1H: **TS, #1, Breaker, OTE, KOD → W CRT L** (weekly CRT low) |
+| 08 | IMG_0562 | Zaki-habiib 1h 30 Oct: **TS, BR, OTE, KOD** → low |
+| 09–16 | IMG_0831…0823 | NAZARIO 7H PROFILING bogag (nuqul) |
