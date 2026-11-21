@@ -124,3 +124,19 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | **Q-H** | ✅ Xal la soo jeediyay: default 17/00/07 (TET Forex & CFD), input lagu beddeli karo. Ansixi. |
 | **Q-G** | SMT pairs: D3 (7 asset) mise PDF-ka (True SMT = XAUEUR, XAUGBP, XAGUSD; kuwa kale lama isticmaalo purging/1-stage)? |
 | **Q2** | OTE: ka saar? |
+
+---
+
+## J. Profile models (user, 2026-11-21) — QABYO, waxay sugaysaa caddeyn
+
+User-ka qoraalkiisa (erey-erey): 5 profile, mid walba = **HTF alignment** + **1H key level** + (PSP ama SMT ama 2SMT) + **TS** + **Model #1** + **SMT (1H ama 5m)** → **5m entry**.
+
+| Profile | HTF orderflow alignment | Kadib |
+|---|---|---|
+| P1 | **Daily + 7H** raacsan, iyo **1H** raacsan | 1H KL + (PSP / SMT / 2SMT) + TS + M#1 + SMT (1H ama 5m) → 5m entry |
+| P2 | **7H + 4H** raacsan | 1H KL + … → 5m entry |
+| P3 | **Daily + 4H** raacsan (ama 7H) | 1H KL + … → 5m entry |
+| P4 | **Daily + 1H + 7H** raacsan | 1H KL + … → 5m entry |
+| P5 | **Weekly + 4H** raacsan | 1H KL + … → 5m entry |
+
+Su'aalaha caddeynta: orderflow qeexid per TF · profiles OR + label P1–P5 · TS maxay qaadaysaa · SMT 1H vs 5m · PSP/2SMT doorka.
