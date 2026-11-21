@@ -1,0 +1,436 @@
+//@version=6
+// TET CRT Model — XAUUSD (5m entry)
+// Rules: research/RULES.md + research/DECISIONS.md (D1–D9)
+// Non-repainting: signals fire only on confirmed (closed) bars; higher-timeframe ranges are
+// built from closed chart bars in America/New_York time; pairs use request.security on the
+// chart timeframe with lookahead off.
+indicator("TET CRT Model — XAUUSD", "TET CRT", overlay = true, max_boxes_count = 300, max_lines_count = 300, max_labels_count = 300)
+
+// ───────────────────────── Inputs ─────────────────────────
+const string M4 = "4H CRT → 5m"
+const string M7 = "D bias + 7H → 5m"
+const float  RR = 3.0                       // D2: fixed 1:3
+
+grpM     = "Model"
+mode     = input.string(M4, "Model", options = [M4, M7], group = grpM)
+tz       = input.string("America/New_York", "Timezone", group = grpM)
+sessOff  = input.int(0, "7H session offset (h) — 0 Forex/CFD, 1 Indices", minval = 0, maxval = 1, group = grpM)
+biasIn4H = input.bool(false, "Use daily bias filter in 4H mode", group = grpM)
+
+grpP     = "Purge hours (NY) — D6"
+use4am   = input.bool(false, "Extra purge: 4am (1AM 4H candle)", group = grpP)
+use11pm  = input.bool(false, "Extra purge: 11pm (9PM 4H candle)", group = grpP)
+
+grpK     = "Key levels (1H) — D5"
+useFVG   = input.bool(true, "Fair Value Gap", group = grpK)
+useOB    = input.bool(true, "Order Block", group = grpK)
+useBRK   = input.bool(true, "Breaker Block (broken OB)", group = grpK)
+reqKL    = input.bool(true, "Require key level", group = grpK)
+showKL   = input.bool(true, "Show key level boxes", group = grpK)
+maxZones = input.int(30, "Max stored zones", minval = 4, maxval = 60, group = grpK)
+
+grpS     = "SMT — D3/D4"
+reqSMT   = input.bool(true, "Require SMT", group = grpS)
+sym1     = input.symbol("OANDA:XAUEUR", "Pair 1", group = grpS)
+sym2     = input.symbol("OANDA:XAUGBP", "Pair 2", group = grpS)
+sym3     = input.symbol("OANDA:XAGUSD", "Pair 3", group = grpS)
+minFail  = input.int(1, "Min pairs failing to sweep", minval = 1, maxval = 3, group = grpS)
+
+grpR     = "Risk — D1/D2"
+slBuf    = input.float(0.0, "SL buffer beyond TS wick (price)", minval = 0, group = grpR)
+maxDay   = input.int(3, "Max signals per day", minval = 1, maxval = 10, group = grpR)
+
+grpF     = "Filters"
+req1H    = input.bool(false, "Require 1H orderflow alignment", group = grpF)
+
+grpV     = "Visuals"
+showCRT  = input.bool(true, "Show CRT range (H / EQ / L)", group = grpV)
+showPos  = input.bool(true, "Show SL / TP boxes", group = grpV)
+showTbl  = input.bool(true, "Show stats table", group = grpV)
+
+// ───────────────────────── Types ─────────────────────────
+type Agg
+    float o = na
+    float h = na
+    float l = na
+    float c = na
+    int   t = na
+    float po = na
+    float ph = na
+    float pl = na
+    float pc = na
+    int   pt = na
+    bool  hasPrev = false
+    bool  pend = false
+
+method roll(Agg a, bool isNew, float o_, float h_, float l_, float c_, int t_) =>
+    if isNew
+        a.pend := true
+    if not na(h_) and not na(l_)
+        if a.pend or na(a.h)
+            if not na(a.h)
+                a.po := a.o
+                a.ph := a.h
+                a.pl := a.l
+                a.pc := a.c
+                a.pt := a.t
+                a.hasPrev := true
+            a.o := o_
+            a.h := h_
+            a.l := l_
+            a.c := c_
+            a.t := t_
+            a.pend := false
+        else
+            a.h := math.max(a.h, h_)
+            a.l := math.min(a.l, l_)
+            a.c := c_
+
+type Zone
+    float top
+    float bot
+    int   dir      // -1 resistance (sells), +1 support (buys)
+    int   kind     // 0 FVG, 1 OB, 2 Breaker
+    box   bx
+
+// ───────────────────────── Time buckets (NY) ─────────────────────────
+hNY = hour(time, tz)
+
+f4H(int hh) =>
+    hh >= 17 and hh < 21 ? 17 : (hh >= 21 or hh < 1) ? 21 : hh < 5 ? 1 : hh < 9 ? 5 : hh < 13 ? 9 : 13
+
+f7H(int hh) =>
+    int s = (hh - sessOff + 24) % 24
+    s >= 17 ? 17 : s < 7 ? 0 : s < 14 ? 7 : 14
+
+crtStart = mode == M4 ? f4H(hNY) : f7H(hNY)
+newCRT   = na(crtStart[1]) or crtStart != crtStart[1]
+dShift   = (hNY - 17 + 24) % 24
+newDay   = na(dShift[1]) or dShift < dShift[1]
+newH1    = na(hNY[1]) or hNY != hNY[1]
+
+isPurge(int start, int hh) =>
+    bool r = false
+    if mode == M4
+        r := (start == 17 and hh == 20) or (start == 21 and (hh == 21 or hh == 22 or (use11pm and hh == 23))) or (start == 1 and (hh == 2 or hh == 3 or (use4am and hh == 4))) or (start == 5 and (hh == 6 or hh == 8)) or (start == 9 and (hh == 9 or hh == 10))
+    else
+        int s = (hh - sessOff + 24) % 24
+        r := (start == 17 and s >= 20 and s <= 22) or (start == 0 and (s == 2 or s == 3)) or (start == 7 and s >= 8 and s <= 10)
+    r
+
+// ───────────────────────── Aggregates ─────────────────────────
+var Agg crt = Agg.new()
+var Agg day = Agg.new()
+var Agg h1  = Agg.new()
+var Agg p1  = Agg.new()
+var Agg p2  = Agg.new()
+var Agg p3  = Agg.new()
+
+[o1, hi1, lo1, c1] = request.security(sym1, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+[o2, hi2, lo2, c2] = request.security(sym2, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+[o3, hi3, lo3, c3] = request.security(sym3, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+
+var float ppH = na
+var float ppL = na
+var bool  bearInv = false
+var bool  bullInv = false
+var int   sigToday = 0
+if newDay
+    ppH := day.ph
+    ppL := day.pl
+    bearInv := false
+    bullInv := false
+    sigToday := 0
+
+crt.roll(newCRT, open, high, low, close, time)
+day.roll(newDay, open, high, low, close, time)
+h1.roll(newH1, open, high, low, close, time)
+p1.roll(newCRT, o1, hi1, lo1, c1, time)
+p2.roll(newCRT, o2, hi2, lo2, c2, time)
+p3.roll(newCRT, o3, hi3, lo3, c3, time)
+
+// ───────────────────────── 1H key levels + structure ─────────────────────────
+var array<Zone>  zones = array.new<Zone>()
+var array<float> hO = array.new<float>()
+var array<float> hH = array.new<float>()
+var array<float> hL = array.new<float>()
+var array<float> hC = array.new<float>()
+var array<int>   hT = array.new<int>()
+var float swH = na
+var float swL = na
+var int   of1H = 0
+
+addZone(float top, float bot, int d, int k, int t0) =>
+    color cz = d == -1 ? color.new(color.red, 85) : color.new(color.teal, 85)
+    box b = showKL ? box.new(t0, top, t0 + 3 * 3600000, bot, xloc = xloc.bar_time, extend = extend.right, bgcolor = cz, border_color = color.new(cz, 50), text = k == 0 ? "FVG" : "OB", text_size = size.tiny, text_halign = text.align_right, text_color = color.gray) : na
+    zones.push(Zone.new(top, bot, d, k, b))
+    if zones.size() > maxZones
+        Zone old = zones.shift()
+        if not na(old.bx)
+            old.bx.delete()
+
+if newH1 and h1.hasPrev
+    float cc = h1.pc
+    // 1) update existing zones with the closed 1H candle
+    if zones.size() > 0
+        for i = zones.size() - 1 to 0
+            Zone z = zones.get(i)
+            bool broken = (z.dir == -1 and cc > z.top) or (z.dir == 1 and cc < z.bot)
+            if broken
+                if z.kind == 1 and useBRK
+                    z.kind := 2
+                    z.dir := -z.dir
+                    if not na(z.bx)
+                        color cb = z.dir == -1 ? color.new(color.orange, 85) : color.new(color.blue, 85)
+                        z.bx.set_bgcolor(cb)
+                        z.bx.set_border_color(color.new(cb, 50))
+                        z.bx.set_text("BRK")
+                else
+                    if not na(z.bx)
+                        z.bx.delete()
+                    zones.remove(i)
+    // 2) store closed 1H candle (keep last 3)
+    hO.push(h1.po)
+    hH.push(h1.ph)
+    hL.push(h1.pl)
+    hC.push(h1.pc)
+    hT.push(h1.pt)
+    if hO.size() > 3
+        hO.shift()
+        hH.shift()
+        hL.shift()
+        hC.shift()
+        hT.shift()
+    // 3) new zones + 1H structure
+    if hO.size() == 3
+        float aH = hH.get(0)
+        float aL = hL.get(0)
+        float bO = hO.get(1)
+        float bH = hH.get(1)
+        float bL = hL.get(1)
+        float bC = hC.get(1)
+        float cH = hH.get(2)
+        float cL = hL.get(2)
+        float cO = hO.get(2)
+        float cC = hC.get(2)
+        if useFVG and aL > cH
+            addZone(aL, cH, -1, 0, hT.get(0))
+        if useFVG and aH < cL
+            addZone(cL, aH, 1, 0, hT.get(0))
+        if useOB and bC > bO and cC < cO and cC < bL
+            addZone(bH, bO, -1, 1, hT.get(1))
+        if useOB and bC < bO and cC > cO and cC > bH
+            addZone(bO, bL, 1, 1, hT.get(1))
+        if bH > aH and bH > cH
+            swH := bH
+        if bL < aL and bL < cL
+            swL := bL
+    if not na(swL) and cc < swL
+        of1H := -1
+    if not na(swH) and cc > swH
+        of1H := 1
+    // daily-bias EQ invalidation (1H close beyond previous day's 0.5)
+    if day.hasPrev
+        float eqD = (day.ph + day.pl) / 2
+        if cc > eqD
+            bearInv := true
+        if cc < eqD
+            bullInv := true
+
+klHit(int d, float hi, float lo) =>
+    bool hit = false
+    if zones.size() > 0
+        for z in zones
+            if z.dir == d and hi >= z.bot and lo <= z.top
+                hit := true
+    hit
+
+pairFails(Agg p, bool bear) =>
+    int r = 0
+    if p.hasPrev and not na(p.h)
+        r := bear ? (p.h <= p.ph ? 1 : 0) : (p.l >= p.pl ? 1 : 0)
+    r
+
+pairOK(Agg p) =>
+    p.hasPrev and not na(p.h) ? 1 : 0
+
+// ───────────────────────── Daily bias ─────────────────────────
+needBias = mode == M7 or biasIn4H
+pdH = day.ph
+pdL = day.pl
+pdC = day.pc
+bearBias = day.hasPrev and not na(ppH) and ((pdH > ppH and pdC < ppH) or pdC < ppL) and not bearInv
+bullBias = day.hasPrev and not na(ppL) and ((pdL < ppL and pdC > ppL) or pdC > ppH) and not bullInv
+
+// ───────────────────────── CRT setup state ─────────────────────────
+var float sTs = na
+var bool sSw = false
+var bool sCf = false
+var bool sPg = false
+var float sOB = na
+var bool sDone = false
+var int sTsBar = na
+var float bTs = na
+var bool bSw = false
+var bool bCf = false
+var bool bPg = false
+var float bOB = na
+var bool bDone = false
+var int bTsBar = na
+
+if newCRT
+    sTs := na
+    sSw := false
+    sCf := false
+    sPg := false
+    sOB := na
+    sDone := false
+    bTs := na
+    bSw := false
+    bCf := false
+    bPg := false
+    bOB := na
+    bDone := false
+
+// trade state
+var int   tDir = 0
+var float tE = na
+var float tSL = na
+var float tTP = na
+var int   tBar = na
+var int   wins = 0
+var int   losses = 0
+
+if tDir != 0 and bar_index > tBar
+    if tDir == -1
+        if high >= tSL
+            losses += 1
+            tDir := 0
+        else if low <= tTP
+            wins += 1
+            tDir := 0
+    else
+        if low <= tSL
+            losses += 1
+            tDir := 0
+        else if high >= tTP
+            wins += 1
+            tDir := 0
+
+bool sellSig = false
+bool buySig  = false
+
+if crt.hasPrev
+    // ── SELL: sweep CRT high, close back inside, Model #1 break
+    if not sDone
+        if high > crt.ph and (not sSw or high > sTs)
+            sTs := high
+            sTsBar := bar_index
+            sPg := isPurge(crtStart, hNY)
+            sOB := na
+            sCf := false
+            sSw := true
+        if sSw
+            if close < crt.ph
+                sCf := true
+            else if close > crt.ph
+                sCf := false               // closed back above range high = continuation
+            if low <= crt.pl
+                sDone := true              // target reached before entry
+            if close > open
+                sOB := open                // last up-close candle (Model #1 line)
+    // ── BUY: sweep CRT low, close back inside, Model #1 break
+    if not bDone
+        if low < crt.pl and (not bSw or low < bTs)
+            bTs := low
+            bTsBar := bar_index
+            bPg := isPurge(crtStart, hNY)
+            bOB := na
+            bCf := false
+            bSw := true
+        if bSw
+            if close > crt.pl
+                bCf := true
+            else if close < crt.pl
+                bCf := false
+            if high >= crt.ph
+                bDone := true
+            if close < open
+                bOB := open                // last down-close candle (Model #1 line)
+
+    int nOK    = pairOK(p1) + pairOK(p2) + pairOK(p3)
+    int failS  = pairFails(p1, true) + pairFails(p2, true) + pairFails(p3, true)
+    int failB  = pairFails(p1, false) + pairFails(p2, false) + pairFails(p3, false)
+    bool smtS  = not reqSMT or (nOK > 0 and failS >= minFail)
+    bool smtB  = not reqSMT or (nOK > 0 and failB >= minFail)
+    bool klS   = not reqKL or klHit(-1, sTs, (crt.ph + crt.pl) / 2)
+    bool klB   = not reqKL or klHit(1, (crt.ph + crt.pl) / 2, bTs)
+    bool biasS = not needBias or bearBias
+    bool biasB = not needBias or bullBias
+    bool ofS   = not req1H or of1H == -1
+    bool ofB   = not req1H or of1H == 1
+    bool room  = sigToday < maxDay and tDir == 0
+
+    if barstate.isconfirmed and room and not sDone and sSw and sCf and sPg and not na(sOB) and close < sOB and close < open and smtS and klS and biasS and ofS
+        sellSig := true
+    if barstate.isconfirmed and room and not bDone and bSw and bCf and bPg and not na(bOB) and close > bOB and close > open and smtB and klB and biasB and ofB and not sellSig
+        buySig := true
+
+if sellSig
+    tDir := -1
+    tE := close
+    tSL := sTs + slBuf
+    tTP := close - RR * (tSL - close)
+    tBar := bar_index
+    sDone := true
+    sigToday += 1
+if buySig
+    tDir := 1
+    tE := close
+    tSL := bTs - slBuf
+    tTP := close + RR * (close - tSL)
+    tBar := bar_index
+    bDone := true
+    sigToday += 1
+
+if (sellSig or buySig) and showPos
+    box.new(bar_index, tSL, bar_index + 36, tE, bgcolor = color.new(color.red, 80), border_color = color.new(color.red, 60))
+    box.new(bar_index, tE, bar_index + 36, tTP, bgcolor = color.new(color.green, 80), border_color = color.new(color.green, 60))
+    label.new(sellSig ? sTsBar : bTsBar, sellSig ? sTs : bTs, "TS", style = sellSig ? label.style_label_down : label.style_label_up, color = color.new(color.gray, 70), textcolor = color.white, size = size.tiny)
+
+plotshape(sellSig, "Sell", shape.triangledown, location.abovebar, color.red, text = "SELL", size = size.small)
+plotshape(buySig, "Buy", shape.triangleup, location.belowbar, color.green, text = "BUY", size = size.small)
+
+if sellSig or buySig
+    string dirTxt = sellSig ? "SELL" : "BUY"
+    alert("TET CRT " + dirTxt + " " + syminfo.ticker + " | Entry " + str.tostring(tE, format.mintick) + " | SL " + str.tostring(tSL, format.mintick) + " | TP " + str.tostring(tTP, format.mintick), alert.freq_once_per_bar_close)
+
+alertcondition(sellSig, "TET CRT Sell", "TET CRT SELL on {{ticker}} at {{close}}")
+alertcondition(buySig, "TET CRT Buy", "TET CRT BUY on {{ticker}} at {{close}}")
+
+// ───────────────────────── CRT range lines ─────────────────────────
+var line lnH = na
+var line lnL = na
+var line lnE = na
+if showCRT and newCRT and crt.hasPrev
+    line.delete(lnH)
+    line.delete(lnL)
+    line.delete(lnE)
+    lnH := line.new(bar_index, crt.ph, bar_index + 1, crt.ph, extend = extend.right, color = color.new(color.gray, 30))
+    lnL := line.new(bar_index, crt.pl, bar_index + 1, crt.pl, extend = extend.right, color = color.new(color.gray, 30))
+    lnE := line.new(bar_index, (crt.ph + crt.pl) / 2, bar_index + 1, (crt.ph + crt.pl) / 2, extend = extend.right, color = color.new(color.gray, 60), style = line.style_dotted)
+
+// ───────────────────────── Stats table ─────────────────────────
+var table tb = table.new(position.top_right, 2, 5, bgcolor = color.new(color.black, 80), border_width = 1)
+if showTbl and barstate.islast
+    int tot = wins + losses
+    table.cell(tb, 0, 0, "Model", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 0, mode, text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 1, "Wins / Losses", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 1, str.tostring(wins) + " / " + str.tostring(losses), text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 2, "Win rate", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 2, tot > 0 ? str.tostring(100.0 * wins / tot, "#.#") + "%" : "-", text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 3, "Net R (1:3)", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 3, str.tostring(wins * RR - losses, "#.#") + "R", text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 4, "Daily bias", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 4, bearBias ? "Bearish" : bullBias ? "Bullish" : "None", text_color = color.white, text_size = size.small)
