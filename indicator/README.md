@@ -13,7 +13,8 @@ Fayl: `TET_CRT_Model.pine`. Xeerarka: `research/RULES.md`, go'aannada: `research
 |---|---|---|
 | 1 | **CRT range** = HTF candle-kii u dambeeyay ee xirmay (4H: 5P/9P/1A/5A/9A/1P · 7H: 17/00/07/14, NY) | L04, L18, L19 |
 | 2 | **Turtle Soup**: CRT high (sell) / low (buy) waa la qaadaa, kadib 5m candle wuxuu dib ugu xirmaa gudaha range-ka | L04, L14 |
-| 3 | **Purge hour (qasab)**: candle-ka sameeyay wick-ka TS waa inuu ku jiraa purge hour-ka (4H: 5P→8P · 9P→9–10P · 1A→2–3A · 5A→6/8A · 9A→9–10A; 7H: 8–10P · 2–3A · 8–10A) | D6 |
+| 3 | **Purge hour (qasab)**: candle-ka sameeyay wick-ka TS waa inuu ku jiraa: **Asia 8/9/10 PM · London 2/3/4 AM · NY 8/9/10 AM** (NY time) | D10 |
+| 3b | **Entry session**: signal-ku wuxuu ka dhacaa oo keliya Asia (8 PM–12 AM), London (2–5 AM) ama NY (8 AM–12 PM) | D10 |
 | 4 | **Key level (1H)**: FVG / OB / Breaker ku yaal premium (sell) ama discount (buy) ee CRT range-ka, oo uu TS-ku gaaray | D5, L13 |
 | 5 | **SMT (qasab)**: ugu yaraan 1 pair (XAUEUR / XAUGBP / XAGUSD) ayaa ku fashilmay inuu qaado CRT high/low-giisa | D3, D4, D9 |
 | 6 | **Model #1 entry**: 5m candle ku xirma dhinaca kale ee open-ka candle-kii u dambeeyay ee jihada ka soo horjeeday (line #1) | L07, Q4 |

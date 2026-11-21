@@ -17,9 +17,10 @@ tz       = input.string("America/New_York", "Timezone", group = grpM)
 sessOff  = input.int(0, "7H session offset (h) — 0 Forex/CFD, 1 Indices", minval = 0, maxval = 1, group = grpM)
 biasIn4H = input.bool(false, "Use daily bias filter in 4H mode", group = grpM)
 
-grpP     = "Purge hours (NY) — D6"
-use4am   = input.bool(false, "Extra purge: 4am (1AM 4H candle)", group = grpP)
-use11pm  = input.bool(false, "Extra purge: 11pm (9PM 4H candle)", group = grpP)
+grpP     = "Purge hours & sessions (NY) — D10"
+useAsia  = input.bool(true, "Asia: purge 8/9/10 PM · entries 8 PM–12 AM", group = grpP)
+useLon   = input.bool(true, "London: purge 2/3/4 AM · entries 2–5 AM", group = grpP)
+useNY    = input.bool(true, "New York: purge 8/9/10 AM · entries 8 AM–12 PM", group = grpP)
 
 grpK     = "Key levels (1H) — D5"
 useFVG   = input.bool(true, "Fair Value Gap", group = grpK)
@@ -109,14 +110,13 @@ dShift   = (hNY - 17 + 24) % 24
 newDay   = na(dShift[1]) or dShift < dShift[1]
 newH1    = na(hNY[1]) or hNY != hNY[1]
 
+// D10 (user): purge hours Asia 8/9/10 PM · London 2/3/4 AM · NY 8/9/10 AM (NY time)
 isPurge(int start, int hh) =>
-    bool r = false
-    if mode == M4
-        r := (start == 17 and hh == 20) or (start == 21 and (hh == 21 or hh == 22 or (use11pm and hh == 23))) or (start == 1 and (hh == 2 or hh == 3 or (use4am and hh == 4))) or (start == 5 and (hh == 6 or hh == 8)) or (start == 9 and (hh == 9 or hh == 10))
-    else
-        int s = (hh - sessOff + 24) % 24
-        r := (start == 17 and s >= 20 and s <= 22) or (start == 0 and (s == 2 or s == 3)) or (start == 7 and s >= 8 and s <= 10)
-    r
+    (useAsia and hh >= 20 and hh <= 22) or (useLon and hh >= 2 and hh <= 4) or (useNY and hh >= 8 and hh <= 10)
+
+// D10 (user): entries only inside Asia (20–24), London (02–05) and New York (08–12) sessions
+inSession(int hh) =>
+    (useAsia and hh >= 20 and hh <= 23) or (useLon and hh >= 2 and hh <= 4) or (useNY and hh >= 8 and hh <= 11)
 
 // ───────────────────────── Aggregates ─────────────────────────
 var Agg crt = Agg.new()
@@ -369,7 +369,7 @@ if crt.hasPrev
     bool biasB = not needBias or bullBias
     bool ofS   = not req1H or of1H == -1
     bool ofB   = not req1H or of1H == 1
-    bool room  = sigToday < maxDay and tDir == 0
+    bool room  = sigToday < maxDay and tDir == 0 and inSession(hNY)
 
     if barstate.isconfirmed and room and not sDone and sSw and sCf and sPg and not na(sOB) and close < sOB and close < open and smtS and klS and biasS and ofS
         sellSig := true
