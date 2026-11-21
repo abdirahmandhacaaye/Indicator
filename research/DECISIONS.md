@@ -6,7 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
-| D2 | 2026-11-21 | Risk:Reward | **RR-ku waa go'an: 1:3 (3R).** Casharka 08 looma baahna. Faahfaahinta (TP = 3R mise minimum 3R) waa la sugayaa. | User (jawaab toos ah) |
+| D2 | 2026-11-21 | Risk:Reward | **RR-ku waa go'an mar walba: 1 Risk : 3 Reward.** TP = Entry ± 3 × (fogaanta Entry ilaa SL). Ma jiro TP1/TP2/TP3, TP-guna kuma xirna ERL/DOL. Casharka 08 looma baahna. | User (jawaab toos ah) |
 | D1 | 2026-11-21 | Stop loss (CRT setup) | **SL waxaa la dhigaa wick-ka Turtle Soup-ka korkiisa.** Sell: high-ga manipulation-ka (TS) dushiisa. Buy: low-ga TS-ka hoostiisa. | User (jawaab toos ah) |
 
 ## Su'aalaha furan (jawaabta waxaa laga raadinayaa casharrada soo socda)
@@ -23,13 +23,16 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q6 | OB: body mise high/low oo dhan? | Furan |
 | Q7 | IFVG disrespect: candle close mise wick? | Furan |
 | Q8 | Dealing range: swing-kee iyo timeframe-kee? | Furan |
-| Q9 | Take profit: TP1/TP2/TP3 ma jiraan, mise CRT low/DOL keliya? | Qayb ahaan (casharka 07 P2 [AUDIO?]): "target koowaad waa la qaaday, target labaad waa ERL". Laba target ayaa la xusay, laakiin xeer TP1/2/3 ah ma jiro. |
+| Q9 | Take profit: TP1/TP2/TP3 ma jiraan, mise CRT low/DOL keliya? | **→ D2: hal TP oo go'an (3R).** |
+| Q9-old | | Qayb ahaan (casharka 07 P2 [AUDIO?]): "target koowaad waa la qaaday, target labaad waa ERL". Laba target ayaa la xusay, laakiin xeer TP1/2/3 ah ma jiro. |
 | Q10 | Minimum Risk:Reward | **→ D2 (3R).** |
 | Q10-old | Minimum Risk:Reward | Furan. (Casharka 06: tusaale trade ah ayaa gaaray ~3R, laakiin ma aha xeer.) |
 | Q11 | Purging hours: shuruud qasab ah mise grade? | Casharka 06 [P3 01:49–02:03]: "qasab maaha, laakiin waa waqtiyada ugu fiican". Casharka 05: waa mid ka mid ah 3-da shay ee la sugo. **Waxay u baahan tahay go'aanka user-ka.** |
 | Q12 | Pair-ka SMT/PSP: XAUEUR, XAUGBP mise XAGUSD? | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: D2 waa la caddeeyay. TP-ga waa 3R go'an mar walba, waana hal TP oo keliya. Q9 waa la xalliyay.
 
 - 2026-11-21: Waxaa lagu daray D2 (RR = 3R). User-ku wuxuu go'aamiyay in casharka 08 aan loo baahnayn.
 
