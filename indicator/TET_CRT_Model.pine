@@ -1,5 +1,5 @@
 //@version=6
-// TET Profile Model — XAUUSD (5m entry)  v2.0
+// TET Profile Model — XAUUSD (5m entry)  v2.0.1
 // Rules: research/RULES.md (section J) + research/DECISIONS.md (D1–D15)
 // Non-repainting: every signal fires on a confirmed (closed) 5m bar. Higher-timeframe candles
 // (W, D, 7H, 4H, 1H) are built from closed chart bars in New York time; pairs come from
@@ -106,6 +106,7 @@ method roll(Agg a, bool isNew, float o_, float h_, float l_, float c_, int t_) =
             a.h := math.max(a.h, h_)
             a.l := math.min(a.l, l_)
             a.c := c_
+    true                                    // explicit return (CE10235)
 
 method eqCheck(Agg a, float c1h) =>
     if a.hasPrev and not na(c1h)
@@ -114,6 +115,7 @@ method eqCheck(Agg a, float c1h) =>
             a.invBear := true
         if c1h < eq
             a.invBull := true
+    true
 
 method bias(Agg a) =>
     a.of == -1 and not a.invBear ? -1 : a.of == 1 and not a.invBull ? 1 : 0
@@ -230,6 +232,7 @@ addZone(float top, float bot, int d, int k, int t0) =>
         Zone old = zones.shift()
         if not na(old.bx)
             old.bx.delete()
+    true
 
 if newH1 and h1.hasPrev
     float cc = h1.pc
