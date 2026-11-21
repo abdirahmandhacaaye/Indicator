@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Video | https://youtu.be/Y7fOO97hbns (TET COMMUNITY, 57:47) |
-| Isha | Qayb video ah uu user-ku soo geliyay: **00:00–15:14 (P1)**. Qaybaha kale (15:14–57:47) waa la sugayaa. |
+| Isha | 4 qaybood (casharka oo dhan). P2 dambe–P4 waa tusaalooyin live (XAUUSD/XAGUSD/XAUNZD 1D/1H, OANDA). |
 | Habka | Slide-yada (way cad yihiin). Qoraalka maqalka waa la sugayaa. |
 | Sawirrada | `research/img17/` |
 
@@ -44,6 +44,14 @@ Wax kasta oo hoos ku qoran waa **[SLIDE]**.
 > HTF retracement-ka dhacaya, 1H-ka wuxuu ku noqonayaa orderflow fursad bixinaya, marka waa muhiim inaad ka faa'iidaysan kartid."
 
 - Tani waxay la jaanqaadaysaa **trap 4** ee casharka 16: kadib DOL, sug retracement.
+
+## 4b. "D major KL filled → 1H TSQ aligned with HTF orderflow"  [SLIDE]
+- Daily chart: **MAJOR KL** (kor) waa la buuxiyay, target-kuna waa **DOL** (hoos).
+- 1H chart: MAJOR KL → **BB** (breaker) → hoos u dhac ilaa DOL. 1H TSQ-ga wuxuu raacay daily orderflow-ga.
+
+## 4c. Tusaalooyinka live (P3–P4)  [SLIDE]
+- Watchlist-ka: XAUUSD, XAUEUR, XAUGBP, XAGUSD, XAUNZD, XAUAUD, XAUJPY, XAUCHF, XAUCAD. Tani waxay la jaanqaadaysaa D3, waxaana ku jira **XAUNZD** oo cusub.
+- Chart 1H-ka (`img17/swing_times_4_shuruud.png`) waxaa gacan lagu qoray **"4 shuruud: TS, M#1, BB, 2 KL"**. Swing high/low kasta waxaa lagu qoray saacadda uu samaysmay: 3am, 7am, 8am, 9am, 10am, 2am, 4am, 8pm. Tani waxay muujinaysaa in swing-yada muhiimka ahi ay ku samaysmaan **key times** (killzones/purging).
 
 ## 5. Xiriirka indicator-ka (soo jeedin)
 - **1H TSQ active state:** TS → #1 (OB) → Breaker, oo ka dhacay HTF context (major DOL la qaaday / major KL la buuxiyay / SMT).
