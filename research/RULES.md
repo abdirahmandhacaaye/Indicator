@@ -18,6 +18,7 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 |---|---|---|
 | A1 | **Order flow:** bullish waa marka buy-side la jabiyo, swing lows-kuna ay protected yihiin. Bearish waa tan ka soo horjeedda. | 📘 L02, L11 |
 | A2 | **Dealing range:** waa dhaqaaqii u dambeeyay ee order flow-ga raacsan. 50% = equilibrium. Buy setup-ka waxaa laga raadiyaa discount, sell setup-kana premium. | 📘 L04 §2.7 |
+| A2b | Suuqu wuxuu u dhaqaaqaa 3 qaab: **IRL→ERL, ERL→IRL, ERL→ERL**. | 📘 PDF IRL_TO_ERL |
 | A3 | **DOL / ERL (targets ama liquidity):** PDH/PDL, PWH/PWL, PMH/PML, session highs/lows (Asia/London/NY) iyo EQH/EQL. | 📘 L02, L14 |
 | A4 | **Daily bias:** Daily CRT. Candle 2 ayaa qaata high-ga ama low-ga candle 1 ee ku yaal KL/major LQ, kadibna dib ugu xirma gudaha (wick above/below). Bias-ku waa jihada ka soo horjeedda sweep-ka, DOL-kuna waa dhinaca kale ee candle 1. Haddii candle-ku xirmo dibadda (close above/below), waa continuation. | 📘 L04 §2.6, L19 §2 |
 | A5 | **"No profile = no trade":** signal lama bixiyo haddii bias-ka aan la xaqiijin (A4 + B). | 📘 L18 |
@@ -56,7 +57,8 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 |---|---|---|
 | E1 | **SMT:** XAUUSD wuxuu qaadaa level (high/low), ugu yaraan hal asset oo kale ah ayaana ku fashilma. | ✅ D4 |
 | E2 | **Assets-ka:** XAUEUR, XAUGBP, XAGUSD, XAUCHF, XAUJPY, XAUCAD, XAUAUD. Liiska waa input. | ✅ D3 |
-| E3 | **PSP:** isla HTF candle-ka (oo xirmay), XAUUSD wuxuu ku xirmaa hal jiho, asset kalena jihada ka soo horjeedda. | 📘 L06 |
+| E2b | ⚠️ **PDF-ka "True SMT":** XAUEUR, XAUGBP, SILVER oo keliya ayaa ah True SMT. XAUCHF, XAUNZD, AUD, JPY = "Other SMT" — **"DONT USE: purging, 1 stage smt"**. Khilaaf la leh D3 → ❓ Q-G. | 📘 PDF COMPLETE_MODEL p21 |
+| E3 | **PSP:** ("xaqiijin dheeraad ah, ma aha setup kaligiis" — PDF PSP)  isla HTF candle-ka (oo xirmay), XAUUSD wuxuu ku xirmaa hal jiho, asset kalena jihada ka soo horjeedda. | 📘 L06 |
 | E4 | **Two-stage SMT:** laba SMT oo isku xiga, probability-guna waa ka sarreeyaa. | 📘 L06 |
 | E5 | **SMT break:** asset-kii fashilmay ayaa markii dambe isna qaada level-ka. Markaas SMT-gu waa invalid. | 📘 L06 (slide) |
 | E6 | ❓ **SMT/PSP ma qasab baa** (sida purging hours), mise waa grade ama confirmation dheeraad ah? L07: "liquidity la qaado **ama** SMT, waa isku mid". L19: Confirm entry = PSP **ama** SMT/2SSMT. | ❓ Q-C |
@@ -90,7 +92,9 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | H2 | **Range candle trap:** candle range ah oo ku dhex samaysmay key level-ka. Liquidity-giisa ayaa marka hore la qaadaa, sidaas darteed ha gelin ka hor sweep-kaas. Ka reeban: haddii key level-ku horay u lahaa range. | 📘 L16 trap 2 (🟡 faahfaahin) |
 | H3 | **Retracement phase:** kadib qaadista PDL (DOL), sell lagama galo retracement-ka ("DON'T SELL HERE"). Buy-gana waa tan ka soo horjeedda. | 📘 L16 trap 3 |
 | H4 | **Target la gaaray:** kadib DOL ama target, waxaa la sugaa retracement ka hor setup cusub jihadaas. | 📘 L16 trap 4, L17 |
-| H5 | 🟡 **Setup invalid ka hor entry:** (a) candle ku xirma TS wick-ka dibaddiisa (close above/below = continuation, L04), ama (b) qiimuhu wuxuu gaaraa TP-ga (3R) isagoo aan entry bixin. | 🟡 Q1 |
+| H5 | **Invalidation Scenario 1 (bias failure):** price-ku wuxuu qaadaa liquidity weyn (PDH/PWH ee bullish), key levels-kii bias-ka waa la jabiyaa (disrespect), **1H TSQ** ayaa active noqota jihada ka soo horjeedda, kadibna 7H profile ayaa raacda → bias-ka waa la beddelaa, target-kuna waa EQ / PDL. | 📘 PDF COMPLETE_MODEL p17 |
+| H5b | **Invalidation Scenario 2 (EQ):** EQ = 0.5 ee HTF candle-ka. Continuation-ka, haddii candle **ku xirmo EQ-da dhinaca kale** (wick waa la aqbali karaa) → structure failure, DOL cusub = opposite liquidity (PDL/PDH). | 📘 PDF COMPLETE_MODEL p19 |
+| H5c | 🟡 **Setup invalid ka hor entry:** candle ku xirma TS wick-ka dibaddiisa, ama TP (3R) la gaaro iyadoon entry bixin. | 🟡 Q1 |
 | H6 | 🟡 **SMT break** (E5) → setup-ka SMT-ga ku tiirsan waa invalid. | 📘 L06 |
 
 ## I. Kuwa kale
@@ -114,5 +118,6 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | **Q-D** | Breaker/KOD re-entries: haa mise maya? |
 | **Q-E** | Grade (A+/B) mise signal oo keliya? |
 | **Q-F** | Trade-yo badan maalintii: haa (immisa)? |
-| **Q1** | Invalidation H5: (a), (b), mise labadaba? |
+| **Q1** | Invalidation H5c (ka hor entry): candle ku xirma TS dibaddiisa, TP la gaaray, mise labadaba? (H5/H5b waxay ka yimaadeen PDF-ka.) |
+| **Q-G** | SMT pairs: D3 (7 asset) mise PDF-ka (True SMT = XAUEUR, XAUGBP, XAGUSD; kuwa kale lama isticmaalo purging/1-stage)? |
 | **Q2** | OTE: ka saar? |

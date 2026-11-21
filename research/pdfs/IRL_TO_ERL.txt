@@ -1,0 +1,78 @@
+IRL TO ERL
+                              IRL       ERL
+IRL to ERL waa concept muhiim ah oo ka mid ah ICT/Smart Money
+Concepts, gaar ahaan marka aad fahmeyso liquidity-ga suuqa iyo
+sida suuqu u dhaqaaqo.
+ Suuqu wuxuu u dhaqaaqaa sadex qaab
+
+
+
+               IRL TO ERL
+
+               ERL TO IRL 
+
+               ERL TO ERL
+                          IRL
+
+IRL (Internal Range Liquidity) = liquidity ku jirta
+gudaha lugtii dhaqaaqday.
+
+
+
+
+IRL:
+
+
+    FVG
+
+
+    OB
+
+
+    IFVG
+            IRL
+            FVG
+                  ERL
+
+
+
+
+      FVG
+                         FVG
+IRL
+                   IRL
+            IRL
+             OB
+                  ERL ( Target )
+
+
+
+
+                      Ordeblock
+Ordeblock
+IRL
+IRL - ERL
+                        ERL
+ERL – External Range Liquidity
+
+
+ERL waa Liquidity (swing highs and swing lows ) ee lugta
+dhaqaaqday ka so tagtay markii IRL la soo buuxinayay.
+
+
+Waxaa inta badan ERL Noqda:
+
+
+   Previous Day High (PDH)
+
+   Previous Day Low (PDL)
+
+   Previous Week High/Low
+
+   Major Swing High/Low
+
+   Equal Highs ama Equal Lows oo muhiim ah
+ERL
+ERL - IRL
+ERL - ERL
+
