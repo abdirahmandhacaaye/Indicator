@@ -39,6 +39,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 
 ## Changelog
 
+- 2026-11-21: User: casharrada 10 (Waa maxay Forex) iyo 01 (Introduction) looma baahna; waa laga boodayaa. Casharka 08 sidoo kale (D2).
+
 - 2026-11-21: Waxaa lagu daray D8 (TET checklist ha la koobiyeyn).
 
 - 2026-11-21: Casharka 13 waa la dhammeeyay (OB, FVG, IFVG, Breaker, Gap). Q6 waa la xalliyay.
