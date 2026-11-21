@@ -29,6 +29,8 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 |---|---|---|
 | B1 | **Model 4H (casharrada 04/05):** maalinta = 6 × 4H candle (5P, 9P, 1A, 5A, 9A, 1P). CRT-ga waa 4H candle-kii **xirmay**. Candle-ka xiga ayaa qaada high-ga ama low-giisa (TS). | 📘 L04, L05 |
 | B2 | **Model 7H (casharrada 18/19):** maalinta = 4 session oo 7H ah: Asia 17:00, London 00:00, NY AM 07:00, NY PM 14:00. Profile-yada: **Asian reversal**, **London reversal**, **NY AM reversal**, **NY PM continuation**. Session-ka reversal sameeya wuxuu qaadaa high-ga ama low-ga session-kii hore, kadibna dib ayuu ugu xirmaa. | 📘 L18, L19 |
+| B2b | **7H profile detection (NAZARIO PDF):** Asia reversal = London 7H **ma qaadin** Asia high/low oo ku xirmay dibadda · London reversal = London **qaaday** Asia high/low kadibna gudaha ku xirmay · NY reversal = Asia + London reversal ma sameyn → 8AM ayaa sameeya. Natiijada: 8AM NY = continuation ama reversal. | 📘 PDF 7H PROFILING (Nazario) |
+| B2c | ⚠️ **Waqtiga 7H:** TET Forex = 17:00/00:00/07:00, NAZARIO = 18:00/01:00/08:00. → ❓ Q-H | ❓ |
 | B3 | ❓ **Model-kee ayaa la isticmaalayaa:** 4H (B1), 7H (B2), mise labadaba (input "mode")? | ❓ Q-A |
 
 ## C. Key levels (IRL)
@@ -119,5 +121,6 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | **Q-E** | Grade (A+/B) mise signal oo keliya? |
 | **Q-F** | Trade-yo badan maalintii: haa (immisa)? |
 | **Q1** | Invalidation H5c (ka hor entry): candle ku xirma TS dibaddiisa, TP la gaaray, mise labadaba? (H5/H5b waxay ka yimaadeen PDF-ka.) |
+| **Q-H** | 7H session open times: TET (17:00 / 00:00 / 07:00) mise NAZARIO (18:00 / 01:00 / 08:00)? Mise input? |
 | **Q-G** | SMT pairs: D3 (7 asset) mise PDF-ka (True SMT = XAUEUR, XAUGBP, XAGUSD; kuwa kale lama isticmaalo purging/1-stage)? |
 | **Q2** | OTE: ka saar? |
