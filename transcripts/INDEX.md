@@ -33,5 +33,5 @@ Captions fetched with yt-dlp (subtitles only, no video). Metadata comes from eac
 
 - No video has manual (uploader-provided) subtitles. Every transcript is YouTube's **auto-generated** track.
 - YouTube's metadata marks the spoken language as `ar` (Arabic), but the speech is mostly Somali with English trading terms. The Arabic ASR output is therefore a poor, largely phonetic transcription. Treat it as low quality.
-- From this server the default `web` client hit "Sign in to confirm you're not a bot" and `HTTP Error 429` on the English/Somali auto-translated tracks. Every successful fetch used `--extractor-args "youtube:player_client=android"`, which offers only the `ar`/`ar-orig` tracks. No English track was downloaded.
+- While fetching video 01, the default and `web` clients hit "Sign in to confirm you're not a bot" and `HTTP Error 429` on the English/Somali auto-translated tracks. After that, every video was fetched with `--extractor-args "youtube:player_client=android"`, which offers only the `ar`/`ar-orig` tracks. No English track was downloaded.
 - `raw/` holds the original `.vtt` files and `info.json` metadata. `ar.vtt` and `ar-orig.vtt` are the same track.
