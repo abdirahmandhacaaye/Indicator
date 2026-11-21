@@ -22,12 +22,14 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q6 | OB: body mise high/low oo dhan? | Furan |
 | Q7 | IFVG disrespect: candle close mise wick? | Furan |
 | Q8 | Dealing range: swing-kee iyo timeframe-kee? | Furan |
-| Q9 | Take profit: TP1/TP2/TP3 ma jiraan, mise CRT low/DOL keliya? | Furan |
+| Q9 | Take profit: TP1/TP2/TP3 ma jiraan, mise CRT low/DOL keliya? | Qayb ahaan (casharka 07 P2 [AUDIO?]): "target koowaad waa la qaaday, target labaad waa ERL". Laba target ayaa la xusay, laakiin xeer TP1/2/3 ah ma jiro. |
 | Q10 | Minimum Risk:Reward | Furan. (Casharka 06: tusaale trade ah ayaa gaaray ~3R, laakiin ma aha xeer.) |
 | Q11 | Purging hours: shuruud qasab ah mise grade? | Casharka 06 [P3 01:49–02:03]: "qasab maaha, laakiin waa waqtiyada ugu fiican". Casharka 05: waa mid ka mid ah 3-da shay ee la sugo. **Waxay u baahan tahay go'aanka user-ka.** |
 | Q12 | Pair-ka SMT/PSP: XAUEUR, XAUGBP mise XAGUSD? | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: Casharka 07 waa la dhammeeyay. Q9 qayb ahaan, Q3 waa la xoojiyay (KOD = trade-ka ugu fiican).
 
 - 2026-11-21: Casharka 07 (P1) ayaa lagu daray. Q4 waa la xalliyay. Model #1 wuxuu u baahan yahay key level + liquidity/SMT + purging hour, haddii kale waa fake OB.
 

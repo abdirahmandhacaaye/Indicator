@@ -186,3 +186,189 @@ Source: video clip(s) uploaded by user; faster-whisper large-v3-turbo, language=
 [09:52] wahai hai
 [09:57] 2 stage SMT wahai sana
 [09:59] kusideyna marika targididina raha
+
+==================== PART p2 (10:02–17:50; ~7:48 overlap-adjusted) ====================
+[00:02] Yai i day back a 1973 click doceo. Target in a separate box. LED I-card C-етеic line.!
+[00:14] Model 1, level to fit being it. Model 1, level to fit. Model 1, level to fit of inside bar.
+[00:21] Main animal frame wrap around flipping rangeorta. If needed to press, there are 2 AM minimum
+[00:28] i nta kusabrata u saaha yano 2 am ba ufi an
+[00:32] samg shila ki khasam mahaa
+[00:33] marika kanal ki uurriya barjin kismi e2 stage smt na wahai sana
+[00:37] halka marika haanku qorani na
+[00:39] 2 stage smt
+[00:43] wahai hai
+[00:48] 2 stage smt wahai sana
+[00:50] dhe kusidey na marika targid yada narhasana na marika
+[00:54] targid kaini kwaad marika wala qaadi
+[01:01] targid kaini lawadwa lorka lawaswa daaywa
+[01:04] ea ralka marika
+[01:06] Ntas, marqa haan filayya ina ilafan teemba filayya.
+[01:10] U aya hai, chaalal waadu marqa raasinna, chaalalwa aairu tiyaral 4 hawaar kaaday.
+[01:16] U aya hai, wan hawaar kaan tigayna marqa.
+[01:19] Saolilala haada marqa.
+[01:23] Halkaan ufirsa da marqa.
+[01:25] U aya kuwaana as katiro.
+[01:28] Aairal kaan marqa marqa ila tigayay.
+[01:32] Suuq u xunsao samayay, ufirsa.
+[01:34] Suuq u xunsao samayay.
+[01:35] Waxoqa ādai, lukulitea wa wiena dirao wain lukulitea busooqa ādai,
+[01:39] lukulitea, kuwaano birificis dhe l-lawye, birificis ue l-lawye,
+[01:43] waxaso dhe busooqa ādai,
+[01:44] soq marka ħaddu bxumtsoghaa niyoogi,
+[01:47] niyoogi diwul diskonti bxoqa yo,
+[01:49] kanalaka wanka expansion busonu għdai,
+[01:51] faifka expansion busonu għdai,
+[01:52] naa inka marka mxarabna,
+[01:54] yinu suqa a-airal ka kuliya marka o,
+[01:56] marka e-airal, to a-airal wa ya marka.
+[01:59] Waay hai, halka'n marke wiyan, marke an noot sharo, marke an maha ka da'i,
+[02:09] lukuditiga'n a'n laqa'adhi,
+[02:11] lukuditiga'n marke laka'adhi,
+[02:14] wa ii aara'l ki marke mxa ta'ar gida, aara'l ki ta'ar gida marke.
+[02:18] Waay hai, inta'n marke lakad a'adhi,
+[02:20] kan laki tinka'a'gaba baar jinn nusimi,
+[02:23] oo marke 9am ki wakwuchirna'a marke, kan laki 9am ka.
+[02:30] Wai hai.
+[02:31] Mareka l'aqa haka l'anfidinna SMT mahi na.
+[02:33] Okei.
+[02:38] Gulliwa mareka SMT nougatay.
+[02:39] Heka mhaika nougatay SMT.
+[02:42] Wai hai.
+[02:43] SMT baada aaday mareka.
+[02:45] Kaan mareka SMT nougatay.
+[02:47] SMT baada aaday.
+[02:53] Mareka nabool baagwa mareka taril garaayna na.
+[02:55] Wai hai.
+[02:56] Waana awiliwa kan alkaforhaur kan naayin ka taril garaayna.
+[02:59] Awfiil sawa naayn ayamki.
+[03:00] Nain AAMKa mhaakar ixraadnay
+[03:02] Mabarijin ki waka lixraadnay.
+[03:04] Baarijin ki nwaahelnay. SMT dhe nwaahelnay
+[03:06] lukulit gaana wana loqaaday.
+[03:08] Waihaa an hos uddegna marka 5 minit kaan uddegna marka.
+[03:10] 5 minit ka marka uddegna halka mhaaka isanna.
+[03:14] SMT qruh badmaa ka isanna.
+[03:16] SMT mhaka ghaa kehenny.
+[03:18] Halka wawon haworki yaa.
+[03:23] Ok.
+[03:25] Halka anna mhaaka isanna. Halka an SMT waa ka isanna.
+[03:29] Mhaka terekaan terelaan ghaati ba.
+[03:33] Akaan daa skoafiirinnoo hakaan SMT wakadaa saa chaalai, aaa wakanaa
+[03:42] Waaay hai, markad mhaaahenaa two-stage SMT wakakaayenaa
+[03:47] Two-stage SMT, kaanigar doleid markad two-stage SMT wakasaanaa
+[03:53] Waaay hai, modruwaan keana kaan nukonayaa
+[03:55] Laas di kandalka, eee lucruity sweep ka ye soosimayi, paan nukonayaa
+[03:59] Hai gisaas marki laadaafo, oo wiki gisaas laafo mhandi gana yaa, yamit kahandi gana yaa
+[04:05] AMARKA AMAGA AMAGA ANTAWOKAFARADAR-TID
+[04:07] 17-19
+[04:09] ASAKANGHANDAGANIYA
+[04:10] NARjAAHANDAGANIYA
+[04:12] ANA
+[04:13] ANA
+[04:13] LOGO AMAHA RA AMAGA AMAGUHA SLHAKA
+[04:15] SOMEYYDIYAA
+[04:15] ANA
+[04:16] LOGO AMAGUHAINU PROTECTIDIA
+[04:17] LAHADIYKALAGAGA AMAGUHA AVAWA AVAAS DILI SAHAH
+[04:20] BIS
+[04:21] BIS
+[04:21] ELA TIVI ARAARKEINU
+[04:22] ERAADINUN AMARKA
+[04:23] EGO BINAAAN TİLLIGIEENAH
+[04:24] AMARULUKA LOKULTIKARATGOGAINU
+[04:25] OGAGAGABAHA NASO OGADIE
+[04:26] ndo [...repeat] ndo
+[05:18] 2-stage SMT wang kailanay,
+[05:21] lukuli tifiyaan wala qaaday wang kailanay,
+[05:23] lukuli tifyaan wala qaaday,
+[05:25] lukuli tifyaan wala qaaday,
+[05:26] sasa malka bulbaak tukusu tairir garenna.
+[05:28] Waayay, tairir kaas sasaanaga haado,
+[05:30] SMT dana,
+[05:31] kuley halka naa kafeha mkar taambi,
+[05:33] SMT dana sometimes inaa tairir kaabahadid,
+[05:35] wakuuu kaalifsa soita wulibu kua bulbaak taa.
+[05:37] Adi ila haayyad ala qaaday walaas kaabahaa.
+[05:40] Waayayay, tsaalayay naa sadaa haad maraka,
+[05:42] Uxun nguhaniyaa.
+[05:44] Tariir kaano nguhaniyaa.
+[05:45] Continuwaishka.
+[05:46] Lannan continuwaishka.
+[05:48] Aasianka waakana.
+[05:49] Aasianka mhmishu samiyyee.
+[05:50] Hai bu soosamistai.
+[05:51] Halkanaalaga soodaghaa gai.
+[05:52] Ufidso.
+[05:53] Aasianka hai abdadiye soosamiyyee.
+[05:55] Kee laafil kaanaalaga soodaghaa gai.
+[05:57] Waakanaal ki 5pm kaaba soosamiyyea.
+[06:01] Waakana amarka.
+[06:02] Aasianka lannanlaki mxaysiyeehin.
+[06:03] Continuwaishin bisyyeehin.
+[06:05] Markewaa.
+[06:06] Laylii brafail kuleoaksooparatay.
+[06:07] Keelea fil ka'na lamna kilayee maaday wana hawa rka'a
+[06:10] Kedewna mhaa liye samayee barjima liye samayee
+[06:12] Halka a'nao cha'na mharka
+[06:13] Barjima mharka nyo lusimayee mharkamnaa
+[06:15] Mharka sa'na naa di SMT dainna iyo BSB dainna
+[06:18] Waayay
+[06:21] SMT maayinu iBSB minu
+[06:24] Waayay
+[06:26] Halka a'na mharka ha'na uwa'la mharka
+[06:28] SMT
+[06:30] SMT baasaa kwaaysa naa
+[06:32] SMT mharka sa'na so'na mharka sa'na BSB ufirsu
+[06:35] Kana ka'na mbirish kana wa bolish
+[06:36] aunt uh...
+[06:38] It's O TV,едoos a Balis,
+[06:40] el paolo acepto,
+[06:41] you can call in
+[06:41] at the resort about SMT usa
+[06:44] Cally,
+[06:44] caankalalla麾,
+[06:46] Na pshea fate,
+[06:49] yep,
+[06:49] can to call him
+[06:51] garden
+[06:52] H시면
+[06:53] francin
+[06:54] and aceto
+[06:54] it's
+[06:56] okie
+[06:58] E2M
+[06:59] ead
+[07:06] ᕭᕃ៙ៃំ។៽ ᕭለៅ់ោ់ ᔕ ቃ እៅ់៌់ ᜽ៅ់។ ច៉់្ះ ህៅ�។ៗ ህ៩ំ៭ እៅ់៪េ៉ እ។�្០៎�ះ.
+[07:13] ikadimna hal kaan cardiga race
+[07:22] there uidless으로 uga alasohada laak Yeah bada nax
+[07:25] trii grade baar gaada naa
+[07:28] now wada roohaacch name bada na 3
+[07:30] noo
+[07:31] citi tarigi tillia ghara vivkaya
+[07:32] .
+[07:33] kIGN
+[07:44] addGS
+[07:45] d識
+[07:46] Likuditi stargadu
+[07:48] anhza
+[07:49] o meylah
+[07:50] ngay
+[07:51] Ka umwa fiyrsan ni ba'an fiyriyo.
+[07:53] Dhol kaana taar gida haamarka.
+[07:55] Tareel kaan qaada namarka mishon nukhdayy kees of dis bu nukhday.
+[07:57] Wa tareel ka oo dhambayy aw dhul ka logu qaada amarka.
+[08:00] Tareel ka oo dhambayy aw dhul ka logu qaada amarka.
+[08:02] Tareel ka oo dhambayy aw dhul ka logu qaada amarka.
+[08:04] Wa tareel ka oo dhambayy aw dhruun lukudit ka logu qaada.
+[08:06] Wa tareel ka oo hiperbaabla tseung huyyan.
+[08:09] The best tareel haada maqashwa ka naamarka.
+[08:12] eshal bamnada kwa marah awa maraniya
+[08:14] waeshala kaftamaya, lakin suuqa eshalwa ala qataa
+[08:17] kakwa tbiis tetiru yyan
+[08:19] madama dholki loodoo yahai lamasho odnokda
+[08:21] dholka di loodoo yahai suuqa diim lamasho adibramiyal namasho adlamakayano
+[08:26] wahanhaay, inta souha acahla hii aqsambruska sainaini gufiliin hyin
+[08:30] inta limo dooka yya eskuhirka
+[08:33] adba omaasintisahabiyal
+[08:35] asirada dhamayitas kuaharkadona di laahidmo
+[08:37] wahanoo suqa anna wahaloobla hii hai chuktyn yukuqwilalin

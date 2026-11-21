@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Video | https://youtu.be/2nOW8N6nAgs (TET COMMUNITY, 2026 Mentorship, 17:50) |
-| Isha | Qayb video ah oo uu user-ku soo geliyay: **00:00–10:02 (P1)**. Qaybta 2aad (10:02–17:50) waa la sugayaa. |
+| Isha | Laba qaybood oo video ah uu user-ku soo geliyay: P1 (00:00–10:02) iyo P2 (~09:30–17:50). Casharka oo dhan waa la helay. |
 | Habka | Slide-yada iyo qoraalka maqalka (Whisper, Af-Soomaali). Tayadu waa dhexdhexaad. |
 | Qoraalka | `transcripts/07_2nOW8N6nAgs.whisper_so.txt` |
 | Sawirrada | `research/img07/` |
@@ -53,12 +53,22 @@ Slide-ka **"MODEL #1"** wuxuu ku jiraa `img07/model1_bearish_zoom.png`.
 - Model #1 ayaa samaysmay, entry ayaa la galay, target-kuna wuxuu ahaa **ERL** [P1 08:52–09:22].
 - Purging hour-ku wuxuu ahaa **1 AM** (2 AM ayaa la filayay). "Waqtigu qasab maaha" ayaa la xusay [P1 09:32–09:42] [AUDIO?].
 
-## 5. Su'aalaha furan
+## 5. Tusaalooyinka P2 (XAUGBP 5m / 1H)  [AUDIO? + SLIDE]
+- **Targets:** "target-kayaga koowaad waa la qaaday, target-kayaga labaad waa ERL" [P2 00:50–01:06] [AUDIO?]. Tani waxay muujinaysaa in **laba target** ay jiri karaan, tusaale ahaan liquidity-ga ugu horreeya iyo ERL. Laakiin ma aha xeer cad oo TP1/TP2/TP3 ah.
+- **ERL → IRL:** 4H ERL waa la qaaday, kadib expansion ayaa yimid. Discount-ka ayaa la soo galay, target-kuna wuxuu ahaa IRL [P2 01:10–02:14].
+- **9 AM purging + SMT:** 4H candle-ka 9 AM ayaa purging hour iyo SMT lahaa. Kadib 5-min Model #1 ayaa entry ahaa [P2 02:18–03:16].
+- **Two-stage SMT, 5m:** Model #1 waa candle-kii u dambeeyay ee ka horreeyay liquidity sweep-ka [P2 03:42–03:59].
+- **Continuation trades:** London iyo Asia continuation. HOD-ka waxaa sameeyay Asia (5 PM), kadib key level ayaa la gaaray, purging hour, SMT iyo PSP ayaa dhacay [P2 05:40–06:35].
+- **Kiss of Death (KOD) [AUDIO+]** [P2 07:53–08:09]: "trade-ka ugu dambeeya ka hor intaan DOL-ka la qaadin waa KOD. Waa trade **high probability** ah, waana **the best trade**." Tani waxay xoojinaysaa jawaabta **Q3**.
+- Sawirrada position box-yada (`img07/live_5m_trade_*.png`) waxay muujinayaan in SL-ku ku yaal sweep-ka dushiisa (D1 ✅). R:R-ku wuxuu u muuqdaa ~3–4R, laakiin waa tusaale, ee ma aha xeer.
+
+## 6. Su'aalaha furan
 - **Q4:** waa la xalliyay (§3). Entry = line-ka #1, oo ah dhinaca kale ee OB-ga.
-- **Q1 (invalidation), Q2 (OTE), Q9 (TP-yada), Q10 (min R:R):** lagama jawaabin qaybtan.
+- **Q9 (TP-yada):** qayb ahaan. Laba target ayaa la xusay: liquidity-ga koowaad iyo ERL. Ma jiro xeer TP3 ah.
+- **Q1 (invalidation), Q2 (OTE), Q10 (min R:R):** lagama jawaabin casharkan.
 - **Q11:** waxaa la xoojiyay in purging hours ay muhiim yihiin, laakiin "qasab maaha". Ma jiro qeexid cad.
 
-## 6. Xiriirka indicator-ka (soo jeedin)
+## 7. Xiriirka indicator-ka (soo jeedin)
 - **Model #1 detector (LTF):** kadib TS ee CRT high/low (oo ku yaal key level), helitaanka candle-kii u dambeeyay ee jihada ka soo horjeedda (OB).
   - **Entry trigger:** candle (5m) ku xirma dhinaca kale ee OB-ga (#1 line).
   - **SL:** TS wick (D1).
