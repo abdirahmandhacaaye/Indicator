@@ -49,7 +49,7 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | # | Xeer | Isha |
 |---|---|---|
 | D1 | **Turtle Soup (TS):** qiimuhu wuxuu jabiyaa high ama low hore (CRT high/low, PDH/PDL, session H/L, EQH/EQL), kadib candle-ku wuxuu dib ugu xirmaa gudaha. Waa fake breakout. | 📘 L04, L14 |
-| D2 | **Purging hours waa qasab.** TS-ka waa inuu ku dhaco: 5P→**8P** · 9P→**9–10P** · 1A→**2–3A** · 5A→**6/8A** · 9A→**9–10A**. | ✅ D6 |
+| D2 | **Purging hours waa qasab** (L07 frame: macallinku wuxuu gacan ku qoray 4H candle-ka purge kasta — xaqiijin). TS-ka waa inuu ku dhaco: 5P→**8P** · 9P→**9–10P** · 1A→**2–3A** · 5A→**6/8A** · 9A→**9–10A**. | ✅ D6 |
 | D3 | ❓ **Khilaaf waqti:** L17 (A+ times) waxay leeyihiin NY **8–9 AM**, L19-na **8–10 AM**, L05-na **9–10 AM** (iyo 6/8 AM Pre-NY). L18/L19 Asia-da waxay leeyihiin **8–10 PM**. Liiska saxda ah waa la ansixinayaa. | ❓ Q-B |
 | D4 | Dead time xeer gaar ah ma leh, maadaama D2 si toos ah uga reebayo. | ✅ D7 |
 
@@ -75,7 +75,7 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | F4 | **Entry trigger:** candle (LTF) ku xirma dhinaca kale ee line-ka **#1** (OB open). Tani waa non-repainting, maadaama la sugo candle close. | 📘 L07 (Q4) + 🟡 (close) |
 | F5 | Looma baahna in la sugo in HTF candle-ku (4H/7H) xirmo. Entry-ga waxaa laga galaa gudaha candle-ka. | 📘 L05 §8 |
 | F6 | **The Sequence (TSQ):** TS → #1 → BRK → (OTE) → KOD → DOL. Mid kasta wuxuu noqon karaa entry. 1H TSQ waa active marka TS + #1 + BB + 2 KL oo jihada ka soo horjeedda la jabiyo. | 📘 L04, L17 |
-| F7 | 🟡 **OTE:** casharrada lagama sharxin. Soo jeedin: laga saaro (F1 = Model #1 oo keliya). | 🟡 Q2 |
+| F7 | 🟡 **OTE:** waa fib retracement (L04 frame: 0.618 / 0.786). Zone sax ah lama sheegin. Soo jeedin: laga saaro signal-ka (F1 = Model #1 oo keliya). | 🟡 Q2 |
 | F8 | ❓ **Breaker / KOD entries:** ma bixiyaan signal kale (re-entry)? Mise Model #1 oo keliya? | ❓ Q-D |
 
 ## G. Risk
