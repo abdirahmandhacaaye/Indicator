@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Video | https://youtu.be/lJjYnhQXnxU (TET COMMUNITY, 1:06:27) |
-| Isha | Qayb video ah uu user-ku soo geliyay: **00:00–15:11 (P1)**. Qaybaha kale (15:11–1:06:27) waa la sugayaa. |
+| Isha | 6 file uu user-ku soo geliyay. P4 iyo P5 waa **isku file** (md5 isku mid), sidaas darteed ~13 daqiiqo (≈43:00–56:00) waa maqan yihiin. P2 dambe–P6 waa tusaalooyin live (XAUUSD/XAUGBP D/7H/1H/5m). |
 | Habka | Slide-yada (way cad yihiin). Qoraalka maqalka waa la sugayaa. |
 | Sawirrada | `research/img19/` |
 
@@ -52,6 +52,26 @@ Daily bias waxaa lagu go'aamiyaa:
 - **1H TSQ** (The Sequence: TS → #1 → BB, casharka 17) **ama** **1H KEY LEVEL**.
 - **MAJOR LQ = Previous Daily / Previous Weekly** (PDH/PDL, PWH/PWL).
 - **BEST PURGE TIME: 8, 9, 10 – 2, 3 – 8, 9, 10** (NY time). Tani waa: Asia 8–10 PM, London 2–3 AM, NY 8–10 AM.
+
+## 4b. Confirm entry  [SLIDE]
+- **KEY LEVEL / MAJOR LQ** → **PSP** — **SMT / 2SSMT** → **BEST PURGE TIME (8,9,10 – 2,3 – 8,9,10)**.
+
+## 4c. TET CHECKLIST (tusaalooyinka live)  [SLIDE/CHART]
+Chart-yada live-ka waxaa ku dul yaal indicator la yiraahdo **"TET ADVANCED CHECKLIST"**. Waa checklist **gacan lagu calaamadeeyo** (checkboxes), ee ma aha automatic:
+
+| # | Shuruud |
+|---|---|
+| 1 | **Daily Bias** |
+| 2 | **7H Confirmation** |
+| 3 | **1H Key Level** |
+| 4 | **Purge Time** |
+| 5 | **SMT / PSP / 2SSMT** |
+| 6 | **Model 1** |
+| → | **RATING:** "No Trade" (shuruud ka dhiman) ama **"A+"** (dhammaan 6-da way buuxsameen, box cagaaran) |
+
+- Settings-ka: Light Mode, Checklist Size, Position (Top Right), Show HTF Candles, Show Daily Count (3), Show 7H Count (6), Offset, Candle Spacing.
+- Tusaalaha u dambeeya: **5-min** Model #1 entry ayaa la galay marka checklist-ku noqday A+ (position box: SL kor, TP hoos). Sidaas darteed **entry-ga dhabta ah wali waa 5m Model #1**, xitaa model-kan D-7H-1H.
+- **Macnaha indicator-keena:** 6-dan shuruud waxay noqon karaan **checklist automatic ah** (mid kasta si toos ah loo xisaabiyo), rating-kuna A+ marka dhammaan la buuxiyo, haddii kale "No Trade". (Waa in aanu koobiyeyn indicator-kooda; kaliya fikradda checklist-ka ayaa la isticmaalayaa.)
 
 ## 5. Isbarbardhig muhiim ah (waa in la go'aamiyo)
 | | Casharka 04/05 | Casharka 19 |
