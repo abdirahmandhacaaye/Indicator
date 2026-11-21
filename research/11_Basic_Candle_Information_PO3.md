@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Video | https://youtu.be/vWCID2MeaHo (TET COMMUNITY, Basic series, 35:56) |
-| Isha | Qayb video ah oo uu user-ku soo geliyay: **00:00–17:08 (P1)**. Qaybta 2aad (17:08–35:56), oo ay u badan tahay inay ku jirto **Price Delivery** iyo **PO3**, waa la sugayaa. |
+| Isha | Laba qaybood: P1 (00:00–17:08) iyo P2 (~17:08–35:56). Casharka oo dhan waa la helay. Qaybta dambe ee P2 waa demo TradingView ah (EURUSD D/W/M). |
 | Habka | Slide-yada (way cad yihiin, waana Af-Soomaali). Qoraalka maqalka waa la sugayaa. |
 | Sawirrada | `research/img11/` |
 
@@ -47,8 +47,14 @@ Wax kasta oo hoos ku qoran waa **[SLIDE]**.
 >
 > Wareegga: Expansion → Retracement → Expansion → Consolidation → Reversal → Expansion cusub."
 
-## 6. 2.5 Price Delivery
-- Cinwaanka ayaa la arkay. Sharaxaaddu waxay ku jirtaa qaybta 2aad (waa la sugayaa).
+## 6. 2.5 Price Delivery  [SLIDE]
+- Diagram: **Price Delivery** ayaa dhexda ku jira, waxaana ku wareegsan Expansion → Retracement → Reversal → Consolidation.
+- Chart-yada: Expansion → Retracement → Expansion → Retracement → Expansion (bearish), iyo Expansion → Reversal → Expansion cusub. Consolidation/Ranging waa box range ah.
+
+## 6b. 2.6 Power of 3 (PO3)  [SLIDE]
+- **PO3 = Accumulation → Manipulation → Distribution (AMD).**
+- Chart-ka: Accumulation (range), Manipulation (kor loo qaaday high-ga range-ka) iyo Distribution (dhaqaaq xoog leh oo hoos ah).
+- Tani waxay la mid tahay **AMD-ga CRT** (casharka 04): accumulation = candle-ka range, manipulation = Turtle Soup, distribution = dhaqaaqa target-ka.
 
 ## 7. Xiriirka indicator-ka
 - Casharkan waa aasaas. Xeer cusub oo signal ah kuma jiro. Wuxuu xoojinayaa: OLHC/OHLC (CRT), fractal-ka timeframe-yada (HTF CRT → LTF), iyo orderflow (bullish/bearish/range).
