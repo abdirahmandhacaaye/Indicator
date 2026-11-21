@@ -5,7 +5,7 @@
 | Video | https://youtu.be/sjXV_ODG1No (TET COMMUNITY, Basic series, 37:17) |
 | Isha | 3 qaybood oo video ah uu user-ku soo geliyay: ~00:00–15:35, ~15:35–31:07, ~31:07–37:17. Casharka oo dhan waa la helay. |
 | Habka | **Slide-yada** (way cad yihiin, waana Af-Soomaali/Ingiriis). Qaybaha 2 iyo 3 waa demo TradingView ah (EURUSD 15m/1H/1D, timezone setting). |
-| Qoraalka | `transcripts/12_sjXV_ODG1No.whisper_so.txt` (waa la sugayaa) |
+| Qoraalka | `transcripts/12_sjXV_ODG1No.whisper_so.txt`  |
 | Sawirrada | `research/img12/` |
 
 Wax kasta oo hoos ku qoran waa **[SLIDE]**, haddii aan si kale loo sheegin.
@@ -60,6 +60,11 @@ Wax kasta oo hoos ku qoran waa **[SLIDE]**, haddii aan si kale loo sheegin.
 
 ## 6. 3.5 How time effects price delivery
 - Slide-ka cinwaankiisa ayaa la arkay. Qaybaha 2–3 waa demo TradingView ah: sida timezone-ka chart-ka loo dejiyo (UTC-4 / Nairobi UTC+3), iyo sida candle-yada 1H/1D ay ugu beddelmaan timezone-ka [SLIDE/demo]. Faahfaahin xeer ah lagama helin.
+
+## 6b. Waxa hadalka laga helay  [AUDIO?]
+- Suuqu wuxuu furan yahay **5 maalmood** (Isniin–Jimce) [P1 00:11–00:53].
+- Ugu fiican Asia: **8 PM** NY [P2 05:01].
+- **Sessions iyo AMD** [P3 06:32–07:33]: session kasta wuxuu yeelan karaa accumulation, manipulation ama distribution. "Session-ka sameeya expansion, kan xigaa inta badan wuxuu sameeyaa retracement / consolidation / accumulation." Tani waxay la jaanqaadaysaa Daily Profiles (casharka 05).
 
 ## 7. Xiriirka indicator-ka (soo jeedin)
 - **Killzone boxes / background:** Asia 20:00–24:00, London 02:00–05:00, NY 08:00–12:00 (America/New_York).
