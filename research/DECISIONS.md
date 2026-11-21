@@ -25,7 +25,7 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q3 | KOD: magaca buuxa iyo qeexidda saxda ah? | **La helay (casharka 02 P2 05:31):** KOD = Kiss of Death. Waa retracement yar ama liquidity sweep u dambeeya ka hor target-ka. |
 | Q4 | Model #1: ma u baahan yahay candle ku xirma OB-ga hoostiisa ka hor entry? | **La xalliyay (casharka 07 slide + casharka 02 P2):** entry-ga waa line-ka #1, oo ah dhinaca kale ee OB-ga (low-ga last up-candle ee sell setup-ka). Waa marka la dhex maro. SL = TS wick (D1). Close mise touch lama sheegin. Soo jeedin: candle close (non-repaint). |
 | Q5 | Noocyada CRT: 5 mise 6? | Furan |
-| Q6 | OB: body mise high/low oo dhan? | Furan |
+| Q6 | OB: body mise high/low oo dhan? | **La helay (casharka 13 slide + casharka 07):** OB level = open-ka (body edge) candle-ka OB-ga; shuruud: displacement ka dambeeya. |
 | Q7 | IFVG disrespect: candle close mise wick? | Furan |
 | Q8 | Dealing range: swing-kee iyo timeframe-kee? | Furan |
 | Q9 | Take profit: TP1/TP2/TP3 ma jiraan, mise CRT low/DOL keliya? | **→ D2: hal TP oo go'an (3R).** |
@@ -37,6 +37,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q12-old | | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: Casharka 13 waa la dhammeeyay (OB, FVG, IFVG, Breaker, Gap). Q6 waa la xalliyay.
 
 - 2026-11-21: Waxaa lagu daray D6 (purging hours = qasab) iyo D7 (dead time: xeer gaar ah ma leh). Q11 waa la xalliyay.
 
