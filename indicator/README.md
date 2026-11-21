@@ -1,38 +1,35 @@
-# TET CRT Model — XAUUSD (Pine Script v6)
+# TET Profile Model — XAUUSD (Pine Script v6) — v2.0
 
-Fayl: `TET_CRT_Model.pine`. Xeerarka: `research/RULES.md`, go'aannada: `research/DECISIONS.md` (D1–D9).
+Fayl: `TET_CRT_Model.pine` (v2, profile engine). Nooca hore: `TET_CRT_Model_v1.pine`.
+Xeerarka: `research/RULES.md` (qaybta J), go'aannada: `research/DECISIONS.md` (D1–D15).
 
 ## Sida loo geliyo TradingView
-1. TradingView → **Pine Editor** → *New* → koobi garee dhammaan `TET_CRT_Model.pine` → **Save** → **Add to chart**.
-2. Chart: **XAUUSD (OANDA), 5 minute**. Timezone: (UTC-5) New York.
-3. Settings → **Model**: `4H CRT → 5m` ama `D bias + 7H → 5m`.
-4. Alerts: *Create alert* → condition **TET CRT** → *Any alert() function call* (ama "TET CRT Sell/Buy").
+1. **Pine Editor** → *New* → koobi garee `TET_CRT_Model.pine` → **Save** → **Add to chart**.
+2. Chart: **XAUUSD (OANDA), 5 minute**, timezone (UTC-5) New York.
+3. Alerts: *Create alert* → **TET PM** → *Any alert() function call*.
 
-## Waxa uu sameeyo (sida ay u kala horreeyaan)
-| # | Shuruud | Xeer |
+## Socodka signal-ka
+| # | Talaabo | Xeer |
 |---|---|---|
-| 1 | **CRT range** = HTF candle-kii u dambeeyay ee xirmay (4H: 5P/9P/1A/5A/9A/1P · 7H: 17/00/07/14, NY) | L04, L18, L19 |
-| 2 | **Turtle Soup**: CRT high (sell) / low (buy) waa la qaadaa, kadib 5m candle wuxuu dib ugu xirmaa gudaha range-ka | L04, L14 |
-| 3 | **Purge hour (qasab)**: candle-ka sameeyay wick-ka TS waa inuu ku jiraa: **Asia 8/9/10 PM · London 2/3/4 AM · NY 8/9/10 AM** (NY time) | D10 |
-| 3b | **Entry session**: signal-ku wuxuu ka dhacaa oo keliya Asia (8 PM–12 AM), London (2–5 AM) ama NY (8 AM–12 PM) | D10 |
-| 4 | **Key level (1H)**: FVG / OB / Breaker ku yaal premium (sell) ama discount (buy) ee CRT range-ka, oo uu TS-ku gaaray | D5, L13 |
-| 5 | **SMT (qasab, entry kasta — D12)**: ugu yaraan 1 pair (XAUEUR / XAUGBP / XAGUSD) ayaa ku fashilmay inuu qaado CRT high/low-giisa | D3, D4, D9 |
-| 6 | **Model #1 entry**: 5m candle ku xirma dhinaca kale ee open-ka candle-kii u dambeeyay ee jihada ka soo horjeeday (line #1) | L07, Q4 |
-| 7 | **SL** = wick-ka TS + buffer · **TP** = 1:3 go'an | D1, D2 |
-| 8 | **Daily bias** (7H mode qasab, 4H mode ikhtiyaari): shalay wick above/below ama close beyond ee maalintii ka horreysay; waa la burinayaa marka 1H close dhaafo 0.5 (EQ) ee shalay | L19, COMPLETE_MODEL p17–19 |
-| 9 | **Invalidation ka hor entry**: close dib ugu gudba CRT high/low (continuation) → la sugo · target (dhinaca kale ee range-ka) la gaaray → setup waa dhammaaday | L04, D9 |
-| 10 | Max **3 signal / maalin**, hal trade mar keliya | D9 |
-| 11 | **1H TSQ re-entries (BRK / KOD)**: kadib Model #1, retracement sweep (purge hour) + **1H SMT** + Model #1 break cusub → entry; BRK haddii 1H breaker la gaaro, haddii kale KOD. TSQ wuxuu dhammaadaa DOL ama close dhaafa TS | D11 |
+| 1 | **Orderflow** W / D / 7H / 4H: candle-kii u dambeeyay ee xirmay — close above/below candle-kii hore = continuation, wick above/below = reversal; waa la burinayaa marka 1H candle ku xirmo dhinaca kale ee 0.5 (EQ) ee candle-kaas. **1H**: swing structure | D15, COMPLETE_MODEL |
+| 2 | **Profile** (mid kasta oo la buuxiyo): P1 D+7H+1H · P2 7H+4H · P3 D+4H (ama 7H) · P4 D+1H+7H · P5 W+4H | D15 |
+| 3 | **TS**: XAUUSD wuxuu qaadaa 1H high/low-gii hore, kadib 5m candle wuxuu dib ugu xirmaa gudaha | D15 |
+| 4 | **1H key level**: sweep-ku wuxuu gaaraa FVG / OB / Breaker jihada saxda ah | D5 |
+| 5 | **Purge hour**: Asia 8/9/10 PM · London 2/3/4 AM · NY 8/9/10 AM; **entry session**: Asia 8 PM–12 AM · London 2–5 AM · NY 8 AM–12 PM | D10 |
+| 6 | **SMT (qasab)**: 1H SMT ama 5m SMT (ugu yaraan 1 pair: XAUEUR / XAUGBP / XAGUSD ma qaadin) | D12, D13, D14 |
+| 7 | **Model #1**: 5m candle ku xirma dhinaca kale ee open-ka candle-kii u dambeeyay ee jihada ka soo horjeeday | L07 |
+| 8 | **SL** = TS wick (+buffer) · **TP** = 1:3 | D1, D2 |
+| 9 | **+PSP / +2SSMT**: lagu qoraa label-ka haddii la arko (qasab maaha) | D14 |
+| 10 | **1H TSQ re-entries**: BRK / KOD (retracement + purge + SMT + Model #1) ilaa DOL ama close dhaafa TS | D11, D12 |
+| 11 | Max 3 signal / maalin, hal trade mar keliya | D9 |
+
+Label tusaale: `P1 SELL +PSP`, `P2 KOD BUY`.
 
 ## Non-repainting
-- Signals waxay soo baxaan oo keliya marka 5m candle-ku **xirmo** (`barstate.isconfirmed`).
-- CRT range iyo 1H key levels waxaa laga dhisaa candles **xirmay** (waqtiga NY), lookahead ma jiro.
-- Pairs-ka SMT: `request.security(..., timeframe.period, lookahead_off)`.
+Signals waxay soo baxaan oo keliya marka 5m candle-ku xirmo. HTF candles waxaa laga dhisaa 5m candles xirmay (NY time). Pairs: `request.security` (chart TF, lookahead off).
 
-## Xaddidaadyo (v1) — waa la hubin doonaa
-- **Lama compile-gareyn halkan** (Pine compiler ma jiro environment-kan). Fadlan ku tijaabi TradingView, haddii error jiraana ii soo dir screenshot-ka.
-- **Breaker** = OB uu 1H close dhaafay. Shuruudda "sweep ka hor" (L13) weli laguma darin.
-- **1H orderflow** filter waa toggle (default off) — qeexid cad oo la detect-gareyn karo ma jirto.
-- **PSP / 2-stage SMT** laguma darin v1 (SMT keliya ayaa qasab ah, D9).
-- **OTE** entry laguma darin. BRK/KOD waa la daray (D11).
-- Win/loss table-ku waa backtest fudud (haddii SL iyo TP isku candle ku dhacaan, waxaa loo tiriyaa loss).
+## Xaddidaadyo
+- **Lama compile-gareyn halkan** — ku tijaabi TradingView, error haddii uu jiro ii soo dir screenshot.
+- P1 iyo P4 waa isku shuruud (D + 7H + 1H) sida qoraalka user-ka.
+- Breaker = OB uu 1H close dhaafay (sweep-ka ka horreeya laguma xiran).
+- 5m SMT = swing pivots (length 3); 1H SMT = 1H candle-kii hore.
