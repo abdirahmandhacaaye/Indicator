@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Video | https://youtu.be/ELUb-AIxC88 (TET COMMUNITY, 2026 Mentorship, 56:47). Macallinka: "Akim" (TET Community). |
-| Isha | 4 qaybood oo video ah uu user-ku soo geliyay: 00:00–19:00, 19:00–38:00, ~38:00–45:10, ~45:10–52:10. **~4.5 daqiiqo ee u dambeeya lama helin**, waana tusaalooyin chart. |
+| Isha | 5 qaybood oo video ah uu user-ku soo geliyay: 00:00–19:00, 19:00–38:00, ~38:00–45:10, ~45:10–52:10, ~54:02–56:47. **~2 daqiiqo (~52:10–54:02) lama helin**, waana tusaalooyin chart. |
 | Habka | Slide-yada (sawir 10-kii ilbiriqsi kasta) iyo qoraalka maqalka (Whisper, Af-Soomaali). |
 | Tayada | Slide-yadu waa cad yihiin. Qoraalka maqalku waa **dhexdhexaad**, wuuna ka fiican yahay kan casharka 03. |
 | Qoraalka buuxa | `transcripts/04_ELUb-AIxC88.whisper_so.txt`. Waqtiyada hoos ku qoran waa `Pn mm:ss`: qaybta iyo waqtiga ku dhex jira qaybtaas. |
@@ -140,6 +140,15 @@ Slide-ka waxaa ku qoran (bearish): **CRTH + TS → #1 → BRK → OTE → KOD �
 - Order flow bearish ah. Liquidity ayaa la qaaday, kadibna FVG ayaa la ixtiraamay. OB-ga wuxuu noqon karaa koox candles ah [P3a 05:58–06:36].
 - 50%-ka CRT range-ka (premium/discount-ka candle-ka) ayaa la sawiray [P3b 01:16–01:44].
 - Tusaale **2 Candle CRT (type 2)** ah, oo candle-ka labaad samaynayo manipulation iyo distribution, kadib LTF Model #1 ayaa la raadiyay [P3b 04:10–05:24]. Tusaale **2 stage manipulation** ah ayaa la bilaabay [P3b 05:53].
+
+### 2.14 Tusaalaha u dambeeya (qaybta p3c)  [AUDIO?]
+- Macallinku wuxuu sheegay "time iyo price" [p3c 00:00–00:40]: setup-ku wuxuu u baahan yahay key level (price) iyo waqti (time). **[MA CADDA]** Faahfaahinta lama fahmi karo.
+- **Tusaale 3 Candle CRT (bullish):**
+  - Accumulation-ku wuxuu ku samaysmay OB (key level).
+  - Candle-ka xiga wuxuu qaaday CRT low-ga (manipulation), kadibna distribution ayaa timid [p3c 00:58–01:27].
+  - LTF-ka liquidity ayaa la qaaday. **Model #1** = "candle-kii u dambeeyay ee bearish ahaa ka hor intaan suuqu bullish noqon", kadibna suuqu wuxuu toos u aaday target-ka [p3c 01:34–02:13].
+- Chart-ka waxaa ku jira tusaalooyin two-stage manipulation, multiple CRT iyo inside bar CRT [p3c 02:26–02:42].
+- **Stop loss iyo invalidation laguma sheegin qaybtan.**
 
 ## 3. Setup / Entry / SL / TP / Invalidation (sida casharku sheegay)
 
