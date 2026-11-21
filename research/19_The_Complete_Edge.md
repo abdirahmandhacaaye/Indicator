@@ -71,7 +71,7 @@ Chart-yada live-ka waxaa ku dul yaal indicator la yiraahdo **"TET ADVANCED CHECK
 
 - Settings-ka: Light Mode, Checklist Size, Position (Top Right), Show HTF Candles, Show Daily Count (3), Show 7H Count (6), Offset, Candle Spacing.
 - Tusaalaha u dambeeya: **5-min** Model #1 entry ayaa la galay marka checklist-ku noqday A+ (position box: SL kor, TP hoos). Sidaas darteed **entry-ga dhabta ah wali waa 5m Model #1**, xitaa model-kan D-7H-1H.
-- **Macnaha indicator-keena:** 6-dan shuruud waxay noqon karaan **checklist automatic ah** (mid kasta si toos ah loo xisaabiyo), rating-kuna A+ marka dhammaan la buuxiyo, haddii kale "No Trade". (Waa in aanu koobiyeyn indicator-kooda; kaliya fikradda checklist-ka ayaa la isticmaalayaa.)
+- **D8 (user):** nooca checklist-kan lama rabo, lamana koobiyeynayo. (Fikraddii hore:) 6-dan shuruud waxay noqon karaan **checklist automatic ah** (mid kasta si toos ah loo xisaabiyo), rating-kuna A+ marka dhammaan la buuxiyo, haddii kale "No Trade". (Waa in aanu koobiyeyn indicator-kooda; kaliya fikradda checklist-ka ayaa la isticmaalayaa.)
 
 ## 5. Isbarbardhig muhiim ah (waa in la go'aamiyo)
 | | Casharka 04/05 | Casharka 19 |

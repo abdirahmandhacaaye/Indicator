@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D8 | 2026-11-21 | TET checklist | **Ha la koobiyeyn "TET ADVANCED CHECKLIST", nooca checklist-ka gacanta lagu calaamadeeyo lama rabo.** Indicator-ku wuxuu si automatic ah u ogaanayaa xeerarka, wuxuuna bixinayaa signal. Panel checklist ah oo gacan ah ma jiro. | User |
 | D7 | 2026-11-21 | Dead time | **Dead time-ka laguma darayo xeer gaar ah (user: "maya").** Fiiro: maadaama purging hours ay qasab yihiin (D6), dhammaan signal-yadu waxay dhacaan 8 PM, 9–10 PM, 2–3 AM, 6/8 AM ama 9–10 AM. Midkoodna kuma jiro dead time (17–20, 12–17 NY), sidaas darteed signal kama dhici karo dead time. | User |
 | D6 | 2026-11-21 | Purging hours | **Qasab (mandatory filter).** Turtle Soup-ka / manipulation-ka waa inuu ku dhaco purging hour-ka 4H candle-ka (NY time): 5PM→8PM, 9PM→9–10PM, 1AM→2–3AM, 5AM→6/8AM, 9AM→9–10AM. Haddii kale, signal lama bixiyo. | User |
 | D5 | 2026-11-21 | Key levels (IRL) | **Indicator-ku wuxuu diiradda saarayaa FVG, Order Block (OB) iyo Breaker Block oo keliya.** Mitigation, VI, BPR iyo IFVG laguma darayo (IFVG waxaa lagu dari karaa haddii user-ku si gaar ah u codsado). | User (jawaab toos ah) |
@@ -37,6 +38,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q12-old | | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: Waxaa lagu daray D8 (TET checklist ha la koobiyeyn).
 
 - 2026-11-21: Casharka 13 waa la dhammeeyay (OB, FVG, IFVG, Breaker, Gap). Q6 waa la xalliyay.
 
