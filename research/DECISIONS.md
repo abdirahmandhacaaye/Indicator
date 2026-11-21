@@ -16,8 +16,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 |---|---|---|
 | Q1 | Invalidation-ka setup-ka ka hor entry: close above TS, touch, mise target la gaaray? | Furan |
 | Q2 | OTE: macnaha iyo heerarka (fib %)? | Furan |
-| Q3 | KOD: magaca buuxa iyo qeexidda saxda ah? | Furan |
-| Q4 | Model #1: ma u baahan yahay candle ku xirma OB-ga hoostiisa ka hor entry? | Furan |
+| Q3 | KOD: magaca buuxa iyo qeexidda saxda ah? | **La helay (casharka 02 P2 05:31):** KOD = Kiss of Death. Waa retracement yar ama liquidity sweep u dambeeya ka hor target-ka. |
+| Q4 | Model #1: ma u baahan yahay candle ku xirma OB-ga hoostiisa ka hor entry? | **Qayb ahaan (casharka 02 P2 01:53–02:05, [AUDIO?]):** confirmation-ku waa candle ku xirma dhinaca kale ee Model #1 ("trade and through"). Kadib Model #1 wuxuu noqdaa active, entry-guna waa marka dib loogu soo laabto. Waxaa la xaqiijin doonaa casharka 07. |
 | Q5 | Noocyada CRT: 5 mise 6? | Furan |
 | Q6 | OB: body mise high/low oo dhan? | Furan |
 | Q7 | IFVG disrespect: candle close mise wick? | Furan |
@@ -26,5 +26,7 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q10 | Minimum Risk:Reward | Furan |
 
 ## Changelog
+
+- 2026-11-21: Q3 waa la xalliyay, Q4-na qayb ahaan, labadaba casharka 02 ayaa laga helay.
 
 - 2026-11-21: Waxaa la abuuray faylkan. Waxaa lagu daray D1 (SL = wick-ka TS-ka korkiisa).

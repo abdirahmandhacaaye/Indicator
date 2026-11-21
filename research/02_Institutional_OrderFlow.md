@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Video | https://youtu.be/1e7n4AMm0dA (TET COMMUNITY, 2026 Mentorship, 23:06). Macallinka: Zakariya Xaylu. |
-| Isha | Qayb video ah oo uu user-ku soo geliyay: **00:00–11:18**. Qaybta 2aad (11:18–23:06) waa la sugayaa, waana tusaalooyin chart. |
+| Isha | Laba qaybood oo video ah uu user-ku soo geliyay: 00:00–11:18 (P1) iyo 11:18–23:06 (P2). Casharka oo dhan waa la helay. |
 | Habka | Slide-yada iyo qoraalka maqalka (Whisper, Af-Soomaali). Tayadu waa dhexdhexaad. |
 | Qoraalka | `transcripts/02_1e7n4AMm0dA.whisper_so.txt` |
 | Sawirrada | `research/img02/` |
@@ -48,15 +48,34 @@
   - Marka la gaaro key level-ka, candle keliya (tusaale weekly) ayaa qaada sell-side-ka, taas oo ka dhigan "one candle against four candles" [09:14–10:21].
 - **Macnaha indicator-ka:** HTF key level-ka la buuxinayo wuxuu sharxayaa sababta LTF-ka uu u muujinayo order flow jihada ka soo horjeedda. Waa "context", ee ma aha signal.
 
-## 5. Xiriirka casharrada kale
+## 5. Tusaalooyinka chart-ka (P2)  [AUDIO+ / AUDIO?]
+
+### 5.1 Bullish (XAUUSD)
+- Suuqu wuxuu u dhaqaaqay inuu buuxiyo **major key level**. Inta uu socday, LTF-ku wuxuu muujiyay complex pullback bearish ah [P2 00:00–01:06].
+- **SMT:** marka major key level-ka (delivery gap) la gaaro, **SMT** ayaa xaqiijin kara. Tusaale ahaan Gold iyo hanti kale oo la xiriirta (lagu maqlay "gold GBP" [AUDIO?]). Haddii SMT jirto, looma baahna in wax kale la sugo [P2 01:13–01:36]. Faahfaahinta SMT waxay ku jirtaa casharka 06.
+- **Confirmation-ka (sida la maqlay) [AUDIO?]** [P2 01:47–02:05]:
+  1. Pullback-ku waa inuu buuxiyo major key level-ka.
+  2. **Major liquidity** waa in la qaado. Tani waa **Turtle Soup**.
+  3. **Confirmation-ka koowaad:** **Model #1** ha la sameeyo, kadibna candle ha ku **xirmo** dhinaca kale ee Model #1, oo ah "trade and through".
+- Kadib Model #1 wuxuu noqdaa **active**. Suuqu dib ayuu ugu soo laabtaa, wuu ixtiraamaa (sell-side rejection), buy-side-kana wuu jabiyaa, ilaa **DOL**-ka [P2 02:43–03:12].
+- Key levels-ka xiga (FVG, IFVG) waa la ixtiraamay, waana footprint-ka bullish order flow [P2 03:19–04:59].
+- **KOD = "Kiss of Death"** [P2 05:31] [AUDIO+]: haddii major liquidity aan la qaadin, suuqu wuxuu samayn karaa retracement yar (kiss of death) ka hor intaanu sii socon. Tani waxay jawaab u tahay **Q3**.
+
+### 5.2 Bearish
+- Daily order flow-gu waa bearish. Suuqu kor ayuu u soo kacay si uu u buuxiyo **Daily FVG**, LTF-kuna wuxuu muujiyay complex pullback bullish ah [P2 08:09–08:55].
+- Marka key level-ka la taabtay, **1H Model #1** ayaa samaysmay, kadibna sell-side-ka waa la jabiyay ("trade and through") [P2 08:58–09:33].
+- Key level kasta oo xiga (Model #1, FVG) waa la ixtiraamay: buy-side rejections ayaa ka dhacay, sell-side-kana waa la jabiyay. Target-ku wuxuu ahaa sell-sides-ka ilaa **DOL** [P2 09:46–11:29].
+
+## 6. Xiriirka casharrada kale
 - Qeexidda **Dealing Range** ee casharka 04 ("dhaqaaqii ugu dambeeyay ee OF-ga raacsan") waxay ku xiran tahay order flow-gan.
 - Su'aasha **Q8** (sida dealing range-ka loo sawiro) jawaab buuxda weli lama helin. Wax yar oo la xiriira ayaa casharkan ku jira: swing points protected, highs la jabiyay.
 
-## 6. Xiriirka indicator-ka (soo jeedin)
+## 7. Xiriirka indicator-ka (soo jeedin)
 Order flow-ga waxaa si cad loo detect-gareyn karaa:
 - **Bullish OF:** swing highs ayaa la jabiyaa (close ama wick ka gudba high-ga hore), swing low-ga u dambeeyayna wuu jiraa (protected).
 - **Bearish OF:** waa tan ka soo horjeedda.
 - **DOL:** PDH/PDL, PWH/PWL, PMH/PML.
 - **HTF key levels:** D/W/M FVG iyo OB.
+- **Model #1 confirmation:** candle ku xirma dhinaca kale ee OB-ga (soo jeedin, waxay ku xiran tahay Q4).
 
 Code lama qorin.
