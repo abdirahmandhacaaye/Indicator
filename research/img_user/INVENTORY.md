@@ -57,3 +57,11 @@
 | 14 | IMG_2884 | EURUSD 1D 14 Aug: daily CRT, low sweep (dotted higher lows) |
 | 15 | IMG_2930 | AKIIM 5m 18 Aug 11:20: sell box SL 4406.36 / entry 4393.41 / TP 4355.99 (≈2.9R) |
 | 16 | IMG_2932 | AKIIM 1h 18 Aug: CRT range, lower high (dotted), "10 am" sweep |
+
+## Batch 04 (15 sawir; #1–#11 waa nuqul batch 03 #6–#16, lama keydin mar labaad) — 2026-11-21
+| # | Fayl | Waxa ku jira (akhris degdeg ah) |
+|---|---|---|
+| 12 | IMG_2917 | AKIIM 1h 18 Aug 08:21: CRT range, KL box (grey), range consolidation, projection: sweep up → hoos |
+| 13 | IMG_0865 | Discord 18/08 "**1H context = Key level + Candle range. 5 min orderblock + ssmt. +3%**" |
+| 14 | IMG_2943 | AKIIM **EURUSD** 1h 19 Aug: range low sweep, "**Smt dxy**" (higher low vs DXY) |
+| 15 | IMG_2944 | **DXY** 1D 19 Aug: daily CRT (high la qaaday, target low) |
