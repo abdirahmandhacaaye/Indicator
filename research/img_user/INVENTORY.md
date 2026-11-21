@@ -65,3 +65,23 @@
 | 13 | IMG_0865 | Discord 18/08 "**1H context = Key level + Candle range. 5 min orderblock + ssmt. +3%**" |
 | 14 | IMG_2943 | AKIIM **EURUSD** 1h 19 Aug: range low sweep, "**Smt dxy**" (higher low vs DXY) |
 | 15 | IMG_2944 | **DXY** 1D 19 Aug: daily CRT (high la qaaday, target low) |
+
+## Batch 05 (16 sawir) — 2026-11-21
+| # | Fayl | Waxa ku jira (akhris degdeg ah) |
+|---|---|---|
+| 01 | IMG_0860 | Discord AKIIM (EURUSD): "**Daily to 1H timeframe alignment. Daily Context = Key level + candle range. 1h Orderblock + smt**" (EURUSD + DXY); 24/08 "Good bye guys, see you paid mentees" |
+| 02 | IMG_3220 | AKIIM 5m 15 Sep 04:03: lower highs (dotted), sell box SL 4295.91 / entry 4290.54 / TP 4275.01 (≈2.9R) |
+| 03 | IMG_3221 | 1h 15 Sep: KL box (kor), lower high, "**3am**" sweep, target low (magnet icon) |
+| 04 | IMG_3313 | 5m 19 Oct 04:57: "**3 AM**" sweep, sell box SL 4190.60 / entry 4186.04 / TP 4170.24 (≈3.5R) |
+| 05 | IMG_3314 | 1h 19 Oct: lower high (dotted), CRT range high, "3 AM" sweep |
+| 06 | IMG_3338 | 1h 23 Oct 10:19: KL box, CRT high, "**9 am**" sweep, target low |
+| 07 | IMG_3393 | 5m 4 Nov 10:58 UTC-5: higher low (dotted), 🐢 TS, buy box SL 4029.08 / entry 4034.05 / TP 4049.49 (≈3.1R) |
+| 08 | IMG_3396 | 1h 4 Nov: "**10 am**" sweep (higher low), 🐢, range |
+| 09 | telegram 5945… | MT5 M5 15 Oct: buy ~4138 → ~4158.7 |
+| 10 | image (ZX) | **Zakariya Xayluu "TET MODEL"** 1h 15 Oct: #1, BRK ×2, OTE (box grey, 0.5 dotted) |
+| 11 | image (ZX) | ZX 1D 15 Oct: **fib 0 / 0.25 / 0.5 / 0.62 / 0.75 / 1** ee daily candle-ka |
+| 12 | IMG_0845 | Discord zakariye-xayluu 15/10: "**D bias invalidated 0.5 close above lagu sameyay 1h tsq and 7h confirmation then 2am purge 2ssmt and 5m #1**"; 19/10 "+3% Done london session" |
+| 13 | IMG_0844 | Discord 11/11: "**D bias + 7h profile, 2am purge**" |
+| 14 | telegram 6030… | MT5 M5 12 Nov: sell ~3951 → ~3927 |
+| 15 | kax5pV0J (ZX) | ZX 5m 12 Nov 08:16 UTC-5: sell box SL 3955.91 / entry 3952.19 / TP 3924.75 (≈7.4R) + 1H candles |
+| 16 | image (ZX) | ZX 1h 12 Nov: swing kasta saacad: **8pm, 2am, 8am, 2am, 6am, 8am, 8pm, 2am, 6am, 8am** → DOL |
