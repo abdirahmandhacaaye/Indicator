@@ -22,6 +22,7 @@ Fayl: `TET_CRT_Model.pine`. Xeerarka: `research/RULES.md`, go'aannada: `research
 | 8 | **Daily bias** (7H mode qasab, 4H mode ikhtiyaari): shalay wick above/below ama close beyond ee maalintii ka horreysay; waa la burinayaa marka 1H close dhaafo 0.5 (EQ) ee shalay | L19, COMPLETE_MODEL p17–19 |
 | 9 | **Invalidation ka hor entry**: close dib ugu gudba CRT high/low (continuation) → la sugo · target (dhinaca kale ee range-ka) la gaaray → setup waa dhammaaday | L04, D9 |
 | 10 | Max **3 signal / maalin**, hal trade mar keliya | D9 |
+| 11 | **1H TSQ re-entries (BRK / KOD)**: kadib Model #1, retracement sweep (purge hour) + Model #1 break cusub → entry; BRK haddii 1H breaker la gaaro, haddii kale KOD. TSQ wuxuu dhammaadaa DOL ama close dhaafa TS | D11 |
 
 ## Non-repainting
 - Signals waxay soo baxaan oo keliya marka 5m candle-ku **xirmo** (`barstate.isconfirmed`).
@@ -33,5 +34,5 @@ Fayl: `TET_CRT_Model.pine`. Xeerarka: `research/RULES.md`, go'aannada: `research
 - **Breaker** = OB uu 1H close dhaafay. Shuruudda "sweep ka hor" (L13) weli laguma darin.
 - **1H orderflow** filter waa toggle (default off) — qeexid cad oo la detect-gareyn karo ma jirto.
 - **PSP / 2-stage SMT** laguma darin v1 (SMT keliya ayaa qasab ah, D9).
-- **OTE / KOD / BRK** entries laguma darin (entry = Model #1 oo keliya).
+- **OTE** entry laguma darin. BRK/KOD waa la daray (D11).
 - Win/loss table-ku waa backtest fudud (haddii SL iyo TP isku candle ku dhacaan, waxaa loo tiriyaa loss).

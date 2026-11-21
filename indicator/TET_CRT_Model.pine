@@ -41,6 +41,9 @@ grpR     = "Risk — D1/D2"
 slBuf    = input.float(0.0, "SL buffer beyond TS wick (price)", minval = 0, group = grpR)
 maxDay   = input.int(3, "Max signals per day", minval = 1, maxval = 10, group = grpR)
 
+grpQ     = "1H TSQ re-entries (Breaker / KOD) — D11"
+useReent = input.bool(true, "Enable Breaker / KOD entries after Model #1", group = grpQ)
+
 grpF     = "Filters"
 req1H    = input.bool(false, "Require 1H orderflow alignment", group = grpF)
 
@@ -245,6 +248,14 @@ klHit(int d, float hi, float lo) =>
                 hit := true
     hit
 
+brkHit(int d, float hi, float lo) =>
+    bool hit = false
+    if zones.size() > 0
+        for z in zones
+            if z.kind == 2 and z.dir == d and hi >= z.bot and lo <= z.top
+                hit := true
+    hit
+
 pairFails(Agg p, bool bear) =>
     int r = 0
     if p.hasPrev and not na(p.h)
@@ -376,6 +387,86 @@ if crt.hasPrev
     if barstate.isconfirmed and room and not bDone and bSw and bCf and bPg and not na(bOB) and close > bOB and close > open and smtB and klB and biasB and ofB and not sellSig
         buySig := true
 
+// ───────────────────────── 1H TSQ re-entries (D11) ─────────────────────────
+// After a Model #1 signal the sequence (TSQ) stays active until the DOL (opposite side of the
+// original CRT range) is reached or price closes beyond the TS wick. Inside it, each retracement
+// that sweeps a minor high/low in a purge hour and breaks its own Model #1 line is a new entry:
+// labelled BRK if the retracement reached a 1H breaker block, otherwise KOD.
+var int   qDir = 0
+var float qTop = na
+var float qDol = na
+var float rX = na
+var bool  rPg = false
+var float rOB = na
+var int   rBar = na
+bool reSell = false
+bool reBuy  = false
+string reTag = ""
+float reX = na
+
+if qDir == -1 and (low <= qDol or close > qTop)
+    qDir := 0
+if qDir == 1 and (high >= qDol or close < qTop)
+    qDir := 0
+
+if useReent and qDir != 0 and tDir == 0
+    if qDir == -1
+        if na(rX) or high > rX
+            rX := high
+            rBar := bar_index
+            rPg := isPurge(crtStart, hNY)
+            rOB := na
+        if close > open
+            rOB := open
+        if barstate.isconfirmed and sigToday < maxDay and inSession(hNY) and rPg and not na(rOB) and rX < qTop and close < rOB and close < open and bar_index > rBar
+            reSell := true
+            reX := rX
+            reTag := brkHit(-1, rX, rX) ? "BRK" : "KOD"
+    else
+        if na(rX) or low < rX
+            rX := low
+            rBar := bar_index
+            rPg := isPurge(crtStart, hNY)
+            rOB := na
+        if close < open
+            rOB := open
+        if barstate.isconfirmed and sigToday < maxDay and inSession(hNY) and rPg and not na(rOB) and rX > qTop and close > rOB and close > open and bar_index > rBar
+            reBuy := true
+            reX := rX
+            reTag := brkHit(1, rX, rX) ? "BRK" : "KOD"
+
+if sellSig
+    qDir := -1
+    qTop := sTs
+    qDol := crt.pl
+if buySig
+    qDir := 1
+    qTop := bTs
+    qDol := crt.ph
+if sellSig or buySig or reSell or reBuy
+    rX := na
+    rOB := na
+    rPg := false
+
+if reSell
+    tDir := -1
+    tE := close
+    tSL := reX + slBuf
+    tTP := close - RR * (tSL - close)
+    tBar := bar_index
+    sigToday += 1
+if reBuy
+    tDir := 1
+    tE := close
+    tSL := reX - slBuf
+    tTP := close + RR * (close - tSL)
+    tBar := bar_index
+    sigToday += 1
+if (reSell or reBuy) and showPos
+    box.new(bar_index, tSL, bar_index + 36, tE, bgcolor = color.new(color.red, 80), border_color = color.new(color.red, 60))
+    box.new(bar_index, tE, bar_index + 36, tTP, bgcolor = color.new(color.green, 80), border_color = color.new(color.green, 60))
+    label.new(bar_index, reSell ? high : low, reTag + (reSell ? " SELL" : " BUY"), style = reSell ? label.style_label_down : label.style_label_up, color = reSell ? color.new(color.red, 20) : color.new(color.green, 20), textcolor = color.white, size = size.small)
+
 if sellSig
     tDir := -1
     tE := close
@@ -404,6 +495,9 @@ plotshape(buySig, "Buy", shape.triangleup, location.belowbar, color.green, text 
 if sellSig or buySig
     string dirTxt = sellSig ? "SELL" : "BUY"
     alert("TET CRT " + dirTxt + " " + syminfo.ticker + " | Entry " + str.tostring(tE, format.mintick) + " | SL " + str.tostring(tSL, format.mintick) + " | TP " + str.tostring(tTP, format.mintick), alert.freq_once_per_bar_close)
+
+if reSell or reBuy
+    alert("TET CRT " + reTag + (reSell ? " SELL " : " BUY ") + syminfo.ticker + " | Entry " + str.tostring(tE, format.mintick) + " | SL " + str.tostring(tSL, format.mintick) + " | TP " + str.tostring(tTP, format.mintick), alert.freq_once_per_bar_close)
 
 alertcondition(sellSig, "TET CRT Sell", "TET CRT SELL on {{ticker}} at {{close}}")
 alertcondition(buySig, "TET CRT Buy", "TET CRT BUY on {{ticker}} at {{close}}")
