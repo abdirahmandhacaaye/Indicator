@@ -56,6 +56,7 @@ Wax kasta oo hoos ku qoran waa **[SLIDE]**.
 > "**Order Block la jabiyey.** Kadib wuxuu noqdaa support ama resistance cusub."
 
 - Chart-yada (`img13/breaker_block_examples.png`): OB-ga ayaa la jabiyaa (price wuxuu ku xirmaa dhinaca kale), markuu dib ugu soo laabtana box-ka "BREAKER BLOCK" ayaa noqda support (bullish) ama resistance (bearish).
+- **Breaker vs Mitigation Block [AUDIO?, P3 07:57–08:06]:** "tani waa breaker, tanina waa mitigation block... marka liquidity la qaado waa breaker". Fasiraad: OB la jabiyay **kadib liquidity sweep** = Breaker. Haddii sweep aan jirin = Mitigation Block (D5: laguma darayo).
 - Xiriirka casharka 04: **BRK** ee The Sequence (CRTH + TS → #1 → **BRK** → OTE → KOD → CRTL).
 
 ## 8. 4.6 Gap  [SLIDE]
