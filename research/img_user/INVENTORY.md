@@ -38,3 +38,22 @@
 | 14 | IMG_2406 | AKIIM 5m 2 Jul 08:36: buy box SL 4057.43 / entry 4067.01 / TP 4127.36 (≈6R) |
 | 15 | IMG_2405 | AKIIM 1h 2 Jul: IRL box, higher low (dotted), range high, breakout |
 | 16 | IMG_0885 | Discord 10/07: "SL ka ugu badan waxa la qaata marka uusan 1h Orderflow active ku ahayn ama aadan haysan TSQ. Ts, M#1, OTE, KOD"; "Checklist 1-IRL to ERL 2-KL 3-11pm Purge (silver smt) 4-Ts and M#1 …" |
+
+## Batch 03 (16 sawir; #2 iyo #3 waa isku sawir) — 2026-11-21
+| # | Fayl | Waxa ku jira (akhris degdeg ah) |
+|---|---|---|
+| 01 | IMG_2521 | AKIIM 1h 10 Jul 00:12: CRTH sweep (dotted, lower high), M#1, arrow → CRTL |
+| 02–03 | IMG_2580 (×2) | AKIIM 1h 13 Jul: CRTH, Ts, #1, OTE, KOD, CRTL (price wuxuu gaaray CRTL) |
+| 04 | IMG_0884 | Discord 13/07 "Checklist 1-IRL to ERL 2-KL 3-9am Purge 4-Ts and M#1 5-2ssmt" |
+| 05 | IMG_0883 | Discord 13/07 "Daily CRT ~1hr TSQ — The best entries meelaha laga raadiyo waa marka daily iyo 1h iskuka raacaan. TS, M#1, BRK, OTE and KOD" |
+| 06 | IMG_0878 | Discord 28/07 "Kiss of death" (KL, KOD, CRTL) + "No smt no ferrari" |
+| 07 | IMG_2725 | AKIIM 5m 28 Jul 06:09: Ts, sell box SL 4055.15 / entry 4046.30 / TP 4022.11 (≈2.7R), CRTL |
+| 08 | IMG_2726 | AKIIM 1h 28 Jul: KL box, KOD, "4 am" sweep, CRTL |
+| 09 | IMG_2727 | AKIIM 1h 28 Jul: lower highs (dotted ×2), #1, KL, KOD, CRTL |
+| 10 | IMG_2715 | AKIIM 1h 27 Jul 08:25: lower high, #1, arrow → CRTL |
+| 11 | IMG_0873 | Discord 28/07 "1h TSQ done" + "Kiss of death" |
+| 12 | IMG_2882 | AKIIM **EURUSD** 5m 14 Aug: Kod, buy box SL 1.15619 / entry 1.15669 / TP 1.15824 (≈3R) |
+| 13 | IMG_2883 | EURUSD 1h 14 Aug: KL box, Kod, "9am" sweep |
+| 14 | IMG_2884 | EURUSD 1D 14 Aug: daily CRT, low sweep (dotted higher lows) |
+| 15 | IMG_2930 | AKIIM 5m 18 Aug 11:20: sell box SL 4406.36 / entry 4393.41 / TP 4355.99 (≈2.9R) |
+| 16 | IMG_2932 | AKIIM 1h 18 Aug: CRT range, lower high (dotted), "10 am" sweep |
