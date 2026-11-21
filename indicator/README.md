@@ -16,13 +16,13 @@ Fayl: `TET_CRT_Model.pine`. Xeerarka: `research/RULES.md`, go'aannada: `research
 | 3 | **Purge hour (qasab)**: candle-ka sameeyay wick-ka TS waa inuu ku jiraa: **Asia 8/9/10 PM · London 2/3/4 AM · NY 8/9/10 AM** (NY time) | D10 |
 | 3b | **Entry session**: signal-ku wuxuu ka dhacaa oo keliya Asia (8 PM–12 AM), London (2–5 AM) ama NY (8 AM–12 PM) | D10 |
 | 4 | **Key level (1H)**: FVG / OB / Breaker ku yaal premium (sell) ama discount (buy) ee CRT range-ka, oo uu TS-ku gaaray | D5, L13 |
-| 5 | **SMT (qasab)**: ugu yaraan 1 pair (XAUEUR / XAUGBP / XAGUSD) ayaa ku fashilmay inuu qaado CRT high/low-giisa | D3, D4, D9 |
+| 5 | **SMT (qasab, entry kasta — D12)**: ugu yaraan 1 pair (XAUEUR / XAUGBP / XAGUSD) ayaa ku fashilmay inuu qaado CRT high/low-giisa | D3, D4, D9 |
 | 6 | **Model #1 entry**: 5m candle ku xirma dhinaca kale ee open-ka candle-kii u dambeeyay ee jihada ka soo horjeeday (line #1) | L07, Q4 |
 | 7 | **SL** = wick-ka TS + buffer · **TP** = 1:3 go'an | D1, D2 |
 | 8 | **Daily bias** (7H mode qasab, 4H mode ikhtiyaari): shalay wick above/below ama close beyond ee maalintii ka horreysay; waa la burinayaa marka 1H close dhaafo 0.5 (EQ) ee shalay | L19, COMPLETE_MODEL p17–19 |
 | 9 | **Invalidation ka hor entry**: close dib ugu gudba CRT high/low (continuation) → la sugo · target (dhinaca kale ee range-ka) la gaaray → setup waa dhammaaday | L04, D9 |
 | 10 | Max **3 signal / maalin**, hal trade mar keliya | D9 |
-| 11 | **1H TSQ re-entries (BRK / KOD)**: kadib Model #1, retracement sweep (purge hour) + Model #1 break cusub → entry; BRK haddii 1H breaker la gaaro, haddii kale KOD. TSQ wuxuu dhammaadaa DOL ama close dhaafa TS | D11 |
+| 11 | **1H TSQ re-entries (BRK / KOD)**: kadib Model #1, retracement sweep (purge hour) + **1H SMT** + Model #1 break cusub → entry; BRK haddii 1H breaker la gaaro, haddii kale KOD. TSQ wuxuu dhammaadaa DOL ama close dhaafa TS | D11 |
 
 ## Non-repainting
 - Signals waxay soo baxaan oo keliya marka 5m candle-ku **xirmo** (`barstate.isconfirmed`).

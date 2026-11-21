@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D12 | 2026-11-21 | SMT | **"No smt no trade"** — SMT waa qasab entry kasta (Model #1, BRK, KOD). Input-ka lagu demin karo waa la saaray. Re-entries: SMT waxaa lagu xisaabiyaa 1H candle-ka: XAUUSD wuxuu qaadaa 1H high/low-ga hore, ugu yaraan 1 pair ayaa ku fashilma. | User |
 | D11 | 2026-11-21 | Breaker / KOD entries | **Gudaha 1H TSQ, Breaker iyo KOD waa entries** (user: "Breaker kod in 1H tsq"). Kadib Model #1 signal, TSQ-gu wuu firfircoon yahay ilaa DOL-ka (dhinaca kale ee CRT range-ka) la gaaro ama close dhaafo TS wick-ka. Retracement kasta oo sweep-gareeya high/low yar oo purge hour ah, kadibna jebiya Model #1 line-kiisa = entry cusub (BRK haddii uu gaaro 1H breaker, haddii kale KOD). SL = retracement wick, TP 1:3, max 3/maalin, session D10. | User |
 | D10 | 2026-11-21 | Purge hours + entry sessions | **Waxay beddeshaa D6.** Purge hours (NY time = waqtiga user-ka, TradingView UTC-5 New York): **Asia 8 PM, 9 PM, 10 PM · London 2 AM, 3 AM, 4 AM · NY 8 AM, 9 AM, 10 AM.** Entries waxaa la galaa oo keliya gudaha **Asia, London iyo NY sessions** (Asia 8 PM–12 AM, London 2–5 AM, NY 8 AM–12 PM). 6 AM iyo 11 PM lama isticmaalo. | User |
 | D9 | 2026-11-21 | Su'aalaha Phase 2 (Q-A…Q-H) | User: **"Done everything"** → talooyinkii Claude waa la aqbalay: **Q-A** labada model (4H→5m iyo D+7H→5m, input) · **Q-B** D6 sidiisa; 4am iyo 11pm = toggles (default off) · **Q-C** SMT qasab · **Q-D** entry = Model #1 · **Q-E** grade ma jiro · **Q-F** max 3 signal/maalin · **Q1** invalidation: close dib u gudba CRT high/low (continuation) + target la gaaray ka hor entry + D bias EQ (0.5) 1H close · **Q2** OTE lama isticmaalo · **Q-G** XAUEUR, XAUGBP, XAGUSD · **Q-H** 7H 17/00/07 (offset input) · **1H orderflow** = toggle (default off, sababta: qeexid cad ma jirto). | User |
@@ -41,6 +42,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q12-old | | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: D12 — SMT qasab entry kasta.
 
 - 2026-11-21: D11 — Breaker/KOD re-entries gudaha 1H TSQ.
 

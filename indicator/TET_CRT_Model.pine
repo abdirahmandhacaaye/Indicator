@@ -31,7 +31,7 @@ showKL   = input.bool(true, "Show key level boxes", group = grpK)
 maxZones = input.int(30, "Max stored zones", minval = 4, maxval = 60, group = grpK)
 
 grpS     = "SMT — D3/D4"
-reqSMT   = input.bool(true, "Require SMT", group = grpS)
+const bool reqSMT = true                  // D12: "No smt no trade" — always required
 sym1     = input.symbol("OANDA:XAUEUR", "Pair 1", group = grpS)
 sym2     = input.symbol("OANDA:XAUGBP", "Pair 2", group = grpS)
 sym3     = input.symbol("OANDA:XAGUSD", "Pair 3", group = grpS)
@@ -128,6 +128,9 @@ var Agg h1  = Agg.new()
 var Agg p1  = Agg.new()
 var Agg p2  = Agg.new()
 var Agg p3  = Agg.new()
+var Agg q1  = Agg.new()                     // pairs on 1H buckets (re-entry SMT)
+var Agg q2  = Agg.new()
+var Agg q3  = Agg.new()
 
 [o1, hi1, lo1, c1] = request.security(sym1, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
 [o2, hi2, lo2, c2] = request.security(sym2, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
@@ -151,6 +154,9 @@ h1.roll(newH1, open, high, low, close, time)
 p1.roll(newCRT, o1, hi1, lo1, c1, time)
 p2.roll(newCRT, o2, hi2, lo2, c2, time)
 p3.roll(newCRT, o3, hi3, lo3, c3, time)
+q1.roll(newH1, o1, hi1, lo1, c1, time)
+q2.roll(newH1, o2, hi2, lo2, c2, time)
+q3.roll(newH1, o3, hi3, lo3, c3, time)
 
 // ───────────────────────── 1H key levels + structure ─────────────────────────
 var array<Zone>  zones = array.new<Zone>()
@@ -399,6 +405,7 @@ var float rX = na
 var bool  rPg = false
 var float rOB = na
 var int   rBar = na
+var bool  rSmt = false
 bool reSell = false
 bool reBuy  = false
 string reTag = ""
@@ -415,10 +422,11 @@ if useReent and qDir != 0 and tDir == 0
             rX := high
             rBar := bar_index
             rPg := isPurge(crtStart, hNY)
+            rSmt := h1.hasPrev and h1.h > h1.ph and (pairFails(q1, true) + pairFails(q2, true) + pairFails(q3, true)) >= minFail
             rOB := na
         if close > open
             rOB := open
-        if barstate.isconfirmed and sigToday < maxDay and inSession(hNY) and rPg and not na(rOB) and rX < qTop and close < rOB and close < open and bar_index > rBar
+        if barstate.isconfirmed and sigToday < maxDay and inSession(hNY) and rPg and rSmt and not na(rOB) and rX < qTop and close < rOB and close < open and bar_index > rBar
             reSell := true
             reX := rX
             reTag := brkHit(-1, rX, rX) ? "BRK" : "KOD"
@@ -427,10 +435,11 @@ if useReent and qDir != 0 and tDir == 0
             rX := low
             rBar := bar_index
             rPg := isPurge(crtStart, hNY)
+            rSmt := h1.hasPrev and h1.l < h1.pl and (pairFails(q1, false) + pairFails(q2, false) + pairFails(q3, false)) >= minFail
             rOB := na
         if close < open
             rOB := open
-        if barstate.isconfirmed and sigToday < maxDay and inSession(hNY) and rPg and not na(rOB) and rX > qTop and close > rOB and close > open and bar_index > rBar
+        if barstate.isconfirmed and sigToday < maxDay and inSession(hNY) and rPg and rSmt and not na(rOB) and rX > qTop and close > rOB and close > open and bar_index > rBar
             reBuy := true
             reX := rX
             reTag := brkHit(1, rX, rX) ? "BRK" : "KOD"
@@ -447,6 +456,7 @@ if sellSig or buySig or reSell or reBuy
     rX := na
     rOB := na
     rPg := false
+    rSmt := false
 
 if reSell
     tDir := -1
