@@ -23,9 +23,13 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q7 | IFVG disrespect: candle close mise wick? | Furan |
 | Q8 | Dealing range: swing-kee iyo timeframe-kee? | Furan |
 | Q9 | Take profit: TP1/TP2/TP3 ma jiraan, mise CRT low/DOL keliya? | Furan |
-| Q10 | Minimum Risk:Reward | Furan |
+| Q10 | Minimum Risk:Reward | Furan. (Casharka 06: tusaale trade ah ayaa gaaray ~3R, laakiin ma aha xeer.) |
+| Q11 | Purging hours: shuruud qasab ah mise grade? | Casharka 06 [P3 01:49–02:03]: "qasab maaha, laakiin waa waqtiyada ugu fiican". Casharka 05: waa mid ka mid ah 3-da shay ee la sugo. **Waxay u baahan tahay go'aanka user-ka.** |
+| Q12 | Pair-ka SMT/PSP: XAUEUR, XAUGBP mise XAGUSD? | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: Casharka 06 ayaa lagu daray. Waxaa lagu daray Q11 (purging hours: qasab mise grade) iyo Q12 (SMT pair).
 
 - 2026-11-21: Casharka 05 ayaa lagu daray: Q4 waa la xoojiyay, waxaana la helay saddexda shuruudood ee entry-ga (TS + key level + purging hour).
 

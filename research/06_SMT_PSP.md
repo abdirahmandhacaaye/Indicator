@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Video | https://youtu.be/TH2R803mjQE (TET COMMUNITY, 2026 Mentorship, 25:58). Macallinka: Saka Habib. |
-| Isha | Qayb video ah oo uu user-ku soo geliyay: **00:00–10:29 (P1)**. Qaybta 2aad (10:29–25:58) waa la sugayaa. |
+| Isha | 3 qaybood oo video ah uu user-ku soo geliyay: P1 (00:00–10:29), P2 (~10:29–19:20), P3 (~19:20–25:58). Casharka oo dhan waa la helay. |
 | Habka | Slide-yada iyo qoraalka maqalka (Whisper, Af-Soomaali). Tayadu waa dhexdhexaad ilaa hoose, qaybo kooban oo Carabi ah ayaa ku jira. |
 | Qoraalka | `transcripts/06_TH2R803mjQE.whisper_so.txt` |
 | Sawirrada | `research/img06/` |
@@ -51,13 +51,25 @@
 - **ERL → IRL:** SMT iyo PSP ayaa ku dhaca ERL (reversal), kadibna target-ku waa IRL [P1 09:22–10:08].
 - Slide-yada waxaa ku qoran ERL (Target/Reversal) iyo IRL (Reversal/Target) ee Asset 1 iyo Asset 2.
 
-## 8. SMT Break vs True SMT  [SLIDE]
-- Slide-ka: "SMT BREAK VS True SMT", oo ay ku qoran yihiin PDH iyo "SMT Break". Sharaxaadda waxay ku jirtaa qaybta 2aad, oo weli la sugayo [P1 10:12–10:29].
+## 8. SMT Break vs True SMT  [SLIDE + MA CADDA]
+- Slide-ka "SMT BREAK VS True SMT" wuxuu muujinayaa saddex asset. Asset-ka fashilmay wuxuu ku qoran yahay **"PDH (SMT Break)"**. Slide-ka xiga, "And this is how it ended", wuxuu muujinayaa in qiimuhu kor u sii socday, kana gudbay PDH-ka.
+- **Fasiraad [AUDIO?]:** "SMT break" waa SMT been ah. Asset-kii "fashilmay" ayaa markii dambe isna qaaday level-ka (PDH), sidaas darteed SMT-gii wuu jabay, suuquna wuxuu sii socday jihadii hore. **True SMT** waa marka asset-ka fashilmay uusan level-ka qaadin, reversal-kuna dhaco.
+- Hadalka qaybtan [P2 00:00–01:55] wuxuu u badan yahay Whisper hallucination (Ingiriis aan macno lahayn), sidaas darteed **sharaxaadda saxda ah lama hayo**.
 
-## 9. Xiriirka indicator-ka (soo jeedin)
+## 9. Tusaalooyinka live (P2–P3, XAUUSD 1H/5m, OANDA)  [AUDIO? + SLIDE]
+- **Pairs-ka la isticmaalay:** **XAUUSD, XAUEUR, XAUGBP** iyo **Silver** [P2 02:42–03:04]. "Gold, Gold-Euro iyo Gold-GBP ayaan eegnaa."
+- **Tusaalaha 1 [P2 03:43–05:30]:** key level waa **FVG**, purging hour-ku waa **2 AM**. **SMT iyo PSP** ayaa ka dhacay. Labada candle ee PSP-ga mid wuxuu ahaa bullish, midka kalena bearish. Target-ku wuxuu ahaa **ERL / DOL**. 5-min-ka waxaa ka dhacay liquidity sweep, kadib **Model #1** ayaa entry ahaa.
+- **Inside Bar [P2 07:02–07:22]:** marka inside bar jiro, waxaa la sugaa candle-ka xiga inuu qaado (sweep) oo key level-ka gaaro. Kadib SMT ayaa confirmation ah.
+- **Tusaalaha 2 [P2 07:43–P3 00:29]:** **two-stage SMT**, 5-min turtle soup, kadib Model #1 entry. Trade-kaasi wuxuu gaaray **~3R** [AUDIO?] [P3 00:23–00:29]. Waa natiijo tusaale ah, ee ma aha xeer.
+- **Waqtiga [AUDIO+] [P3 01:49–02:03]:** purging hours (8 AM, 3 AM, iwm.) "**qasab maaha**, laakiin waa waqtiyada ugu fiican". Fasaxyada (tusaale Ciidda) waqtigu wuu isbeddeli karaa [P3 02:19–02:34].
+- **Tusaalaha 3 [P3 02:38–04:02]:** 4H key level iyo 1H key level ayaa isku beegmay. 4H candle-ka **9 AM** ayaa ka dhacay SMT iyo PSP, target-kuna wuxuu ahaa **ERL**. Two-stage = high probability.
+- **Tusaalaha 4 [P3 05:13–06:02]:** daily-ga OB-ga waa la ixtiraamay. SMT iyo PSP ayaa dhacay, target-kuna wuxuu ahaa IRL.
+
+## 10. Xiriirka indicator-ka (soo jeedin)
 - **SMT detection:** waxaa loo baahan yahay asset labaad (`request.security`), tusaale XAUEUR ama XAGUSD. Swing high/low ama CRT high/low ee labada asset ayaa la isbarbar dhigayaa. Mid ayaa qaaday, midka kalena ma qaadin.
 - **PSP detection:** isla HTF candle-ka (oo xirmay), labada asset midkood wuxuu xirmay bullish, midka kalena bearish.
 - **Two-stage:** laba SMT oo isku xiga.
-- **Fiiro:** symbol-ka labaad wuxuu ku xiran yahay broker-ka (OANDA:XAUEUR / OANDA:XAGUSD). Waa in user-ku dooran karo, maadaama xog la'aan ay dhici karto.
+- **Fiiro:** symbol-ka labaad (iyo kan saddexaad) wuxuu ku xiran yahay broker-ka, tusaale OANDA:XAUEUR, OANDA:XAUGBP ama OANDA:XAGUSD. User-ka ayaa dooranaya, maadaama xog la'aan ay dhici karto.
+- **Purging hours ma aha shuruud qasab ah** (§9). Waxay noqon karaan **grade** (A+/A/B), ee ma aha mandatory filter. Tani waxay u baahan tahay ansixintaada.
 
 Code lama qorin.
