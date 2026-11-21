@@ -6,6 +6,8 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D7 | 2026-11-21 | Dead time | **Dead time-ka laguma darayo xeer gaar ah (user: "maya").** Fiiro: maadaama purging hours ay qasab yihiin (D6), dhammaan signal-yadu waxay dhacaan 8 PM, 9–10 PM, 2–3 AM, 6/8 AM ama 9–10 AM. Midkoodna kuma jiro dead time (17–20, 12–17 NY), sidaas darteed signal kama dhici karo dead time. | User |
+| D6 | 2026-11-21 | Purging hours | **Qasab (mandatory filter).** Turtle Soup-ka / manipulation-ka waa inuu ku dhaco purging hour-ka 4H candle-ka (NY time): 5PM→8PM, 9PM→9–10PM, 1AM→2–3AM, 5AM→6/8AM, 9AM→9–10AM. Haddii kale, signal lama bixiyo. | User |
 | D5 | 2026-11-21 | Key levels (IRL) | **Indicator-ku wuxuu diiradda saarayaa FVG, Order Block (OB) iyo Breaker Block oo keliya.** Mitigation, VI, BPR iyo IFVG laguma darayo (IFVG waxaa lagu dari karaa haddii user-ku si gaar ah u codsado). | User (jawaab toos ah) |
 | D4 | 2026-11-21 | SMT qeexid | **SMT waa marka asset-yadu isku khilaafaan:** qaar ayaa qaada liquidity, qaarna ma qaadaan. Ama mid ayaa qaada, mid kalena wuu ku fashilmaa. **Hal khilaaf oo keliya** (ugu yaraan hal asset oo kala duwan) ayaa ku filan. | User (sharaxaad toos ah) |
 | D3 | 2026-11-21 | SMT pairs | Asset-ka ugu weyn waa **XAUUSD**. Asset-yada SMT/PSP lagu isbarbar dhigo waa: **XAUEUR, XAUGBP, XAGUSD, XAUCHF, XAUJPY, XAUCAD, XAUAUD**. Liiska waa input user-ku beddeli karo (symbol prefix-ka broker-ka). Sida divergence-ka loo xisaabiyo (hal pair mise inta badan) waa la sugayaa. | User (sawir watchlist) |
@@ -35,6 +37,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q12-old | | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: Waxaa lagu daray D6 (purging hours = qasab) iyo D7 (dead time: xeer gaar ah ma leh). Q11 waa la xalliyay.
 
 - 2026-11-21: Waxaa lagu daray D5 (key levels = FVG, OB, Breaker).
 
