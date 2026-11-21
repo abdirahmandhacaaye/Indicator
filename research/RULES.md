@@ -140,3 +140,8 @@ User-ka qoraalkiisa (erey-erey): 5 profile, mid walba = **HTF alignment** + **1H
 | P5 | **Weekly + 4H** raacsan | 1H KL + … → 5m entry |
 
 Su'aalaha caddeynta: orderflow qeexid per TF · profiles OR + label P1–P5 · TS maxay qaadaysaa · SMT 1H vs 5m · PSP/2SMT doorka.
+
+**User (2026-11-21): "Last invalidation"** — profile kasta wuxuu ku dhammaanayaa invalidation. Soo jeedin (TET COMPLETE_MODEL p16–19):
+- **Scenario 1 (bias failure):** liquidity weyn (PDH/PWH) la qaado + key levels-ka bias-ka la jabiyo + 1H TSQ jihada ka soo horjeedda → bias-ka profile-ka waa la beddelaa.
+- **Scenario 2 (EQ 0.5):** HTF candle-ka profile-ka (W/D/7H/4H) EQ-giisa candle ku xirma dhinaca kale → structure failure, signal lama bixiyo jihadaas.
+- **Setup:** 5m close dhaafa TS wick ka hor entry → setup waa burayaa.
