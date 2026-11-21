@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D4 | 2026-11-21 | SMT qeexid | **SMT waa marka asset-yadu isku khilaafaan:** qaar ayaa qaada liquidity, qaarna ma qaadaan. Ama mid ayaa qaada, mid kalena wuu ku fashilmaa. **Hal khilaaf oo keliya** (ugu yaraan hal asset oo kala duwan) ayaa ku filan. | User (sharaxaad toos ah) |
 | D3 | 2026-11-21 | SMT pairs | Asset-ka ugu weyn waa **XAUUSD**. Asset-yada SMT/PSP lagu isbarbar dhigo waa: **XAUEUR, XAUGBP, XAGUSD, XAUCHF, XAUJPY, XAUCAD, XAUAUD**. Liiska waa input user-ku beddeli karo (symbol prefix-ka broker-ka). Sida divergence-ka loo xisaabiyo (hal pair mise inta badan) waa la sugayaa. | User (sawir watchlist) |
 | D2 | 2026-11-21 | Risk:Reward | **RR-ku waa go'an mar walba: 1 Risk : 3 Reward.** TP = Entry ± 3 × (fogaanta Entry ilaa SL). Ma jiro TP1/TP2/TP3, TP-guna kuma xirna ERL/DOL. Casharka 08 looma baahna. | User (jawaab toos ah) |
 | D1 | 2026-11-21 | Stop loss (CRT setup) | **SL waxaa la dhigaa wick-ka Turtle Soup-ka korkiisa.** Sell: high-ga manipulation-ka (TS) dushiisa. Buy: low-ga TS-ka hoostiisa. | User (jawaab toos ah) |
@@ -33,6 +34,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q12-old | | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: Waxaa lagu daray D4 (SMT = khilaaf ugu yaraan hal asset).
 
 - 2026-11-21: Waxaa lagu daray D3 (liiska SMT pairs, 7 asset). Q12 waa la xalliyay.
 
