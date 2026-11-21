@@ -17,7 +17,7 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | # | Xeer | Isha |
 |---|---|---|
 | A1 | **Order flow:** bullish waa marka buy-side la jabiyo, swing lows-kuna ay protected yihiin. Bearish waa tan ka soo horjeedda. | 📘 L02, L11 |
-| A2 | **Dealing range:** waa dhaqaaqii u dambeeyay ee order flow-ga raacsan. 50% = equilibrium. Buy setup-ka waxaa laga raadiyaa discount, sell setup-kana premium. | 📘 L04 §2.7 |
+| A2 | **Dealing range** (lugta u dambeysa ee OF-ga: 0% = swing low, 100% = swing high / ERL — PDF CRT, Q8 ✅): waa dhaqaaqii u dambeeyay ee order flow-ga raacsan. 50% = equilibrium. Buy setup-ka waxaa laga raadiyaa discount, sell setup-kana premium. | 📘 L04 §2.7 |
 | A2b | Suuqu wuxuu u dhaqaaqaa 3 qaab: **IRL→ERL, ERL→IRL, ERL→ERL**. | 📘 PDF IRL_TO_ERL |
 | A3 | **DOL / ERL (targets ama liquidity):** PDH/PDL, PWH/PWL, PMH/PML, session highs/lows (Asia/London/NY) iyo EQH/EQL. | 📘 L02, L14 |
 | A4 | **Daily bias:** Daily CRT. Candle 2 ayaa qaata high-ga ama low-ga candle 1 ee ku yaal KL/major LQ, kadibna dib ugu xirma gudaha (wick above/below). Bias-ku waa jihada ka soo horjeedda sweep-ka, DOL-kuna waa dhinaca kale ee candle 1. Haddii candle-ku xirmo dibadda (close above/below), waa continuation. | 📘 L04 §2.6, L19 §2 |
@@ -30,7 +30,7 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | B1 | **Model 4H (casharrada 04/05):** maalinta = 6 × 4H candle (5P, 9P, 1A, 5A, 9A, 1P). CRT-ga waa 4H candle-kii **xirmay**. Candle-ka xiga ayaa qaada high-ga ama low-giisa (TS). | 📘 L04, L05 |
 | B2 | **Model 7H (casharrada 18/19):** maalinta = 4 session oo 7H ah: Asia 17:00, London 00:00, NY AM 07:00, NY PM 14:00. Profile-yada: **Asian reversal**, **London reversal**, **NY AM reversal**, **NY PM continuation**. Session-ka reversal sameeya wuxuu qaadaa high-ga ama low-ga session-kii hore, kadibna dib ayuu ugu xirmaa. | 📘 L18, L19 |
 | B2b | **7H profile detection (NAZARIO PDF):** Asia reversal = London 7H **ma qaadin** Asia high/low oo ku xirmay dibadda · London reversal = London **qaaday** Asia high/low kadibna gudaha ku xirmay · NY reversal = Asia + London reversal ma sameyn → 8AM ayaa sameeya. Natiijada: 8AM NY = continuation ama reversal. | 📘 PDF 7H PROFILING (Nazario) |
-| B2c | ⚠️ **Waqtiga 7H:** TET Forex = 17:00/00:00/07:00, NAZARIO = 18:00/01:00/08:00. → ❓ Q-H | ❓ |
+| B2c | **Waqtiga 7H (XAUUSD = CFD):** **17:00 / 00:00 / 07:00 (+14:00 NY PM)**. NAZARIO-ga 18/01/08 waa waqtiyada **Indices** (PDF COMPLETE_MODEL p6). Soo jeedin: input, default 17/00/07. | 📘 PDF COMPLETE_MODEL |
 | B3 | ❓ **Model-kee ayaa la isticmaalayaa:** 4H (B1), 7H (B2), mise labadaba (input "mode")? | ❓ Q-A |
 
 ## C. Key levels (IRL)
@@ -39,7 +39,7 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 |---|---|---|
 | C1 | Key levels-ka la isticmaalayo waa **FVG, Order Block iyo Breaker Block** oo keliya. | ✅ D5 |
 | C2 | **FVG:** 3 candle. Bullish box-ku wuxuu u dhexeeyaa high-ga C1 iyo low-ga C3. Bearish box-ku wuxuu u dhexeeyaa low-ga C1 iyo high-ga C3. | 📘 L03, L13 |
-| C3 | **Order Block:** candle-kii u dambeeyay ee jihada ka soo horjeeday, **ka hor displacement**. Level-ku waa **open-ka (body edge)** candle-ka. | 📘 L03, L13 (Q6) |
+| C3 | **Order Block:** candle-kii (ama **kooxda candles**) u dambeeyay ee jihada ka soo horjeeday, **ka hor displacement**. Level-ku waa **open-ka candle-ka ugu horreeya ee kooxda** (body edge). | 📘 L03, L13 (Q6), L04, PDF IRL_TO_ERL |
 | C4 | **Breaker:** OB uu candle ku xirmay dhinaca kale **kadib liquidity sweep**, kaas oo noqda support ama resistance cusub. Haddii sweep aanu jirin, waa Mitigation, lamana isticmaalayo. | 📘 L13 |
 | C5 | Timeframe-yada key level-ka: HTF (D/4H/1H) ama 1H KL / major LQ (PDH/PDL/PWH/PWL). | 📘 L17, L19 |
 | C6 | 🟡 **Displacement:** candle-ka xiga ha ku xirmo dhinaca kale ee OB-ga, ama FVG ha ka samaysmo. Qeexid cad casharrada kuma jirto. | 🟡 |
@@ -121,6 +121,6 @@ Waqtiyada oo dhan waa **New York time** (`America/New_York`, DST-ka si toos ah a
 | **Q-E** | Grade (A+/B) mise signal oo keliya? |
 | **Q-F** | Trade-yo badan maalintii: haa (immisa)? |
 | **Q1** | Invalidation H5c (ka hor entry): candle ku xirma TS dibaddiisa, TP la gaaray, mise labadaba? (H5/H5b waxay ka yimaadeen PDF-ka.) |
-| **Q-H** | 7H session open times: TET (17:00 / 00:00 / 07:00) mise NAZARIO (18:00 / 01:00 / 08:00)? Mise input? |
+| **Q-H** | ✅ Xal la soo jeediyay: default 17/00/07 (TET Forex & CFD), input lagu beddeli karo. Ansixi. |
 | **Q-G** | SMT pairs: D3 (7 asset) mise PDF-ka (True SMT = XAUEUR, XAUGBP, XAGUSD; kuwa kale lama isticmaalo purging/1-stage)? |
 | **Q2** | OTE: ka saar? |
