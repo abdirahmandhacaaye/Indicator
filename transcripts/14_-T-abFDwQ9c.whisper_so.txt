@@ -1,0 +1,289 @@
+Title: 05 Basic : Liquidity & SMT (lesson 14, -T-abFDwQ9c, 26:07)
+Source: video clip(s) uploaded by user; faster-whisper large-v3-turbo, language=so.
+
+==================== PART p1 (00:00–14:12) ====================
+[00:02] Assalamualaikum warahmatullahi wabarakatuh. Nisaaqaqaal shawidwaadhaa, ashirkayanishanak, ee, liquidity iyo SMT. Eee, ashirkaan, ashir muhimah. Eee, nahaanatkuu hirasaan sariwekala basic aid, alpartikalat swaqa atem. Marcahdiilaira maantas la barandonaa likuiditwaamahay. Nahaakaaabaylaaylaaydaaydaay. Fakkeil lololilgriyaa. Akei suqo gudala. Eee, minkasawidwaadhaa.
+[00:32] Saha biya loo.
+[00:33] Malka.
+[00:34] Inuudilao asir kenadi ilahi raadhi inshawadha.
+[00:37] Maka.
+[00:53] Maka.
+[00:54] Maka.
+[00:55] Maka shuura jaswi indini soa maha.
+[00:56] Maka yinliquiditi soa.
+[00:58] Okey.
+[00:59] Likiditi.
+[01:00] Eeeemm.
+[01:02] Uwamil.
+[01:04] Eilaak ta'alo.
+[01:07] Au suuqa taniyo.
+[01:09] Inuqaado.
+[01:10] Siyu daqa.
+[01:11] Pustamini.
+[01:12] Okey.
+[01:13] Masaog barata suuqa qaado.
+[01:15] in expansion, consolidation, retracement, expansion.
+[01:22] Mitaa e'nao sami ewee edo a sobratay.
+[01:24] An haakalo sobratay suuqa taimka wa tredigriyoo.
+[01:30] Kan riska taab ki hiin order flow a sobratay qaab soa'at ka suuqa.
+[01:34] A sobratay boos taajigoo suuqa ka dagaagoo.
+[01:38] Marka boos taajigoo suuqa dagaagoo suuqa haajigta waxu kuswydunay boos taajigoo
+[01:45] and si da gari gada bostadjadu ugui maada si uu rakaab owa qaato and suuqana salgta ugui maana bostadjada mohawayaan
+[01:56] en waasagana likuditika qaato marika likuditi waa rakaabus waamela laak eitaaloh
+[02:02] oadra farabadana suuqa liwari oadra kaas suuqsaaduanta yukumtigaasa a lahaqaa
+[02:07] then next likuditiya lada adanwa a lahaqaa gabi gadao likuditi waa entas
+[02:12] So let's go, next slide.
+[02:16] Marqo hawae,
+[02:24] emm...
+[02:26] Paiska,
+[02:27] inta unstamainin laqaaqa sahdaa,
+[02:30] oa expansion ki aataqani.
+[02:32] emm...
+[02:34] Marqo harawu huuhtaga,
+[02:35] maila haa likuiditiga uiyyalo,
+[02:37] si u usu arugliu likuiditigaas,
+[02:39] waa likuiditi anna manipulation,
+[02:41] waa baratwaarit resmini ksuku suusiminae,
+[02:44] den likuiditiigaas uqaadaa,
+[02:46] muku qaadaa,
+[02:47] den next likuiditi haaigas anbaasa likuiditiigaasa taaigit guaa.
+[02:50] ndi loo eita nabila aksi
+[02:52] Okei
+[02:53] Intas marcoo xal loo yaqaana
+[02:55] Makaan ta yirmil jiga AICT ean jivnas
+[02:57] Intaswa maga aadafla uiyaran
+[03:00] O xataa stratiġieza kala
+[03:02] Fodwa istiimalan
+[03:04] Adi Forex baan kudwa uiyya AICT
+[03:06] Kedipu maga aavin
+[03:08] Tadka qaar hau uiyaran l-Critic Graph
+[03:10] Qaar ba uxadan l-Critic Sweep
+[03:12] Qaar ba uxadan Totsu
+[03:14] Qaar na uxadan Stop Hunt
+[03:16] Intaswa maga aadaa aqid
+[03:18] ndamantadu xal lagawada, xal mihano nbaaf, yyan mihanaha soqa in liquidity laqaadu,
+[03:24] liquidity meen la'akta ala nti la'i maadu, la'a suib giri, la'grab giri, or tatersu lugu sime, or istapu anti lugu sime,
+[03:31] same wa nnaka'n ba'a lugu badena'a, mih maddu ba'u ninafeaantid meen la'akta ala in suqin tu'i maadu,
+[03:37] wua la'akta as kaqaatek.
+[03:39] Okay, next slide.
+[03:48] Eeeem...
+[03:50] Suqo haa sobratay, unu baii hay,
+[03:54] iinu sell yae lawadaa sqayb inay forex udaaddo
+[03:58] en likuditiga ina marika wa sili lawadaa qayb mid mbukuha gaga
+[04:03] a baysayd likuditi ama sell sayd likuditi
+[04:07] marika haade waa kana baysayd ka ina suure
+[04:10] baysayd likuditiga waa likuditiga ku arroosan a yada korka
+[04:15] wixi korkaajiro mukassuwa a baa uwedit
+[04:17] likuditi walbo korkaajirtu wa baysayd likuditi
+[04:20] Waxaybada na wakuta ala marga mehraa spesifika a a jirana di korlogul oo
+[04:27] Udku gureliza a ghafka inu kor
+[04:29] Adi waxolba korwa eskanu qonkara gan
+[04:31] Sidaanku aqwasan kara likiditika sahada
+[04:34] Gaaasas esu yiddiyna saa
+[04:35] An korka moaka waxakuha ka gan
+[04:37] Previous day lihaay maaninka hora haiga la semestay
+[04:40] Previous week lihaay esbuoq hora haiga isa
+[04:43] Previous month lihaay bishi hora haiga la semestay
+[04:46] Iya session haiz a sobratea ishiyaan haiga
+[04:49] Sa'ama London Haid or New York Haid.
+[04:53] Sasyon walbo furmo.
+[04:55] Haiga u samesti kor bayside likuditiya la'a.
+[04:59] Marga wako ispiesifig giree halka si kuha gagaan bayside likuditiya si aadu si gwerilin.
+[05:04] Oke, next slide.
+[05:08] Selside Likuditi.
+[05:10] Selside Likuditi ba bil' aksigi su qaselko usu'gdo wax walbo low walbo oo hoska jiru ilipiditi walbo hoska ta'lo.
+[05:19] ke bihanbu halloa ka nangaagud sell-side liquidity.
+[05:23] Deeen, sell-side liquidity gas wixi lo yedaku arrosana wixi kuha ya gan specific liquidities.
+[05:30] Wa previous daily law, shalay law gedi, previous weekly law, sbuqara law gisa,
+[05:36] previous monthly law, pishara law gida, i-session laws,
+[05:40] Asian law, London law, or New York law.
+[05:43] yako a Senior
+[05:52] and a зар details.
+[06:04] yako avanica
+[06:09] iha halka Discovery
+[06:13] then
+[06:13] buy side liquidity
+[06:16] it was correct
+[06:18] Il-Aqs ki wa ta edo ah opposite keel
+[06:20] Suuqan Expansion usame
+[06:22] Retracement face u gali
+[06:24] Halka liquidity ki level ay maaday
+[06:26] Liquidity ka qa qaati
+[06:28] Ten sell-side liquidity a target ku ah
+[06:31] Low housi ka adeta ah
+[06:32] Marka sell-side liquidity ka as ma hanko lakha kwa yaaik
+[06:35] Taha hanko taah
+[06:36] Session Lose
+[06:37] Previous Daily Lose
+[06:39] Ama Previous Monthly Lose
+[06:41] So
+[06:42] Ama Previous Weekly Lose
+[06:43] Tanma korpana hanko shagir
+[06:45] And two types of liquidity.
+[07:02] Liquidity is a number.
+[07:04] Allahu ya laadha hai.
+[07:05] Midga sobrati ashar karakso qaati, internal range liquidity, IRL.
+[07:10] And wa sobrati ama key level.
+[07:13] Sebeba a number maa qalbi maa alu di gai halayayay.
+[07:17] And internal range liquidity,
+[07:20] waa liquidity ubudaha kujirta magu suuqa expansions,
+[07:22] Cool Akee
+[07:30] Simple
+[07:30] External range liquidity
+[07:32] 1RIL
+[07:34] 1L
+[07:36] 1L
+[07:37] 1L
+[07:38] 1L
+[07:38] 1L
+[07:40] 2L
+[07:41] 2L
+[07:42] 2L
+[07:43] 3L
+[07:44] 1L
+[07:45] 1L
+[07:46] 2L
+[07:46] 1L
+[07:47] 3L
+[07:47] 3L
+[07:48] 1L
+[07:48] 3L
+[07:48] 4L
+[07:49] 2L
+[07:49] 3L
+[07:50] 3L
+[07:50] 3L
+[07:50] 3L
+[07:52] Okay, next slide.
+[08:06] And, tunnel range liquidity.
+[08:09] Wa, IRL wa mel qi mwkafeel aliyo key level.
+[08:13] Aashar kora mqsu qaadhanu haal agarraadiyya.
+[08:16] Key level ki marqaad, key level aliyya ke liyaal uubara.
+[08:19] Alkaasu haal agarraadiyya, gudda haal daqaafi khora agarraadiyya.
+[08:22] Marqa meelahas, likuditiya taal wa melakakluw agarraadiyya.
+[08:26] or liquidity alayala markabat gara naza ki levels kana intayihin
+[08:31] o b v bagar, break the broad multiplication block, volume imbalans, or price range
+[08:37] mafala intas nabankar diyanakwaan kudda hai maizwa kashadam
+[08:43] o yaa maka dafam diipu lula gashrikas
+[08:48] and external range liquidity
+[08:52] buy side liquidity or sell side liquidity
+[08:57] And if you had a good impression aboutLevGaS daily hour, day- discolting low, weekly hour, weekly hour stopped, monthly hour open, monthly hours at the cityorta.
+[09:14] wa inta ku soo shigayay
+[09:16] anta ekstarnol ka ee baay saiki wa
+[09:19] ishifimit
+[09:20] mar ka sosa uogani saa
+[09:23] maka aqanum bagu kallukur hii
+[09:26] skumiduay
+[09:27] lakin strategi ladu hae kudambe
+[09:29] i-rl to i-rl
+[09:31] baay saiki kas
+[09:32] ena bezik taham barwa ena sofian
+[09:34] lik strategi dimensiang haku bezikirisimtaik
+[09:37] wadalka na ku barantonto
+[09:39] wa internal range liquidity
+[09:41] baasas ekstarnol range liquidity
+[09:43] Okaay, suuqa markan.
+[09:47] Siwaana ugaranizaa.
+[09:50] Marka, siwaana ugaranizaa.
+[09:53] Insaeik, untaana rainchi li kuidid suuqa.
+[09:55] Wahawayaan, ekspanssion suusimii.
+[09:59] Ekspanssion kofarqa sa'u susimii.
+[10:01] Then, retracement suuqa kalaf.
+[10:04] The retracement ka marka manshuq i mazii maa mustiq.
+[10:10] Kee level leddi.
+[10:12] Yibubula wa aksrik kao kawkas niti oo parkhae.
+[10:16] And and mar a'la wan nukko kee level kaad maadirbegad,
+[10:20] ya jodor deblok gaga gaga nuna e-maly,
+[10:24] mar ka hal kaas madam oo e-maly internal range liquidity kaas buidaa.
+[10:30] Taigeet kana bananko ukaagas wu teka external range liquidity
+[10:33] ay'ila lao suda, odr thluoo kaazna koo yi hayy
+[10:36] sal salto haiti gagan sa expansion kaan daa.
+[10:40] Dien retracement da'a alkaas merke likuuditiya laga ghaa ta'a.
+[10:43] Inta'na rinju likuuditiya, alkaas likuuditiya sugu te'a ta'a ki level ka muku imaadu
+[10:48] o gwa mashi'n gwa melu akta'a la odrru lu'a agi, la akta'a odrrukiya la so'a ta'a ta'a ta'a ta'a
+[10:52] ta'een, miki odrruka ghaa so'a ta'a sugu da'a ta'a
+[10:56] oo expansion ki xige aqaatsa xige sa'hda haabu sune'a
+[10:59] assegu ta'a ta'iget kutta'ay, yenu i-arelka haa s'a ta'a ta'a
+[11:02] So, aifan ta raadjyehna suuq uwa liquidity to liquidity
+[11:09] Kabi gisa suuqa, nintas karefa handid, nindamda suuqa
+[11:13] Kainzana nindamda, liquidity ka aaddi, aaddi kaabusa
+[11:17] Okay
+[11:19] Eeeem, aeadol bil aaksi anu atana, expansion u suuqa samiyeh
+[11:26] Then, retracement to SOSME,
+[11:29] HAL KAANIUHU IMAHAE KEY LEVEL,
+[11:31] BEARBAGAGUI IMAHAE KEY LEVEL KHAAS MARIKU IMAHAE KEY LEVEL KHAAIA LAH LIQUIDITY YA YA YA LAH.
+[11:38] MARIKA LIQUIDITY GAS MEASHI YALU AYOU KAADI, MARIKA MARIKAU LIQUIDITY GAS KAADI,
+[11:44] AYOUHU SAMI EXPANSHON KHAIHU.
+[11:46] ASAGA UUSSOH DAINU KAADO, EXTERNAL RANCH LIQUIDITY,
+[11:50] WAANA EXTERNAL RANCH LIQUIDITY,
+[11:52] Age
+[11:55] Açao
+[11:59] And that's what's the criteria to give us our level of price
+[11:59] Arl-to-e-rl-y
+[12:01] As we'll get our level of price
+[12:03] Arl-to-e-rl-y
+[12:05] And the level of expansion
+[12:13] The other Carlos
+[12:15] And the other
+[12:16] And the opposite
+[12:17] We'll show you the level of price
+[12:21] Okay, okey, iii ni ki level la imaadhaan lukubarashama ki level ka qaqaa kaerlu gua imaadhaa isu aish sweetenisao
+[12:29] The last switinisao hawa expansion wu qsua mya ya, mchubu qaada ya
+[12:33] E rl, external range liquidity wu qaada ya.
+[12:36] External range liquidity ga mcubu qaada wmchubu doonana ya, internal range liquidity ga nukaswutu doonana ya.
+[12:42] Iii ki level kaamashi uyalu, halka asu imaana ya, dhe indaqa kiis hii kao halka kusua mya ya, suga tagit wadaan uunu qun doonu
+[12:49] XTANOR RANGE LIQUIDITY
+[12:51] Marko wa LICUDITY TO LICUDITY TO LICUDITY
+[12:53] Wihabina baantarijena baantarijena baantarijena baantarijena
+[12:57] XTANOR RANGE LIQUIDITY gaas o koo ghaadi
+[13:03] EIN RETRAISMENT
+[13:05] Halkan LIQUIDITY taali wa aqtangu ghaadi
+[13:09] Mokul aqtang ghaadi next
+[13:11] State piece wihabina ghoa expansion ghaadi
+[13:13] XTANOR RANGE LIQUIDITY gaas o kajrta ghaadi
+[13:17] I can go see the default to the screen
+[13:21] Just that you can see the default to the screen
+[13:25] I can see the default to the screen
+[13:28] Next slide
+[13:30] Next slide
+[13:35] TotalSoup
+[13:37] TotalSoup
+[13:39] This is a single one
+[13:41] And TotalSoup
+[13:43] In a single one
+[13:45] TSA
+[13:47] TotalSoup
+[13:49] 6.
+[13:52] 2.
+[13:53] 3.
+[13:56] 3.
+[13:57] 4.
+[13:57] 4.
+[13:58] 5.
+[13:59] 5.
+[14:00] 6.
+[14:01] 6.
+[14:01] 7.
+[14:01] 7.
+[14:02] 8.
+[14:03] 7.
+[14:04] 8.
+[14:05] 9.
+[14:06] 10.
+[14:06] 11.
+[14:07] 11.
+[14:08] 11.
+[14:08] 11.
+[14:09] 12.
+[14:09] 11.
+[14:10] 11.
+[14:11] 12.
+[14:11] 13.
+[14:12] 13.
+[14:12] 14.
+[14:13] 12.
+[14:13] 14.
+[14:14] 14.
+[14:14] 14.
+[14:15] 15.
+[14:15] 15.
