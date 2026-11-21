@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Video | https://youtu.be/eVCXokhMUPs (TET COMMUNITY, 2026 Mentorship, 38:36) |
-| Isha | Qayb video ah oo uu user-ku soo geliyay: **00:00–11:01 (P1)**. Qaybaha kale (11:01–38:36) waa la sugayaa. |
+| Isha | 4 qaybood oo video ah uu user-ku soo geliyay: P1 (00:00–11:01), P2 (~11:01–21:03), P3 (~21:03–30:54), P4 (~30:14–38:36). Casharka oo dhan waa la helay. Offsets-ka P2–P4 waa qiyaas. |
 | Habka | Slide-yada iyo qoraalka maqalka (Whisper, Af-Soomaali). Tayadu waa dhexdhexaad. |
 | Qoraalka | `transcripts/05_eVCXokhMUPs.whisper_so.txt` |
 | Sawirrada | `research/img05/` |
@@ -67,13 +67,49 @@ Slide-ka wuxuu muujinayaa 4H iyo 1H (bullish):
 
 [P1 10:43–10:58] ayaa xaqiijinaya xiriirka 4H candle-ka iyo purging hours-ka.
 
-## 7. Xiriirka casharrada kale
-- **Casharka 04:** purging hours iyo CRT/AMD. Purging hour-ku waa waqtiga **manipulation**-ka (TS) ee CRT-ga 4H.
-- Su'aalaha furan: midkoodna kuma jawaabin qaybtan.
+## 7. Profiles-ka kale (P2)  [SLIDE + AUDIO+]
 
-## 8. Xiriirka indicator-ka (soo jeedin)
+| Profile | Sharaxaad |
+|---|---|
+| **5 PM H/L of the Day** | Eeg §5. LOD/HOD wuxuu ku samaysmaa 4H-ka 5 PM, 1H-kana 8 PM [P2 01:29–01:58] |
+| **9 PM H/L of the Day** | 4H-ka 9 PM: accumulation, kadib TS, kadib buy. 1H-ka wuxuu ku samaysmaa **9 PM ama 10 PM**, inta badan 10 PM [P2 01:51–02:17] |
+| **1 AM H/L of the Day** | London ayaa samaysa HOD/LOD. 1H-ka waa **2 AM ama 3 AM** (slide: 3 AM) [P2 02:26–03:51] |
+| **5 AM H/L of the Day** | 4H-ka 5 AM wuxuu qaadaa key level iyo liquidity. 1H-ka waa **6 AM ama 8 AM** (slide: 6 AM) [P2 04:42–05:49] |
+| **9 AM H/L of the Day ("9 AM reversal")** | 4H-ka 9 AM ayaa samaysa HOD/LOD (reversal), halkii uu ka ahaan lahaa continuation. 1H-ka waa **9 AM ama 10 AM** (slide: 10 AM). Waxaa la socda Inside Bar CRT [P2 05:57–07:24] |
+
+- Purging hour-ka **7 AM** sidoo kale wuu dhici karaa, laakiin waa ka yar yahay 6 AM iyo 8 AM [P3 06:10–06:19].
+
+## 8. Brick by Brick — 4H → 1H → 5 min  [SLIDE + AUDIO+]
+- Slide-ka: **4H** CRT → **1H** ("8 am Purge") → **5 MIN** (#1, oo leh position box: SL casaan ah iyo TP cagaar ah).
+- [P2 08:49–09:44] **Muhiim:** "Uma baahnid inaad sugto in 4H candle-ku xirmo." Confirmation-ka CRT waa **purging hour**-ka iyo turtle soup-ka. Entry-ga waxaa laga galaa **gudaha 4H candle-ka**, iyadoo la isticmaalayo Model #1 ee LTF.
+- [P3 01:31–01:50] **Saddexda shay ee la sugo [AUDIO+]:**
+  1. **Liquidity** ha la qaado (TS).
+  2. **Key level** ha la gaaro.
+  3. **Purging hours** (time).
+
+  Kadib 5-min-ka waxaa laga raadiyaa **Order Block (Model #1)** [P3 01:57–02:04].
+- [P3 02:24–02:57] 2 Candle CRT: lama sugo candle close. Marka high-ga la qaado, key level-ka la joogo iyo waqtiga purging hour-ka, 5-min Model #1 ayaa entry ah.
+- **Model #1 (buy) [AUDIO+]:** "candle-kii u dambeeyay ee bearish ahaa, ka hor dhaqaaqa bullish-ka ee qaaday liquidity-ga" [P3 06:47–07:08; P4 01:49–02:00].
+- **Tusaalaha 5-min:** position box-ka SL-ku wuxuu ku yaal sweep-ka hoostiisa, taas oo la jaanqaadaysa **D1**. TP-guna wuxuu ku yaal range high / ERL [sawir: `img05/example_5min_trade_sl_tp.png`].
+
+## 9. Tusaalooyinka live (P3–P4)  [AUDIO? + SLIDE]
+- **Waqtiga chart-ka:** "NY time = **UTC-4** halkan" [P3 03:20–03:24]. **Fiiro:** NY waa UTC-4 xilliga xagaaga (DST) iyo UTC-5 xilliga jiilaalka. Indicator-ku waa inuu isticmaalo `America/New_York`.
+- **5 AM example:** order flow bullish ah. Purging hour-ku wuxuu ahaa **7 AM**. CRT ayaa samaysmay, Model #1 ayaa entry ahaa, target-kuna wuxuu ahaa ERL [P3 05:41–07:31].
+- **5 PM example:** purging hour-ku wuxuu ahaa **8 PM** [P3 08:26–08:56].
+- **SMT (Gold vs Silver) [AUDIO+]:** Silver-ku wuxuu qaaday liquidity, Gold-na ma qaadin, taasina waa SMT [P4 00:56–01:08]. Chart-ka Silver waxaa lagu arkay P4.
+- **9 PM / Inside Bar CRT:** 9 PM ayaa samaysay CRT, kadib Inside Bar. Purging hour-ku wuxuu ahaa 2 ama 3 [P4 03:21–03:42, 07:23].
+- **Summary [P4 04:55–06:09]:** accumulation ku yaal key level → purging hour (2 ama 3) → order flow → key level (OB/FVG) → kadib marka liquidity la qaado, entry 5-min.
+
+## 10. Xiriirka casharrada kale
+- **Casharka 04:** purging hours iyo CRT/AMD. Purging hour-ku waa waqtiga **manipulation**-ka (TS) ee CRT-ga 4H.
+- Su'aalaha furan: Q4 waa la xoojiyay (§8). Q1, Q2, Q5–Q10 weli waa furan yihiin.
+- **Shuruudaha signal-ka ee la soo jeedin karo:** TS + key level + purging hour, kadib LTF Model #1 (§8).
+
+## 11. Xiriirka indicator-ka (soo jeedin)
 - **4H candle boundaries (NY time):** 5p/9p/1a/5a/9a/1p, oo session label leh.
 - **Purging hour window** 4H candle kasta. TS-ka ku dhaca window-kaas wuxuu noqon karaa shuruud ama grade.
 - **HOD/LOD tracking:** maalinta NY 5 PM ka bilaabanta, iyo 4H candle-ka uu ku samaysmay.
+- **Non-repainting:** CRT range-ku waa 4H candle-kii **xirmay**. Signal-ku wuxuu ka dhici karaa gudaha 4H candle-ka socda (purging hour + TS + LTF Model #1), laakiin signal-ka LTF waxaa lagu xaqiijinayaa marka LTF candle-ku xirmo.
+- **Timezone:** `America/New_York` (DST-ka si toos ah ayuu u maamulaa).
 
 Code lama qorin.
