@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D3 | 2026-11-21 | SMT pairs | Asset-ka ugu weyn waa **XAUUSD**. Asset-yada SMT/PSP lagu isbarbar dhigo waa: **XAUEUR, XAUGBP, XAGUSD, XAUCHF, XAUJPY, XAUCAD, XAUAUD**. Liiska waa input user-ku beddeli karo (symbol prefix-ka broker-ka). Sida divergence-ka loo xisaabiyo (hal pair mise inta badan) waa la sugayaa. | User (sawir watchlist) |
 | D2 | 2026-11-21 | Risk:Reward | **RR-ku waa go'an mar walba: 1 Risk : 3 Reward.** TP = Entry ± 3 × (fogaanta Entry ilaa SL). Ma jiro TP1/TP2/TP3, TP-guna kuma xirna ERL/DOL. Casharka 08 looma baahna. | User (jawaab toos ah) |
 | D1 | 2026-11-21 | Stop loss (CRT setup) | **SL waxaa la dhigaa wick-ka Turtle Soup-ka korkiisa.** Sell: high-ga manipulation-ka (TS) dushiisa. Buy: low-ga TS-ka hoostiisa. | User (jawaab toos ah) |
 
@@ -28,9 +29,12 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q10 | Minimum Risk:Reward | **→ D2 (3R).** |
 | Q10-old | Minimum Risk:Reward | Furan. (Casharka 06: tusaale trade ah ayaa gaaray ~3R, laakiin ma aha xeer.) |
 | Q11 | Purging hours: shuruud qasab ah mise grade? | Casharka 06 [P3 01:49–02:03]: "qasab maaha, laakiin waa waqtiyada ugu fiican". Casharka 05: waa mid ka mid ah 3-da shay ee la sugo. **Waxay u baahan tahay go'aanka user-ka.** |
-| Q12 | Pair-ka SMT/PSP: XAUEUR, XAUGBP mise XAGUSD? | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
+| Q12 | Pair-ka SMT/PSP: XAUEUR, XAUGBP mise XAGUSD? | **→ D3.** |
+| Q12-old | | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: Waxaa lagu daray D3 (liiska SMT pairs, 7 asset). Q12 waa la xalliyay.
 
 - 2026-11-21: D2 waa la caddeeyay. TP-ga waa 3R go'an mar walba, waana hal TP oo keliya. Q9 waa la xalliyay.
 
