@@ -32,6 +32,12 @@ Slide-yada waxay tusayaan setup-yada aan la qaadan.
   - **Trap 3:** Kadib marka PDL (DOL) la qaado, dhaqaaqa kor u soo laabanaya waa **retracement**. Sell lagama galo key level-ka retracement-ka dhexdiisa ku jira. Tani waxay u muuqataa xeer **invalidation / no-trade** ah.
   - **Trap 4:** Marka target (DOL) la gaaro, setup cusub jihadaas looma raadiyo ilaa retracement la sameeyo. Tani waa **no-trade** rule.
 
+## 2b. Waxa hadalka qaybaha 2–4 laga helay  [AUDIO?, tayo hoose]
+- **Range candle [P2 00:51–01:11]:** "candle-kani wuxuu sameeyay pullback / range, isla candle-ka key level-ka ku samaysmay... kadib ayaa la qaaday". Waxay u muuqataa: candle-ka range-ka ah ee key level-ka liquidity-giisa ayaa marka hore la qaadaa (sweep), kadibna dhaqaaqa dhabta ah ayaa yimaada. Ha gelin ka hor sweep-ka range candle-ka.
+- **Target-ka kadib [P2 04:18–04:43]:** "haddii key level-ka aan la imaan... purging, SMT... key level-ka la ixtiraamay, model 1 la ixtiraamay, breaker la ixtiraamay, OTE, kiss of death". Taasi waa TSQ oo dhan, ka dib retracement.
+- **Inside bar [P2 06:05–06:57]:** "candle-ka inside bar-ka xiga wuxuu samayn karaa pullback iyo SMT, kadib purging, kadibna dhaqaaq. Model 1 ayaa la sugaa". Sidaas darteed inside bar-ka keligiis entry ma aha.
+- Qaybaha 3–4: tusaalooyin live (D ERL→IRL, PWH, 1H/5m position boxes).
+
 ## 3. Tusaalooyin (P3–P4)  [SLIDE]
 - "D ERL TO IRL": Daily ERL ayaa la qaaday, kadib IRL. 1H-ka #1 iyo 10 AM ayaa la calaamadeeyay. Chart-yada XAUUSD 1D/1H/5m ee PWH iyo ERL, iyo position boxes.
 
