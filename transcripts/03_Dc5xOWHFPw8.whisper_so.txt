@@ -1,0 +1,723 @@
+Title: 2.0 IRL to ERL & 3.0 Key Levels | 2026 Mentorship (lesson 03, Dc5xOWHFPw8)
+Source: video file uploaded by user; transcribed with faster-whisper large-v3-turbo, language=so, CPU int8.
+Quality: medium-low. Somali ASR; many words mis-heard. Use only together with research/03_*.md.
+==================================================================
+[00:04] Assalamualaikum warahmatullahi wabarakatuh, sahabiyya al-Sawduwada, and w-Sawduwada y-youtub kena, TED Community, wa anewaz kariya haylu, a-shir kena lagad, e-mantashab kena 2026, e-mantashab kena 2026, e-mantashir kena qadhan y-no wa IRL, ERL, EO key levels, makalharan,
+[00:30] ahorita kuad al-shkudachilain, e-mantashir kena wabarakatuh, pru.
+[00:34] eeeen a-di adnambashir kena ubalaraan, agen rajayini a-se-dee agarrabikind hatu ufudud, agumaa ufududud, e-mahul, sam, eh, taftu kofu, kabu kofuha mikaro,
+[00:44] inangu sharrohoh, insya Allah, hadilai ra ahudhu, maka solwa za sa-habiyya al-malawad,
+[00:52] e-mantashir kena. A-airil tuli, ERL,
+[01:03] And wamo dhu anu kuwaad
+[01:05] IRL hallo su gabi yay internal range liquidity
+[01:10] IRL wa key level kujira gudaha dealing range ka suuqa
+[01:15] And kasulu lu jida yaani wa dealing range ka suuqa u kujiru
+[01:22] Dealing range ka gudihisa waha kujiru
+[01:26] Ayya loo aqana IRL
+[01:30] Wa internal yaani wa wahab kudaha kujiru internal range liquidity
+[01:34] And badi wahaay nukudhaan wa kuwaagmaan
+[01:40] Order block, verba gap, invasion verba gap
+[01:43] Iya kuwa kalwa badan anu dat ka isti amaran
+[01:46] Fakin sadhaadagumi hii msa waha sadhaadas
+[01:48] And IRL wa bilaksi gedi wa external range liquidity
+[01:55] Wa yaani liquidity taa lo bananka range ka
+[02:00] Ay suuqa u kudaha jiru
+[02:02] IRL wa likuditi ya labba nanka range ka win
+[02:07] Tani wahaay nukunkur taa
+[02:08] Previous highs, previous lows, major swing points
+[02:12] Buy side ama sell side liquidities
+[02:15] Intas ay kuwaay kerta
+[02:17] In IRL ka
+[02:20] Marka amalina intas sarhaadas qowan
+[02:24] Ina tufaham ten
+[02:25] Example laa nusul suadhaan insha'allah
+[02:27] Sufiya ambadu siwa midadhan
+[02:29] And
+[02:32] Nahay ad
+[02:34] Wa araktaan
+[02:35] Example kubu wa ad wa
+[02:36] IRL to ERL
+[02:38] And
+[02:40] Wa ad
+[02:41] Range ka lwushi gayao
+[02:43] Wa yaani range ka lwushi gayao
+[02:43] Wa yaani range ka lwushi gayao
+[02:44] Wa yaani range ka lwushi gayao
+[02:45] Range ka lwushi gayao
+[02:45] Range ka lwushi gayao
+[02:46] Wa suuq wa daqaaka mbahay
+[02:48] Daqaak mbahay
+[02:50] Aya loa kaana range
+[02:51] Dealing range
+[02:52] Daa makashid
+[02:53] Wa kana
+[02:54] Marka
+[02:56] Dealing range kaan
+[02:58] Aya wushu liya hay
+[03:00] Saaha adama kay lwuktaan
+[03:02] Ubahaday
+[03:02] Displacement kaan
+[03:04] Daaay
+[03:04] Aarkesaan
+[03:05] Awa ye
+[03:06] Wuhuke tagay
+[03:08] Internal range
+[03:09] Liquidity
+[03:09] Yaani wwa
+[03:10] Liquidity
+[03:11] Buda huujrtu
+[03:11] Maesha nada wa
+[03:13] Bairba gap
+[03:14] Wa imbalans
+[03:15] Wa mel ubaanin
+[03:16] La soa
+[03:16] Af madderu
+[03:17] Marka
+[03:18] Maesha asna
+[03:19] Aarka asna
+[03:20] Wa taaaygeet
+[03:21] Marki maesha
+[03:23] Inbalans
+[03:24] Kaan lagattagay
+[03:25] Sidaa idin
+[03:26] Sheegi
+[03:26] Footprints
+[03:27] Ga
+[03:27] Raadadka
+[03:28] Ibdaay
+[03:29] Katagay
+[03:29] So
+[03:29] Madaxu
+[03:30] Inta
+[03:31] Suuqa
+[03:31] Nuhawa
+[03:31] Inbalans
+[03:33] Kaana lagattagay
+[03:33] Yuhalule
+[03:34] Inbalans
+[03:34] Kaana
+[03:35] Ima'anena
+[03:35] Marka
+[03:36] Ima'anno
+[03:37] Aarka asna
+[03:37] Ribazola
+[03:38] Kadigay
+[03:38] Taagayet
+[03:39] Kanubi
+[03:40] Nuhi
+[03:40] Nuhi
+[03:40] Hay
+[03:40] IRL
+[03:42] Ima'anena
+[03:43] Ima'anena
+[03:43] Ima'anena
+[03:44] Ima'anena
+[03:44] Ima'anena
+[03:45] IRL
+[03:46] TRL
+[03:46] Wa'ana
+[03:47] Kaapka
+[03:47] Suuqa
+[03:48] Udgaaako
+[03:49] Wa'ana
+[03:49] Kaapka
+[03:50] Umihimsan
+[03:51] Ima'anena
+[03:52] Fahantid
+[03:52] Adigo
+[03:53] Kuhira
+[03:54] Naayy
+[03:54] Ashir
+[03:54] Kaadi
+[03:55] Udru
+[03:55] Floga
+[03:55] Ha
+[03:56] Maha'ka
+[03:57] Hawshua
+[03:58] Sidas
+[03:59] En
+[04:00] Marka'an
+[04:01] Udru
+[04:01] Balak
+[04:02] Balest
+[04:02] Maalai
+[04:03] Ima'an
+[04:04] Aarka'an
+[04:06] Dilling
+[04:07] Grange
+[04:07] Kaana
+[04:08] Haisanna
+[04:08] Al
+[04:15] External range
+[04:16] Liquidity
+[04:17] Nuhi
+[04:17] Kaas
+[04:17] O
+[04:17] Tagit
+[04:18] Ka
+[04:18] External range
+[04:19] Sillu
+[04:20] Wa'a
+[04:20] Tagit
+[04:21] Haadda
+[04:22] Markan
+[04:22] Sillu
+[04:23] Tagit
+[04:23] Nuhi
+[04:24] Internal
+[04:25] Range
+[04:25] Liquidity
+[04:26] Nuhi
+[04:26] Wa'ana
+[04:26] Sillu
+[04:26] Sillu
+[04:27] A
+[04:27] Taas
+[04:29] O
+[04:29] Mi'anena
+[04:29] Hidwi
+[04:29] Hay
+[04:30] Lugta
+[04:30] Nuhi
+[04:31] Maha'an
+[04:31] Arke
+[04:31] Sir
+[04:31] Dealing
+[04:32] Range
+[04:32] Kaana
+[04:33] Da
+[04:33] Madama
+[04:34] Asir
+[04:34] Kua
+[04:35] Da
+[04:35] So
+[04:35] Dagi
+[04:37] Siti
+[04:37] So
+[04:37] Fiyo
+[04:37] Anu
+[04:37] Fahant
+[04:38] Taas
+[04:39] Mi'an
+[04:39] Hidwi
+[04:39] Haawai
+[04:40] Udru
+[04:40] Flugi
+[04:40] Nuhi
+[04:41] Nuhi
+[04:42] Bae
+[04:42] So
+[04:43] Wtun
+[04:43] Maha'tai
+[04:43] Sill
+[04:44] Site
+[04:45] Rejections
+[04:46] Bae
+[04:46] Sites
+[04:47] Kana
+[04:47] Bood
+[04:47] Yada
+[04:47] Faya
+[04:48] Maha'an
+[04:51] Hidwi
+[04:51] Haa
+[04:53] Adhina
+[04:54] Next
+[04:54] Slide
+[04:55] Next
+[05:01] Slide
+[05:02] Bain
+[05:02] Adhina
+[05:03] Maha'an
+[05:04] Naga
+[05:04] Tertiru
+[05:05] Maha'an
+[05:12] Maha'an
+[05:16] Sorry
+[05:16] Arraba
+[05:17] Nga
+[05:17] Maha'an
+[05:24] Waa
+[05:25] E
+[05:25] R
+[05:26] To
+[05:26] I
+[05:27] R
+[05:27] Waa
+[05:27] Bil
+[05:28] Aksi
+[05:28] Maha'an
+[05:29] Maha'an
+[05:30] Maha'an
+[05:30] Maha'an
+[05:32] Aadkuda
+[05:33] Bain
+[05:33] Kare
+[05:34] Kare
+[05:34] Ta
+[05:34] Aashr
+[05:34] Kare
+[05:34] Wudru
+[05:34] Flugi
+[05:35] Maha'an
+[05:36] I-A-Rail
+[05:37] I-A-Rail
+[05:38] Maha'an
+[05:39] I-A-Rail
+[05:39] I-A-Rail
+[05:40] Kata
+[05:40] Taagit
+[05:40] Kha
+[05:41] Hadha
+[05:42] Taagit
+[05:42] I-A-Rail
+[05:43] Kha
+[05:44] Gormi
+[05:45] Maha'an
+[05:45] Maha'an
+[05:45] Maha'an
+[05:45] Maha'an
+[05:45] A-Rail
+[05:45] Jaha'an
+[06:03] Maha'an
+[06:06] Maha'an
+[06:06] Pan
+[06:09] A-Rail
+[06:09] Hai
+[06:10] Waxe da aan major key level.
+[06:14] Ma ki la suobu xinae.
+[06:15] Sae di shiigin xaay 10 frame key level daily, weekly, monthly.
+[06:20] Alkan xa ka soda azo rivaazol.
+[06:24] Marika taqtid lowa 10 frame ka complex bulbaaga maishaan ka so'ado.
+[06:28] Marika marikaan complex bulbaaga lowa 10 frame kaan ka so'ado.
+[06:33] Waxa u so'ata xaay 10 frame key level u so'ata.
+[06:37] Nama widdi la nguo, wikili la nguo, marikaan marika aaya rilka aaya taqtiddeh.
+[06:44] Maju asaqa gul kura meeshi lagad ghaa ghaay asaqa taqtidka ah.
+[06:47] Kadibna waa arkeasa ekstano rinx kaas dib aya loqa ghaada ya.
+[06:51] Sada sahda ghaa maada ma udrufu luuga maki haaya 10 frame ka meeshi lagkeenu.
+[06:56] Sina idu soo shay udrufu luuga wala ghaa da ghaa ghaa ghaada ghaa ghaada na lakin.
+[06:59] Rinx ka suog wukujira nam huyya yi ghaa kena.
+[07:02] Wa arkeasa rinx ka lugta an kujirnu.
+[07:05] Wa arkeasaan lugta an suwaa marika antaana lrinx ka baad taqtidha.
+[07:09] Rivaazul kujukas u da'ghaa ii arayla.
+[07:12] Marikaan asa gana waa kana marr lakzambul lawa ta danaan intuswa.
+[07:20] Ida adhi shayga waa halkaan u arkeasaan.
+[07:23] Lugtaan aya hayasanna ekspansion kaan ahr.
+[07:27] Dealing range kaan aya sanna.
+[07:29] Ii arayla kaan rivaazul kuswa da'ghaa.
+[07:32] Wa arkeasaan rivaazul kuswa da'ghaa taqtidka mhuyya suqa.
+[07:36] Ii arayla kaan in laa soa'ghaa fi matiru.
+[07:41] Wa aay aay rayl.
+[07:42] Aayyada hada taaigitka.
+[07:44] Aayyada yaan alawaswada.
+[07:45] Marikaan laa ye maaadu.
+[07:46] Aayyada yaan alawaswada.
+[07:47] Marikaan laa ye maaadu.
+[07:48] Arkeasaan suqa.
+[07:49] Aayyada yaan alawaswada.
+[07:50] Ii arayla kaadana dibu uqaaday.
+[07:54] Marikaan intus.
+[07:55] Ii arayla kaadana diibu uqaaday.
+[07:56] Marikaan intus.
+[07:57] Ii arayla taaigitka.
+[07:58] Ii arayla baarijayna yaa.
+[07:59] Aadu a aayidu bil aaksi a.
+[08:00] Sobta kene sanu hawaa in da hay.
+[08:03] Wa in major key level la soibu huyena yaa yu marikaan.
+[08:08] Aayye.
+[08:09] Aayye.
+[08:10] Ankaswa anna.
+[08:13] Key levels.
+[08:14] Key levels.
+[08:15] Waameelaha suqa uqa daqaako.
+[08:17] Aayy.
+[08:18] Maru farbadan na asirka uduflug waa'yumakashan.
+[08:21] Key level.
+[08:22] Key level.
+[08:23] Key level.
+[08:24] Haddaan islabaraayna uxu ya hay.
+[08:28] Aayy.
+[08:29] Key levels.
+[08:30] Ka ugu hurrayo.
+[08:31] Aayy.
+[08:32] Key level.
+[08:33] Waameelaha.
+[08:34] Ay.
+[08:35] Kaaddaqaakaan.
+[08:36] Medha huyenta suqa.
+[08:38] Ibda.
+[08:39] Waameelaha daqaaka.
+[08:40] Aayy.
+[08:41] Aayy.
+[08:42] Kaaddaqaaka.
+[08:43] Aayy.
+[08:44] Aayy.
+[08:45] Aayy.
+[08:46] Key level.
+[08:47] Koo hurrayo.
+[08:48] Aayy.
+[08:49] Wa.
+[08:50] FPG.
+[08:51] Verwa gab.
+[08:52] Marika.
+[08:53] Verwa gab.
+[08:54] Wa.
+[08:55] Sadeh.
+[08:56] Kandal.
+[08:57] Kandal number one.
+[08:58] Kandal number two.
+[09:00] Kandal number three.
+[09:01] Or.
+[09:02] Wix code is suqaaren.
+[09:05] Kandal number one.
+[09:06] And kandal number two.
+[09:08] Wix code is suqaaren.
+[09:09] Gaaab ka meesha ka aburmu.
+[09:12] Aayy.
+[09:13] Aayy.
+[09:14] Aayy.
+[09:15] Wix code is suqaaren.
+[09:16] Gaaab ka meesha ka aburmu.
+[09:17] Aayy.
+[09:18] Aayy.
+[09:19] Aayy.
+[09:20] Koo hurrayo.
+[09:21] Kandal number one.
+[09:22] Kandal number two.
+[09:23] Kandal number three.
+[09:24] Wix.
+[09:25] Wix.
+[09:26] Wix.
+[09:27] Wix.
+[09:28] Wix.
+[09:29] Wix.
+[09:30] Kandal number one.
+[09:31] And wix.
+[09:32] Kandal number two.
+[09:33] Gaaab ka udaxweyo.
+[09:34] Wix.
+[09:35] Wix.
+[09:36] Wix.
+[09:37] Wix.
+[09:38] Wix.
+[09:39] Wix.
+[09:40] Wix.
+[09:41] Wix.
+[09:42] Wix.
+[09:43] Wix.
+[09:44] Wix.
+[09:45] Iubi.
+[09:46] Aayy.
+[09:47] Wix.
+[09:48] Wix.
+[09:49] Aadiga ki level ku'a wa melbo staa joo lagaad aaa ke doono oo rival source kaddea doono wana halka larabo ina ufriisitit suuqa kane ilaqshatit wana ki levels, ki level yaasha u gumi yimsan.
+[10:04] Aadiga ki level ka labaad wa order blok wa ki levels ka ki level la da u gudja ala hay an aad iyaad u isti'imalo, institusional ka ibda.
+[10:28] Maa shogubadane ka daqaqaqa ma dame etay aniga aad iyaad order blok ka u isti'imala, an order blok wa mahaay.
+[10:37] Kaish bi edin ka mudan waae, order blok salel gu gara nga laa, order blok xoog gara nga taa, markay luog ta bearish tahay diilin granch ka aku jirto, ee tahay bearish wa laas kandal ee ab aaha intu wana suuqa daun aadin.
+[10:58] Kandal kaas, ay ay ayu hese meyyan inst daqaqaqan ma dame daqaqan selkan daadhan ayo, maishu muuf ku ku ku ku kasobila maa sarihi hay, ay institution wal ku hese meyyan dib ay wusuwa lawtaan, markay dib wusuwa lawtaan, wa amel ay haddana laaq suuq gilina ayaan suuqa, order kalay kisoo gilina, datsway lodo, order blok.
+[11:19] wa amel order, uusub eka suuq gilina ayaan, next move ku uuduna eka suuq gilinda hon aansuuqa laakta, amel kas, order blok, fahaam kisina faantana umalena yaa, haddi ku yahay suuqa, bulish nah, wa un inta haanku shayi o bil al aks digida a, wa lahs kandal ee daun aaha intu na suuqo ab aadin.
+[11:43] Inya faantana barajay na yaa, let's move, invasion verba gap, wa aki level skaina sadhaat,
+[11:52] Ea Zdekmaa Looa Naga.
+[11:54] Eaaan...
+[11:55] Key levels kaan...
+[11:56] Inveeshoa n'viruwa kaab...
+[11:58] Hummalayna F.E.G.
+[12:00] Waxasustana hummalayna aaywa xerkor...
+[12:02] Waxo diganay...
+[12:04] Adda marka aaywa raasan.
+[12:06] Marka waa waxiro suyureg...
+[12:08] Marka waa hawaaay...
+[12:09] Waa viruwa kaab l'ajjibiye...
+[12:12] Amalugu xaana aqay...
+[12:14] Markaaz aaya...
+[12:16] Key level koonu qanaya...
+[12:18] Marki l'ajjibiwiyo viruwa kaab kaas...
+[12:20] Marki l' jibiyeo...
+[12:21] Aaya wukoonu qanaya...
+[12:23] Marki l'uoguswa laabda...
+[12:25] Key level me l'rriwaazoo l'kadu'o...
+[12:27] Ooo...
+[12:29] Keddimna suuqaas uuqatlaqa aqo...
+[12:31] Waana...
+[12:33] Waana viruwa kaab ki unwa...
+[12:35] Candle number one...
+[12:37] Candle number two...
+[12:39] Candle number three...
+[12:41] Weeks goda n'esmesu gari unwa...
+[12:43] Arkesa candle number three...
+[12:45] And candle number one...
+[12:47] Maisha aamarka kaab ki udihye...
+[12:49] Maada mbalans ka laba n'esdik...
+[12:51] Inu saa antu usameeo suu ihtiraamo...
+[12:53] Respect kariru...
+[12:55] Yara l'ka aadha meishi...
+[12:57] Ayo suuqi wuhuswa laabto...
+[12:59] Wa haasdan...
+[13:01] Ani war umaa yu daay...
+[13:03] Disrespect uunu kusameeo...
+[13:05] Marki wu disrespect kusameeo...
+[13:07] Wa aadha meishi...
+[13:09] Wa aadha meishi wuhuswa laabto...
+[13:11] Wa aadha meishi wuhuswa laabto...
+[13:13] Wa aadha meishi wuhuswa daay...
+[13:15] Wa aadha meishi wuhudhi...
+[13:17] L'ugu daay...
+[13:19] Suuqa baay uumaswa aday...
+[13:21] Maa nasoora aasa baalule...
+[13:23] Marka aadha meishi wuhudhi...
+[13:25] Marka aadha meishi wuhudhi...
+[13:27] Marka aadha meishi wuhudhi...
+[13:29] Taakitka nawa iya aareelka...
+[13:31] Wa aadha meishi wuhudhi...
+[13:32] lugu ha naga i прямо...
+[13:34] Maa la disrespect gari...
+[13:36] Wa aadha meishi wuhudhi...
+[13:37] Marka aadha me chinese wuhudhi...
+[13:41] Wa aadha meishi wuhudhi...
+[13:43] Iëwi wuhudhi...
+[13:44] Rao am resmi wuhudhi...
+[13:46] I Gri Ace...
+[13:47] Ga baime sote...
+[13:48] Ani wuhudhi...
+[13:50] Maa kzae abhyal ask an...
+[13:54] Email sura aadha mithi....
+[13:56] Bune uuhudhi...
+[13:57] Y首 kPa R23...
+[13:58] I can see...
+[13:59] Ajo IRL...
+[14:00] Let's go to the charts.
+[14:24] Saahabi al kujudu wada chartin kaena
+[14:26] an trading view ga
+[14:28] aaharib maana aslaaaragnu
+[14:29] sidao ugu maaqoolsan ugu faafasan
+[14:32] an IRL
+[14:34] 2ERL
+[14:35] anan harada wakushara hawa
+[14:37] anaslaaaragnu
+[14:38] marika
+[14:40] aarkesaan sibirkaan
+[14:41] an
+[14:42] waaaregdan
+[14:45] sibirkaan
+[14:47] an
+[14:49] mechan totosubaa kada aay
+[14:52] luqtaanaa baxaday
+[14:55] luqtaanaa baxaday
+[14:57] haaallaget tagay
+[14:59] aaya aareg il
+[15:01] intaanaa range liquidity
+[15:03] aaya aareg il kaan marika
+[15:05] mchuyyaa daadwaa gara nesa
+[15:06] waa order block
+[15:09] order block wa aada
+[15:11] baali sugu huxiyay
+[15:13] maraala makilaa suwataab gare
+[15:14] IRL kin alkaasee kuta laa
+[15:17] waa taagit
+[15:18] maruul bua aarkesa
+[15:21] saasad ghaaq loo sami yana ya
+[15:23] huuqa
+[15:23] dealing range kaasa
+[15:24] laaswa msubaa
+[15:25] suba dana
+[15:25] intaana range
+[15:27] liquidity aala
+[15:28] agatagi
+[15:28] waa la suwataab gare
+[15:29] iya aareg il ka taagita
+[15:32] adana intaana range
+[15:34] liquidity aal
+[15:34] guuswa lafti
+[15:35] iya aareg il ka saa taagita
+[15:37] illa haa doolki laaqaday
+[15:39] adana aaya
+[15:40] aareg il kaal
+[15:41] agatagi
+[15:41] ekstaana range
+[15:44] liquidity a taagita
+[15:45] marika
+[15:48] saha biyal
+[15:52] eean
+[15:53] maa hawa yanaat eean
+[15:56] lafanteen baara jayna yaa
+[15:58] eean
+[16:00] ekstaano range
+[16:01] liquidity
+[16:02] maru walbo o daqaak
+[16:04] laasamee yo
+[16:04] bhaa haal laga agataka
+[16:06] yaa
+[16:06] liquidity
+[16:07] guudaha ku jortta
+[16:08] liquidity
+[16:09] gas
+[16:09] mhaa ngula
+[16:10] mhaa ku baigini
+[16:11] ika taa
+[16:11] order block
+[16:12] mhaa ku baigmin kika taa
+[16:14] angkula
+[16:15] F.E.G
+[16:16] berva gab
+[16:18] mhaa ka la ku baigmin kika taa
+[16:19] angkula
+[16:20] waa
+[16:20] aareg taa
+[16:20] masan
+[16:21] F.E.G
+[16:22] waa
+[16:22] paras
+[16:23] price range
+[16:24] wa lau
+[16:25] berva gab
+[16:26] berva gab
+[16:26] berva gab
+[16:27] berva gab
+[16:27] lukuj biwaa
+[16:27] En mirka taagit kunu marwalbo
+[16:31] madame sadda order flow gaadana
+[16:33] wuboolish ya hay
+[16:34] wada adarkezo
+[16:35] sell sayed ke rejection
+[16:37] wukada gaya bay sayed
+[16:38] kenan trade and true
+[16:39] lugu sumeena
+[16:40] marwalbo
+[16:41] o internal range liquidity
+[16:43] gada la ima adho
+[16:44] miha taagit ku ah
+[16:45] external range liquidity
+[16:47] wakas
+[16:48] tasa loo qada external range
+[16:52] yash
+[16:52] internal range skana
+[16:55] wala respect kireena
+[16:57] ian adan buulish uudrufulu
+[16:59] aay setid
+[17:00] wakasen keelabels
+[17:04] naa iigaa baku wa
+[17:05] wakasat keelabeli
+[17:06] yash
+[17:07] yash
+[17:08] wihidun wak
+[17:09] iskusu no gudunukona
+[17:10] wihik
+[17:10] warika
+[17:11] wa wakana
+[17:13] uudrufulu wakay wa key level
+[17:14] uudrufulu wakay wa key level
+[17:16] uudrufulu wakay wa key level
+[17:18] fiji wakay wa key level
+[17:20] simple as that
+[17:22] uudrufulu ga sopara te wakana
+[17:24] enti yun wakay
+[17:26] Eeeen
+[17:58] Marekaw xaad suga saa intaa aareel kaan laga age imaana ayo.
+[18:05] Wala lugu imaaday baha kuhiga baha waa in i aareel kaas laqaada.
+[18:11] Wala kaaday adhan amhaa haissa.
+[18:14] Diling range uqsuwaa haissa taa.
+[18:16] Diling range kaas.
+[18:18] Maha laa yaaga tege.
+[18:19] Intaano range likuditiya laga aga tege.
+[18:23] Ex-taano range likuditi na halkaasa laga aga tege.
+[18:25] Otaagit kuuqa.
+[18:27] Tanna wa hadhana aidhan awal gukeena ya suuqa.
+[18:31] Wala imaaday.
+[18:32] Wala kaaday i aareel ki adhan amhaa lugu simi.
+[18:41] I aareel ugu simi.
+[18:42] Halka an amhaa kwaista.
+[18:43] Ex-taano range likuditi.
+[18:45] Wadru bloga kwaista.
+[18:50] Wala suuqa taab gari.
+[18:51] Marki la suuqa taab gari.
+[18:52] Warka zaafiri.
+[18:53] Sensitive wahaan.
+[18:55] Yane waha meelaha ibda.
+[18:57] Meel wulpe lugu moddaaha.
+[18:59] Waha rekta rejeksyon ka kadaaha.
+[19:01] Kaabka lua respect karena.
+[19:03] Lugu moddaaha.
+[19:05] Ibda kooliswa wahaas.
+[19:07] Eze yaadu gufirsu.
+[19:08] I aareel ka sa'luwubani.
+[19:12] I aareel ka anna wakana.
+[19:15] Ki level kan.
+[19:19] Wala suuqa taab gari.
+[19:21] Sensitive wahaakule yaare.
+[19:22] Swarik.
+[19:24] Wala suuqa taab gari.
+[19:25] Yane piwa respect waha.
+[19:28] Yane waha respect in the highest order waha.
+[19:33] Waha ma'lun bunasuuqa taab gari.
+[19:35] Waha yarael ki waha loqa adhi.
+[19:39] And halikzambula kala waha nubuhuqa jina yaa birisha.
+[19:55] Okay.
+[20:01] Halika egzambula nubuhuqa nubuhuqa nubuhuqa nubuhuqa nubuhuqa nubuhuqa nubuhuqa nubuhuqa.
+[20:03] Waha birish saganah.
+[20:07] Tato suuqa kuuda gari.
+[20:13] Aareel ki kuwadwa ahesta.
+[20:14] Waha suuqa ihtirama.
+[20:16] Waha suuqa taab gari.
+[20:19] Waha suuqa da gari.
+[20:20] Boom.
+[20:21] I aareel ka sa'tagi da.
+[20:22] Wala qaadi.
+[20:24] Next.
+[20:24] I aareel ka la ahesta.
+[20:26] Wataas.
+[20:26] Waha suuqa taab gari.
+[20:27] I aareel ka sa'tagi da.
+[20:36] Waha suuqa taab gari.
+[20:37] Waha suhelamata egza la ahela qaadi.
+[20:48] Waha suuqa taab gari.
+[20:56] Waha suuqyda gari.
+[21:00] I aareelTA gari.
+[21:04] Waha suuqa taab gari.
+[21:09] Waha suuqa ta���.
+[21:13] Anwarika.
+[21:14] Mareka, an,
+[21:16] istidogu,
+[21:17] fududud ina nusharhaan rajaayna ya,
+[21:19] an, ina tfahimtaan,
+[21:21] insha Allah,
+[21:22] fidbaqiyin anu anu muhim,
+[21:24] an, waxan sihlaan,
+[21:26] amu waxan qaradmun bil aadam baanay,
+[21:29] an,
+[21:30] lusus u uchi, insha Allah,
+[21:32] kommenti wuk shukura,
+[21:33] an,
+[21:35] siya an, anna gana,
+[21:36] an,
+[21:38] uskakal sahnu,
+[21:39] oo usuhael rajaayna, insha Allah,
+[21:41] an,
+[21:42] an, ihin kana,
+[21:43] an, ihin rajaayna ya,
+[21:44] an, kuyifaham,
+[21:45] an, lai din kaddigo,
+[21:47] an, agana,
+[21:48] xilkaan, an, qaradmun bil aadamu ghaastru,
+[21:50] insha Allah,
+[21:51] xil ulusuhael,
+[21:52] an, dhiyad,
+[21:53] an, sahbya,
+[21:54] alli din salamaya,
+[21:55] an, fidbaqiyin anu anaksan,
+[21:57] kommentiyashin anu anaksan,
+[21:58] an, awa, arakna,
+[22:00] an, adhiyad,
+[22:01] baumaha sentihin,
+[22:02] bamaantihin,
+[22:03] an, wadhimad,
+[22:03] an, yin nadhu,
+[22:04] adhiman,
+[22:04] an, sugaartay,
+[22:05] wa hakeli yawumihimsan,
+[22:07] an, wahaan dan,
+[22:09] samayin anu hawai,
+[22:11] du'o,
+[22:12] an, ina anhelna,
+[22:14] an, adhi adbaqan,
+[22:15] an, adbaqan,
+[22:17] an, uumaha sentihin,
+[22:18] Assalamualaikum warahmatullahi wabarakatuh.
