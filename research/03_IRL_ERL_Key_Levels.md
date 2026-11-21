@@ -80,7 +80,7 @@ Calaamadaha lagu sawiray chart-yada:
 | Calaamad | Waxa la og yahay |
 |---|---|
 | **DOL** | Hadalka [15:37]: "ilaa DOL-ka la qaado". Waxay u badan tahay *Draw on Liquidity* [AUDIO?]. |
-| **TS** | Lama sharxin. Chart-ka waxay ku taal **low-ga ugu hooseeya ee swing-ka** (bullish) ama **high-ga ugu sarreeya** (bearish), oo ah meesha lugtu ka bilaabmatay. **[MA CADDA]**, macnaha ha la xaqiijiyo. |
+| **TS** | Casharkan laguma sharxin. Chart-ka waxay ku taal **low-ga ugu hooseeya ee swing-ka** (bullish) ama **high-ga ugu sarreeya** (bearish). **Update (casharka 04):** TS = **Turtle Soup**, oo ah liquidity sweep-ka CRTH/CRTL. Eeg `04_CRT.md` §2.11. |
 
 Socodka chart-ka (bullish): **TS** (low) → kor u kac → **IRL** (FVG/OB) taabasho iyo reaction → **ERL** (high hore) la jabiyo → IRL cusub → ERL cusub → ... → **DOL**. Chart-ka bearish (hoose ee [20:00–21:09]) waa sidaas oo kale, laakiin jihada ka soo horjeedda.
 
