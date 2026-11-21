@@ -1,0 +1,188 @@
+Title: 7.0 ENTRY MODEL | 2026 Mentorship (lesson 07, 2nOW8N6nAgs, 17:50)
+Source: video clip(s) uploaded by user; faster-whisper large-v3-turbo, language=so.
+
+==================== PART p1 (00:00–10:02) ====================
+[00:01] Assalamualaikum warahmatullahi wabarakatuh sahibiyal suudwada. Kuud suudwada Tate Community mentorship kanea 2026, aahwa haan qa'naduwa naa adilaayin moa, aashar kanea tada baad, awa naqwana yaa entry model. Madama aasubara tain aashara kalea dwan, aan sidaa suuqa markaa, aoduflawgis saa loo raa'a ama aoduflawga loo aqonsadoo, aahaira al tiyar ala diliwakuin maa yi CRT ya di baarchin hawa riski iyo,
+[00:31] SIDKILLAEA FULISKALOOL ISTAMAANY SIN INTERRI ULAW URHAASANAGYI
+[00:34] MARKA AASMT YADY WAHAA WAHAA SULLANMAADAMAAA SOOKAATI
+[00:38] MAANTA MARKA WAHAA CHOOGNAA MAESHI UDEMBESAY GWAHAAN QAĀDASHHADAH
+[00:42] SUUGA MARKA WAHAA SOO CONFIRMATIONA IYA WAHAA SOO MARKA AAN HOOLIS AAKASO HESHID
+[00:48] DEAWK ANKA WUDAMA YAMAHAA INTERRIGINAA FULISKALOOL ISTAMAANY
+[00:50] WAIHAAY
+[00:51] INTERRI MODAL KENNA MARKA AAN ISTAMAAL ANUGU WAHAAL INTERRI MODAL
+[00:56] Waxana magaisu yaay model 1.
+[00:59] Halka intiri model waxanku dawaranay.
+[01:02] Koo waa inoo saan marka intiri model confused.
+[01:04] Skeni ya uoo saan hainoo.
+[01:06] Tso'la handi waxaxira ICT fair value ga baachira.
+[01:10] Brickra blog baachira.
+[01:11] Woyinikwan modela.
+[01:12] Waxaxira infarisi fair value ga baachira.
+[01:15] Tira dayo ka paten.
+[01:17] Waxaxa so'lan marka intiri matkana ishe intiri gmarku taagan yaay.
+[01:21] Anku confused grau wlaa.
+[01:23] Keebaan ka qaata tso'la hama brickra.
+[01:24] haka galaama feirig ghab kam inversi nika
+[01:26] waha haa sootna mika dihye confused
+[01:28] interegi wa haalga yano sometimes kaatogu
+[01:30] sometimes haalga aaraartu niska kaadintu
+[01:33] mariko haalga sootna anoka aarauna
+[01:35] model wan baan mika
+[01:38] soota asanoo istamaala model wan
+[01:40] and
+[01:41] siloka le model wan kaan istamaalwa haka istamaalwa
+[01:44] five minute kan ka istamaalwa
+[01:45] and
+[01:47] waliya baayna tusaalwa yin 15 minute kuaraakli
+[01:49] lakiya man five minute kan ka istamaalwa
+[01:50] waya hori anguusu anu
+[01:52] Anwa mahi marika moadalwaanku. Moadalwaanku si dhisa bawa OB. OB ghaas smarka li soochi biyuh nukdaha moadalwaan.
+[01:59] Lakin shuruoq luulay yahay. Shuruoq dhisa marika ha daada raain left kiisoo wa matiqaana fake OB bwa nukunayya. Fake OB wa yahay.
+[02:09] Adi amarka udafa lawga lasu uotid. Soalahan ayara l-balwuta ghaaam kilefa l-balwuta ghaay.
+[02:15] Lu kudi tibaxa ghaan laga alaqaaday. Tartar sumlua l-guudaray barjana ah. Barjana haawaraa uqandalka wanhaawarka barjana kisiba
+[02:22] S&T baas samtaym serikataayya ghan wala qaida uaa yiyaa
+[02:26] waa eskumid uabiigaan inu SMT ngadaho yi inu lukul itiqaada waa eskumid
+[02:30] waae yiyaa vabiigaan mahala garaabaan nabaroon
+[02:34] saon agarabaa inu lukul iti sooqaada yi
+[02:36] waa kanaa samgat idkaneree kuhriyoo sooqaada
+[02:38] ami inu SMT ngadaho, waa eskumida labadabuaa
+[02:41] marka saaddiywaa lagaadaalika liigaan taa di submtayayixin
+[02:43] waae haye, haa di asaga wikiisah marka buori laa sodahaa fiyo
+[02:47] Marekaas wuh nukwaniya mawadhalwaanku thalid buun nukwaniyaayoo interega aakefu ninkrtaaa.
+[02:52] Lakin haadduo saan lukwurita saog qaadin, saog kana baarjana haawar oo saogwa dhanin.
+[02:57] Soalahaan kanal kenaynka aformay.
+[02:59] An...
+[03:01] Oni yoga.
+[03:02] Aformay.
+[03:03] Kanalaka mawadhalwaan lukwuritaidhaal kaan yaala.
+[03:05] Kanalaka miaala haan lukwurmaay saanwi iraaday.
+[03:07] Wax baarjana moussa mayanin o kanal kuhriyaayis moussa qaadinin.
+[03:11] Laaayakana la maysa qaadi wax isamtiyya maysaidid.
+[03:14] Kee laefl ki gulila mabuhin, xaaddii mawadalwaan warka aaske suqaayetaka wara.
+[03:17] Deguaxa mawadalwaan shakayinima wafiq uubi.
+[03:21] Mareka waxalrabaa mareki aad mawadalwaan kutari ilganeanis waxalrabaa inaad konseptiyadu hura aasoo barata eskuuqa batin.
+[03:26] Kee laefl kaagamalugu tshuogaa wa mareka ulifalooq raaasantahay lu kuditi maalugu qaaddii
+[03:32] tartar sumaay saaqa hain xiligi baarjan haawariskaa hain.
+[03:36] Aaddii marka naayn kookala uyaay, wa xalagyaaba naayn taati, ten taati, ino meelaa koo baegma.
+[03:45] Aaman naayn ka lexdiisi ino koo baegma, maa naayn kandalka naayn ka aaddi marka aaddi marka aaheishid tartarsoop kaagi, waxa aasuna wamaay, wa moadalwaan ino wahoos hirma.
+[03:57] Waaayy, ntaayin lelafaa amayibarachyena yaa, mwadalwaan ka doussan lukudita suwa qaadin, mwadalwaan mwadalwaan mwadalwaan ffake oopi waaayyaa, doussan haaysan barjinaa, suluoka lawa ffake oopi marka.
+[04:07] Waaayy, waaayy, waa lukudita suwi maa wadaimbaa, suwa qbila lukudita suwi badaagashid, aadiyyaa lukudita nukonayya marka.
+[04:13] Qaayy marqa anna tsoaala anna waha gwa ya marqa anna lukulita la qaadhi wa bulbaqa a tereel gana nisidwe, soaala anna bribus liel loo baa la qaadhi, bribus liel loo marqa la qaadhi, ufiirsa marqa waha da'i tartafsu ba da'i, tartafsu ba da'i, tartafsu pa marqa u da'i marqa kandar kaana tartafsu ka samayyi, sudo ka laka kanna wuu samayyi, lakin moosa qaadhin loo ghaan, lakin moosa qaadhin loo ghaan, lakin huo nukday, SMT buo nukda, SMT da'an marqa wahaan xisabsanaynaa ino l
+[04:43] Halkan SMT kadhain? Halkan desu SMT kadhain kana mwadalwaan nukonlahaa.
+[04:48] Mwadalwaan kaini waiya? Halkan suqqqilil nahein ila mwadalwaan taaregid kaini ahonsoo chunni.
+[04:53] Wai hai, mwadalwaan k marke wadlufidl yasimbal waiyan.
+[04:57] Lakin wainaa kdiyarissin mwadalwaan kdiyarissin. Mwadalwaan kdiyarissin. Mwadalwaan kdiyarissin.
+[05:01] Mwadalwaan kuhirta mwadalwaan barajin kaagi, yotartalsoob kaagi, CRT daadi,
+[05:05] iyo SMT yadaadi, iyo IRT aaral kiile faliskaagi, waxaagwa ulan lao kuhihto.
+[05:11] Puhul baga daa teriud gireenisinda, waa ii aaral, waa matkhaan ulli loo wakasu galesa suqaama ulli haay wakasu galesa.
+[05:17] Briefs li loo, lannu loo wala gayaan sabtaem sinu kupayag naadhu meelahaan,
+[05:21] lakin uu diibad iskun txuga aamad dhulluwin laqaaday,
+[05:24] Briefs uigli loo, waxyaasu kupayag ma'amarka.
+[05:27] Waaay hai marka ala lsgoot charts, chartiga antagno.
+[05:30] Eksambal isma ka ndiyari wa halkan ya'la
+[05:33] Eksambal kaan waha wiyan
+[05:35] Aairal ba halkan ya'la sa uchiddi
+[05:37] 4 hour a
+[05:39] 4 hour aairal
+[05:40] Tu ii aairal ba loo so'la
+[05:41] Wajay iyaaralka halkan andiwa halkan wiyan iyaaralka
+[05:45] Halkan al loo so'la
+[05:47] Wajay
+[05:48] Wajay halkan al loo so'la
+[05:51] Halkan mhaaka ay salamarka
+[05:53] Waxal wubnay inside barbal wubnay
+[05:55] Sa uchiddi
+[05:57] Kandalkan musaqadin haayin loo
+[05:58] Kandalka kuxiga wa lanna kiwa yaan asayam xasuginaa inu barjinka samayoo qaado ki leafil ki tago
+[06:06] wana hawar kiina barjinka anku firsano bi isbideenna iyo SMT niye dheenna iyo xayabayan niyina anku sokarirna marka.
+[06:13] Waya hay marka aantagnoo five minuteka aantagnoo.
+[06:19] Lannaga marka firmada xasuginaa.
+[06:22] Aam iska qaad marka.
+[06:23] Lannaga marka firmadao xasuginaa marka.
+[06:25] Inde barjinka la isamayoo, liquidity sweep la isamayoo.
+[06:27] waa liy sami yi sa ucaydaan
+[06:30] kandalki wanka sami yi wan hawarkeelna tig marga
+[06:34] kufirisul marga wan hawarkeelna wan hawarkeelna xan kadhaay
+[06:36] baar jambaka kadhaay
+[06:38] ama waha la sami yi kandalki for hawarkeelna uu furma uusba
+[06:42] oo bin baay lukuditi gu sawqaaday inside barga ha
+[06:46] mahaa hadda targidnoa ii aralka targidnoa
+[06:48] lakinu aina ahelno waha yabiyan nikalo SMTaha, BSPaha
+[06:52] aina ahelno marga
+[06:53] kalaaga hana kalantagno
+[06:54] I think the shader can supply
+[07:06] GPP
+[07:07] But earlier estoy saying I don't call it
+[07:11] This Гener
+[07:15] So let me check the
+[07:16] J port
+[07:18] So it's around for me
+[07:21] Okay
+[07:22] I was
+[07:23] Is I can see it in your hand
+[07:25] aula
+[07:27] Okay
+[07:29] Okay
+[07:30] , parING, a paring is on the same page.
+[07:32] .
+[07:34] .
+[07:35] inside bar-ir can use module that.
+[07:37] .
+[07:39] .
+[07:40] .
+[07:42] .
+[07:43] .
+[07:44] .
+[07:45] .
+[07:48] .
+[07:49] .
+[07:53] .
+[07:54] .
+[07:54] .
+[07:57] .
+[07:57] .
+[08:03] .
+[08:04] .
+[08:06] .
+[08:06] .
+[08:06] .
+[08:06] .
+[08:07] Two-Stage SMT.
+[08:09] Lakin, Silver ad u gma ha sabta nno.
+[08:11] Madam aan confirmations ke u nun aah yis anno.
+[08:13] Wa bi ra'is wakale gana nana.
+[08:15] Halka mha ka yis anna Two-Stage SMT.
+[08:18] Ufya samar, kandalka faif ka ma yis qaadin.
+[08:20] Wa ake tana qaad daimarka.
+[08:22] Kandalka faif ka.
+[08:23] Halka mha ka yis anna Two-Stage SMT.
+[08:26] Kakin wako kush yege Silver scale ala.
+[08:28] Labadhaan la aqawadhu kale.
+[08:29] Ba gullu lugu furse.
+[08:30] Kullu GBP yu gullu Euro.
+[08:32] Wa ya hai.
+[08:34] Marka halka inside barna waka yis anna.
+[08:36] wa naa uurkeni nufimsemi suubkeeni waxani wunussemi tarta suubkeeni inside bar na waa qaadna.
+[08:44] Waa skuukaay toosanta marika.
+[08:46] Kilim haa suwinna waya waa suoda afa marika.
+[08:52] Halkaano haa marika.
+[08:53] Marika waxani udan helnay.
+[08:55] Modaloon keena awe.
+[08:56] Waakana modaloon keeni.
+[08:58] Halkaana marika intereka suflunna.
+[09:01] Esarkeen halkaana diganena.
+[09:03] Tibi gannakwa ad marika waa inside bar ke luugi suwiyan.
+[09:07] u ghaal kaana, waa yaay, inside barca logis, waa target aadho taasawu,
+[09:18] target ka lawaan na waa mahaay, waa iya aaral ka marka.
+[09:22] See dain ya marka, maudalwaan keeg ufi rso, maudalwaan keeg mchunsu samayi,
+[09:26] marki laqaada inside barca laqaada wu lukuritiga laqaada keel yafukaan la tagay,
+[09:29] mahala samayi, lukuriti suwi baal samayi,
+[09:32] kandar ka marka barjink samayi waa mahaay, waa 1 hour ka, 1 AM ka waa yaan.
+[09:36] inka stoo marika intaa kuuswa barati uusahaayna 2 am ba wufi'an
+[09:40] saa maqshayla ki khasam maaha
+[09:42] marika kandil kiwureya barijin kismayi 2 stage SMT na wahai sana
+[09:46] halka marika uxanku qoran inna
+[09:48] 2 stage SMT
+[09:52] wahai hai
+[09:57] 2 stage SMT wahai sana
+[09:59] kusideyna marika targididina raha

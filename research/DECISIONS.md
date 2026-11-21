@@ -17,7 +17,7 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q1 | Invalidation-ka setup-ka ka hor entry: close above TS, touch, mise target la gaaray? | Furan |
 | Q2 | OTE: macnaha iyo heerarka (fib %)? | Furan |
 | Q3 | KOD: magaca buuxa iyo qeexidda saxda ah? | **La helay (casharka 02 P2 05:31):** KOD = Kiss of Death. Waa retracement yar ama liquidity sweep u dambeeya ka hor target-ka. |
-| Q4 | Model #1: ma u baahan yahay candle ku xirma OB-ga hoostiisa ka hor entry? | **Qayb ahaan (casharka 02 P2 01:53–02:05, [AUDIO?]):** confirmation-ku waa candle ku xirma dhinaca kale ee Model #1 ("trade and through"). Kadib Model #1 wuxuu noqdaa active, entry-guna waa marka dib loogu soo laabto. Waxaa la xaqiijin doonaa casharka 07. **Casharka 05:** entry-ga waa Model #1 (OB) ee 5-min, kadib marka TS, key level iyo purging hour ay wada dhacaan. Looma baahna in la sugo in 4H candle-ku xirmo. |
+| Q4 | Model #1: ma u baahan yahay candle ku xirma OB-ga hoostiisa ka hor entry? | **La xalliyay (casharka 07 slide + casharka 02 P2):** entry-ga waa line-ka #1, oo ah dhinaca kale ee OB-ga (low-ga last up-candle ee sell setup-ka). Waa marka la dhex maro. SL = TS wick (D1). Close mise touch lama sheegin. Soo jeedin: candle close (non-repaint). |
 | Q5 | Noocyada CRT: 5 mise 6? | Furan |
 | Q6 | OB: body mise high/low oo dhan? | Furan |
 | Q7 | IFVG disrespect: candle close mise wick? | Furan |
@@ -28,6 +28,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q12 | Pair-ka SMT/PSP: XAUEUR, XAUGBP mise XAGUSD? | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-21: Casharka 07 (P1) ayaa lagu daray. Q4 waa la xalliyay. Model #1 wuxuu u baahan yahay key level + liquidity/SMT + purging hour, haddii kale waa fake OB.
 
 - 2026-11-21: Casharka 06 ayaa lagu daray. Waxaa lagu daray Q11 (purging hours: qasab mise grade) iyo Q12 (SMT pair).
 
