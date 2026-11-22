@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D28 | 2026-11-22 | OB line meesha | **OB line = afka body-ga (open) ee OB candle-ka**, ma aha bartamaha: bullish OB (last down candle) → body top; bearish OB (last up candle) → body bottom. Line-ku wuxuu ka bilaabmaa OB candle-ka, wuxuuna **wax yar ka baxaa** (dhaafaa) midigta candle-ka — ma dheeraado. | User (IMG_0963/0964) |
 | D27 | 2026-11-22 | PDF COMPLETE_MODEL iyo step 1 | (1) CRT reversal shuruuddiisa: **labadaba waa la hayaa** — key level (Daily/Weekly OB/FVG) **ama** major LQ (PWH/PWL) **ama** major swing (5 candle, input). (2) London purge/entry **2/3/4 AM** (4 AM waa la hayaa, inkastoo PDF-ku 2,3 qoray). | User |
 | D26 | 2026-11-22 | CRT reversal shuruud + lines gaagaab | (1) **CRT reversal (wick dhaafay + close gudaha) wuxuu ansax yahay oo keliya marka** wick-ku gaaro **key level (major: Daily/Weekly OB ama FVG)** ama qaado **major liquidity** (previous week high/low ama major swing high/low). Haddii kale → None. (2) **Lines waa gaagaab** (candle-ka ilaa wax yar midig), ma dheeraan; 7H = line keliya. | User (casharka 19 p1) |
 | D25 | 2026-11-22 | Tallaabada 1 (Daily bias + 7H) — sawir | **7H line: qoraal la'aan, line dheer oo keliya** (7H chart-ka). **Qoraal kasta waa la gaabiyaa** (sida OB / smt): Daily line = `D`, target = `DOL` (dashed), CRT reversal = `CRT`; table: `D` / `7H` / `Bias`. Box ma jiro (D23). | User |
@@ -112,3 +113,4 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 - 2026-11-22: D25 — step 1 sawirka: 7H line qoraal la'aan, labels gaagaab.
 - 2026-11-22: D26 — CRT reversal = key level / major liquidity shuruud; lines gaagaab.
 - 2026-11-22: D27 — swing + PDF shuruudaha labadaba; London 2/3/4 AM.
+- 2026-11-22: D28 — OB line body edge (open), gaaban oo wax yar ka baxa candle-ka.
