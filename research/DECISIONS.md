@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D30 | 2026-11-22 | 7H CRT reversal | **7H CRT reversal** (wick dhaafay high/low-ga candle-kii hore ee session-ka + close gudaha) **waa ansax iyadoo aan key level dheeraad ah loo baahnayn** — qaadista high/low-ga session-kii hore (Asia → London, 2 PM → Asia, London → NY) **waa liquidity-ga** (PDF bog 8–11 profiles). Tusaale: London waxay qaadday high-ga 5 PM, gudaha ayay ku xirantay → **7H Bear (London reversal)**. Daily wuxuu weli u baahan yahay KL / major LQ (D26/D27). | User (IMG_0988–0991) |
 | D29 | 2026-11-22 | 7H bias + 2 PM candle | (1) Candle-ka **2 PM (NY PM)** bias ma bixiyo: marka uu xirmo → **7H = None**; wuxuu kaliya yahay **candle 1** (liquidity-ga Asia qaaddo). (2) **7H bias waxaa la go'aamiyaa marka candle-ku xirmo** (haddii Asia qaaddo labada high iyo low-ga 2 PM, close-ka ayaa go'aamiya). (3) **Entry-ga (step dambe)**: Asia (5 PM) oo socota marka ay qaaddo 2 PM high/low **oo gaarto 7H key level** → 1H: TSQ / SMT / PSP / 2SSMT + 1H key level → 5m entry (rules). Daily: 2 candle, close / body dhaafay shalay. | User |
 | D28 | 2026-11-22 | OB line meesha | **OB line = afka body-ga (open) ee OB candle-ka**, ma aha bartamaha: bullish OB (last down candle) → body top; bearish OB (last up candle) → body bottom. Line-ku wuxuu ka bilaabmaa OB candle-ka, wuxuuna **wax yar ka baxaa** (dhaafaa) midigta candle-ka — ma dheeraado. | User (IMG_0963/0964) |
 | D27 | 2026-11-22 | PDF COMPLETE_MODEL iyo step 1 | (1) CRT reversal shuruuddiisa: **labadaba waa la hayaa** — key level (Daily/Weekly OB/FVG) **ama** major LQ (PWH/PWL) **ama** major swing (5 candle, input). (2) London purge/entry **2/3/4 AM** (4 AM waa la hayaa, inkastoo PDF-ku 2,3 qoray). | User |
@@ -116,3 +117,4 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 - 2026-11-22: D27 — swing + PDF shuruudaha labadaba; London 2/3/4 AM.
 - 2026-11-22: D28 — OB line body edge (open), gaaban oo wax yar ka baxa candle-ka.
 - 2026-11-22: D29 — 2 PM 7H candle = None; 7H bias at close; Asia sweep of 2 PM H/L into 7H KL = entry setup (later step).
+- 2026-11-22: D30 — 7H CRT valid on previous-session sweep (no extra KL).

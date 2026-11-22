@@ -66,7 +66,9 @@ wZones() =>
     [a[1], b[1]]
 
 // Bias of the last closed candle of the timeframe this runs on
-biasCtx() =>
+// needKL = true  -> Daily: CRT reversal needs a key level or major liquidity (D26/D27)
+// needKL = false -> 7H: taking the previous session's high / low IS the liquidity (D30: London / Asia / NY reversal)
+biasCtx(bool needKL) =>
     [zBear, zBull] = nearZones()
     [wBear, wBull] = request.security(syminfo.tickerid, "W", wZones(), lookahead = barmerge.lookahead_on)
     // previous week high / low
@@ -109,14 +111,14 @@ biasCtx() =>
     else
         bool upW = high > high[1]
         bool dnW = low < low[1]
-        if upW and not dnW and (keyBear or liqBear)
+        if upW and not dnW and (not needKL or keyBear or liqBear)
             b := -1
-        else if dnW and not upW and (keyBull or liqBull)
+        else if dnW and not upW and (not needKL or keyBull or liqBull)
             b := 1
     [b[1], high[1], low[1], time[1], time]
 
-[dB, dH, dL, dT, dT2] = request.security(syminfo.tickerid, "D", biasCtx(), lookahead = barmerge.lookahead_on)
-[sB0, sH, sL, sT, sT2] = request.security(syminfo.tickerid, "420", biasCtx(), lookahead = barmerge.lookahead_on)
+[dB, dH, dL, dT, dT2] = request.security(syminfo.tickerid, "D", biasCtx(true), lookahead = barmerge.lookahead_on)
+[sB0, sH, sL, sT, sT2] = request.security(syminfo.tickerid, "420", biasCtx(false), lookahead = barmerge.lookahead_on)
 // D29: last closed 7H candle = NY PM (2 PM) -> None
 // (also caught by its length: the session's short last 7H candle is <= 4 h)
 bool lastIsPM = not na(sT) and (hour(sT, "America/New_York") == pmHour or (sT2 - sT) <= 4 * 3600000)
