@@ -17,3 +17,12 @@ Isha: `scratchpad v19/p1–p4/whisper.txt` (**pass 2 — markii ugu horreysay la
 | 12 | SMT pairs: gold-euro (+ CHF, NZD, AUD, JPY la eegi karaa); stage 1 / stage 2. | p4 04:19–04:48 |
 
 Fiiro: D19 — invalidation **skip** (user). D20 — PSP HTF. D12 — "No SMT no trade" ✅ (#6).
+
+## p6 (pass 2)
+| # | Xeer | Waqti |
+|---|---|---|
+| 13 | Tusaale invalidation: 8 PM → 6 AM candle; liquidity la qaaday; daily 0.5 la dhaafay → previous daily low target; 7H confirmation → London continuation → 1H key level. | p6 00:00–01:42 |
+| 14 | SMT ama PSP; SMT1 → Model 1 (15m / 5m). | p6 02:29–03:48, 07:14–07:34 |
+| 15 | Target previous daily low; risk 3%. | p6 05:33–05:37, 07:39–07:45 |
+
+✅ Casharka 19 dhammaan waa la akhriyay (p5 = clip kale oo cod la'aan ah, 1 ilbiriqsi — maaha casharkan).
