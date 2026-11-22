@@ -39,3 +39,20 @@ Isha: `transcripts/09_BY5tdw6Gnjc.whisper_so.txt` (p1–p3 la qoray pass 1; **p4
 | 25 | 1H OB rejection. | p3 10:52–11:07 |
 
 ⚠ **Su'aal user-ka:** casharku wuxuu tusaale u isticmaalay **6 AM** purge (Pre-NY). D23 wuxuu sheegay NY entries = 8/9/10 AM oo keliya. Ma lagu darayaa 6 AM?
+
+## p4–p8 (pass 2 — markii ugu horreysay la qoray; qoraalka qaybo badan waa jajaban)
+| # | Xeer | Waqti |
+|---|---|---|
+| 26 | **Kiss of death**: DOL-ka ka hor trade-ka ugu dambeeya; marka target / DOL la qaado → **ka bax / iska jir** (trade cusub ma jiro). | p4 00:31–00:52 |
+| 27 | SMT divergence + Model 1; target **3RR (3.5)**; two-stage SMT ayaa ka fiican. | p4 01:10–01:22, 03:33–03:51 |
+| 28 | 4 AM; **1H key level** → KOD active; key level la ixtiraamay → trade. Risk 1%. | p4 04:11–06:41 |
+| 29 | **Weekly → Daily → 1H** isku xir ilaa DOL; target previous daily low (5 PM la gaaray). | p4 06:54–07:51 |
+| 30 | Daily IRL; **1H Model 1**; **3 AM purge**; 6 AM / 7 AM liquidity → 5m Model 1 + SMT (silver); "SMT ma jirin → ma qaadan". | p5 02:05–04:50, 08:27–08:50 |
+| 31 | **4H iyo 1H key level isku meel** → **SMT** loo baahan yahay → 5m. Daily CRT; OB / sweep. | p6 00:13–01:40, 02:17–02:45 |
+| 32 | Daily key level (daily IRL) → target. **CRT keligiis lama isticmaalo** — key level + SMT. | p6 05:07–05:58, 06:10–07:35 |
+| 33 | Haddii liquidity weyn la qaado → inta badan **skip**. 7 AM purge + key level; SMT (silver) → 2-stage. | p7 00:00–01:50 |
+| 34 | SMT kadib → Model 1 → entry; time + purge confirm. **Inside bar CRT**: inside bar-ka la qaado + key level + **SMT** (SMT la'aan → ma jiro). | p7 03:48–05:56 |
+| 35 | Daily OB confirmation; previous low + SMT; daily SMT. | p7 08:09–09:39 |
+| 36 | FVG la ixtiraamay; **purge + SMT (+ PSP)** → checklist → Model 1; target **3RR**. | p8 00:00–01:50 |
+| 37 | **Checklist**: purge (**3 AM**) → SMT → Model 1 → orderflow active → previous daily low target → 3RR. | p8 02:12–03:34 |
+| 38 | Key level lama jebin; CRT + purge + SMT; SL / TP. | p8 04:19–06:44 |
