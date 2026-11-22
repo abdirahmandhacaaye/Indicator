@@ -1,0 +1,548 @@
+Title: 6.0 ADVANCED SMT & PSP | 2026 mentorship (lesson 06, TH2R803mjQE, 25:58)
+Source: video clip(s) uploaded by user; faster-whisper large-v3-turbo, language=so.
+
+==================== PART p1 (00:00–10:29) ====================
+[00:02] Assalamualaikum warahmatullahi wabarakatuh, sahibi al-sawadawada, ku-sawadawada TETO Community Mentorship Kana 2026, maga'aygu wa saka habib.
+[00:13] Nuhan qaadun doon na'a awa 10-ken il-lihaad on nukwana ya'adfansid SMT and PSP.
+[00:20] 10-ken aw kamida 10-wumihim san marki lachogo tredinka.
+[00:25] Konseptiyalaan maraka awan usta'amalun doona meyelaka eduwaan
+[00:29] Sada hadayna ghoota maraka ina an intiri kukhaa adano
+[00:31] O intiri ghaan kukhaan fahim garaayno
+[00:34] Iyan hadayna ghoota paayas ghaan kukhaan fahim garaayno
+[00:37] O maraka tshada suuqa marakaan dirinno alaynay
+[00:39] Tshadaas polish amabirish bumaat aahliya amaswookhaan
+[00:42] O haya waaan kukhaan fahim garaaynekaamitahay
+[00:44] Qolopasla haad an usta'amalat doona wahaakkaamidha
+[00:47] Inna maraka tshada suhudi maraka oo an soqa adanay
+[00:51] o marqa walaan confirmation qusogalnaay
+[00:53] targetiz ka anusoo ane haadiyla garao kala
+[00:55] ina marqa profitkin nusoo
+[00:57] dha yankubit baas lana marqa anu qabaxano
+[00:59] marqa uhaaywaasoo
+[01:01] dhammey naga ausaa
+[01:03] waiyaa horay anu qasooadoo
+[01:06] waiyaaay waamhaay SMT marqa
+[01:08] SMT awalusoo qaabiyya marqa smart money
+[01:10] teqnik wa
+[01:12] wa teqnikha isti'maalaan smart money
+[01:14] marqa ayyramasooqa inay dhaqaachyan
+[01:16] oo tcheehaa marqa usooqaayqayyan
+[01:18] saale
+[01:20] anewa istamaalwa haa ka mida refirsal ka ya kontinuwaishika
+[01:23] hadiyan marqa tusa'na haan usuk aaa na refirsal
+[01:26] waha liguoyi maaday aayraal balguoyi maaday
+[01:29] okay, aska yariyo
+[01:32] aayraal balguoyi maaday
+[01:34] targitka guamhaay wa iya aaralka
+[01:36] waayah
+[01:37] Aya ralka marcoo lguoji maa szaa aqsharadho hara kuswa baratay, waha qooda aqa tartal soobaa qooda aqa.
+[01:43] So, aqa tartal soobaa aqa aqa tartal soobaa aqa aqa aqa baarijin haa wariski saahda hayo taama bariska aqa haa.
+[01:48] Waiya, inta marcoa ae slayshid, aqa rabitina soobaa qaadatid, wahaadjil confirmation marcoa
+[01:53] kuoqaadayn ya marcoa in sooboo iya aqa ralka aadayyo.
+[01:56] oo marika awodi biirish kaayda soodamaatay, soo gana boolishko marika ay lewureyegayn awoday.
+[02:01] Wai hai taa marika tegnikaas, loo gana marika taqtar soobka ay kusamaysi gulli yura ufiirso marika.
+[02:08] Mahainsa maina saa, loo gana ay edo kufashnmataay awo ay qaaduwaayda.
+[02:12] Taasoo moo chinesa marika in selleriski marika awodika tiktay o ay qaaduwaayin loo gana,
+[02:18] taasoo marika keinesa in marika peyrkaan gulli yura ay uudikdikta iya aaralkaan,
+[02:24] O radaayy chapsa ta marka.
+[02:26] Tso ala ufiil sool,
+[02:27] moadalwaan ka maki laa simaayay looquma soo'nna qannin.
+[02:29] Suu qo uili wu iskasisi soadaa
+[02:31] oo intarigia looquma foorinin.
+[02:33] Addaa gulli yyura qaadalna haiid.
+[02:34] Ocea, xalaka gulli
+[02:36] wa asoa u simaayay moadalwaan ka marku simaayay ba
+[02:38] la sootaab giraia ola fray intarigia.
+[02:40] Sadaaka laadaa ufiil setid,
+[02:42] xalakaan haiigal marki laa siga adayay gulli yyura
+[02:44] taungu li meisik ghaari.
+[02:46] Wai hai, taaswa kuo qaaday nasa marka in awoddi bierishka hai da isku bida shi boolish, oo boolishka aya awoddi law reegain.
+[02:54] Wai hai, SMT taasaa qodahafa ya marka, SMT daan wa SMT dhaan noor marka, laaqbal loo qaadsa, laaqna wakufashil masa.
+[03:01] Laaqba hai qaadsa, laaqna wakufashil masa.
+[03:03] Wai hai, inta awogu dhubno.
+[03:05] Waxati lawax loo hiqaana marka two-stage SMT.
+[03:08] Two-stage SMT dhu marka wain noo' ya balantay, noo' wa noo' kubad marka.
+[03:12] Two-stage SMT dhu waxa wae yaan.
+[03:14] lhaaktahancti kaik METI
+[03:15] la
+[03:22] uya OMT
+[03:22] 7
+[03:23] 65
+[03:25] en
+[03:27] Changi
+[03:28] so
+[03:28] ng
+[03:30] ***
+[03:30] bay
+[03:31] 2
+[03:33] terrified
+[03:34] 2
+[03:35] Stella
+[03:38] waa
+[03:38] la
+[03:38] uh
+[03:38] au
+[03:39] waje
+[03:40] fer
+[03:41] u daqa yo suqi na u lu yadaan target ka uo horraya kadigana yo marka wa alaman marka refer sal mochina sa marka.
+[03:49] Halka marka marka marka horay marka xal SMT aahis sennay, halka moha kaay sennay labi SMT.
+[03:54] Taaswa marka tosku mochina sa in marka suqi u daqaag saaxa gala yo,
+[03:59] oo marka lu yadaan ay target tosi hiin marka.
+[04:02] Marka tuu stage SMT dhaa tariliil aanku qaadana wuxiwayan, wa hay probabili tista daqbis.
+[04:06] Maadama aay labi SMT marka aaylna aaykadi gantahay
+[04:09] In marka mishall loo soo'da aaytahay target qasah dhaa aah
+[04:12] O aan lagaswa laba lamayn dhwanin aaytahay loo ya daad marka
+[04:15] Waya inta aayn lilai faamaari txiniga
+[04:17] Marka noo aan labaad naa asla fiirinu
+[04:19] Noo aan labaad oo aantirir ku qahtayman duuid
+[04:22] O aan soo'di gayba telegram kenna community ga
+[04:24] Halkaan uu fiirsa marka
+[04:26] Waha daaday
+[04:28] SMT1 baadaday
+[04:30] O laaak taana aqaaday
+[04:32] Waya
+[04:33] Loo ghaan nama yasn qaadinoo
+[04:36] Ayaadi isla ayaadi baalabadi loobo qo fashl matay
+[04:38] Halkatan labaddi loobo aay qaaday
+[04:40] Ayaaralki nasub guhu huyusay oo aay taktay laaktaani
+[04:43] Halkatan Ayaaralki aaysan qaaday unadu ghaanine
+[04:46] Labaddi loobo aay kowla fashl matayba
+[04:48] Halkam haaka ayaan kaaysan naamarka two-stage SMT maan haaysan naamarka
+[04:52] Ufiirsa marka targit ki ahor tagay laaktaan ahor taktay
+[04:56] Halkatan wule istiil aayrafa na ssoho
+[04:58] Melaa iska wulegizhaar dugu baalaga ya wena qaadda ailu kura faalasay.
+[05:02] Wai hay.
+[05:03] And two-stage SMT da laba'na waa'i ghaay saan.
+[05:06] And two-stage SMT marka haishid waxayka digantay tereer kaaga oo luo jikina.
+[05:10] And aakuda baqdid.
+[05:11] Sida aayral, tiaaral kaagi.
+[05:13] And tartar suubka di CRT daadi.
+[05:16] Marka haalka waxa keelasa.
+[05:17] Hay burababili tisad abaa keelasa.
+[05:20] Wai hay.
+[05:21] Qolab keena marka sadhaad wuxna qona yaa.
+[05:23] BSP oa.
+[05:25] Precision Screening Point.
+[05:27] Wai hay.
+[05:27] Kanda lada marka aari fersa lkismayni siid ufirsa marka wa kanda lada waa wan hawar iya foor hawar marka.
+[05:33] Kanda soal haa usawqa taay, waa ku intari daan kullisuno, CRT daan kullisuno.
+[05:37] Waayya halkan mhaakada aay, CRT baakada aaday, halkan na CRT waa laba biarooka dinduan kanna usawqaada gulli, kanna gulli yoro.
+[05:45] Waayya hay, waa xarabna ina ham bwulish uqaada na trirkaas, ufirsa marka kanda ladaan mhaay shiigiyan.
+[05:51] Boolish.
+[05:52] Xalqa kwaana
+[05:53] ayy stil bierish inu awodda kutcharta shiigyan.
+[05:56] Wai hai.
+[05:59] Kandaliz kaana marika waam hai.
+[06:00] Wa Boolish.
+[06:01] Mayash lawso gada na waam hai.
+[06:06] Wa Boolish.
+[06:07] Taaswa marika shiigis in awodda ahi kutcharto
+[06:09] danka Boolish ka.
+[06:10] Marika b-speedu
+[06:12] wawain taasbaa.
+[06:13] Waxi qadaisa
+[06:14] in awodda danka lawso gada
+[06:16] ayy tahay Boolish.
+[06:18] Marika marika sidi horaya marika SMT da lakta kufashil mataa
+[06:21] ba targit ka hirgaadich.
+[06:22] xada lakin target ku hawhirgaariya laakta bullish ka awood aay kutshirta marka.
+[06:26] Marka wa ala madna ayyaduna reversal ka moochisa
+[06:30] sudokal suku yinu dagaak saaxa samayna yyanan noo shakta.
+[06:33] Waayy haan kaigu dhimnu.
+[06:34] Halka waha nuya la two-stage SMT with PSP.
+[06:38] Wa nimqa adunwayyan.
+[06:41] Waayy haalka an ufisa marka.
+[06:43] Haya ghaan waha qaadu yaday.
+[06:44] Kandar kaana qaadu waayy.
+[06:46] Handeha sori.
+[06:47] Kandar kaana.
+[06:48] Kandar kaana uqaada.
+[06:49] Haa ka hae isan hael ka-one. Hael ka anna waada qaadi uvae, ufeerso tana' aqa haad day mark
+[06:57] To, two-stage SMTE was a kwa istana sa maa. siihen, hael kaan ufeerso marka, kanaladari fyrsalka samayini ufeerso
+[07:05] Aribizna katire rikalaisit. Wa maa hi wa beyrish wayyan wa sall wayyan labadwa. Hael ka tan ufeerso marka
+[07:13] Waa boolish baa loo badaan yaa marka.
+[07:16] Waaayy hala qahtana marka targit kool galeel doon tsaanku uxurabu koovshagay.
+[07:20] Afkaabu loo saariya waal qaadrwaa.
+[07:22] Halka tanxuga loo saariya waal qaadrwaa.
+[07:23] Halka tanxuga loo saariya wao uilil lagafu ghi hai marka.
+[07:25] Waaayy hay.
+[07:26] Waaayy hay.
+[07:27] Labadaa marka akslea hishid.
+[07:28] Halka waa haka daa haa hii probabiliya tsaadaab.
+[07:30] Sootakadigasana waxiwyaan in toos awa arka sidbaa in awodi issu bidaliso.
+[07:34] Dina gana lagaswa lmaadi dina gana waddi sofu shay marka.
+[07:38] Waayya hai, ankaswa anna marka.
+[07:42] Continuation marka. Continuation ku waa waha yaabaha marka
+[07:46] wa tereidiska uufudl andehe
+[07:48] an qaadhan marka. So haan waha lgwiy madkii lefal balgwiy madwaan haawara
+[07:52] waha lkood agadi tar-tar-tar-suba kood agadi
+[07:54] hala ka laaktaan uffirsa marka.
+[07:56] Ay tagiwida aayralka, silokalna ay samaysay, smt.
+[08:01] Intaa marka samaysay, intaa kiliyum yaa kwaa kaatamai
+[08:03] wahaada agadi bsb uffirsa.
+[08:05] Kandal, wa bearish. Kandal kaan, wa bullish, ya bearish marka.
+[08:09] Markas tad taana a marka target horti giddoon ta.
+[08:12] Marka aaddee tan interi qruh badan ku so, taana laga gala.
+[08:15] Haaddee kaloo interi ghaan marka wu kulaa yer qaabdarnaado.
+[08:17] Taana a marka so qaadhan kartaay stil.
+[08:19] Wa haay burubabili tsa da'n blabada wa maesh wu dhigiddoonan.
+[08:23] Wa ya hay.
+[08:24] PSP da marka inlai lefa ame barachin ya.
+[08:27] Wa ya hay maa mail ka sta oo siti na'liddoon a marka.
+[08:30] PSPO مشاها اسوء كومو اركضة من دوناء
+[08:34] و امايending
+[08:35] فرامورة جينيه اعصاب رنبان وستعمال
+[08:36] دوناء احرار
+[08:38] احرار
+[08:40] اخرسة مركز
+[08:41] احرار كون احرار كيتمادي
+[08:43] وحي قادي
+[08:44] كانوا احرار تيبان على ساقوة السناء
+[08:46] ام الترتلسوب
+[08:47] كانوا يز pou genيع مركز
+[08:48] مركز قوة
+[08:51] ترتلسوب كوفيرسة مركز
+[08:53] كون احرار كون احرار
+[08:54] اسم手ensive
+[08:54] احرار كون احرار كون احرار
+[08:57] سو نحرار من حقه
+[08:58] كون او
+[08:59] wao wala bullish waean.
+[09:01] Halka tan iya bearish yya bullish ae taayy.
+[09:03] Waasawata marka tan ae uuhurtaisoo target ka marka.
+[09:06] Mahay haista taa SMT ya BSP ba haista taa.
+[09:09] Marka saas frame wao qeyna mhaaqo hihalnai RL to ERL ka anu guo hihalnai confirmation marka aang.
+[09:15] Ognaha yisooku marka inu kudu ghaaqa tkara marka.
+[09:17] Obo bullish ka aqwa aadhiyo.
+[09:20] Waayahay.
+[09:22] Frame wao qeyna labaadwa ghaa mhaay wuhu nuqo niya haa.
+[09:25] Nuqo niya haa.
+[09:26] ERL to IRL
+[09:29] L alphabet Googlecard Googlecard
+[09:33] briefcase wick IRL
+[09:34] Bree wal why
+[09:35] fourcrochet
+[09:35] click on CRT
+[09:39] Z � su m2
+[09:40] Lodu
+[09:40] American
+[09:41] subinta
+[09:42] B
+[09:46] IRL
+[09:47] Z
+[09:47] Z
+[09:47] Z
+[09:48] Z
+[09:49] Z
+[09:50] Rise
+[09:51] Z
+[09:58] S&T with PSP marketcation,
+[10:00] targitka wuhaa waean IRL ka halkaas oo ghaa hlasa a tririr ka aga.
+[10:03] Maadama di IRL tiara loo guusuma yinqra waddu lagaas aarika na marka tririr ki.
+[10:08] Intas na marka halkaas ono ghaa bhaa haa ya hay.
+[10:12] Waxad sirtuoh looyiqa na marka SMT break yya turu SMT marka.
+[10:18] Ama SMT txambal ah yya SMT saha ah.
+[10:21] Waa ya hay.
+[10:23] An bairkaan wuhaaad wuhaa inu qaadwa breef sbeelahay.
+[10:27] Wuhuna wuhaa laa shuhaas.
+[10:29] is an...
+
+==================== PART p2 ====================
+[00:00] in taas na marka lkasonoga baxaya, waay hai. Waahad tirsu hallo yeqa na marka SMT break, yeh turu SMT marka. Ama SMT txambala, yeh SMT saha ah. Waay hai, an, bair kaan wuxuk aadu gudawa inu qaadwa, bryufis leila hai, wuxuna uwhala shubhaas SMT bowhalay, khuraybuka qaada. Suhukala tanna SMT baha shay, urawaybuka qaaddaeba, awal ba wasi qaaddae, haddana wasi qaaddaeba. Waay hai, halka bair kaan uffirsa, uutage ayaral, halka ayaral,
+[00:31] ყროიო ლყი
+[00:37] G accent
+[00:38] positivity
+[00:39] Video
+[00:40] lij commemorations
+[00:41] Script
+[00:44] Writing
+[00:47] Re targeted
+[00:51] Script
+[00:53] Education
+[01:01] ევოვე, on the last part of your character.
+[01:05] Hard times,
+[01:06] but that's,
+[01:09] still,
+[01:09] the case where anything is needed to be used from a project like that,
+[01:12] every case a company would have to go to Smart долine,
+[01:15] each owner would have to be a SMT or a SMT,
+[01:17] each owner would have to be on a project like CoTQ.
+[01:22] Each employee could have to be used to the company.
+[01:26] Each employee could have been used to the project like that.
+[01:27] Anyway, because, you know, this act is a particular point that the handgunness on some way
+[01:33] So here we side effect is between the Italian pleats.
+[01:39] So this is SMT break and the ostateto means to have a LIKE
+[01:43] and COIP because there is one form writing so today
+[01:47] This is the fourth form in the RICS
+[01:52] two form the chart
+[01:55] დ დ დ დ დქეალსულლდ დ [...repeat] დიცოე.
+[02:01] Kusude waadda markaat chartigayna.
+[02:05] დ დდსსლელდ დვოლე markaat
+[02:07] wasala suha hitraamay, key-level pale suha hitraamay
+[02:11] suha kala key-level klala hitraamay
+[02:14] wa a-aira-to-e[...repeat] -rall
+[02:15] intabababwaadiyyikrta
+[02:17] xadana key-level klala hitraamay
+[02:25] Okay, halka na marqa wu firsa marqa.
+[02:32] Kee la yafal kena marqa la tigaym haka da'ay.
+[02:34] Haaka da'ay.
+[02:36] An SMT ba'a ka da'aaday.
+[02:39] SMT marqa ka da'aaday wuliwaad tu istaycha.
+[02:42] Firsa waha samiay marqa, silfar ba waha samiay say, haiggana wa qaadu wa yday.
+[02:47] Halka la'aga hana, ay haiggan qaadu waayyan wu firsa marqa.
+[02:52] SMT da marqa silfar marqa staquma wu firsa na wu anasaywa ghaatid.
+[02:55] Wa waha badaan txambal ka da'a badaan marqa.
+[02:58] Waxan kufir sanna golli, golli euro, iyo golli GBP waxan kufir sanna.
+[03:04] Marika mar mar kili aayda kukwaan kufir sanna a marika.
+[03:07] Waxan kama haka aista two-stage SMT maaka aay sanna.
+[03:12] Isda uudha cedan.
+[03:14] Okey, two-stage SMT maaka aay sanno.
+[03:17] Still marika waxa suwinna a marika hili ggaan wa, hili marika an an a time-ambraisa a hain.
+[03:23] Marika waxa suwinna a hili time-ambraisa in a tiri li dhanir haasinno.
+[03:26] sadin ya Amerika.
+[03:27] Kalka Amerika mishaga da'ay,
+[03:29] moadadala wan keel nikobad baadad ka da'ay.
+[03:32] Waa ya hai.
+[03:33] Ama ob eli ba nuluo byanayay.
+[03:35] Arrabna Marika suquo inusore ngulgla.
+[03:37] Marika moadadala wan doodghegaan ta'a Amerika aha haddao
+[03:39] konfajmway waye wa sora'y suquo.
+[03:41] Waha suguyi naa tiame bridge kiini basuguin naa Marika.
+[03:43] Waa ya.
+[03:46] Halka ala mahalay byanayay.
+[03:47] Kelayfalba layay byanayaa.
+[03:49] Oo fair value gap.
+[03:52] Fair value gap ka hamarki layay byanay oo fairs a Marika.
+[03:54] Waxarabnaa ina malka tiriirka disno haada wa 2 AM
+[03:58] wa ala nantayn baachyugnaaa waa ya halkan aantagna malka
+[04:02] ayyadha namhaa la bennayyi
+[04:04] firif hali gaba la bennayyi waa guldi yooro
+[04:06] waa ya hayy
+[04:08] waa ya hayy
+[04:08] waa ya hayy
+[04:09] waa ya hayy
+[04:10] waa ya hayy
+[04:11] waa ya hayy
+[04:14] T.S.
+[04:15] aahe hai [...repeat] hai
+[04:45] SMT ba'a ka da'ai.
+[04:47] Sudo ka na maha da'ai.
+[04:48] Adhaa sifiyaan uxisu 16 kenii.
+[04:51] PSP ba'a ka ka da'ai.
+[04:54] Labadaan ka dalwa mahaay.
+[04:55] Wa birish waya.
+[04:58] Alka haalkan firso malka.
+[05:00] Ay labadu yihim boolish ay yihim.
+[05:03] Waayas la suha kuahisana malka.
+[05:05] PSP ba'a kuahisana yoo ESMT malka.
+[05:09] PSP uiti SMT.
+[05:11] Key level kenii nwa nolotagay.
+[05:12] Udifluo gain nun wa mahaay.
+[05:13] Waa birish way yaan.
+[05:15] Horey no haus yo yasinna yi markaa ki laeful lagaswa dagaaaqi
+[05:17] iyo SMT yoo markaa soo konfaaym gariye yi markaa dagaaaqi horey.
+[05:22] Aaddanu markaa waharabnaaa inaan iya aaraldaan taergid garaannu ila addol ka'na markaa.
+[05:26] Waa ya 5 minit ka yana aantigno.
+[05:28] Markaa markaa haelna yi SMT dhaa markaa haelna yi
+[05:30] SMT dhaa markaa haelna yi yi lukuditi sweep keanna.
+[05:37] Kadannu haaraasana inna.
+[05:38] Modalwaan keena raasana inna.
+[05:40] Modalwaan keena markaa haelna yi na.
+[05:42] რ რვვავად რვას ვვიდ რ ოვავაედ დად რ ჯ ხვიადთუდ რეუ ვავადდ დჵად დამადადად დად რრვიგა჻დ, რლეადჀდვან
+[06:16] Aayid wu haa hee staa
+[06:19] ean B-speed da aayid wu haa rankei dechila a marka
+[06:22] Waya si daa ya marka
+[06:25] waya hadda waxa la ibanayay
+[06:33] ki lefel ka la la ibanayay
+[06:34] Uubi ba la ibanayay
+[06:35] Uubi ga marki la ibanayayay
+[06:39] uaxa ki lefel ka la ibanayay
+[06:41] waxa kalua haa kaan iyaallah
+[06:45] iyaallah
+[06:49] kanil ka sa riyanji inno qonee
+[06:50] Waxa ra waxa kanilaka kala o taim ambreska
+[06:52] yino haiga iso qaado
+[06:54] si ea a marka uterid gara ya marka
+[06:55] Yaa marka.
+[06:56] Aani gawir haa sanna yaa marka confirmation is ka xada a sobar anu aaa SMT yaa BSP.
+[07:00] Waa yaa siideyuh.
+[07:02] Waa yaa xay, xalka'n mhaa marka haista inside bar ba haista a marka.
+[07:06] Inside bar marka haistaid.
+[07:08] Waxa suguin naa kandalka kuxiga inu a marka labadaba sku qaado.
+[07:12] O kandna soo qaada ki laafil kanad togo.
+[07:14] Saas marka aankuoyal na marka refersal ke enni.
+[07:17] O firsa marka mhaa da aay.
+[07:19] Nsaid bar ka waa la qaaday.
+[07:22] Likuli tiswi bala samim hara sanna maka konfirmishn aha SMT.
+[07:27] Waia SMT dha haadda halka wakada aadda halka ane kada aadda uffirso.
+[07:32] SMT.
+[07:33] Hai gaani qaadu waitha.
+[07:35] Waia gul yyoro tag.
+[07:37] Aoki gul yyoro maha yasama yasay.
+[07:38] Labadu wakada [...repeat] wakada.
+[07:43] Halka mhaa kwaitha sanna two-stage SMT wakwaitha sanna marka.
+[07:48] Iliyna a marka.
+[07:50] Waia hai.
+[07:51] Halka naa fiirin yaa marka, awood marka halka uubadantaay waas ka fiirin naa, BSP maaaysa naa, no BSP maaaysa naa marka.
+[07:59] Waiha lakin mahaaysa naa, two-stage SMT maaaysa naa marka.
+[08:03] Two-stage SMT maaaysa naa.
+[08:05] Waiha interegan naa halka asa nka suqaadanaa, five-minute ka aantagnoo.
+[08:09] Marka marka aan SMT yada na konfaaym garaaynay, tartalsu ka na konfaaym garaaynay.
+[08:14] Kandalka kandalki ayt kuaha marka, barjana da marka ayt ka daa niyoga nbu ka midi hay.
+[08:19] Kadeyna model wun kenna intri ganka sofru no, alka andi ganna esalka, tb ganna tri arar marke rhaadi no,
+[08:25] ankeistu intri model ganna asala baran no,
+[08:27] wa xadjira feeg uubiya badan baachira marka, intri model ganna di la yed muskola ki doona,
+[08:33] sorry,
+[08:36] alka mhaaka daaay, model wun baaka daaay,
+[08:39] tarta suwkiyna waahisa taa, yelly kudit siwkiyya rkaaha,
+[08:43] waya, alkaas mhaaka yalna yi two-stage SMT mhaaka yalna,
+[08:46] TRIKASNA TRI ARA ALBUHAHLKAS
+[08:49] Qo baha marga uda fluo gara asa
+
+==================== PART p3 ====================
+[00:00] da [...repeat] da, co effe o b iya da da da da? De xuuuri? De xuuuri? Hala big house is a model, build one.
+[00:18] Tartafsoob kiina waahe sa taa yellu kudit siwub ki yarka haa.
+[00:22] Waayya haa.
+[00:23] Halkaas mhaake yalna 2-stage SMT maake yalna.
+[00:27] Terir kaasna 3-aralbo halkaas.
+[00:29] Koobaxa marka uldufalooga raa asan marka.
+[00:32] 2-stage SMT.
+[00:36] Waayya haa.
+[00:37] Estil marka uldufalooga nwa active.
+[00:39] Terir ki lawad waa sooqa haada nay.
+[00:40] Ki waram haaku sooqa haada nay.
+[00:42] SMT with BSP wakku sooqa haada na kanna.
+[00:44] 2-stage SMT wakku sooqa haada na.
+[00:47] Waayya haa.
+[00:47] S-tila wan hao raud-fu-lugeena marka wa kiliin, wa wa sall.
+[00:51] Kila fil-qusumna wa nolob anayye, wa a, wa bi.
+[00:56] Wa ya hay.
+[00:59] Addaa sidao ka la uffir s-tid.
+[01:01] Meylaa haan ka soda ghaa ghaa ghaa na wa mahaay wa aairal, tu i aaral, aairal, tu i i aaral.
+[01:06] Wa kan sabti ghaa hori u soba rata yi marka.
+[01:08] Wa ya hori an ghaa ghaa ghaa da marka.
+[01:11] Suuqa mxhaa la gaaray target ki baal la gaara.
+[01:13] Piri so marka target katan inti si gaarink.
+[01:16] Ba ghaa ghaa wai qaadayn.
+[01:17] Wai, sootwa gha mhaay.
+[01:19] La ghaan waxa ghaa istaan SMT iyo, PSP bhaa istaan.
+[01:22] A waddu danka biirishka uba danta aayaga firmer.
+[01:25] Waxan ulu nahta kanay sii qaada yaan.
+[01:28] Inta marka tanna a isim wili wili ba gairin ba target ki marka.
+[01:32] Waay haan sii da aya marka.
+[01:34] La ghaagutan target ki wili qaartii.
+[01:36] Lakin dhulki ba aayy banaa wana wili laman qaadin.
+[01:39] Ki laifal marka mhaa iya.
+[01:40] Oo bii ghaan a kasu tarir gheri.
+[01:42] Baa ki laifal iya.
+[01:43] Kilaifal kalama waha yistawa meeshan kumubu chereba.
+[01:46] Waaay hai?
+[01:47] Aan siidehna marka.
+[01:49] Hilaayda marka barjinka la samayna ayyadna wakudra'yna.
+[01:51] Kan barjinka wax l-sameye 8 ba l-sameye.
+[01:53] Kan wax l-sameye 3 wax waktayad ugufiya'na marka.
+[01:56] Kan wabriniyok kan wuqtayad ugufiya'na wuyyan.
+[01:59] Marka waktigaa khasam maahan, laki waktayad ugufiya'na wuyyan.
+[02:03] Wa oo kolle barjinka hawuliskaw kusaw baratay.
+[02:05] Kwa siidehna ya Kilaifal kenayinta nulao imaaniyoo waa sugi naaman.
+[02:08] Suuqa haasku taa taa waan maki laafilka intalaga imaaniya.
+[02:11] Soori, halka ayi qabo.
+[02:13] Waa yaha ki laafilke niwaa noloyimid.
+[02:17] Ki laafilke niwaa noloyimid.
+[02:19] Ixilligaan barijin ku daqwaa mahae wa eid.
+[02:21] Eid kuwaataqa naan oo waxa ku sobarateen.
+[02:23] Barijin ka ku sobarateen.
+[02:25] Waxa wayaan wa intuus aasiyaanku furmin wayaan.
+[02:27] Wa kandalka aasiyaanku kohraya.
+[02:29] Eid ka marika wa barijin kiis uufiyaan wayaan.
+[02:32] Wa kandalka aasiyaanku intuus furmin.
+[02:34] Aasiyaanku mariku furmana.
+[02:38] Wai hai, halka amarka m'haa ka da'gai CRT ba'gai ki level kina wa lugu tiga.
+[02:43] Wai hai, waxaruhna la'gaiha ka la'gaiha ka la'marka ina confirmation ka l-SMT ama wahyabas ina ka l-no.
+[02:48] 4 hour ka tiga ya, wai hai, 4 hour ka m'arka ta'gno uffirsa m'arka, halka an uffirsa m'arka, halka an uffirsa m'arka.
+[02:57] Halka an m'haa ka da'gai, kandalka waa 9 AM, ha da'gai, SMT ba'gaiha ka da'gai, halka an amarka ka r-kei SMT da, waha ka an amarka, SMT ba'gai sta'gai.
+[03:09] SMT marka saa qwa hiista marka, haal kaan la marka ietag
+[03:12] gulli anna fiiri, anna gu qaada marka
+[03:17] waxka li ganta marka labala agol marka qaadaan wadde best wayan
+[03:19] best wayan marka, waayahay
+[03:23] key level ken yon rochuga, 4 hour key level, 1 hour key level uo xiguduwa iskuya dihin
+[03:28] marka haal kaan iye maw marka, inta marka saa confirm gari SMT saa qa hiistu
+[03:31] key level ken li eechoa, BSB marka mahiista haa
+[03:35] yes wa hiistu ufiirsoor, labadaan karna ula mahi uwa boolish
+[03:38] Kan dalka nnawohu shig ya biirish bwshig ya kan dalka nrifel koso samaynayya.
+[03:43] Target kenowa m'hai wa ERL ka nmarke.
+[03:49] ERL waai yha hai.
+[03:54] Xal ka m'arke m'ham kuahistaa.
+[03:56] SMT wut PSP man kuahistaa.
+[03:59] Guza haada u'de ga m'arkeo Xalga ya m'aynayaa 2 stage hilo.
+[04:02] Daad will be high probability tsa daab m'arke.
+[04:05] Waai yha hai.
+[04:06] Xalgaan uffyesu s'daydiya shandakal soosami.
+[04:10] Kan s'daydiya shandakal.
+[04:14] Silefa industries
+[04:17] Silefaery customers
+[04:19] Silefa
+[04:20] Silefa
+[04:21] 3
+[04:25] 2
+[04:26] 2
+[04:30] 3
+[04:35] 4
+[04:38] 4
+[04:39] 5
+[04:41] Aaddaa tiri aaraa u guddaqtina isa ina fuu yaan 6% marka.
+[04:45] Si daa ya marka.
+[04:47] Tana hurittigidon ta marka targitka y ufiirsa marka.
+[04:51] Kukale.
+[04:52] Uili targitka maggaaren sawtu amaxi waayna garet sawtu marho rao kushayaga marka.
+[04:55] Aaktaan waxi laada hai BSP yi two-stage SMT belaada.
+[04:59] Y inhaalkaas na aay lafan tin barachin yaa two-stage SMT with BSP.
+[05:06] Marka intiri daa anwa intiriya a marka anku tiri grayi.
+[05:09] Solao ka la wahaan ni tussiya marka'a baayas ghi yista huw qwaanfaan gheran lahayt.
+[05:13] Hadda marka'a deeliga ya na tegnoo.
+[05:17] Deeliga ya na marka'a da tegnoo.
+[05:19] Asbuwaan, hadxiri marka'a deeliga.
+[05:21] Siyayarti kadha'adhi baadxiri wakaan'a.
+[05:24] Halka'a unfiirsa marka'u. Waxal ima'adi.
+[05:26] Ayral bali ima'adi.
+[05:28] Wahaan taargida.
+[05:30] Ia arawl kaana taargida marka.
+[05:34] Waya, ia aral kaana taargida.
+[05:37] Waya, halka'a maha kadha'adi.
+[05:39] Siyayarti baadha'adhi.
+[05:40] Chama adhi wa malka samansayi siya artiida.
+[05:42] Okay, chama adhi malka samansayi wa harasin naa malka
+[05:44] PSP iya SMT aqoo confirm gara na madama suquo sal'a haa
+[05:49] wa obigaan la suihtirami, obigaan la suihtirami
+[05:52] wa dailyga malka li tshuwa.
+[05:53] Halka a malka a uffirsa na.
+[05:55] Akada hai SMT ba akada a uffirsa malka.
+[05:59] Kan da baada na malka a uffirsa na wa boulish e bierish.
+[06:02] I think la baada na wa boulish e bierish hauskumid.
+[06:05] Kan uffirsa malka.
+[06:06] Pal Training
+[06:09] And this is when M effe Erstai
+[06:14] We are going to bring CMT to巧mics
+[06:21] You got a vinegar
+[06:22] We're going to hustle
+[06:23] Not a 2006
+[06:24] Thispass byetzal
+[06:25] Is that a sum both point
+[06:27] There are a lot of performance
+[06:30] We are going to see how
+[06:32] What do we say
+[06:33] We rise
+[06:34] Well we're going to
+[06:35] serpent
+[06:35] Keeleafal, ya SMT, baan hai sanna.
+[06:40] Taaasu kainta marka ino suqo horay, u qaara marka target ki, firsa marka.
+[06:45] Target kaino horay u qaarduh.
+[06:51] Ulau batanhaa hul qaartay target haada u firsa day, madama AST, SMT aya AST.
+[06:56] Waaay hai, harkas marka, uhaan kusooqa ba gawain naa aasar kaini SMT, ya BSP.
+[07:03] Waaan fila yaa in sidaoogu naa xanaydao sharhaay, ua loo fahamay, waaakon sabtiyo fudud,
+[07:08] iya fudud, hadana a high probability.
+[07:11] Mareka, still, uhaa misna haay,
+[07:13] anunsuo egtik hati gaino, kunseptiyadan haada istimashid,
+[07:16] aabrofiti wal nukon duita di lah idno.
+[07:18] Saahibi al-khayr badan baanir chayni yasas,
+[07:20] anku seo qo qo qo qo yinna, aashar kena di lah idno.

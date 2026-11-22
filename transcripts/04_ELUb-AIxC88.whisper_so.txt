@@ -1,0 +1,1268 @@
+Title: 4.0 CANDLE RANGE THEORY (CRT) | 2026 Mentorship (lesson 04, ELUb-AIxC88, 56:47)
+Source: 4 video clips uploaded by user; faster-whisper large-v3-turbo, language=so, condition_on_previous_text=False.
+Quality: medium. Timestamps are relative to each clip. Clip offsets in the full video: p1=00:00, p2=19:00, p3a~38:00, p3b~45:10 (approx; clips cut by user). ~4.5 min at the end (chart examples) not received.
+
+==================== PART p1 ====================
+[00:00] Assalamualaikum warahmatullahi wabarakatuh.
+[00:03] Sood wala sahibiyal, ku sood wala YouTube kainatet community, iya mentorship kainat 2026 Free Mentorship.
+[00:10] Maga'iigwa akim, ku sood wala 10ka afaraad iya mentorship kaa, kaa, candle range theory CRT.
+[00:17] 10kaan wuhaqwa ahal iddoonna, wamhae CRT, types of CRT, iyo, sida, low values to CRT.
+[00:25] 10 ka han u hoqimid iha 10 uum hiimsan
+[00:27] e man tar shibkaan
+[00:29] waxarajjena in aad kafe eesad dhantaan edulahi admo
+[00:32] in ta anu gud bin CRT
+[00:35] iya waxa eetay yinu iya kaladwen
+[00:37] waxa muhima morkore in aan islafe hanu
+[00:40] istayviska ee maran kaan aliska
+[00:42] prom
+[00:43] o bin tukalus
+[00:45] kaan lakoo firmaa uu hirmaa
+[00:48] intu lixas han istayviso mraa
+[00:50] okey, kaan lakoo mshumaraa afra istib
+[00:53] uu firmaa
+[00:55] Loo am haay mitkul uussemesta and din kalus wunogada.
+[00:59] Okay, adee aaykan bilawang kaanala buulishka'a.
+[01:02] Kaanalka buulishka'a wufurma, wufurma, and din loo uussemesta, and din hai uudan ben kalus.
+[01:11] Wa obin, loo hai kalus.
+[01:16] Mahanloos awgabiya, o, l, h, c.
+[01:18] hay unsemesta haed ikha harka kaananka интересabia
+[01:24] adein lay usemesta lu samples fuera wada n etti
+[01:29] wat open najay lu05
+[01:33] huhaan losu gaabiya yu hl si
+[01:40] 憋im saan oo miliga halay ken boolish waa abyn lilu hi-, close
+[01:45] Taas taas u ma'ani hedi ghaay, in kaanal ka boolishka'a u furmo lu sa u lu u kormaru an diin hai u nugdu an diin kalus u kuhilm.
+[01:53] Halka kaanal ka biirishka'a u kurka furmo an diin hai u sosmisto, lu u sosmisto u gudabben u kulus nugdu.
+[02:05] In taas ina fainteena nijena, in sha Allah, u ra u sa'aneena.
+[02:10] In taas ino haasasunada, qidharin lagu imaadhanu ayko mbima.
+[02:14] Ukay wawam haay CRT.
+[02:15] CRT u xalagus u ghaabye kaanal ring theory.
+[02:18] Kaan ala lo bea at koa ragtu jartiska haa haada daily, four hour
+[02:22] hama na maan time free mida kalaba
+[02:24] amusa yi maismin si rinnam ah
+[02:25] ewa range, every kaan al is a range
+[02:28] wa time based range
+[02:30] okey
+[02:31] wa range muka alayyam haka wada
+[02:36] haka wada
+[02:37] kaan al kaan
+[02:39] wa kaan al
+[02:40] bullish ah
+[02:42] iya high
+[02:45] high gan
+[02:47] wa liquidity
+[02:48] Loo gana wa lukwiriti wa rinji hai
+[02:51] Loo gana wa hawae
+[02:54] Rinji loo
+[02:56] okey
+[02:58] Loo rtain framer kaluudu
+[03:01] kanalaka hana hana hana
+[03:01] wawabin loo
+[03:03] hai
+[03:04] close
+[03:06] wawabin
+[03:12] uufurma
+[03:14] kanalaka uufurma
+[03:17] andin loo sumista
+[03:18] andin huta ya
+[03:21] manish uusarayso
+[03:22] andin close
+[03:24] وحولي هامرك
+[03:25] specific high
+[03:28] yoo specific low
+[03:29] range high range low
+[03:31] baysal liquidity
+[03:34] salisal liquidity
+[03:35] so every canal is a range
+[03:38] canal ka amرك
+[03:40] low time frame low di waha arka
+[03:41] this is a small range
+[03:43] kooli high yoo
+[03:44] ok
+[03:46] xal kaanoo qaysana
+[04:04] low candle
+[04:06] minna wa bullish
+[04:09] minna wa bearish
+[04:10] low time frame
+[04:12] iskematik nasaano ukaano.
+[04:14] Oki ya diya anku bilano lawo kaandal.
+[04:17] Khael kaano xo kaysana kaanil aboolisha.
+[04:19] Kaanil kaboolish kumhousa meya
+[04:20] hara u somarne.
+[04:22] Soha suso.
+[04:23] Obin,
+[04:24] low,
+[04:26] high,
+[04:27] close.
+[04:28] Wa meylu wka furma
+[04:29] and din,
+[04:31] meylu hwasa samista
+[04:32] and din,
+[04:34] meylu sulu samista
+[04:35] and din,
+[04:36] uwe hirma.
+[04:37] Wa obin,
+[04:37] low,
+[04:38] high,
+[04:38] close.
+[04:39] Oki,
+[04:39] next kanal l'mhousa meya
+[04:40] wufurme
+[04:41] And then high u koon mare
+[04:43] Mihoosumi lukhidit kaan u qaadi
+[04:45] Wa rinji high
+[04:47] Ama CRT high
+[04:51] Ma hatar qida CRT low
+[04:54] O bin high
+[04:59] And then low close
+[05:02] Okay low ten frame ksegu kaanayin warke
+[05:05] Haroax u sombrne
+[05:06] Inna rinji gaan hayasana
+[05:08] Okay CRT intaki maanay warke
+[05:11] CRT u haway rinji gaan
+[05:13] O'a naru ue yisane.
+[05:15] Nnegas kaanl, in kaanlakaan haayyisa.
+[05:19] Am loo yisa milu guharmara.
+[05:21] Khad mahaal guharmara, haayyisa lagu guharmara.
+[05:23] Mahaal uusameh, luqwiditi sweep ama talal sweep.
+[05:26] Andean mahaalismeh, targitka tosulu agad.
+[05:29] Targitka mahawa, warinjilugan ama CRT low.
+[05:32] Halkaanna mahaakadaqa, talal sweep.
+[05:35] Ama, luqwiditi sweep.
+[05:42] Okay.
+[05:43] Intaas ayan rajal aya.
+[05:44] Na haal kaan mihaqo yisane kaan al buulish a
+[05:59] kaan al ka buulish moqoosamaya wufurma
+[06:01] moqoosamista a lu, moqoosamista a hai
+[06:03] u gudan beyan moqoosamista a kalus
+[06:05] okey, kaan al kaan
+[06:07] obiinka samista, e lu ga samista, e hai ga samista
+[06:10] e xirmay, moxule ya hai
+[06:12] moxule ya hai
+[06:13] rinji hai, iyo, rinji lu
+[06:16] okey, negas kaan al
+[06:18] xaqsu ya namarka
+[06:19] inu furma u rinji hai ga qaada
+[06:21] rinji hai ga wu qaada
+[06:23] Kormihano yali. Lukuiditi.
+[06:25] Alkaan lukuiditi basa lukuiditi.
+[06:30] Mxukusume lukuiditi sweep ama tala lukuiditi sweep ama fake shift.
+[06:34] Suuqo mxukusume manabinash bin gura.
+[06:36] Andin,
+[06:38] all the way to that.
+[06:40] Target.
+[06:41] Target kumxukua haa.
+[06:42] Khrenji low.
+[06:43] Ok.
+[06:44] Lour ten frame kusudu kaan amarka.
+[06:47] Kaan lkwad wxayisane khrenji gada.
+[06:52] O bin low haay kalus.
+[06:54] Nagas kaan l'mxukusume ufoormay.
+[06:56] And then, xaygu yu qaad.
+[06:58] Maha yas na maishas.
+[07:00] Liquid sweep.
+[07:02] Ama, tarda lsweep.
+[07:04] Ama, baysal liquid ulguuso qaad.
+[07:06] Okey, hai ha diil qaad maha targida.
+[07:09] Lu ga targida.
+[07:10] Lu gaan mahanu yali.
+[07:12] Pringi lu.
+[07:13] Ama, salisal liquiditi ama CRT lu.
+[07:17] Okey, intas ina faintyena ar jena.
+[07:28] Okey, AMD.
+[07:30] AMD.
+[07:30] AMD.
+[07:32] Wa aasas ka ihi basic CRT.
+[07:34] ndid kamagi
+[07:40] aaa
+[07:41] Midna
+[07:42] you can move to the step
+[07:45] you can move more
+[07:46] again
+[07:48] you can move
+[07:50] not say
+[07:52] aaa
+[07:53] ed
+[08:04] Kayaanoo meel saree, wadi yisill loo wadhu, and din, manubilation lasumayo, daqaq bin qur'ah, and din, daqaq yisahda oo harkas ka binawdu.
+[08:14] Waxanoo lum mahaa maamool mark. Waxanoo lum mahaa maamoolo, luqti keuris, luqtaan, ki ilafil qudahjaro.
+[08:21] Wa internal range liquidity, targitkan mahawa, ekasanal range liquidity.
+[08:29] Oke, suu ghal kaan, xoqayista booynti, booynti ghas ila booynti ghaan.
+[08:35] Maha ulda xayo u gudaku jiru key levels
+[08:38] Oki key levels kaan silo ui maada
+[08:40] Mahaqaaswa inahealla
+[08:41] Mahaqaaswa inahealla
+[08:42] Accumulation
+[08:43] Accumulation ki marka harkaan laka yana
+[08:45] Mahaqaaswa inahealla dana
+[08:47] Bengur
+[08:48] Mahaqaalu bengur wa manubration
+[08:50] And din
+[08:51] Manubration ka daahealla
+[08:53] Mahaayasana
+[08:53] Orda roles
+[08:55] Kogu dameen mahaasoo yana
+[08:56] Distribution
+[08:57] CRT wa intan mark
+[08:59] Nakaakaan uhaalkaan lal ah
+[09:01] Bengur kaan uhaalkaan lal ah
+[09:04] Iyo, dhaqaqis sahada, wuhal kandala ha.
+[09:11] Oke.
+[09:13] AMD wxalawso qabi, accumulation, manipulation, distribution.
+[09:16] Accumulation mahawa, wwamarka key level koloswa soaqada.
+[09:20] Oke, sinariy kalajirta marka.
+[09:22] Xad sinariy idha wxwkusha gna, marka key level internal awusajit.
+[09:27] Oke, wuhaada ade, in external laqaada.
+[09:30] External mahaada mahaada ade, manipulation, external kiya qaada, accumulation ki,
+[09:35] And then manipulation. Distribution to the key level.
+[09:39] And then distribution to the key level.
+[09:39] And then distribution to the key level.
+[09:40] Accumulation.
+[09:41] And then manipulation.
+[09:43] And then distribution.
+[09:44] Oh, excellent.
+[09:46] So, allah, we're in a way to go to the key level.
+[09:48] Inta'yna fa'na regena.
+[09:50] Hora uqsa'anena.
+[09:52] Okay.
+[09:53] Types of candle range theory.
+[09:55] Waxasufa hannay hadda awsabarane.
+[09:57] Range is ka waha'i kelihin.
+[09:59] And candle commission uku firmu.
+[10:01] Mayashu uku hirmu.
+[10:02] High e-loo.
+[10:04] And
+[10:05] Xa di hai laqadu in lu targidu bihay
+[10:08] ama di lu laqadu in huay targidu bihay
+[10:10] AMD
+[10:11] waxa sojra anay CRT di
+[10:13] OK CRT di nui iza kalduin
+[10:16] nui anaw gu aansal
+[10:18] waxa waae
+[10:20] tari kan al CRT
+[10:21] waxaku kobein ya siddax kaan dal
+[10:23] siddax ran kaan al mihekalihim
+[10:25] xa kan waxakuaysana
+[10:27] li yin lrinj
+[10:29] waxaku lajra
+[10:30] key level
+[10:32] OK
+[10:34] Diz ki laefal mar kli i maadu. Kaan lakan mxui hai. Oluiz kaan lakan waaak.
+[10:41] Accumulation. Mxuli hai hai. Mxuli hai loo.
+[10:46] Kanna mxawaih. Manublishin.
+[10:50] Mxus meh. Behin kuru smeeh. Wofur meh. Yandin hai wuttege. Yandin kalus. Intok sui hru.
+[10:57] So mxayasana ki laefal internal ah. Laka accumulation ah. Mid kaloo manublishin ah.
+[11:03] Marekan mahaasubi yana ki sahta aha.
+[11:06] Distribution.
+[11:08] Kaan na kaan na mahaway.
+[11:09] Distribution.
+[11:10] Kaan na mahaqaysta.
+[11:12] AMD, Accumulation, Manipulation, Distribution.
+[11:16] Kaan na nabruun, kaan na nabruun, kaan na nabruun, kaan na nabruun, kaan na nabruun, kaan na nabruun, kaan na nabruun.
+[11:23] Nuo ala wad wahaqna qaana.
+[11:28] Nuo ala wad wahaqna qaana.
+[11:30] Tuu kaan na CRT.
+[11:31] Wixuku kumiya laba kaandal.
+[11:33] Si dharu uqsao shakane.
+[11:35] Kaan na nabruun maw marru la mahaway always.
+[11:37] Wa accumulation.
+[11:39] Amo kaan ala ki rinji ghi samaynay, rinji haay, iya rinji low.
+[11:43] Okay, haal kaan mahao kaasana ki level.
+[11:46] Okay, level ki bhaaay maadi? Accumulation, always. Accumulation ka ay maalay.
+[11:53] And then, nagas kaan ala bashaq wuqab tamark. Manipulation, iya distribution.
+[11:59] Chusku yaay, M iya D. Accumulation, manipulation, distribution.
+[12:06] Tu kaan ala CRT, haal kaan kaan ala bashaq wuqab tamark. Manipulation.
+[12:09] Kaan ala 2 iya kaan ala 3.
+[12:12] Nuuuus da had waha laa inside bar.
+[12:20] Inside bar wahaway,
+[12:22] maka kaan ala accumulation ka kaan ala accumulation always.
+[12:25] Hea iluubin, accumulation.
+[12:27] Khaal kaan mahao kaysana key level.
+[12:30] Key level kaan waha nukhara internal iya external.
+[12:39] Wada efa.
+[12:43] Amma waha nukhara key level obi ama fifer gabu nukhara ama infers fifer gabu.
+[12:47] Amma waha nukhara only high ama only low.
+[12:50] Kee level kaadi.
+[12:54] Okee.
+[12:55] Har kan mahao kaesana.
+[12:57] Har kan mahao kaesana.
+[12:58] Kee level.
+[13:00] Kan mahao waay accumulation ki.
+[13:02] Wuhuli yaareanji hai.
+[13:03] Yaareanji lu.
+[13:05] Wa daqaqi maadi kee level ki.
+[13:08] Okee.
+[13:08] Nags kan mahao kaesu yane.
+[13:09] Mar ku furma ino.
+[13:10] Hai ghaada.
+[13:11] La ki ma daaim.
+[13:14] Mioo sami.
+[13:15] U furma.
+[13:17] Andin.
+[13:18] U furma.
+[13:19] Kheye rosamiste.
+[13:20] Andin lu.
+[13:21] So nagas kanal nabar tiriya wuhusumiya marka
+[13:25] wuhfurmay
+[13:26] and then high
+[13:28] high gas mahaway
+[13:30] wamanubilashin
+[13:32] MTY
+[13:33] amwa
+[13:34] lukwiriti gana laqada wa lukwiriti sweep
+[13:36] amwa taa tele sweep
+[13:39] and then
+[13:40] wuhfurmay
+[13:41] nagas kanal muhusumiya marka wuhfurmay
+[13:43] high and then
+[13:46] close
+[13:46] marka la aajara iyaarka
+[13:49] Qaro uxa uso barne lalabak ghaab amal lalaman nuk.
+[13:55] Lawas nuk uxaka l-ahayan tiri kaan al-SIRT i-TOKwaan al-SIRT.
+[13:59] Kan wukid duunyeh.
+[14:00] Waxa waa insayrbar.
+[14:01] Insayrbar waxa loodahay.
+[14:03] Hrenci haaygi i hrenci luugi waxa jira.
+[14:05] Khal kaan dal amuha kabadan.
+[14:07] Wa an nahaygaan naqaaden.
+[14:09] Luugaan naqaaden.
+[14:09] U gudhaa kujira.
+[14:11] Gudhaa kufurma gudhaa kujirma.
+[14:12] So nades kaan ala muka qasamaynaa.
+[14:14] Shakaadi kaan l-ladaan eqabala khayyan.
+[14:16] Shagdii khabimu hain
+[14:17] Kaan al-nambar tiriya qabanaay
+[14:19] Ma kaan al-nambar 4 wa nukkara
+[14:21] Kaan al-nambar 5 wa nukkara
+[14:22] Kaan al-nambar 6 wa nukkara
+[14:24] Wad efa
+[14:25] Kaan l-kofrumi
+[14:27] And then
+[14:28] Nakhay wu kohar maray
+[14:29] Michusumiya l-coded sweep
+[14:30] Manipulation
+[14:31] Ama
+[14:32] Talat sweep
+[14:34] And then michusumiya
+[14:35] Arkaan wu kohar maray
+[14:36] Next kaan al-mahaddaay
+[14:38] Wufrumi
+[14:38] High
+[14:39] Low
+[14:40] Close
+[14:40] Ok
+[14:42] Accumulation
+[14:43] Manipulation
+[14:45] iya distribution.
+[14:55] Oke.
+[14:56] Nooq an oo nooq a farad.
+[14:58] Waxanoo ye gana multiple CRT.
+[15:00] Multiple CRT waa CRT waa
+[15:02] wu lbo
+[15:03] wu ka koovun sida xkaan dalwa xka badab.
+[15:07] Lakin
+[15:07] wu kaan lal kalabad
+[15:09] manubrishan ka simi.
+[15:13] Kanku yad uli zoom haad hane.
+[15:16] Wa accumulation.
+[15:19] Kee lae fara kanku yal
+[15:20] internal wano kara external wano kara.
+[15:24] Oke.
+[15:25] Kaanan wa rtumi qusmii oobin hai loo kalus.
+[15:29] Targit ka morka morka roo haana qaana inna hal kaan dal u qaara ama lawa kaan dal i qaaran.
+[15:34] Morka anu haa qaaraay siddax kaan dal iwa haqabudhan.
+[15:36] Oaah ku, lawa siddax.
+[15:40] Afar, shan lih.
+[15:42] Waikabudhan karan.
+[15:42] Ntayra wana qaran, laba tana noutan qaran
+[15:44] lakin, wain ay sankearan laba kaanral
+[15:47] wain ay sankearan sidax kaanral airaadhe
+[15:50] ku laba sidax
+[15:51] okey, taasawo bichu acha unuqana
+[15:53] multiple CRT
+[15:55] iya kanu uudan bayaqa
+[15:59] two-stage manipulation CRT
+[16:02] two-stage manipulation CRT
+[16:04] waxaloo bichee
+[16:05] and always kanu bichunu acha
+[16:07] khinji hai gana jilu gala
+[16:09] accumulation
+[16:10] okey, halka mohaan gulaqa
+[16:13] manipulation gudu kusoo xalmi
+[16:15] So niggas kaan l'mihaqsu yani
+[16:17] Ino l-distribution auto-starget kuyaad
+[16:19] La ki mada'i al-mahada gai
+[16:20] Manoblation nambar 1 ahay sali
+[16:23] O ki laifal kaal kaan kuyaali
+[16:25] Maybi ki laifal ka ina lalgaari
+[16:28] Maybi in time price kuusayay kaan l-kaan
+[16:32] So kaan l-kaan mhusumayna amorki
+[16:33] Shqaqdi yu soqab sana
+[16:35] Ki laifal ka yu kaayra
+[16:36] Ghandi al-mahada gai
+[16:38] Manoblation nabar 2
+[16:39] Stage kuyaad wakana
+[16:40] Stage 2 nwaakana manipulation
+[16:42] So
+[16:43] Asaigi amorka shqaqdi la wad ghaabana gai
+[16:45] inu target ka orki gairu.
+[16:47] So wa two stage manipulation.
+[16:49] So, kulu haaluye gana type 6.
+[16:51] Type 6 CRT.
+[16:56] Okay, aam markalaki uili.
+[17:03] Haruwa haqqsa banay, haruwa haqqsa baranay.
+[17:10] So, l-haruwa haqsa baranay.
+[17:12] And, kanwa accumulation moro boh.
+[17:14] Wuhuliye haay, range high.
+[17:16] Iyo range low.
+[17:18] Hal kano wuhuqaisa naa ki level.
+[17:20] Ke level internal or external.
+[17:24] Middle bone o' unkarat.
+[17:26] Okay, kaanan kwaad wufurmay loo semesta u rinja low ah, and din haaywa semesta u rinja high ah, addin wuie hirme.
+[17:33] So, nagas kaanan l-muhusumay yin wufurmay, haaygi uuswil gare, wukwil t-sweeb, amatral t-sweeb uusumay, addin guidhu uksuwe hirme.
+[17:40] So, nagas kaanan l-muhaksuoyana, ino qabin haay, loo kluusumay, laa ki maddain, wuhusumay, wufurmay, khormi huwisane, manubrashin.
+[17:50] And din muhusumayana amakala, manubrashin kaala.
+[17:54] Manubrashin kaala samana.
+[17:55] So,
+[17:56] So,
+[17:57] Keeleifarki uqgara markan,
+[17:58] Kana la tuwa xalaqai binus Keeleifarki gara rin,
+[18:01] Amein uusana ahayn,
+[18:02] Kana la taam beraitha.
+[18:03] So,
+[18:03] Kana la mirtiri mohussamana shaghiu soqab sana,
+[18:06] Wofurma,
+[18:07] Hai uusana sana,
+[18:08] And then,
+[18:09] All the way to the target,
+[18:11] Shaghiu daqsaqa marai,
+[18:12] Maan ambinushaki,
+[18:12] Distribution ka,
+[18:13] Muiskiyuri egihin,
+[18:15] And,
+[18:16] Type 2,
+[18:17] Ama,
+[18:18] 2 kananla CRT,
+[18:19] Ama,
+[18:20] 3 kanla CRT nusku egihin,
+[18:22] 2 kanla CRT nusku egihin,
+[18:23] in halkan al wmanabinushan samayl
+[18:26] lissalbushan samayl
+[18:27] an tariy kan al-CRT nuhiskiyegi hiin
+[18:29] min siddah kan al-ayhihiin
+[18:30] okey halkan
+[18:32] haqqud lamadhi
+[18:33] taibis nuhiidh umimisana soqa hano al-CRT
+[18:37] okey
+[18:39] halkan haqqayisana
+[18:42] kan al-esku
+[18:44] dhabia'adha eesamayan
+[18:45] kan al-esku eesamayan
+[18:47] labad dhabia'ad mit
+[18:49] ama
+[18:50] afar bi'eskar hama
+[18:52] law bayah ilaw selah
+[18:54] okay
+[18:54] inkanal ku'usamaya kalus abaf
+[18:56] am inkanal ku'usamaya kalus bulu
+[19:00] kalus abaf
+
+==================== PART p2 ====================
+[00:00] Can [...repeat] Can
+[00:30] Kaan al-birish a orinji hi yirinji loo lah.
+[00:32] Nagaes kaan al-muhusumi o-bin hi
+[00:35] loo
+[00:36] ka looos.
+[00:38] Nagaes kaan al-muhakusuyena loo r-barasis oah continuation.
+[00:43] Kanuwa continuation ka kaabkula istiaymwala.
+[00:45] Adi kaan al-kiboodi laafir nagaes ta kaan al-muhakusuyena
+[00:48] continuation.
+[00:49] Dan ki suuq u-suuq u-suuq u-suuq u-suuq u-buoodi laafir
+[00:52] kankalab baayakusuyena.
+[00:54] Ado suuq sel u-suuq u-buoodi laafir kankalabayakusuyena
+[00:57] sel.
+[00:59] Uqiri suqa bay u-saadi
+[01:01] Kaan ala buodi il-lafi
+[01:02] Nagaes kanal mxaksu gana bay
+[01:04] Suqa sel u-sksu bidali
+[01:06] Kaan ala buodi yuku xalmi
+[01:08] Buodi il-lafi
+[01:09] Nagaes kanal mxaksu gana sel
+[01:11] Oke, lawada sqalba fainteen
+[01:15] Oa close above i close below
+[01:17] Oke, buha jiraw
+[01:18] Week below i week above
+[01:21] Week below mxalla
+[01:22] Kaan ala krinjijiswa kana rinjihay i rinjilow
+[01:25] Mxusumi
+[01:26] Nagaes kanal buodi madhafin
+[01:28] Wukhili tiwa qaada andin
+[01:30] gudu kusui xalmi, wasi RT
+[01:32] Wukhsu gana
+[01:33] Kanalkan hayi yisa wakaasa
+[01:36] Lu yisa la qaada, inta targida
+[01:37] Buz da fiziu
+[01:40] Ashek
+[01:42] Masha targid ka
+[01:43] Madajajajan, fiziu madajajajan
+[01:48] Ok
+[01:49] Wukhataar gada xaygan
+[01:52] Kanalkanij
+[01:54] Soa kana hrinji hay
+[01:55] Hrinji lu wakana andin
+[01:58] Kanalkan afurmi
+[01:59] Loo gaaan wqaada wu hirme.
+[02:01] Naga s kaanwa l-mahattar gida.
+[02:03] Wabin low high close.
+[02:04] Wa higher prices.
+[02:06] Week below higher prices.
+[02:09] An kanwa aksi gisa.
+[02:11] Muxus me.
+[02:13] Kanwa accumulation ki.
+[02:15] Kanwa manipulation ki.
+[02:18] Okay.
+[02:19] Accumulation.
+[02:20] Manabulation.
+[02:22] Muxus me kaanwa kan wufur me.
+[02:24] Khaay wu kohar mara.
+[02:25] An deen tuku hirme.
+[02:26] So naga s kaanwa l-mahakso gana.
+[02:27] Fiddiogu juji e sheik kanal kuhi wu haqsulayana.
+[02:36] Okey, morkan wajjuji soo kuhuji dha.
+[02:38] Maasha'allah.
+[02:39] Naga skanal wu haqsulayana.
+[02:40] Intarget ku ugeal.
+[02:42] O bin hai nukalus.
+[02:45] Intaan na faantina arinjena.
+[02:47] Wa continuation iyo referta niska.
+[02:55] Okey, hadda wu haqa sobarana.
+[02:57] Udufulu guba sobarana u 10 kuwadak soqaadana.
+[03:01] Falldan 10 ura dawa soda wandibu guglawa.
+[03:03] Sokel wu haqa soqaadana.
+[03:05] 20, 10 60, 10, 10, 10 with white.
+[03:24] Sidae marke isku wixirin karna waxa baasa sabarane.
+[03:28] Sidae isku wixirin karna waw marke adjar tskatagno ufaahmi karna.
+[03:33] Oke, let's be six togedah isku wixirin marke.
+[03:38] Maantar umi hamaq leesayn.
+[03:40] Ya, 10 ki, 10 kan kure, diil rrenji, diil rrenji ga hayasona, diil rrenji.
+[03:46] Oke, wa maha diil rrenji.
+[03:50] Diil rrenji waxwin maha.
+[03:53] Diil rrenji waxawaay.
+[03:54] Waddaqaqi
+[03:56] Okee
+[04:00] Waddaqaqi waddaqaqi uuddin bie
+[04:03] E uudufulu gwa ra'asan
+[04:04] Kaas oo ay ki level
+[04:07] Kulah samay sman
+[04:08] Okee
+[04:08] Uudufulu gwa bayu usu'adi
+[04:10] Uudufulu gwa bayu usu'adi
+[04:14] Gandiyan maha da'ai
+[04:16] From this point
+[04:18] To this point
+[04:21] Maha wano qana
+[04:22] Diyan range
+[04:23] Diyan range
+[04:25] Diyan range
+[04:27] Okee
+[04:28] Diyan range ggan
+[04:29] Maha wakulah samay sman work
+[04:30] Q-levels haqo l-ih-sama-zaman
+[04:32] Wa halka madha xawiyyinta ugu taqan food prints
+[04:36] 10-[...repeat] 10 kore
+[04:38] Halka mwaxaqo jiru Q-levels
+[04:41] Q-level-kan wa IRL
+[04:43] Mwaxaqo nukun kara UBI
+[04:44] Mwaxaqo nukun kara FIFALU gab
+[04:46] Mwaxaqo nukun kara Infraction FIFALU gab
+[04:48] Okei, marka halkan la imaad mwaxaqo gana
+[04:50] Bye
+[04:51] Li yun hanji gribu shiga wa inta mark
+[04:54] From disappointing to disappointing
+[04:56] Kalburku id mwaxaqo naqana
+[04:58] Equilibrium
+[04:58] E kulli brem mahaqasare bremium
+[05:02] Mahaqoase diskoon
+[05:05] Kilefa disko mahaqa egane na amarka bayi wadnu
+[05:08] Disko mkaaka egane na
+[05:12] Oke
+[05:12] Xaksiga mahaqa no gana amarka
+[05:15] Xaksiga mahaqa no gana
+[05:16] Suqsel u suadi
+[05:18] Oke kilefaqa mahawa
+[05:22] Kilefaqa arkaan ugujra
+[05:24] Dino lejjig mahaqa no gana
+[05:26] From this point to this point
+[05:28] Nais kaanal maha sugi
+[05:29] Inhaqa asataw
+[05:31] Adin kilefaqa lataw
+[05:32] TOS
+[05:33] Mahaari maana IRLki
+[05:35] Waa IRL TRL
+[05:37] RINJIGAGAN WA KANA RINJIGAGAN WA KANA RINJIGAGAN
+[05:39] OK
+[05:40] A mahka lakooq Qigliya harkas
+[05:43] TUSALA BIRIJAA
+[05:47] Soolkum xuksu alasil
+[05:49] Mahaaysta RINJIGAGAN WA KANA
+[05:54] From this side to this low
+[05:55] Harka maako Qijra
+[05:57] Kee laifad
+[05:58] Kee laifad ku haway
+[05:59] Hukubi gana premium
+[06:01] Handein mahaa sugana
+[06:04] In TOSLU aHLTARGETKI
+[06:05] OOA XANA RINJIGAGAN WA KANA
+[06:07] Waxarajjena iin diin l'l'chirinji afeantin.
+[06:10] Okee, aso ghajaar ta'asla aragna bark.
+[06:13] Halkan mohaqqaisena
+[06:13] diin l'l'chirinji bai'a
+[06:16] wubbulish'a.
+[06:18] Mitka la kuori yusa'naha
+[06:19] wala suubi uxii
+[06:20] Halkan kileflal lagalafte
+[06:22] and din mohaalafnisti
+[06:24] from this point to this point.
+[06:27] So, halkan waakseanal
+[06:29] wida wa haqqujirn mohawa internal.
+[06:31] Mahaalafnimi internal kiaal awsoalafte
+[06:33] kileflal kaan ubi gaal imaade
+[06:35] An di nahal kan mahao ka yasana
+[06:37] Move kan ki lafarki imaana mahalaha
+[06:40] Khura u soqa adhani
+[06:43] Wa accumulation
+[06:44] Kan lkan mahaonun gana
+[06:46] Khrenji hai
+[06:47] Khrenji loo
+[06:48] Wa accumulation kan lkan
+[06:49] Kan mahaway
+[06:50] Was the video
+[06:51] Kan wa manipulation
+[06:57] Kan mahaway
+[07:00] Video wujoji shandakiko
+[07:02] Kan wa distribution
+[07:08] Accumulation
+[07:09] Manoblation
+[07:10] Distribution
+[07:11] Ok
+[07:13] Mahaa yasana maraka
+[07:14] Di lhrinjiga
+[07:15] Wa ka sa
+[07:16] kida hao
+[07:19] 5 level
+[07:20] eli upu
+[07:23] fo
+[07:25] i
+[07:26] wat
+[07:28] how
+[07:28] o
+[07:30] 2
+[07:31] o
+[07:31] o
+[07:33] lame
+[07:33] and
+[07:36] i
+[07:38] i
+[07:38] say
+[07:41] 6
+[07:41] r
+[07:42] c
+[07:46] Okay, halka m'hoke sana tussale, tussale m'haawwai, kam wwa dheili kanna mwa wanhaawr.
+[07:59] Okay, halka m'hoke sana dheili rinjigayna from dispointi to dispointi, wa dheili rinjigayna, wa last move, wa dhaqa qi uudin biya da'ak, dhaqaqa nama haalak dhexraatsida kiilafal interna'la,
+[08:13] Xtanarka aagwa kanaa, intanarka aagwa kaasa, key-leafra kaaswa.
+[08:18] Oke, dhaqaqan key-leafra ke maanamahal haa, accumulation.
+[08:23] Dhaqaqan maanabiniushu ksimiye maanahal haa, maanabiniushu ksimiye maanahal haa, maanabiniushu ksimiye lukwiriti ka qaadu xawar, maanabiniushu mchughaade, lukwiriti.
+[08:30] Prefewu skan al-sahayu qaadu, kri-gi-hi-hi-hi am-si-er-ti-hi-hi uqaadu.
+[08:34] Widu u xuxu ixilmil.
+[08:35] Naqas kaanala mahaak suga naa,
+[08:36] aubi nahai low ka loose.
+[08:38] Asaqaabu huqaada,
+[08:39] external ki khaad.
+[08:41] Oke,
+[08:42] low return fring,
+[08:43] morka udiqna uhaar kaana,
+[08:44] halkan ki lafa al kaana loose wa suhdi,
+[08:46] wa suq saanuk suhdi,
+[08:47] halkanala kaana,
+[08:49] external kaana dhyarraba,
+[08:50] andin,
+[08:51] wain suqa kurla ghiya,
+[08:52] waa accumulation,
+[08:54] andin,
+[08:55] manipulation,
+[08:56] manipulation ki,
+[08:58] baala kaada liquidityan,
+[08:59] ki lafa al kaana littege,
+[09:00] andin mahaa suga naa,
+[09:02] halkas ki lafa uhaanawala,
+[09:04] Moodle 1, basal aar ka doon a model 1 kal.
+[09:07] An dien mhalsime toos mhalu aadhaa target ki.
+[09:10] Oa a CRT loo ama klinji loo ama sal sal sal dikwiriti.
+[09:15] Si dhan aar uskoll isti'imala CRT i kilefal.
+[09:18] Charts ken waskoll aar ka doon aadhaa dhe laa karal naada.
+[09:23] Oke.
+[09:25] Hayr taimframe CRT tu loo taimframe model 1.
+[09:31] An in taan uggil, in taan gudha uggil hayr taimframe.
+[09:35] Loo taimframe, merka rohaa muhim ina faena isku hir ka taimframe yada.
+[09:38] Monthly CRT mirka hiistid, model 1 ka gu hakaratsini
+[09:41] Daily model 1, daily chart, daily time frame
+[09:45] Weekly mirka juktit, ko CRT yuigil a hiistid
+[09:48] Harka model 1 kirasini, 4 hour time frame
+[09:51] Daily CRT mirka hiistid, harka model 1 kirasini, 1 hour
+[09:55] 4 hour time frame mirka juktit CRT da hiistid
+[09:59] Harka model 1 kiradine, 15 minute model 1
+[10:02] 1 hour CRT mirka hiistid, harka model 1 kiradine, 5 minute model 1
+[10:07] nday, [...repeat] nday
+[10:37] ndin ki level
+[10:39] accumulation
+[10:42] kaan lakaan moxaad la
+[10:43] accumulation kaan lal number un
+[10:44] rinji hai yunay hai
+[10:46] yaa rinji lu
+[10:47] rinji hai like
+[10:48] rinji hai
+[10:50] qo bin
+[10:51] uizoku suhel
+[10:56] uizoku suhel
+[10:56] rinji hai yasowqad
+[10:59] ki level tege
+[11:00] uizoku suhel
+[11:01] i yishan
+[11:02] maha daafu
+[11:02] budi maa daafu
+[11:03] maha
+[11:03] wik abof
+[11:05] wik abof
+[11:05] mhoaha
+[11:06] wik abof
+[11:06] mhoaha
+[11:08] yes
+[11:10] wa lor praises wa shayht
+[11:12] ok
+[11:12] lawan khanu mhaqsu gana
+[11:15] in targituk tosi u gana
+[11:17] ok lor ten frame ka
+[11:18] come on 4 hour
+[11:19] hal keka
+[11:20] l egane na modulun ka
+[11:21] wa 15 minute
+[11:22] ok
+[11:23] laqa khanu mhaq
+[11:24] lahani wa accumulation ki
+[11:26] handin
+[11:27] mhaqbalad manipulation
+[11:28] handin
+[11:29] modulun
+[11:30] targit tosi
+[11:33] ok modulun ka arigana
+[11:34] modulun mhaal ha
+[11:36] modulun
+[11:37] Maudoloon wa odd block
+[11:39] odd block mohawwae
+[11:40] wa lasti ab kandal
+[11:43] amma lasti boolish kandal
+[11:45] intu uusan
+[11:46] da'in dhaqaqan ser ka'a
+[11:48] amma bierish ka'a
+[11:49] lasti ab kandal ke'a hamark
+[11:51] ab kandal skaradi
+[11:53] bieritikwaal qadiyya qadal kanal kan
+[11:56] ab kandal kudimiwa kana
+[11:58] boolish
+[11:58] boolish kandal kanal ka'a ha
+[12:01] boolish kandal kanal markel wuhu sijirmu
+[12:03] u bur ilalafir
+[12:04] markaasan mooloon haesata
+[12:06] kaad muhaadai
+[12:07] wakana
+[12:10] likwiditi kaan alqaadi
+[12:12] kaan huudumi pulishka
+[12:14] wakana
+[12:14] pundi ya dafe
+[12:16] so this is your model one
+[12:18] okay
+[12:25] example klawat
+[12:29] example klawat
+[12:31] wakala for howr
+[12:31] and
+[12:32] haesana
+[12:33] kaan il nijigwa
+[12:36] nadi haesana
+[12:37] from this point
+[12:38] to this point
+[12:39] ila point
+[12:43] gana isana
+[12:43] wakadi il nijiggan
+[12:45] nijiggan
+[12:46] kalbarki
+[12:47] soakana
+[12:47] maha kasare
+[12:48] bring me on
+[12:49] okay
+[12:56] Suuqi walabrimi giri.
+[12:58] Mahaalagi kileafal.
+[13:01] Oke.
+[13:07] Oke, kileafalalagi.
+[13:10] Kileafal murka laggi.
+[13:12] Mahaayasana murka lakan.
+[13:14] Akumilishin kena wakanan.
+[13:16] Nuwa ghan mhoqna gana.
+[13:18] Kaan lakan.
+[13:19] Khaaygan yiluugan maqadin.
+[13:21] Khuraqo sawqadana diya alnud giriya satin.
+[13:25] CRT nuwa ghan mhoqna gana.
+[13:29] Poozda video.
+[13:33] Wa insarber CRT.
+[13:35] Sabta kaan lakan.
+[13:36] Xaygaan na maqadin, lu ggan na maqadin,
+[13:39] gudu gu kwexirme.
+[13:40] So dis kaanal wa inside bar CRT.
+[13:43] Naga s kaanal mxak suyena in uformu
+[13:45] nukkide fil qaade ke lafarkatako
+[13:46] and din gudu gu kwexirmo
+[13:47] and kaanal mbrufar mxak suyena
+[13:50] in tos u tibigu agad.
+[13:51] Okay, lor ten frame mxak arkeana
+[13:53] mark 50 minutes.
+[13:54] 50 minutes kxak arkeana
+[13:55] accumulation in ke lafarka luguttege
+[13:59] dhaqaq luguttege
+[14:00] and din
+[14:01] nukkide tegel qaade
+[14:03] and din
+[14:04] Last abkan al-mahawai
+[14:06] wakana
+[14:06] Luis bulmula fiha
+[14:10] wal-luhso alabta ha
+[14:11] harkas o-intiri
+[14:12] Inshallah
+[14:14] Inshallah sofa faasin intiri wako ar-gudumtin
+[14:16] Aki maudogun-mahawai
+[14:17] morku wuma ar-guduq a-sil
+[14:20] wadib wakana luku uudan bi
+[14:22] abaha ambulish a
+[14:23] intu u-san selkas bilawad
+[14:25] Intan asilafamnare jena
+[14:33] Okay
+[14:38] Waha nougu xigo
+[14:42] 4.5 oa
+[14:44] TSQ
+[14:45] The Sequence
+[14:46] The Sequence wuhawai
+[14:48] eeeen
+[14:49] doussakuniswa xalagwada
+[14:51] xal kaan uxaku yasune rinjihaa i rinjiilu
+[14:54] kaan al kaan waki
+[14:56] accumulation ka aha
+[14:56] accumulation ka rinjiilu i rinjihae uleh
+[14:59] rinjihae ga marka laqaadu
+[15:01] oo lawsa rinjiilu ga
+[15:02] xalasni mara
+[15:04] meela badana alasni mara
+[15:06] salahan marka boiinti ee katagisid
+[15:08] oo boiinti li ee awsi uqtid
+[15:11] waa qasab ina mirtid
+[15:12] B, C, E, D
+[15:15] ina mirti qasabuay
+[15:16] Puraan buwanti ee ye ka tugu sae
+[15:18] Baha u suqa taa buwanti dya u suqa taa
+[15:22] Wa qas ta marika mahamari B ya maray C D
+[15:25] Buwanti wanak suqa taa
+[15:28] Baha u suqa taa fur
+[15:29] Mahamari 2 3
+[15:31] Marika marxala daas ummaru suqa
+[15:35] Marika rinjahayla suqa taa u rinjiloolu suqa taa
+[15:37] Amba rinjiloolu suqa taa rinjiloolu suqa taa
+[15:39] Rinjahayla suqa taa awa xaallaha
+[15:40] The sequence
+[15:41] Marika sequence yi ka sammha waa
+[15:43] Xeyko qo beeehinhin martumur kwaed tal suba do'qo ulg kwiditi ka alqaada
+[15:49] Markalawad, mo taloon, mo taloon kad ga aso'arkana
+[15:51] Briekar bloog, wasal aarkadona
+[15:53] OTE, OTE wu haway
+[15:57] Kan mxuwaaha, tal suba kuwaed waal, wa tal suba kuwaed
+[16:01] Tal sul suba luad malala, OTE yalaha
+[16:10] Kan si daxad, amkan afraad, amkan shenaad, nudkar mwan gondwaan
+[16:14] Kan uuddambe, inta an ulg kwiditi ka alqaaden
+[16:18] დadha keeghira fahind
+[16:19] Lέgö culu chsep comigo yu hoes mabai lah samaya
+[16:24] Ammana ta видел suhu mucho chi hêna shema
+[16:26] Inta áا na tagit kalakadim
+[16:28] Baxal laha kiss of life
+[16:32] Key uu diya looa sog gabeya
+[16:33] Target kalakada is CRT law
+[16:37] Sibol kalma chciawë ye dal
+[16:38] Acharada challa puha koma kashwin dal
+[16:40] Dal wa hawaay tárkit kalosa
+[16:42] Hadi reinja hai gandae la sawa qaado
+[16:43] Ringe hai gandae la sawa qaad
+[16:45] Urrinja loon loo sagada
+[16:46] Tringe ru kao smuenon gana dol
+[16:48] وحلو سو قاوي
+[16:49] دروع النلوكوديتي
+[16:52] حالك الله سوال
+[16:53] target الله سوال
+[16:54] اوكي
+[16:54] اكوو عليا مرحلها
+[16:56] اومرو
+[16:56] معنها
+[17:00] manublation ki
+[17:00] distribution
+[17:01] اكوو عليا
+[17:05] حال كانوا
+[17:06] accumulation
+[17:06] from this point
+[17:08] illa
+[17:10] this point
+[17:10] accumulation
+[17:10] اوكي
+[17:11] manublation ki
+[17:12] manublation
+[17:13] محلاظ
+[17:14] محلاظ
+[17:14] محاوات
+[17:15] الال
+[17:15] sweep
+[17:15] q
+[17:16] كان
+[17:17] محاو
+[17:17] اي
+[17:17] model
+[17:17] one
+[17:18] Kizdaahad mahawaay breaker block, mahawaay o-tee o-ah
+[17:21] Lukiritsweeph u-aray aala samaya, and then, mahawaay o-kisaflis
+[17:29] Lukiritsweeph u-dambay aala samaya, inta antarikit ka la qaada, inta not graisa
+[17:38] Mahawaay, ehm, haakaabila a-taril suud, mahawaay o-model number one, mahawaay o-breaker block, mahawaay o-tee
+[17:53] Maha uka xe gu kisafuris
+[17:55] Marahala sohmbara, inta soh marahala damara
+[17:59] Qasam maa hi anu wadamaro
+[18:01] Marahak qaarab aahir kartaa tell sub i maudaloon
+[18:03] Ie ke safuris, labdaan le xaabwin kartaa marahak
+[18:05] Marahak qaarab hawin kartaa
+[18:07] OTE awwin kartaa, peri karahir kartaa
+[18:10] Marahak qaarab hawin kartaa
+[18:11] Kuaan nawwin kartaa
+[18:14] O suq mishmangin kara
+[18:15] Marahak tsaalahan
+[18:17] Haeyista
+[18:19] Accumulation ki
+[18:20] Manipulation alugus me
+[18:22] Maudulwana hili toosa terkid kalwa qaada.
+[18:26] Marekas mhaway?
+[18:27] Labu haaba lahista.
+[18:28] Kan ii kan lahista marekas.
+[18:29] Marna waha hili kan
+[18:31] lawadaan maru l-baqasabuay
+[18:33] ii kana hili.
+[18:35] Marna afrtouda wala hili.
+[18:36] Marna kana kaam mga nana.
+[18:38] Marna khas sama hihina wadihishid.
+[18:39] Damant wadih.
+[18:43] Oke.
+[18:46] Wa kana mareka soo jart sa.
+[18:47] Oke, the sequence.
+[18:49] And
+[18:50] harka mishakuya sani.
+[18:53] Accumulation kien?
+[18:53] Harka nukso bila adhi.
+[18:54] Accumulation.
+[18:55] Alkaadze.
+[18:58] And then mahabillawu maanabirishi.
+[19:01] Maanabirishi morkool da'ay
+[19:02] na'aku eesna'laka
+[19:04] ta' tailisub.
+[19:05] Alkan mahaogu bengal kee layfad.
+[19:08] Tailisub mahawaye.
+
+==================== PART p3a ====================
+[00:00] mana baranaynaa CRT, candle range, key level, key level, key level, key level, key level, key level.
+[00:30] S'il n'oqan, hawae waa kanaa, kaanal kaaswae, dakaa qarii awkutusa, waa kaanal kaan, kaanal kaan wal.
+[00:39] Puliyaan lafi, waa luqsa alaqt.
+[00:41] Model n'oqan wahaista.
+[00:47] Model n'oqan n'oqay, haad mohaeisana, ala biistaebaeisana.
+[00:52] Oqay, istaybkizdae haidmuhu aaa, berikaar buruk.
+[00:54] Berikaar buruk wahaala haa,
+[00:56] or buruk wuddin di eefer shilmi.
+[00:58] Ma'ana, suuqaana huuqusia adi,
+[01:02] suuqaana baayuqusia adi, intuut salsao naqan.
+[01:04] Makaan mahal rabi
+[01:06] Kaan luk uudan bae ayy birisha
+[01:09] Intu ssoog bae adin
+[01:10] Ili ahtarab, intu liqa aliyya al-rausama
+[01:12] Madiain, waila jibi
+[01:13] Mauna gana mar kaan lskaan madiain
+[01:15] Yakuuna gana yan
+[01:15] Yakuuna gana yan
+[01:17] Brikar buruk
+[01:18] Okei, alwak midiyaki yalaf lska
+[01:21] Laki intu badaan lama yistaymala
+[01:22] Intu liwa lau istaymala lakiintu badaan
+[01:26] Baeiski wahaakufiram
+[01:28] Wabiye feferga wahaakufiram
+[01:30] Lakiin wako anfa'a
+[01:31] Walaas wahaway
+[01:33] Kaan litska oo biegu uudin bih
+[01:35] il-ihtiray muay il-i jabsoday.
+[01:38] Harka mahao qay isti
+[01:39] uud-blog wala-ihtirayam.
+[01:40] Harka mahao qay isti
+[01:41] uud-blog wala-ihtirayam.
+[01:43] Harka mahao qay isti
+[01:45] uubi
+[01:45] mahaasig isma kaan lakaan maraku imaad
+[01:47] kaanlu uukur ahele.
+[01:49] Madiind
+[01:49] mahaadaay
+[01:50] wala-jibii.
+[01:51] Harka kaan wamaeche uukuda
+[01:52] a maraka istarka jif
+[01:53] wa maraka model wan aheeshit ka di
+[01:55] awa tlilsub aheeshit
+[01:56] breekarka aheeshit
+[01:58] marakaas wadaa
+[02:03] Ua marxala diis daxad, okey.
+[02:11] Likuri tussub huu rei'a waakana.
+[02:14] Suuq mxusumi,
+[02:18] askadir mo, suuq mxusumi
+[02:20] model one ki wa soo arki
+[02:22] tara suub ki
+[02:23] briyikarki waara soo arki.
+[02:25] Okey, from this point to this point
+[02:27] suuq morku lagaqo qasab wa inu nasta.
+[02:30] Uwa nasta andin, uxala tege
+[02:31] briyikarki loomu lua lakin
+[02:35] uxala imaada mea l-bremiuma.
+[02:40] Xaqo bainganta hai, kan briyikarko
+[02:42] nukkaralistir gis, madama hai gisal ghaade.
+[02:43] Birikar kadak wujil a'iwa hawaay
+[02:46] a'xiga nwaala qa'adhi
+[02:49] wubiigwa kana ilihtiramu sa'n kurla a'iya rabti
+[02:51] laki muli ima'la jafsoe
+[02:52] kana birikar ka'adhi
+[02:53] oki halka mohoke sa'n gwa kan birikar wana gana suu ka la sa'hta
+[02:57] bark mohaali maadhi birikar ka'na lai maadhi
+[02:59] handein mohaali sibi
+[03:00] faaasi taral suup uure
+[03:03] kankedib
+[03:04] wa second
+[03:06] second taral suup kana faaasi no'a
+[03:10] kaas mohaala uiti iyi
+[03:12] suuk wa laqaqa wa laqaqa
+[03:14] target kiwkud uwaid uusolaakti
+[03:16] nukwili tiyo so dhant.
+[03:17] Talaswi muhad ahane warshaydaalaka
+[03:19] sugu uquda ghaaqo.
+[03:21] Talaswi wuswee kisaflis taasim haanawka ahade
+[03:23] targitki.
+[03:25] Qaybta mkudaayra na'amulayna
+[03:26] bahara oo sa'ana.
+[03:31] Okay.
+[03:32] Untu mimsanad wasawu qaadane
+[03:35] waha noo hara barijin hauris.
+[03:37] Barijin hauris waha waa isa'a'daha
+[03:39] harkana haakusa'aragna adadib ulawano
+[03:41] nukwili tiyo laqaada
+[03:43] oo nukwili tiyo laqaada o
+[03:43] nukwili tiyo laqaada o
+[03:43] in accumulation kaya giswa la qada manipulation ala samaya wala soudata.
+[03:48] Barajin hawariswa hawae waktida manipulation ka la samaya.
+[03:51] Amo waktida hai amaloo lu samistu.
+[03:55] Okei.
+[03:56] Waxo kol ghadni ku lawo sadiha tafar shan'u kol ghadni.
+[04:01] In pri aisin seishin.
+[04:04] Aisin seishin kohr.
+[04:07] 8 bm.
+[04:09] New York time.
+[04:09] Marka aajoo nahar kan.
+[04:11] New York time kliya isti' maala.
+[04:12] Somaliya da jokt Somali tam isti' maalena.
+[04:14] Hadaues jokedid these juqtid e Jokedid saaha d tad redihi w y jokta
+[04:20] New York time
+[04:22] O'ced this session
+[04:27] Asset sessionbellu 8pm yalasmistah
+[04:36] Asset sessionbellu gorg passo mingam
+[04:40] Iq's presentationbellu gorg mo savonus
+[04:42] 9 b.m. or 10 b.m.
+[04:47] London session gormala, 2 a.m. o'clock, 3 a.m.
+[04:53] New York session gormala, 6 a.m.
+[04:59] 8 a.m.
+[05:00] New York session gormala, 9 a.m.
+[05:04] 10 a.m.
+[05:08] Waaskola arkadona, jaritkaaskola arkadona.
+[05:12] And...
+[05:12] Okay, now the pieces fit together.
+[05:15] ጃ� ጃ�ጃ� ጃ�ጘጃ ጃ�ጃ ጃ�ጃ anpa ba ya 10kammanta aqaadun crt aha.
+[05:26] Lhaddu ጋ tercerian namaka.
+[05:27] Jarts keena maidamu uustilaat keena o la maade.
+[05:30] Let's move to the jars.
+[05:32] Okay?
+[05:42] Waxha ka bilaay junatsala harto whamah crt, crt use unusmae semaa.
+[05:46] Okay yaadi harka to bila yonu.
+[05:48] Waxha najan gretta yaskojarayna, okay.
+[05:53] Start to new, harka najaskojar na, okay.
+[05:58] Waxha gona afer hawaar time frame.
+[06:00] Waxayasana, eeean,
+[06:03] uod falo bierish a,
+[06:05] maidaama lukwirit la qadi,
+[06:07] and din hal kaan la ihteramay,
+[06:09] in falchfefeal agab,
+[06:12] and din hal kamaxo qayasana,
+[06:14] waxahaanugdan,
+[06:15] uxanugnaayaan,
+[06:18] uubiyanugnaayaan,
+[06:19] maidaama,
+[06:20] uak kaanlisku wuddin bi,
+[06:22] uul bulog ghaasmaa enu hal kaanlal nukban,
+[06:24] uxanugunkaran,
+[06:25] group of kaanlis,
+[06:26] three kaanlis a nukban,
+[06:27] four, five,
+[06:29] kaanlis buodna skuxigo,
+[06:30] oo aaha laqaq uudin bii into sandi'in
+[06:34] move kaanwin
+[06:35] bichananu gana yaan
+[06:36] od blok
+[06:36] okey
+[06:38] so kalal kaan mahaqa ysana
+[06:40] faifalagya bui nombaraan
+[06:42] wala saudiha gala
+[06:43] bichananu gana
+[06:44] meish uu salis
+[06:47] okey
+[06:48] kaanl kaan marunanu gana
+[06:49] haasabaran AMD
+[06:52] haal kaan waliil rinji gani
+[06:55] haal kaan waliil rinji
+[06:57] bichakusum ysata
+[06:59] khanis kaqad
+[07:07] amizgarat, lada amizgarat.
+
+==================== PART p3b ====================
+[00:01] price can be saved. Okay, how are we efficient? Okay, the results are in this rate. Come on. Now, the results are 0.01. Okay, from 0 to 100. 50% of 1, premium, 1, discount. 50% of 1, equilibrium. Okay, the result of the results is a key level, and you can see the result of the liquidity.
+[00:36] [noise]
+[01:16] Kaan la kaan hai gis la maqaadin, lu gis la maqaadin,
+[01:22] xoanonu gana,
+[01:23] yisair baar siyaar tiyan, gis kaan la mihaqsu diyanah.
+[01:26] So, kaan la ilinij gaisa naa soqaaduna,
+[01:31] waa from this high to this low,
+[01:35] 50% tiyo wala gisra yaa,
+[01:37] mid kaan la nude gais, nude khurta,
+[01:40] maruul baqas maa 50% tiyo galao khurmao,
+[01:43] maruul baqas maa 50% tiyo gwaay,
+[01:44] maruak ghaar harkana laga laa gana,
+[01:46] �worth ཁོདབ ཁྱཁ ནས ཀས ནས ཧྱས ཚནད ངས ཁཀྱབ ཁགས འཕི ངེ རེད ཤིད རགུད ཅགུས ཕགུས པརེད གུག ཕེད མམཁད D �
+[02:20] Okee, mahaan laaay, rinjaaygao waa kanaa, aaa kandagaer.
+[02:32] Sko lafaan.
+[02:41] Okee, eee...
+[02:43] Eee...
+[02:44] Eee...
+[02:45] Eee, fna'al ta'njar.
+[02:46] Okee, suuqsaanoha haa,
+[02:47] haagan iloogan,
+[02:48] madama suuqsael awadeid, qasab, inn haagan luoqadhu, am isi imti unokdo.
+[02:51] Shala aayispaan sosoozaadakwa kandhuun taan isi imti yedha.
+[02:54] In haagan luqadhu, an diin markas sosoozaal garenkartaawwa ina, lukuitiyashid.
+[02:58] Okay, mahali sami ye, lukiriti baal ghaada, okay.
+[03:03] Lasti abkandal, lukiriti ghaada, intusan, sirka sordi ain ilashu.
+[03:10] Ahoi, lasti abkandal,
+[03:15] baakana, kanu wukunukum kanal lukiriti ghaada.
+[03:18] Okay, hada haqa isimti ye, eh,
+[03:21] baakana maa maa maa ganae, maa daamna l'akkal agakwa kufashanand, l'akkal aykhaad l'akfana kufashanand.
+[03:25] So, lasti abkandal, lukiriti ghaada, baakana, lasti abkandal,
+[03:34] Xa'la interegisi fa faasaan aw qa'an dhantan, lakin ka waa iskawar la,
+[03:39] ke maudonun ka alkaas on gana,
+[03:46] tooswa taaregid ka laogu da.
+[03:48] Oke, midkaan, sekoin sumu liyeh,
+[03:49] fuhamay,
+[03:50] even breakar bulakum la,
+[03:51] buxulega talsub,
+[03:52] i maudonun tooswa tibi glu aad.
+[03:54] Marka,
+[03:55] sekoin siga margul baqasam mahenayashi,
+[03:57] marka udufuul aaktifiya la maha labo tooswa tibi glu aada.
+[04:01] Oke, hal mar,
+[04:02] xa iskujaraneena,
+[04:04] en,
+[04:10] nuuidake lu duna isi RT dua aragna,
+[04:12] intabadan,
+[04:12] xa aragmai
+[04:14] xa aragmai multiple CRT
+[04:16] insar bar CRT
+[04:17] 3 kanal CRT
+[04:19] wax lannu aarkena
+[04:21] wakena 3 kanal CRT
+[04:23] harkamu ukaista
+[04:25] aaz gijarnu
+[04:27] harkamu ukaista na hrenjilu
+[04:34] hrenjai
+[04:35] kiela fraktawa ka sabubiigwae
+[04:39] xsana hrenjilu kuilita usu ata
+[04:41] soo negis kanal mihaqsuge
+[04:43] soori kanu wa type 2
+[04:49] type 2, soori
+[04:50] wa toh kaan al-CRT.
+[04:52] Hussumi halk kaan al-muhun sumi
+[04:53] manabalution redistribution.
+[05:00] Okay.
+[05:00] Wa manabalution redistribution halk kaan al-kusumi.
+[05:02] Okay, lorten frame kusoo ikana.
+[05:05] Lorten frame kwa kana.
+[05:07] Lorten frame kwa kana.
+[05:18] Eika kan modugun ki logon salawun.
+[05:21] Wa al-kada, modugun kwa kana logon salawun.
+[05:24] Marik qarwad aga asas.
+[05:25] Berko miyisso b'haayyye logon salawatin tabwad.
+[05:28] Okay.
+[05:30] M'haasala ar-raqne.
+[05:31] Asa
+[05:53] 2 stage manipulation
+[05:58] Okay. Sorry.
+[06:01] Okay, two-stage manipulation ka kablaa benao.
+[06:08] Okay.
+[06:29] Mahaadaa, kaame kaan birishwaa.
+[06:31] Ir broker kaajiruaa lakin.
+[06:33] Kana kaam oku furumi.
+[06:34] Guhismi open.
+[06:35] Hi, low, close, gudu kusuhirubi.
+[06:38] So, nagas kanal mahaarabinatoos tibigu ad.
+[06:41] Mahaadaa lakin.
+[06:42] Markelaa liku lihtiyutinu logaad.
+[06:43] Kalea urtanifrim kusuhubi iqyaa agaragno.
+[06:46] Naga urtanifrim kusuhu iqyaa.
+[06:51] ད�ས ད�སས
+
+==================== PART p3c (final clip, 2:45, ~54:02–56:47) ====================
+[00:00] Waxaan maantaayn sabwaha u kudu'a u hawa inkili farkasari aam intayn taim u braes anna jowin. Kan u hawa murkaat sinariy di aad intayn u braes anna jowin. U kaan lakahan, kan kan taim u braes maahan. Okey. Muxasna yun urkan, u kuida tiiga laqaadi and then laas taab kaan lmaju'a hawa kanaa. Udolong keagawa kanaa, uldwiyatoo tibi. Okey. Okey. Muxaay haana tu istiigman mulishin u aragne.
+[00:58] Xanon, ligun, 3-Kanel CRT, okey 3-Kanel CRT wakana.
+[01:03] Arka mahaqqwaesana, arka mahaqwaesana, arka mahaqwaesana, awadu bloggan, awadu bloggan wukwaesana,
+[01:15] and CRT lu, CRT hi, niggas kaanel mihissmi,
+[01:24] kana accumulation wakana, manipulation kwa kaasa, distribution kana wakana.
+[01:27] Okee.
+[01:34] Loo taan farimu ksidu ugi hai.
+[01:36] Wakaana.
+[01:37] Lukuiditi gwa wala qaabe.
+[01:38] Lukuiditi gwa wala qaabe.
+[01:51] Okee.
+[01:52] Lukuiditi gwa wala qaabe.
+[01:53] Andeen mahaada'ai.
+[01:56] Laasa ka handal.
+[01:57] Eee bierish aha.
+[01:58] Inta suuqa uuzan.
+[01:59] Boolish na ghan.
+[02:01] Aow wakwana lawaan kaan ghaasku khufsanay.
+[02:07] Andeen suuqa haka su sotab guri.
+[02:10] Mahaada'ai.
+[02:11] Tawsa terekit kulu aay.
+[02:13] Okee.
+[02:13] Ma kaanu aigwoza yya saan.
+[02:14] Ehe an example niski.
+[02:15] aadda haammele sqoogu dha kaana
+[02:17] aadda haammele sqoogu dha kaana
+[02:20] en aadiga nukula wa jart
+[02:22] waa ena sallada sartar la matut
+[02:24] en
+[02:26] tebtirigi wakana
+[02:29] eee
+[02:32] two-stage malbilishn kuwakana
+[02:34] ke
+[02:38] morsi belsi arti gwa kana
+[02:40] isar barsi arti wakana
+[02:42] dhaman jart ka kiri

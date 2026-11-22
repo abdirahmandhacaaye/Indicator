@@ -1,0 +1,71 @@
+      PSP
+Precision Swing Point
+                        PSP
+
+Introduction
+
+
+
+PSP waxay naga caawisaa , Helitaanka CRT sax ah si an
+reversal u xaqiijino ( confirmation).
+
+
+
+PSP waa xaqiijin dheeraad ah, mana aha sabab keliya oo
+trade lagu galo.
+
+
+
+PSP waa confirmation lagu xoojinayo reversalka/
+Continuationka , ee ma aha setup kaligiis lagu trade-
+gareeyo.
+                        PSP
+Waa maxay Precision Swing Point (PSP)?
+
+
+
+Precision Swing Point (PSP) waa kala duwanaansho ka
+dhex dhaca xiritaanka candles-ka laba asset oo isku xiran
+(correlated assets).
+
+
+
+Marka laba asset oo xiriir leh ay sameeyaan qaab-
+dhismeed isku mid ah, balse mid ka mid ah candle-ku ku
+xirmo Bullish, halka kan kalena ku xirmo Bearish, kala
+duwanaanshahaas ayaa loo yaqaan PSP.
+
+
+
+Si la mid ah SMT divergence, PSP wuxuu diiradda saaraa
+kala duwanaanshaha Qiimaha assets-ka.
+                                 PSP
+                                Candle 2 PSP
+
+                          PSP                   PSP
+
+
+
+
+Suuq bearish usocda
+
+
+
+
+                      XAUUSD                   XAUEUR
+                                      PSP
+                                     Candle 1 PSP
+
+
+                      PSP                       PSP
+
+
+
+
+Suuq bearish usocda
+
+
+
+
+                            XAUUSD         XAUEUR
+

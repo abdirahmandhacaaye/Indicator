@@ -1,0 +1,300 @@
+Title: 09 THE EDGE | 2026 MENTORSHIP (lesson 09, BY5tdw6Gnjc, 2:09:25)
+Source: 9 clips uploaded by user; faster-whisper large-v3-turbo, language=so. Live chart session (Saki Habib).
+
+==================== PART p1 ====================
+[00:00] Assalamualaikum warahmatullahi wabarakatuh, sahib yaluswadawaada, kuswadawaada TED Community Mentorship ka ina 2026, maga'a iwa Saki Habib, en maanta wahaan qa'dan do'na 10 ki uudan beyey mentorship ka ina, 10 ka so'na gandona the edge, hama 10 ki conclusion ka uudan beyey kuswada gawain na model ka ina, en inkas to'o model ka uudamaysturey nye hayy uqaab ka loo diyaa riyaay tayqaab uskuhiran, en haada na 10 kaan wuhun na qonu ya 10,
+[00:30] So, a laba danna dihdi saa a matkana chua wabu hudhu kuili dhwontiid.
+[00:34] So, a lana uxun ngu niya aashar aansku sohira inna model kio urdan aansku soqabana inno.
+[00:39] So, a lana high time frame ila la low time frame.
+[00:42] Yaqa abka lola diil garae yo.
+[00:44] So, a lana khata raaha.
+[00:46] Some time is ahma dabi nada la usku diga yo suuqa.
+[00:50] Hayatku aarkib dhwonti, insha Allah.
+[00:52] Di koli esal lagame bid baadiyo.
+[00:55] La ki maharibna esal maina la ina angaadhan no.
+[00:57] nd sudokala naa an waran naa meelaha lasuku gaaloo, lasuku kyaaamo, sudokala meelaha fookos kalas saarego in tiriida liga faa iidistana.
+[01:05] Manaslaar ki doon aadi lahidmo, marla baad suude wada, sudokala uahan rabaynaan halkaan uga hanbali yeyo.
+[01:13] Daan iyaar taa moodal ka kutirirgaresi, sooqa laaakt uga samensi, aqwa mada ku baasisi, aqwa mada mahinis ka uga chileka su saarte yi palaaski geyi,
+[01:23] And intabawwa oo hambaliya niyaa, intakaloo chitka kuswa chistana waa ninsi hormar niyaa hambaliya diynaa.
+[01:29] And waaat ghaana gula badan, inshaallah baan niigafuddi naa adilaeidmo.
+[01:34] And soda wada, kusoda wada marka seyshin kioo ko baad.
+[01:38] Waayahey, waxan chognaa, wigli time frame ba chognaa.
+[01:41] And wigli gana marka haadaan saa ufiere noh.
+[01:44] Korban kusobilawa naa marka.
+[01:47] Niga tisdiri.
+[01:48] Waayahey, wigli waxaka soola aaday, SMT waka soola aaday.
+[01:52] Xaaddaan gwiigligan naa fiiri naa marrka waxaq aaday, GPP baxaq aaday, xalka SMT waxa sool aaday,
+[02:02] waaanaa meaishi uusirrisay oo gulli kaari uyaan marrka.
+[02:06] Thiinkwa marrki yiddaqaalaadu uchiray naa marrka.
+[02:08] Waaay hay, kedi minnaa marrki yiddaqaalaadu yidda maadayn maalmiya horay,
+[02:12] xalka marrka waxa ka sool aaday SMT waxa sool aaday.
+[02:16] SMT marrka yaka sool aaday marrka deeliga naa marrka ufiirso.
+[02:19] Daili gannam haaka sula'i.
+[02:23] Daili gannam barwaun haaka sula'i.
+[02:25] Modal 1 baqa sula'i.
+[02:27] O ra'asan.
+[02:28] Wigli lukuditiga wayna lusoo garaab grayi.
+[02:31] Kedimna firfaal yugabkan alasoo hhtra'amai.
+[02:34] Waay haada namhaal samayye.
+[02:36] Brikar blokkan ala hhtra'amai.
+[02:38] Yab firfaal yugabkan.
+[02:39] Skuubi agan baal hhtra'amai.
+[02:41] Waay ha.
+[02:44] Anta amirki l samayye marka uusooqo.
+[02:46] Uantaa hhtra'amai.
+[02:47] Kedimna wahaatoosloo qaadayba.
+[02:48] Drawo mulli kurit tigi bahtooslu oo qaada targit ka aha.
+[02:51] Waaia hai, na haadda halkana txogna.
+[02:54] Intiayna mareka unso laaba na haadda halkana txogna.
+[02:57] Waaia.
+[02:59] Maha la ehtra'amay, wigli keel-level ka saala soo ehtra'ama.
+[03:03] Wigli keel-level ka mareka la soo ehtra'amay,
+[03:06] sooqo halka anu mareka,
+[03:07] brefiis wigli haay baalla qaada y wigli keel-level ka saala tagi,
+[03:10] ka daunoo sooqo u souda'at.
+[03:12] Sooqo mareka u souda'atay,
+[03:14] Waxan laga tagi Wigli key-level.
+[03:16] Waxan uxan uxan uxu xiegi aga marka wamxay Wigli key-level key-level tagi baalachogax.
+[03:20] Waxan ala qaaday, brefis wigla xay.
+[03:23] Waxan kaas marka confirmation waxan kaasanna wiglu gax.
+[03:26] In marka brefis wigla xay baal la qaaday, brefis wiglu low oo dolka ana ba taar gada marka.
+[03:32] Waxan taas wa confirmation ko baada xay sannu.
+[03:36] Lakin waxaan siyaa uu ugaan no, in waxaan waxa diqikarayi hiin oo aan marka urro maysan no oo aan dinayisi ugu teregd garae no.
+[03:45] Waxa ubaa an hay in deiligena ya wanha uur keena.
+[03:49] Ay uwaafiqaan marka wihayaan halkaan uigdikusuaarag naay.
+[03:54] Waya se uwaafiqenna marka deiligena tagina.
+[03:57] Deiligena halkeel la txoga marka.
+[03:59] Deiligena waxa la txoga, uigdikiki laafal ba la txoga.
+[04:02] Ya deiligiki laafal skubeagan.
+[04:04] O aah brimiaan marka.
+[04:05] Wai hai in taan marka dad waaahin mudi na suuqo leon yu sabedalay wai retracement.
+[04:10] Wai hai silla akiin wuhaa sqo lana wuhaa qaqee chunno.
+[04:13] Still, mxawbaa hannahay in wu no raaqo wu anhaowar kainamak.
+[04:18] Wai hai, sida halkan uwecchi daan marka waiya halkan wuhaa ka daaay wuigli CRT wuhaaalkan katchirta.
+[04:26] I think wuhaa tana.
+[04:29] Wuigli CRT wuhaa ka wadaa daily CRT wuhaaalkan katchirta.
+[04:33] Laili si aarti daa marika m'haa target kee dhu kwa baan noa. Laili si aarti loo daa target kee dhu kwa baan noa.
+[04:39] Target kee dhu lawaad m'haa noa, dol kaan noa a marika.
+[04:41] Waayay si aan waxa soo lana m'haa qa gye chanam haa wubahaan nahay.
+[04:44] Ena marika is soora aan. Laili geena iyo one hour keena marika.
+[04:49] Hadaa kunu ganna marika one hour keene waakaan a marika.
+[04:52] Waayay.
+[04:54] Asi daa marika. Waayay.
+[05:01] One hour keena marika m'haa qa soo laaay.
+[05:03] Waan haoworki yana brefiswiig lahay marke la sooq qa'day, waan haoworku baay waa wala haa, brefiswiig lahay marke la sooq qa'day,
+[05:10] kandalka qa'duwa 8pm, xalkaan intir baaka subaxay, intir gaaan marke marke kubaaaduwa bull bag,
+[05:15] marke la baadu uudufluog uisraqo, wa marke suudufluog nughonaya.
+[05:19] Waa ya hay, sii an unhaqqi chana marke ina israq ay sooqi, wa xalkaan daily CRT loo dhaan utarget garaayno,
+[05:25] aowda gano daily CRT loo ba'targetah, daily CRT loo ba'targetah,
+[05:32] Xa waba hann hay in sequence igi aana qaana yaanko sobarana 10k siyaartida in uusra'a oo aah nabar wan model wan ki yaas waahina model wan ki
+[05:43] Waa ya nabar tuum haarab naa breaker blogginu nogu hiksidu aama one hour active siin n'golaba
+[05:49] Breaker blogginiwa ake waakana, breaker blogginiwa kandabdi uuddin beya suuqa baaydaa
+[05:55] ndi lia soochi biya waian preaker blogga suuqa haayi
+[05:58] ama ubiigi uudin baay suuqa haayi waian ubiigi uudin baay suuqa haayi
+[06:01] ndi hii
+[06:02] mahaawa baan nahay suuqa yinu wanhaa work active scene uguldo
+[06:04] siyaundu hana daily seartilu da taargi da
+[06:06] marika la baan naa undu hanaa ddolkaasa taargi da marika
+[06:09] waya hayi
+[06:10] wawahas kooxir hiraan marika
+[06:12] waya
+[06:14] kadimna gafasohu
+[06:16] waya hayi suuqa mhaa uchina
+[06:22] wuhu htraamay
+[06:23] wanhaa wali ubiika lwa htraamay
+[06:26] Laa waad cha baa marka suqa htramo wana haur ka loo sami
+[06:29] Marka wad moda lwaan kaad dech biya yal lwa saunu gona hae deelea lhoa
+[06:33] Aqool ina lakak wu saunu ghoottay chrishtoo
+[06:37] Waayahaay lakak wu saunu ghoottay
+[06:39] Waadaroom gmaet chrishtoo
+[06:41] OK
+[06:49] Macrishtoo marka
+[06:50] OK
+[06:50] Hura waasa onna a marka
+[06:51] Breekar blog baan nodi gai uubina wana loo htramay
+[06:54] Oki laafil ki lawaa daa marka
+[06:57] Waayahaay
+[06:57] Inta marka nodi gai suqa mxamarka uwaad na haaddaa haahadhaa chrisni
+[07:05] Yamaa dey siy kuwaansi gane maan nood agay.
+[07:08] Waaay haan siida ya marq.
+[07:12] Waaay suuqo u key level ki uubiga dibu guguna gulay ehtraam fiya an umbuchi.
+[07:16] Ked dibu u soda taay.
+[07:17] Waaay waasida ahrimnay.
+[07:19] Waaay.
+[07:20] Xada marqa lanna ki bala txouga.
+[07:22] Lanna ka marqa maananta haan malatirair garaayn kara.
+[07:25] Nisa maananta haan waan ka da garaayna.
+[07:27] So aaswa haan uga txawaabay ya.
+[07:29] Marqa ee shianka u soosum iya high of the day.
+[07:33] An uuxu taarga da haan kaad iqtay.
+[07:35] lukurdita gana taarget lagadgit.
+[07:36] Madama taarget ki laqaaday lukurdita gana u haa taarget ki
+[07:40] key-level kaan nagas u urchida u oboosin kaana
+[07:43] suog ur retracement bu udira yaa.
+[07:44] Markas na maahan wujibu waanlandan madama ladan
+[07:48] taarget kiena lahit gira ye key-level oboosin aana la uus kaday.
+[07:51] Mahalo baahan yihay u giraan markas suog einta retracement
+[07:53] la giri yo. Marka wahaan nua alaamada saa key-level keena xiga
+[07:56] hankas u trade gireen doona marka. Marka ladan maanita
+[07:59] nanu skip gireen doona marka. Madama taarget ki laqaaday
+[08:02] Rafa shalaa askabbalan dhonta.
+[08:04] Ayan haadduu qo baxana.
+[08:05] Lib igu maha yso ki laafil kati il-ihtera'ama o lada kala baxana.
+[08:08] Ki laafil kala baad.
+[08:09] Ban kutinu weish kas samayin dhonaa in sha Allah.
+[08:11] Kasi irasin dhonaa.
+[08:13] Wai hay.
+[08:13] Sida yu.
+[08:16] Wai hay.
+[08:18] Marka 4 hour kenna na marka ayan yirafiirinu.
+[08:22] Ka maha yir baro ayan laga tussu marka.
+[08:24] Wai hay.
+[08:25] Xal ka amha uchiida 4 hour.
+[08:27] Ki laafil.
+[08:28] Baalai maala.
+[08:30] Wai hay.
+[08:31] Wan hour ka daa tiktinna.
+[08:32] 3 ee baar jimba laa sime yi.
+[08:35] Waae inta marco fuuskwee la waxal gaya inu dhuo.
+[08:37] Wafur hawar kee aktif haayo suuq wa si bae garae niya.
+[08:40] Lakin mxaka sor cida.
+[08:42] Brifis wigla hay la sooq aaday.
+[08:45] Kee lae fal wigla yo laga soo tigay.
+[08:46] Wan hawar seqwaansi soo raay.
+[08:48] Marca a suuqa la xitaa di a bai uqaalean suuq wa xal ar hawa.
+[08:52] Inu wan hawar skuka dib skuka raaqo.
+[08:54] Si a oa xa qixti in brifis wigla haydaan la sooq aaday feeg hayd.
+[08:58] Lakin su qiyo marka active son qday oo soda ghaay las kuma marka sqala lama huris taa oo.
+[09:03] Wa marka oo dhalan tahay wa lugu maddaahay.
+[09:06] Hadii intarii dhano ka marka arakta yi gulisini yana wa xal yalaw.
+[09:11] Marka yi taman xaboo intarii dhano ka la lagaato xala xabaaka gulisit inti kaal marka.
+[09:15] Marka mxhaan sqooghsaan risa wa xal ki marbamr anguish saay tahay.
+[09:19] Intas wa intas.
+[09:20] An horo ea wasu anna marka ki laa fil kanaan oo.
+[09:23] Alamsa saay rabnaayna marka niyo kaso tiril gareno.
+[09:25] Waaay hai, 4AM ka marka ka kaalaan maya anu barka.
+[09:31] So taan u kaalaan iwaan bhaay, anilal na maanitaan u aske bireni yaa.
+[09:36] Si kastoo la isko uur haftoo, anig banahka ka chyooka yaa marka.
+[09:40] Si kastoo hita tiridoo bhaay andee, waaay hai wa sideen yaa marka.
+[09:44] Waaay hai, wahaala gala fayf ki baal gala ywaan nii yo kenal ki fayf ka frumay.
+[09:49] Oos buka so frumay yu lukuditibu soo kaaday.
+[09:51] Andee a halkaan, marka hawa baan hai, yinoo kan hai gisa soo amana mar.
+[09:56] Kadimna nootago, kii lae falka aqala masanay nootago.
+[10:01] Kadim aankesu tereid garae na marka xalkaas u suqa aankasidugnu,
+[10:04] continuation ila daydi siyaartil lu daa uhtar garaesu na marka.
+[10:09] Waayah.
+[10:10] Entas wa entas.
+[10:12] Kadimna mxaw uddigan enna, 5 minitka na uddigan enna,
+[10:14] waxasugun na kandalka 6 ka intalfurma yo.
+[10:17] Waayahay.
+[10:19] Hayao, askadulli edu,
+[10:20] hawa iguho, xinawa malayni ya.
+[10:22] Waayahay.
+[10:23] Maha wabahaan hay in lukuditiga'an
+[10:27] Maha wabahaan hay in lukuditiga'an marka naalaga qa'ado lukuditiga'an mhaa a
+[10:33] waa kan walka foorka'a haa
+[10:35] waa lukudita nukaday aasay rinj iska nukaday
+[10:37] waha dina aana lomada a finin
+[10:39] xal ka'ana da aarkisinda loo resistansi baal labbildi gira'ya marka
+[10:43] loo resistansi waama hay
+[10:44] waa lukuditi iskudu duwa gana saqa'ada nir marka
+[10:47] marka ayyaga alla soqa'ada ddora'a marka
+[10:49] ე კადადანაგაა ოდხდადცაცაცადინაცალთკლებაცადვირჳა ტოსადვლთატდადავუდაწებამაბვიაბნვაუდვად.
+[11:23] Uma TS ba' ubaahannahay.
+[11:26] Eeeen, aama barjin ba' ubaahannah Amerika soo kala ee naahilno.
+[11:30] Barj.
+[11:32] Barj gannam hoon n'uqlai, 6-1 n'uqlaa.
+[11:35] Wahaaddi marrk 6-sk interibihna yuwayan.
+[11:37] Faaakala ubaahannahay, SMT ba'an ubaahannah.
+[11:40] 5-minute model wana wa ubaahannah.
+[11:43] Cheeg dhig istigas a Amerika qaalan doona, wa shanta ha qalob.
+[11:47] Eeeen, wuli ba' afertaan dambaya a isti'maala doona, maadaama
+[11:50] ودو فلو اول بأس واحقي
+[11:51] چيني
+[11:52] key level
+[11:53] القولوا تي همه بارجين
+[11:54] كيني ساح دعينا حيلنو
+[11:56] و 6 AM
+[11:59] واي حي
+[12:01] 6 AM
+[12:02] كدبنا سنتي واوه باهانا
+[12:03] هي 5 minutes
+[12:04] وضرووان باو باهانا
+[12:06] انتا عضا هيلنو مركة
+[12:07] انتاريجن مركة
+[12:08] وعقضان
+[12:08] واي هي 6 سوق
+[12:09] او قاعدة
+[12:13] سيدينا مركة محاا
+[12:14] 3 سوق
+[12:15] باها
+[12:15] مركة 3 سوق
+[12:16] مركة محاا
+[12:17] سينا
+[12:17] سنتي اي داع
+[12:18] دع
+[12:20] سي اوهسي حساب
+[12:20] so what happened to us.
+[12:22] lated we followed the lucka ada
+[12:24] Nope we have seen
+[12:26] Samty
+[12:28] Yes
+[12:29] Samty hooked me up
+[12:31] When we wore eike
+[12:31] it was and
+[12:32] it had no other
+[12:33] it was
+[12:35] they11
+[12:36] Now we got
+[12:37] agreat
+[12:38] direct
+[12:40] you would
+[12:41] talk about
+[12:42] puff
+[12:43] tell them
+[12:44] you
+[12:53] Q-level ka'na marka'a da laidha hai lama taginin
+[12:56] 1-hour fir-fail-yugab ba'asna meesha kutchirey
+[12:58] 1-hour fir-fail-yugab ba'a meesha kutchirey marka'
+[13:03] Wa'a adi marka'a saa matgha'naa Q-level no'u nukonaya'
+[13:06] So ka'la a'gha'a kalana uway tagin
+[13:07] Fir-fail-yugab ka
+[13:10] I think OB-gha'na wala tagin inkstokan
+[13:13] OB-gha'n usan meesha kutchirey nbal a'gha'a kalay
+[13:16] Wa'i hay
+[13:19] Mihimad wuhiwa'y an Q-level no'u nukonaya'
+[13:21] Fier farigab kaayin nukwana ya.
+[13:25] Kedinu xa target garaayna ya.
+[13:27] Xal kaana target garaayna ya.
+[13:29] Wa a, kuri tigaan marke.
+[13:32] Wa a, baxasugu ya modelon kenni.
+[13:34] Modelon kenno noodgay, wa a lai hittra amay.
+[13:36] Wa kutsin na intriga.
+[13:38] Wa a, intrigan saashku soo na maada.
+[13:40] Wa a, hay, marke wa uruf lewugi ni ba aktifa marke.
+[13:44] Targetka labaad wa amxay.
+[13:46] Targetka yana labaad wa amxay wa daily CRT loodhana target noa a marke.
+[13:50] Mareka haadda toos anu ma targid garein iyo.
+[13:53] Ou waxa fiaan suqa ina matkhaan la targid layla hai.
+[13:56] Targid ka aga mareka 3RR 2.7 ma baas kumid ki.
+[14:00] Halka anu ka laa targid garee siin mareka.
+[14:02] Wai hai, waxa sida ina mareka 7 ki yaeid ki maareka na suq son nughda.
+[14:07] Siis uon doonan oo intrik ki liyyan intrik ala nasin doonan.
+[14:11] Oki 7 kiw son nughday, waxo qo son nughday.
+[14:14] Kee laafalki uubiga haabu son nughda.
+[14:16] Waaay, lagay dhaa ma inu nguis suu qaliyya, aronu wax suu qaliyya, suu gho inu si suu qaliyya had, waaay hay,
+[14:23] kadimna marki lugu saun nughda ki lae fal gizaman ki wakus saun nughda,
+[14:28] samanka tred maqaadna karta, firin ma marka, samanka waa tadabadiyya kwa tanishan,
+[14:39] marka aasook hala skayla alin marka, kanal ka marka ki lae fal ka suub buhiyya wakus saun nughda,
+[14:43] Sidaqa ngao ka lae, kanal kuhiga waxa la sugaa, SMT iyo, waxa la sugaa a matartar subaa la sugaa.
+[14:50] Bar ku libaa xal kanal ossaanu buuhaayi haywaa shaeigi ya u libaa.
+[14:53] Waaya hay, marka xa suga naa kanal ka aytka inu noosama iyo, barjin noosama iyo, si interi halka aoga sobaxa marka.
+[15:01] Astaan ganaa check listiga horang an istaymaalne, unbaan istaymaalne naa.
+[15:05] And check listiga kii horang interi ghorang kukadana ayatiin kuigadda liidmai.
+[15:08] CHECDISTRA SUMHUHAA
+[15:10] WUHUHAA NABAR 1 KILA FALBUHAA
+[15:13] NABAR 2 WUHUHAA NABAR 2 WUHUHAA NABARJ
+[15:17] WUAKTA SAHAW BARJAN LASMA YANU YAHAY
+[15:20] LUKUDDU TENALUGUQAZAY DU ISRAAċ AYAD AMKO KALABAH SUUGANA HADA NANKA WUDAHKA
+[15:26] TENKA WUDAHKAKA MUUGAGIN LAKIN WU AYADKA HAD SUUGANA OKAY
+[15:31] XAKA LAWUBAHANAHAY SMT BAWUBAHANAHAY
