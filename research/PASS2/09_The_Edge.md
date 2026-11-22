@@ -56,3 +56,13 @@ Isha: `transcripts/09_BY5tdw6Gnjc.whisper_so.txt` (p1–p3 la qoray pass 1; **p4
 | 36 | FVG la ixtiraamay; **purge + SMT (+ PSP)** → checklist → Model 1; target **3RR**. | p8 00:00–01:50 |
 | 37 | **Checklist**: purge (**3 AM**) → SMT → Model 1 → orderflow active → previous daily low target → 3RR. | p8 02:12–03:34 |
 | 38 | Key level lama jebin; CRT + purge + SMT; SL / TP. | p8 04:19–06:44 |
+
+## p9 (pass 2)
+| # | Xeer | Waqti |
+|---|---|---|
+| 39 | Two-stage SMT + **5 minute Model 1**; Model 1 la ixtiraamay → **OTE** → **kiss of death** (1H sequence). | p9 00:00–00:51 |
+| 40 | Premium; 9 (PM/AM) purge; 5m high la qaaday → reversal. | p9 02:19–03:47 |
+| 41 | Two-stage SMT → sug Model 1; target **3RR** (low resistance). | p9 03:57–04:18 |
+| 42 | 1H: TS → FVG → 5m; **Breaker** samaysmay; key level; **9 (AM)** purge la sugayaa. | p9 04:47–07:08 |
+
+✅ Casharka 09 dhammaan waa la akhriyay (p1–p9).

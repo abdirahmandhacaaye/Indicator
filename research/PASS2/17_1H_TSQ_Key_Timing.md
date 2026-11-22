@@ -42,3 +42,10 @@ Isha: `scratchpad v17/p1/whisper.txt` (**pass 2 — qoraalkan pass 1 lama akhrin
 | 21 | Entries: **2 AM, 9 AM, 8 PM, 8 AM, 10 AM, 3 AM**; 7 AM / 4 AM — "up to you" (probability hoose). | p4 11:04–12:34 |
 
 ✅ D24 (8/9/10 PM · 2/3/4 AM · 8/9/10 AM) — casharkani entries-ka uu isticmaalay dhammaan way ku jiraan (marka laga reebo 7 AM / 1 AM).
+
+## English check (Whisper large-v3 translate, p1)
+- ✅ "**The confirmation is when the TSQ is activated** … done by **TOTOSU** (turtle soup) … the first thing is **Model 1** … confirm the TSQ by using the **break(er) block** … and **two opposite key levels** … the next key level is **disrespect**" (p1 03:52–05:16).
+- ✅ Target: "**previous daily low / previous daily high / previous weekly low / previous weekly high**" (p1 05:56–06:06).
+- ✅ Key times: "**Asian session 8 p.m. and 9 p.m. · London session 2 a.m. and 3 a.m. · New York session 8 a.m. and 9 a.m.**", ~80% win rate (p1 07:55–08:22).
+- ✅ HTF IRL: "**DOB (daily OB), WKOB (weekly OB), FVG, inversion**" (p1 12:24–12:35).
+- Tarjumaadda inteeda kale waa khalad (hees, timo …) — qoraalka Soomaaliga ayaa ka sax badan meelahaas.
