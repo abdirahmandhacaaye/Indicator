@@ -12,7 +12,7 @@
 // Non-repainting: only closed Daily / 7H candles are used ([1] + lookahead_on).
 // D29: the 7H NY-PM candle (2 PM, 3 h) is never a bias candle — after it closes 7H = None;
 //      it is only "candle 1" (the liquidity Asia takes). 7H bias is decided when a candle CLOSES.
-indicator("TET Step 1 — Daily + 7H Bias", "TET S1", overlay = true, max_lines_count = 50)
+indicator("TET Step 1 — Daily + 7H Bias", "TET S1 v3", overlay = true, max_lines_count = 50)
 
 swLen   = input.int(5, "Major swing: candles on each side", minval = 2, maxval = 20)
 showAll = input.bool(false, "All timeframes")
