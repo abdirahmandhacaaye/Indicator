@@ -49,3 +49,7 @@ Isha: `scratchpad v17/p1/whisper.txt` (**pass 2 — qoraalkan pass 1 lama akhrin
 - ✅ Key times: "**Asian session 8 p.m. and 9 p.m. · London session 2 a.m. and 3 a.m. · New York session 8 a.m. and 9 a.m.**", ~80% win rate (p1 07:55–08:22).
 - ✅ HTF IRL: "**DOB (daily OB), WKOB (weekly OB), FVG, inversion**" (p1 12:24–12:35).
 - Tarjumaadda inteeda kale waa khalad (hees, timo …) — qoraalka Soomaaliga ayaa ka sax badan meelahaas.
+
+## English check (p2, p3)
+- ✅ p2: "**SMT confirms** … institutional … smart money tool … **first step of the confirmation**"; "previous daily low and the **CRT low**"; "pull back → **Model 1** → the **breaker** has been confirmed" (p2 00:28–00:51, 01:33, 06:24–06:31).
+- ✅ p3: entries "**3 a.m. · 9 a.m. · 8 p.m.**", "7 a.m. to 8 a.m."; "confirm with your **1 hour**"; "Model 1 … has a **breaker** … **two opposite key levels … disrespected** … good to go, **Model 1 is the entry block**"; 4 AM, 8 AM (p3 01:17–01:26, 07:25, 08:15–08:52, 09:03–09:46).

@@ -17,3 +17,6 @@ Isha: `transcripts/04_ELUb-AIxC88.whisper_so.txt` (p1, p2, p3a, p3b, p3c; ~4.5 d
 | 12 | **Purging hours (NY time kaliya)**: Asia **8 PM, 9 PM, 10 PM** · London **2 AM, 3 AM** · NY **(6 AM?) 8 AM, 9 AM, 10 AM**. Waa waqtiga manipulation-ka (high/low la sameeyo). | p3a 03:37–05:08 |
 
 Fiiro: #12 London 4 AM halkan lagama maqlin (qoraalku wuu go'an yahay); user-ku wuxuu xaqiijiyay 2/3/4 AM (D23). 6 AM = Pre-NY purging (casharka 05/12) — entry laguma darin (D23).
+
+## English check (p2)
+- Tarjumaaddu inta badan waa khalad; waxay xaqiijisay oo keliya: "target … range high", "key level is **IRL** … **equilibrium**", "**3-candle CRT**", "Model 1 … target" (p2 01:36–09:24). Wax cusub ma keenin.
