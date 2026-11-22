@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D17 | 2026-11-22 | TSQ timeframe + profiles (beddelay D15) | **TSQ timeframe waxay ku xiran tahay HTF context-ka:** Monthly KL + OF → TSQ **Weekly** · Weekly KL + OF → TSQ **4H** · Daily KL + OF → TSQ **1H**. **1H TSQ: tirada entries ma go'na** (3 ka badan ama ka yar). Focus: **Daily + 7H OF**, kadib **1H key level + time & price**. **Profiles:** **A+ (1)** Daily OF + 7H OF isku jiho → 1H OF + KL + time & price → 5m entry · **A+ (2)** Daily OF + 1H OF isku jiho → KL + time & price → 5m entry · **A (3)** Daily OF + 4H OF isku jiho → 1H OF + KL + time & price → 5m entry. **Invalidation:** 1H orderflow + key levels + time & price. | User |
 | D16 | 2026-11-21 | 1H TSQ vs 5m entry | **TSQ (TS → #1 → BRK → OTE → KOD → TG) waa 1H. Entry-ga waa 5m oo keliya: TS + SMT + Model #1.** BRK = 1H close jebiya low-ga/high-ga 1H candle-kii TS-ka (TSQ active). **OTE = sweep-ka koowaad** ee retracement-ka (inta badan candle rejection), **KOD = sweep/rejection-ka xiga**, intaan TG la qaadin. 5m entry waxaa la qaadan karaa TS-ka, OTE iyo KOD, mid kasta: 5m TS + SMT + purge + Model #1. Max 3/maalin. Signal kasta waxaa laga arkaa timeframe kasta. Sell iyo buy = isku xeer (mirror); haddii sell iyo buy profile isku mar jiraan → signal ma jiro. Chart: kaliya KL-ka la taabtay iyo TSQ-ga firfircoon. | User |
 | D15 | 2026-11-21 | Profile engine ("ok") | **(1)** Orderflow: W/D/7H/4H = candle-kii u dambeeyay ee xirmay (close above/below candle-kii ka horreeyay = continuation; wick above/below = reversal; haddii kale sidii hore) + EQ 0.5 invalidation (1H close); 1H = swing structure. **(2)** Profile kasta oo la buuxiyo (P1–P5) wuxuu bixiyaa signal, label "P# SELL/BUY", toggle mid walba. **(3)** TS = sweep-ka 1H high/low-gii hore (1H CRT) ee ku yaal 1H key level, purge hour. **(4)** D14. | User (ok) |
 | D14 | 2026-11-21 | PSP / 2SSMT | **SMT-ga koowaad waa qasab. PSP qasab maaha, laakiin haddii la arko waa la rabaa** (waa lagu calaamadeeyaa signal-ka). **SMT labaad (2SSMT) qasab maaha** (waa lagu calaamadeeyaa haddii uu jiro). | User |
@@ -46,6 +47,8 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 | Q12-old | | Casharrada 05–06 waxay isticmaaleen dhammaantood. **User-ka ayaa dooranaya (input).** |
 
 ## Changelog
+
+- 2026-11-22: D17 — TSQ TF mapping (M→W, W→4H, D→1H), profiles A+/A+/A (beddelay P1–P5), entries count ma go'na.
 
 - 2026-11-21: D16 — 1H TSQ stages, 5m entries (TS/OTE/KOD), all-timeframe display, profile conflict = no trade, clean chart. Beddelay D11.
 
