@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D22 | 2026-11-22 | Key levels + SMT/PSP sawir | **OB-ga keliya ee qiimuhu ka soo laabtay ayaa la qorayaa** (Model #1 line → label `OB`); OB-yada kale lama calaamadeeyo; **FVG lama calaamadeeyo** (wuxuu weli ahaan karaa filter-ka key level-ka). **Focus: SMT iyo PSP**, qaabka D21: SMT = line diagonal + magaca pair-ka; PSP = line dhibco ah oo ku taal high (sell) / low (buy) ee HTF candle-ka, label `psp euro D`. | User ("On ka lagu soo laabtay lee ob ku qor… fvg ha calameenin / Smt iyo psp focus saar") |
 | D21 | 2026-11-22 | Qaabka sawirka (user charts IMG_0949–0951) | **Lines keliya, box ma jiro.** `Ts` = line ka bilaabma high/low-ga la qaaday ilaa TS-ka · `OB` = line ku taal open-ka OB-ga (sell: candle-ka bullish open-kiisa) · `BRK` = line swing low/high-ga la jebiyay · line gaagaab oo label la'aan ah = retracement highs · `E` = line target-ka (old low/high, beddel TG) · **SMT = line diagonal ah oo isku xira labada high (buy: lows) ee XAUUSD, oo lagu qoray magaca pair-ka fashilmay (`euro`, `gbp`, `silver`)**. Label-yadu waa yar yihiin, bold, dhinaca midig ee line-ka korkiisa. | User (sawirro + "Sidaa u sameyay cml usame") |
 | D20 | 2026-11-22 | SMT / PSP placement | Buy: SMT waxaa lagu calaamadeeyaa lows-ka (hoos); sell: highs-ka. **PSP waxaa laga raadiyaa HTF (Daily / 7H / 4H / 1H), ma aha 5m.** | User |
 | D19 | 2026-11-22 | Profiles + entry TF (dhammaystir D17) | Grades: A+, A+, A ("A+-" = A). **Intraday focus:** A+ Daily→7H→1H→**5m** · A+ Daily→1H→**5m** · A Daily→4H→1H→**5m** · A Daily→4H (4H KL/TSQ)→**15m** · 7H→1H→**5m** = **B**. Swing (mar dambe): Monthly KL+OF→Daily TSQ/entry · Weekly KL→4H TSQ entry. **Invalidation: skip** (laguma darayo). Entries/maalin: input. | User |
@@ -100,3 +101,4 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 
 - 2026-11-21: Waxaa la abuuray faylkan. Waxaa lagu daray D1 (SL = wick-ka TS-ka korkiisa).
 - 2026-11-22: D21 (qaabka sawirka user-ka) → indicator v4.1: key level = line (box ikhtiyaari), SMT label = magaca pair-ka, TG → E, TS → Ts.
+- 2026-11-22: D22 → v4.2: #1 label = OB, FVG lama sawiro, key level line extra = default off, PSP line + pair name.

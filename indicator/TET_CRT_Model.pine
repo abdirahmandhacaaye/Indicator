@@ -1,5 +1,5 @@
 //@version=6
-// TET Profile Model — XAUUSD  v4.1 (D21: user drawing style — lines only, Ts/OB/BRK/OTE/KOD/E, SMT segment labelled with pair name)
+// TET Profile Model — XAUUSD  v4.2 (D21/D22: lines only — Ts/OB/BRK/OTE/KOD/E; OB = the one price came back from (Model #1); no FVG drawn; SMT + PSP lines labelled with pair name)
 // Rules: research/DECISIONS.md D1–D20 (approved preview: claude.ai/artifact/NkFSSA9sJ5p1wR84xUzJLs)
 // Profiles (D17/D19): A+ D→7H→1H→5m · A+ D→1H→5m · A D→4H→1H→5m · A D→4H→15m · B 7H→1H→5m
 // 1H TSQ: TS → #1 → BRK → OTE → KOD → TG. Entry = TS + SMT + Model #1 (+ purge hour + key level).
@@ -48,9 +48,10 @@ expiry   = input.int(36, "Setup expiry (bars after sweep)", minval = 6, maxval =
 
 grpV     = "Visuals — D18"
 showPos  = input.bool(true, "SL / TP boxes", group = grpV)
-showKL   = input.bool(true, "Key level (the one the TS touched)", group = grpV)
+showKL   = input.bool(false, "Extra HTF key level line (OB/Breaker the TS touched; FVG never drawn — D22)", group = grpV)
 klBox    = input.bool(false, "Key level as box (off = line at OB open / FVG edge)", group = grpV)
 showSMT  = input.bool(true, "SMT lines", group = grpV)
+showPSP  = input.bool(true, "PSP lines (HTF D/7H/4H/1H)", group = grpV)
 showTSQ  = input.bool(true, "TSQ lines (Ts / #1 / BRK / OTE / KOD / E)", group = grpV)
 showTbl  = input.bool(true, "Bias table", group = grpV)
 cLine    = input.color(color.black, "Line / text colour", group = grpV)
@@ -179,6 +180,17 @@ psp(Agg x, Agg p, bool bear) =>
     if p.hasPrev and x.hasPrev and not na(p.pc) and not na(x.pc)
         r := bear ? (x.pc < x.po and p.pc > p.po) : (x.pc > x.po and p.pc < p.po)
     r
+
+// PSP label for one HTF: "psp euro/gbp D" (empty when none)
+pspName(Agg x, Agg p1, Agg p2, Agg p3, bool bear, string tf) =>
+    string r = ""
+    if psp(x, p1, bear)
+        r := nm1
+    if psp(x, p2, bear)
+        r := r == "" ? nm2 : r + "/" + nm2
+    if psp(x, p3, bear)
+        r := r == "" ? nm3 : r + "/" + nm3
+    r == "" ? "" : "psp " + r + " " + tf
 
 // ───────────────────────── Engine ─────────────────────────
 // mode 0: 5m entries, structure TF = 1H   ·   mode 1: 15m entries, structure TF = 4H (A: D → 4H → 15m)
@@ -533,6 +545,10 @@ engine(int mode) =>
     var int    smtT1 = na
     var float  smtP1 = na
     var string smtNm = ""
+    var int    pspT0 = na
+    var int    pspT1 = na
+    var float  pspP = na
+    var string pspTx = ""
 
     bool m1Break = sOn and not na(sM1) and (sDir == -1 ? close < sM1 and close < open : close > sM1 and close > open)
     bool fire = barstate.isconfirmed and sOn and sIn and sPg and sKL and sSmt and m1Break and inSession(hNY) and sigToday < maxDay and tDir == 0
@@ -540,7 +556,15 @@ engine(int mode) =>
         int stg = qDir == 0 ? 1 : qStage + 1
         string gr = qDir == 0 ? (sDir == -1 ? gradeS : gradeB) : qGrade
         bool bear = sDir == -1
-        bool pp = psp(dy, d1, bear) or psp(dy, d2, bear) or psp(dy, d3, bear) or psp(s7, e1, bear) or psp(s7, e2, bear) or psp(s7, e3, bear) or psp(f4, g1, bear) or psp(f4, g2, bear) or psp(f4, g3, bear) or psp(h1, k1, bear) or psp(h1, k2, bear) or psp(h1, k3, bear)
+        string nD = pspName(dy, d1, d2, d3, bear, "D")
+        string n7 = pspName(s7, e1, e2, e3, bear, "7H")
+        string n4 = pspName(f4, g1, g2, g3, bear, "4H")
+        string n1 = pspName(h1, k1, k2, k3, bear, "1H")
+        bool pp = nD != "" or n7 != "" or n4 != "" or n1 != ""
+        pspTx := nD != "" ? nD : n7 != "" ? n7 : n4 != "" ? n4 : n1
+        pspT0 := nD != "" ? dy.pt : n7 != "" ? s7.pt : n4 != "" ? f4.pt : n1 != "" ? h1.pt : na
+        pspT1 := nD != "" ? dy.t : n7 != "" ? s7.t : n4 != "" ? f4.t : n1 != "" ? h1.t : na
+        pspP := nD != "" ? (bear ? dy.ph : dy.pl) : n7 != "" ? (bear ? s7.ph : s7.pl) : n4 != "" ? (bear ? f4.ph : f4.pl) : n1 != "" ? (bear ? h1.ph : h1.pl) : na
         sigStage := stg == 1 ? "TS" : stg == 2 ? "OTE" : "KOD"
         sigT := time
         sigDir := sDir
@@ -580,10 +604,10 @@ engine(int mode) =>
             qStage := stg
         sOn := false
 
-    [sigT, sigDir, sigE, sigSL, sigTP, sigTag, sigStage, oRefT, oRef, oXT, oX, oM1T, oM1, klTop, klBot, klT0, klName, smtT1, smtP1, smtNm, evT, evT0, evP, evTag, bD, b7H, b4H, b1H, gradeS, gradeB, wins, losses]
+    [sigT, sigDir, sigE, sigSL, sigTP, sigTag, sigStage, oRefT, oRef, oXT, oX, oM1T, oM1, klTop, klBot, klT0, klName, smtT1, smtP1, smtNm, pspT0, pspT1, pspP, pspTx, evT, evT0, evP, evTag, bD, b7H, b4H, b1H, gradeS, gradeB, wins, losses]
 
-[sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, smN0, eT0, eTs0, eP0, eTag0, bD, b7H, b4H, b1H, gS0, gB0, w0, l0] = request.security(syminfo.tickerid, "5", engine(0), lookahead = barmerge.lookahead_off)
-[sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, smN1, eT1, eTs1, eP1, eTag1, _bD1, _b7H1, _b4H1, _b1H1, gS1, gB1, w1, l1] = request.security(syminfo.tickerid, "15", engine(1), lookahead = barmerge.lookahead_off)
+[sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, smN0, pT00, pT10, pP0, pX0, eT0, eTs0, eP0, eTag0, bD, b7H, b4H, b1H, gS0, gB0, w0, l0] = request.security(syminfo.tickerid, "5", engine(0), lookahead = barmerge.lookahead_off)
+[sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, smN1, pT01, pT11, pP1, pX1, eT1, eTs1, eP1, eTag1, _bD1, _b7H1, _b4H1, _b1H1, gS1, gB1, w1, l1] = request.security(syminfo.tickerid, "15", engine(1), lookahead = barmerge.lookahead_off)
 
 // ───────────────────────── Drawing (any timeframe, D18) ─────────────────────────
 lineLbl(int t0, int t1, float p, string txt, int st) =>
@@ -592,7 +616,7 @@ lineLbl(int t0, int t1, float p, string txt, int st) =>
         label.new(t1, p, txt, xloc = xloc.bar_time, style = label.style_label_lower_right, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
     true
 
-drawSig(int sT, int sD, float sE, float sSL, float sTP, string sTag, string sStg, int rT, float rP, int xT, float xP, int mT, float mP, float kTop, float kBot, int kT0, string kNm, int smT, float smP, string smN, string tfTxt) =>
+drawSig(int sT, int sD, float sE, float sSL, float sTP, string sTag, string sStg, int rT, float rP, int xT, float xP, int mT, float mP, float kTop, float kBot, int kT0, string kNm, int smT, float smP, string smN, int pT0, int pT1, float pP, string pTx, string tfTxt) =>
     int span = 3 * 3600000
     if showPos
         box.new(sT, sSL, sT + span, sE, xloc = xloc.bar_time, bgcolor = cSL, border_color = color.new(cSL, 100))
@@ -604,14 +628,16 @@ drawSig(int sT, int sD, float sE, float sSL, float sTP, string sTag, string sStg
         else
             lineLbl(xT, sT, xP, sStg, line.style_solid)
         if not na(mT)
-            lineLbl(mT, sT, mP, "#1", line.style_solid)
+            lineLbl(mT, sT, mP, "OB", line.style_solid)    // D22: Model #1 = the OB price came back from
     if showSMT and not na(smT)
         // D21: diagonal segment from the swept high/low to the TS extreme, labelled with the pair that failed
         line.new(rT, rP, smT, smP, xloc = xloc.bar_time, color = cLine, style = line.style_solid, width = 1)
         label.new(int(math.avg(rT, smT)), math.avg(rP, smP), smN == "" ? "smt" : smN, xloc = xloc.bar_time, style = sD == -1 ? label.style_label_lower_right : label.style_label_upper_right, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
         if str.contains(sTag, "2SSMT") and xT != smT
             line.new(smT, smP, xT, xP, xloc = xloc.bar_time, color = cLine, style = line.style_solid, width = 1)
-    if showKL and sStg == "TS" and not na(kTop) and not na(kT0)
+    if showPSP and pTx != "" and not na(pT0)
+        lineLbl(pT0, pT1, pP, pTx, line.style_dotted)
+    if showKL and sStg == "TS" and not na(kTop) and not na(kT0) and kNm != "FVG"
         if klBox
             box.new(kT0, kTop, sT, kBot, xloc = xloc.bar_time, bgcolor = cBox, border_color = color.new(cBox, 100), text = kNm, text_size = size.small, text_halign = text.align_right, text_valign = text.align_center, text_color = cLine)
         else
@@ -623,9 +649,9 @@ drawSig(int sT, int sD, float sE, float sSL, float sTP, string sTag, string sStg
 bool new0 = not na(sT0) and (na(sT0[1]) or sT0 != sT0[1])
 bool new1 = not na(sT1) and (na(sT1[1]) or sT1 != sT1[1])
 if new0
-    drawSig(sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, smN0, "5m")
+    drawSig(sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, smN0, pT00, pT10, pP0, pX0, "5m")
 if new1
-    drawSig(sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, smN1, "15m")
+    drawSig(sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, smN1, pT01, pT11, pP1, pX1, "15m")
 
 bool ev0 = not na(eT0) and (na(eT0[1]) or eT0 != eT0[1] or eTag0 != eTag0[1])
 bool ev1 = not na(eT1) and (na(eT1[1]) or eT1 != eT1[1] or eTag1 != eTag1[1])
