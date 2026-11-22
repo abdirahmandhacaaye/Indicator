@@ -1,5 +1,5 @@
 //@version=6
-// TET Profile Model — XAUUSD  v4.0
+// TET Profile Model — XAUUSD  v4.1 (D21: user drawing style — lines only, Ts/OB/BRK/OTE/KOD/E, SMT segment labelled with pair name)
 // Rules: research/DECISIONS.md D1–D20 (approved preview: claude.ai/artifact/NkFSSA9sJ5p1wR84xUzJLs)
 // Profiles (D17/D19): A+ D→7H→1H→5m · A+ D→1H→5m · A D→4H→1H→5m · A D→4H→15m · B 7H→1H→5m
 // 1H TSQ: TS → #1 → BRK → OTE → KOD → TG. Entry = TS + SMT + Model #1 (+ purge hour + key level).
@@ -35,6 +35,9 @@ grpS     = "SMT (required) / PSP (HTF) — D12–D14, D20"
 sym1     = input.symbol("OANDA:XAUEUR", "Pair 1", group = grpS)
 sym2     = input.symbol("OANDA:XAUGBP", "Pair 2", group = grpS)
 sym3     = input.symbol("OANDA:XAGUSD", "Pair 3", group = grpS)
+nm1      = input.string("euro", "Pair 1 SMT label", group = grpS)
+nm2      = input.string("gbp", "Pair 2 SMT label", group = grpS)
+nm3      = input.string("silver", "Pair 3 SMT label", group = grpS)
 minFail  = input.int(1, "Min pairs failing to sweep", minval = 1, maxval = 3, group = grpS)
 pivLen   = input.int(3, "Entry-TF SMT swing length", minval = 2, maxval = 10, group = grpS)
 
@@ -45,9 +48,10 @@ expiry   = input.int(36, "Setup expiry (bars after sweep)", minval = 6, maxval =
 
 grpV     = "Visuals — D18"
 showPos  = input.bool(true, "SL / TP boxes", group = grpV)
-showKL   = input.bool(true, "Key level box (the one the TS touched)", group = grpV)
+showKL   = input.bool(true, "Key level (the one the TS touched)", group = grpV)
+klBox    = input.bool(false, "Key level as box (off = line at OB open / FVG edge)", group = grpV)
 showSMT  = input.bool(true, "SMT lines", group = grpV)
-showTSQ  = input.bool(true, "TSQ lines (TS / #1 / BRK / OTE / KOD / TG)", group = grpV)
+showTSQ  = input.bool(true, "TSQ lines (Ts / #1 / BRK / OTE / KOD / E)", group = grpV)
 showTbl  = input.bool(true, "Bias table", group = grpV)
 cLine    = input.color(color.black, "Line / text colour", group = grpV)
 cBox     = input.color(color.new(#9e9e9e, 75), "Key level box", group = grpV)
@@ -156,6 +160,17 @@ failPiv(float pHi, float pLo, float pivH, float pivL, bool bear) =>
         r := pHi <= pivH ? 1 : 0
     if not bear and not na(pLo) and not na(pivL)
         r := pLo >= pivL ? 1 : 0
+    r
+
+// names of the pairs that failed (D21: SMT segment labelled with the pair)
+smtWho(int a, int b, int c) =>
+    string r = ""
+    if a > 0
+        r := nm1
+    if b > 0
+        r := r == "" ? nm2 : r + "/" + nm2
+    if c > 0
+        r := r == "" ? nm3 : r + "/" + nm3
     r
 
 // PSP on a closed HTF candle (D20): XAUUSD closed one way, the pair the other way
@@ -337,8 +352,30 @@ engine(int mode) =>
     string gradeB = gS != "" ? "" : gB
 
     // ── SMT on this bar (structure candle or entry-TF swing)
-    bool smtS = (st.hasPrev and high > st.ph and (failAgg(sp1, true) + failAgg(sp2, true) + failAgg(sp3, true)) >= minFail) or (not na(xPH) and high > xPH and (failPiv(hi1, lo1, aPH, aPL, true) + failPiv(hi2, lo2, bPH, bPL, true) + failPiv(hi3, lo3, cPH, cPL, true)) >= minFail)
-    bool smtB = (st.hasPrev and low < st.pl and (failAgg(sp1, false) + failAgg(sp2, false) + failAgg(sp3, false)) >= minFail) or (not na(xPL) and low < xPL and (failPiv(hi1, lo1, aPH, aPL, false) + failPiv(hi2, lo2, bPH, bPL, false) + failPiv(hi3, lo3, cPH, cPL, false)) >= minFail)
+    bool cS  = st.hasPrev and high > st.ph
+    bool cB  = st.hasPrev and low < st.pl
+    bool pS  = not na(xPH) and high > xPH
+    bool pB  = not na(xPL) and low < xPL
+    int aS1 = cS ? failAgg(sp1, true) : 0
+    int aS2 = cS ? failAgg(sp2, true) : 0
+    int aS3 = cS ? failAgg(sp3, true) : 0
+    int aB1 = cB ? failAgg(sp1, false) : 0
+    int aB2 = cB ? failAgg(sp2, false) : 0
+    int aB3 = cB ? failAgg(sp3, false) : 0
+    int vS1 = pS ? failPiv(hi1, lo1, aPH, aPL, true) : 0
+    int vS2 = pS ? failPiv(hi2, lo2, bPH, bPL, true) : 0
+    int vS3 = pS ? failPiv(hi3, lo3, cPH, cPL, true) : 0
+    int vB1 = pB ? failPiv(hi1, lo1, aPH, aPL, false) : 0
+    int vB2 = pB ? failPiv(hi2, lo2, bPH, bPL, false) : 0
+    int vB3 = pB ? failPiv(hi3, lo3, cPH, cPL, false) : 0
+    bool smtSa = cS and aS1 + aS2 + aS3 >= minFail
+    bool smtSp = pS and vS1 + vS2 + vS3 >= minFail
+    bool smtBa = cB and aB1 + aB2 + aB3 >= minFail
+    bool smtBp = pB and vB1 + vB2 + vB3 >= minFail
+    bool smtS = smtSa or smtSp
+    bool smtB = smtBa or smtBp
+    string whoS = smtSa ? smtWho(aS1, aS2, aS3) : smtWho(vS1, vS2, vS3)
+    string whoB = smtBa ? smtWho(aB1, aB2, aB3) : smtWho(vB1, vB2, vB3)
 
     // ── TSQ state
     var int    qDir = 0
@@ -359,14 +396,14 @@ engine(int mode) =>
             evT := time
             evT0 := qT0
             evP := qTG
-            evTag := "TG"
+            evTag := "E"
         qDir := 0
     if qDir == 1 and (high >= qTG or close < qTS)
         if high >= qTG
             evT := time
             evT0 := qT0
             evP := qTG
-            evTag := "TG"
+            evTag := "E"
         qDir := 0
     if newS and st.hasPrev and qDir != 0 and not qBrk
         if (qDir == -1 and st.pc < qBrkLvl) or (qDir == 1 and st.pc > qBrkLvl)
@@ -388,6 +425,7 @@ engine(int mode) =>
     var int   sSmtN = 0
     var int   sSmt1T = na
     var float sSmt1P = na
+    var string sSmtNm = ""
     var float sM1 = na
     var int   sM1T = na
     var int   sBar = na
@@ -437,6 +475,7 @@ engine(int mode) =>
                 if not sSmt
                     sSmt1T := time
                     sSmt1P := ext
+                    sSmtNm := want == -1 ? whoS : whoB
                 sSmt := true
                 sSmtN += 1
             sM1 := na
@@ -493,7 +532,7 @@ engine(int mode) =>
     var string klName = ""
     var int    smtT1 = na
     var float  smtP1 = na
-    var bool   smt2 = false
+    var string smtNm = ""
 
     bool m1Break = sOn and not na(sM1) and (sDir == -1 ? close < sM1 and close < open : close > sM1 and close > open)
     bool fire = barstate.isconfirmed and sOn and sIn and sPg and sKL and sSmt and m1Break and inSession(hNY) and sigToday < maxDay and tDir == 0
@@ -517,7 +556,7 @@ engine(int mode) =>
         oM1 := sM1
         smtT1 := sSmt1T
         smtP1 := sSmt1P
-        smt2 := sSmtN >= 2
+        smtNm := sSmtNm
         tDir := sDir
         tSL := sigSL
         tTP := sigTP
@@ -536,15 +575,15 @@ engine(int mode) =>
             klTop := sKt
             klBot := sKb
             klT0 := sK0
-            klName := sKk == 0 ? "FVG" : sKk == 1 ? "OB" : "BRK"
+            klName := sKk == 0 ? "FVG" : sKk == 1 ? "OB" : "Breaker"
         else
             qStage := stg
         sOn := false
 
-    [sigT, sigDir, sigE, sigSL, sigTP, sigTag, sigStage, oRefT, oRef, oXT, oX, oM1T, oM1, klTop, klBot, klT0, klName, smtT1, smtP1, smt2, evT, evT0, evP, evTag, bD, b7H, b4H, b1H, gradeS, gradeB, wins, losses]
+    [sigT, sigDir, sigE, sigSL, sigTP, sigTag, sigStage, oRefT, oRef, oXT, oX, oM1T, oM1, klTop, klBot, klT0, klName, smtT1, smtP1, smtNm, evT, evT0, evP, evTag, bD, b7H, b4H, b1H, gradeS, gradeB, wins, losses]
 
-[sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, sm20, eT0, eTs0, eP0, eTag0, bD, b7H, b4H, b1H, gS0, gB0, w0, l0] = request.security(syminfo.tickerid, "5", engine(0), lookahead = barmerge.lookahead_off)
-[sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, sm21, eT1, eTs1, eP1, eTag1, _bD1, _b7H1, _b4H1, _b1H1, gS1, gB1, w1, l1] = request.security(syminfo.tickerid, "15", engine(1), lookahead = barmerge.lookahead_off)
+[sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, smN0, eT0, eTs0, eP0, eTag0, bD, b7H, b4H, b1H, gS0, gB0, w0, l0] = request.security(syminfo.tickerid, "5", engine(0), lookahead = barmerge.lookahead_off)
+[sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, smN1, eT1, eTs1, eP1, eTag1, _bD1, _b7H1, _b4H1, _b1H1, gS1, gB1, w1, l1] = request.security(syminfo.tickerid, "15", engine(1), lookahead = barmerge.lookahead_off)
 
 // ───────────────────────── Drawing (any timeframe, D18) ─────────────────────────
 lineLbl(int t0, int t1, float p, string txt, int st) =>
@@ -553,7 +592,7 @@ lineLbl(int t0, int t1, float p, string txt, int st) =>
         label.new(t1, p, txt, xloc = xloc.bar_time, style = label.style_label_lower_right, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
     true
 
-drawSig(int sT, int sD, float sE, float sSL, float sTP, string sTag, string sStg, int rT, float rP, int xT, float xP, int mT, float mP, float kTop, float kBot, int kT0, string kNm, int smT, float smP, bool sm2, string tfTxt) =>
+drawSig(int sT, int sD, float sE, float sSL, float sTP, string sTag, string sStg, int rT, float rP, int xT, float xP, int mT, float mP, float kTop, float kBot, int kT0, string kNm, int smT, float smP, string smN, string tfTxt) =>
     int span = 3 * 3600000
     if showPos
         box.new(sT, sSL, sT + span, sE, xloc = xloc.bar_time, bgcolor = cSL, border_color = color.new(cSL, 100))
@@ -561,27 +600,32 @@ drawSig(int sT, int sD, float sE, float sSL, float sTP, string sTag, string sStg
     lineLbl(sT, sT + span, sE, sTag + " · " + tfTxt, line.style_solid)
     if showTSQ
         if sStg == "TS"
-            lineLbl(rT, sT, rP, "TS", line.style_solid)
+            lineLbl(rT, sT, rP, "Ts", line.style_solid)
         else
             lineLbl(xT, sT, xP, sStg, line.style_solid)
         if not na(mT)
             lineLbl(mT, sT, mP, "#1", line.style_solid)
     if showSMT and not na(smT)
-        line.new(rT, rP, smT, smP, xloc = xloc.bar_time, color = cLine, style = line.style_dashed, width = 1)
-        label.new(smT, smP, "smt", xloc = xloc.bar_time, style = sD == -1 ? label.style_label_lower_left : label.style_label_upper_left, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
-        if sm2 and xT != smT
+        // D21: diagonal segment from the swept high/low to the TS extreme, labelled with the pair that failed
+        line.new(rT, rP, smT, smP, xloc = xloc.bar_time, color = cLine, style = line.style_solid, width = 1)
+        label.new(int(math.avg(rT, smT)), math.avg(rP, smP), smN == "" ? "smt" : smN, xloc = xloc.bar_time, style = sD == -1 ? label.style_label_lower_right : label.style_label_upper_right, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
+        if str.contains(sTag, "2SSMT") and xT != smT
             line.new(smT, smP, xT, xP, xloc = xloc.bar_time, color = cLine, style = line.style_solid, width = 1)
     if showKL and sStg == "TS" and not na(kTop) and not na(kT0)
-        box.new(kT0, kTop, sT, kBot, xloc = xloc.bar_time, bgcolor = cBox, border_color = color.new(cBox, 100), text = kNm, text_size = size.small, text_halign = text.align_right, text_valign = text.align_center, text_color = cLine)
+        if klBox
+            box.new(kT0, kTop, sT, kBot, xloc = xloc.bar_time, bgcolor = cBox, border_color = color.new(cBox, 100), text = kNm, text_size = size.small, text_halign = text.align_right, text_valign = text.align_center, text_color = cLine)
+        else
+            // sell: bearish OB open / FVG bottom = lower edge · buy: upper edge
+            lineLbl(kT0, sT, sD == -1 ? kBot : kTop, kNm, line.style_solid)
     alert("TET " + sTag + " (" + sStg + ", " + tfTxt + ") " + syminfo.ticker + " | Entry " + str.tostring(sE, format.mintick) + " | SL " + str.tostring(sSL, format.mintick) + " | TP " + str.tostring(sTP, format.mintick), alert.freq_once_per_bar_close)
     true
 
 bool new0 = not na(sT0) and (na(sT0[1]) or sT0 != sT0[1])
 bool new1 = not na(sT1) and (na(sT1[1]) or sT1 != sT1[1])
 if new0
-    drawSig(sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, sm20, "5m")
+    drawSig(sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, smN0, "5m")
 if new1
-    drawSig(sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, sm21, "15m")
+    drawSig(sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, smN1, "15m")
 
 bool ev0 = not na(eT0) and (na(eT0[1]) or eT0 != eT0[1] or eTag0 != eTag0[1])
 bool ev1 = not na(eT1) and (na(eT1[1]) or eT1 != eT1[1] or eTag1 != eTag1[1])
