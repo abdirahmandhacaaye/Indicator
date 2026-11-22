@@ -1,0 +1,148 @@
+//@version=6
+// TET — Step 1: Daily bias + 7H (step-by-step rebuild, D23–D26)
+// Rules (research/PASS2/SUMMARY.md, lessons 04 / 18 / 19):
+//   last CLOSED candle vs the candle before it
+//   close below prev low  -> Bear (continuation)   · close above prev high -> Bull (continuation)
+//   wick above prev high + close inside -> Bear (CRT reversal)  — only if the wick reached a key level
+//   wick below prev low  + close inside -> Bull (CRT reversal)     (Daily/Weekly OB or FVG) or took
+//   major liquidity (previous week high/low or an untaken major swing high/low)          — D26
+// Drawing (D23/D25/D26): short lines only, no text, no boxes.
+//   Daily chart: line at PDL (bear) / PDH (bull) · 7H chart: line at the 7H candle low / high.
+//   Other timeframes: nothing, unless "All timeframes" is on.  Table: D / 7H / Bias.
+// Non-repainting: only closed Daily / 7H candles are used ([1] + lookahead_on).
+indicator("TET Step 1 — Daily + 7H Bias", "TET S1", overlay = true, max_lines_count = 50)
+
+swLen   = input.int(5, "Major swing: candles on each side", minval = 2, maxval = 20)
+showAll = input.bool(false, "All timeframes")
+showTbl = input.bool(true, "Table")
+cLine   = input.color(color.black, "Line colour")
+
+type Zone
+    float top
+    float bot
+
+// Active key levels (FVG + Order Block) on the timeframe this runs on.
+// Returns the nearest bearish zone bottom above the close and the nearest bullish zone top below the close.
+nearZones() =>
+    var array<Zone> bear = array.new<Zone>()
+    var array<Zone> bull = array.new<Zone>()
+    if bar_index >= 2
+        if low[2] > high
+            bear.push(Zone.new(low[2], high))          // bearish FVG
+        if high[2] < low
+            bull.push(Zone.new(low, high[2]))          // bullish FVG
+        if close[1] > open[1] and close < low[1]
+            bear.push(Zone.new(high[1], open[1]))      // bearish OB (last up candle)
+        if close[1] < open[1] and close > high[1]
+            bull.push(Zone.new(open[1], low[1]))       // bullish OB (last down candle)
+    if bear.size() > 0
+        for i = bear.size() - 1 to 0
+            if close > bear.get(i).top
+                bear.remove(i)
+    if bull.size() > 0
+        for i = bull.size() - 1 to 0
+            if close < bull.get(i).bot
+                bull.remove(i)
+    while bear.size() > 40
+        bear.shift()
+    while bull.size() > 40
+        bull.shift()
+    float bBot = na
+    float uTop = na
+    for z in bear
+        if z.bot > close and (na(bBot) or z.bot < bBot)
+            bBot := z.bot
+    for z in bull
+        if z.top < close and (na(uTop) or z.top > uTop)
+            uTop := z.top
+    [bBot, uTop]
+
+// Weekly zones as they stood at the end of the last completed week
+wZones() =>
+    [a, b] = nearZones()
+    [a[1], b[1]]
+
+// Bias of the last closed candle of the timeframe this runs on
+biasCtx() =>
+    [zBear, zBull] = nearZones()
+    [wBear, wBull] = request.security(syminfo.tickerid, "W", wZones(), lookahead = barmerge.lookahead_on)
+    // previous week high / low
+    var float wkH = na
+    var float wkL = na
+    var float pwH = na
+    var float pwL = na
+    if timeframe.change("W")
+        pwH := wkH
+        pwL := wkL
+        wkH := high
+        wkL := low
+    else
+        wkH := math.max(nz(wkH, high), high)
+        wkL := math.min(nz(wkL, low), low)
+    // major swing high / low not yet taken
+    var float swH = na
+    var float swL = na
+    float ph = ta.pivothigh(high, swLen, swLen)
+    float pl = ta.pivotlow(low, swLen, swLen)
+    bool tookSwH = not na(swH) and high > swH
+    bool tookSwL = not na(swL) and low < swL
+    if tookSwH
+        swH := na
+    if tookSwL
+        swL := na
+    if not na(ph)
+        swH := ph
+    if not na(pl)
+        swL := pl
+    bool keyBear = (not na(zBear[1]) and high >= zBear[1]) or (not na(wBear) and high >= wBear)
+    bool keyBull = (not na(zBull[1]) and low <= zBull[1]) or (not na(wBull) and low <= wBull)
+    bool liqBear = tookSwH or (not na(pwH) and high > pwH)
+    bool liqBull = tookSwL or (not na(pwL) and low < pwL)
+    int b = 0
+    if close < low[1]
+        b := -1
+    else if close > high[1]
+        b := 1
+    else
+        bool upW = high > high[1]
+        bool dnW = low < low[1]
+        if upW and not dnW and (keyBear or liqBear)
+            b := -1
+        else if dnW and not upW and (keyBull or liqBull)
+            b := 1
+    [b[1], high[1], low[1], time[1], time]
+
+[dB, dH, dL, dT, dT2] = request.security(syminfo.tickerid, "D", biasCtx(), lookahead = barmerge.lookahead_on)
+[sB, sH, sL, sT, sT2] = request.security(syminfo.tickerid, "420", biasCtx(), lookahead = barmerge.lookahead_on)
+
+// ───────── Drawing: short lines, no text ─────────
+var line dLn = na
+var line sLn = na
+bool onD = timeframe.isdaily
+bool on7 = timeframe.period == "420"
+if barstate.islast
+    line.delete(dLn)
+    line.delete(sLn)
+    if (onD or showAll) and dB != 0 and not na(dT)
+        float p = dB == -1 ? dL : dH
+        dLn := line.new(dT, p, dT2 + (dT2 - dT), p, xloc = xloc.bar_time, color = cLine, width = 1)
+    if (on7 or showAll) and sB != 0 and not na(sT)
+        float q = sB == -1 ? sL : sH
+        sLn := line.new(sT, q, sT2 + (sT2 - sT), q, xloc = xloc.bar_time, color = cLine, width = 1)
+
+// ───────── Table: D / 7H / Bias ─────────
+bTxt(int b) =>
+    b == 1 ? "Bull" : b == -1 ? "Bear" : "None"
+
+bCol(int b) =>
+    b == 1 ? color.new(color.green, 20) : b == -1 ? color.new(color.red, 20) : color.new(color.gray, 40)
+
+int bias = dB != 0 and dB == sB ? dB : 0
+var table tb = table.new(position.top_right, 2, 3, border_width = 1)
+if showTbl and barstate.islast
+    table.cell(tb, 0, 0, "D", text_color = color.white, bgcolor = color.new(color.black, 20), text_size = size.small)
+    table.cell(tb, 1, 0, bTxt(dB), text_color = color.white, bgcolor = bCol(dB), text_size = size.small)
+    table.cell(tb, 0, 1, "7H", text_color = color.white, bgcolor = color.new(color.black, 20), text_size = size.small)
+    table.cell(tb, 1, 1, bTxt(sB), text_color = color.white, bgcolor = bCol(sB), text_size = size.small)
+    table.cell(tb, 0, 2, "Bias", text_color = color.white, bgcolor = color.new(color.black, 20), text_size = size.small)
+    table.cell(tb, 1, 2, bias == -1 ? "SELL" : bias == 1 ? "BUY" : "None", text_color = color.white, bgcolor = bCol(bias), text_size = size.small)
