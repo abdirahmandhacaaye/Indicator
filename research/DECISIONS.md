@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D26 | 2026-11-22 | CRT reversal shuruud + lines gaagaab | (1) **CRT reversal (wick dhaafay + close gudaha) wuxuu ansax yahay oo keliya marka** wick-ku gaaro **key level (major: Daily/Weekly OB ama FVG)** ama qaado **major liquidity** (previous week high/low ama major swing high/low). Haddii kale → None. (2) **Lines waa gaagaab** (candle-ka ilaa wax yar midig), ma dheeraan; 7H = line keliya. | User (casharka 19 p1) |
 | D25 | 2026-11-22 | Tallaabada 1 (Daily bias + 7H) — sawir | **7H line: qoraal la'aan, line dheer oo keliya** (7H chart-ka). **Qoraal kasta waa la gaabiyaa** (sida OB / smt): Daily line = `D`, target = `DOL` (dashed), CRT reversal = `CRT`; table: `D` / `7H` / `Bias`. Box ma jiro (D23). | User |
 | D24 | 2026-11-22 | Su'aalaha pass 2 | (1) **Waqtiyada entry = 3 saac session kasta**: Asia 8/9/10 PM · London 2/3/4 AM · NY 8/9/10 AM (casharka 12 golden hours; casharka 17 '2 saac' lama raacayo). (2) **6 AM lagama qaado entry** (inkastoo casharka 09 tusaale u isticmaalay). (3) **Orderflow display: skip** — indicator-ku ma qorayo akhriska orderflow-ga (from/to ama close/wick). | User (jawaab toos ah) |
 | D23 | 2026-11-22 | Dib-u-eegis + qaabka indicator-ka (user screenshots IMG_0954–0956) | (1) **Timeframe kasta waxyaabihiisa meeshiisa ha lagu arko**: waxa 1H laga sameeyay 1H, waxa 7H 7H; option 'all timeframes'. (2) **Box ma jiro gabi ahaanba** (SL/TP/key level). (3) **Entry waxaa la qaadaa kaliya purge hours-ka**: Asia 8/9/10 PM · London 2/3/4 AM (user wuxuu xaqiijiyay 2026-11-22) · NY 8/9/10 AM. (4) **Indicator-ka laguma darayo wax casharrada aan ku jirin.** (5) **Code ma qorayo hadda**: casharrada dib ayaa loo dhageysanayaa (pass 2), sawirrada user-ka dib ayaa loo eegayaa, kadib indicator-ka step by step ayaa loo qorayaa (user-ku wuxuu ansixiyaa tallaabo kasta). | User (fariin 2026-11-22 11:13) |
@@ -108,3 +109,4 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 - 2026-11-22: D23 — v4.2 waa la joojiyay (signals badan, boxes, TF kasta wax walba). Pass 2 ee casharrada waa la bilaabay: 09 p4–p9, 15, 17 p2–p4, 18, 19, R3 hadalkooda markii ugu horreysay ayaa la qorayaa.
 - 2026-11-22: D24 — entries 8/9/10 PM · 2/3/4 AM · 8/9/10 AM, 6 AM maya, orderflow display skip.
 - 2026-11-22: D25 — step 1 sawirka: 7H line qoraal la'aan, labels gaagaab.
+- 2026-11-22: D26 — CRT reversal = key level / major liquidity shuruud; lines gaagaab.
