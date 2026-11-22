@@ -610,7 +610,7 @@ engine(int mode) =>
 [sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, smN1, pT01, pT11, pP1, pX1, eT1, eTs1, eP1, eTag1, _bD1, _b7H1, _b4H1, _b1H1, gS1, gB1, w1, l1] = request.security(syminfo.tickerid, "15", engine(1), lookahead = barmerge.lookahead_off)
 
 // ───────────────────────── Drawing (any timeframe, D18) ─────────────────────────
-lineLbl(int t0, int t1, float p, string txt, int st) =>
+lineLbl(int t0, int t1, float p, string txt, string st) =>
     line.new(t0, p, t1, p, xloc = xloc.bar_time, color = cLine, width = 1, style = st)
     if txt != ""
         label.new(t1, p, txt, xloc = xloc.bar_time, style = label.style_label_lower_right, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
