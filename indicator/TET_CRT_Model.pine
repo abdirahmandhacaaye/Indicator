@@ -1,11 +1,11 @@
 //@version=6
-// TET Profile Model — XAUUSD  v3.0
-// Rules: research/RULES.md + research/DECISIONS.md (D1–D16)
-// · 1H TSQ: TS → #1 → BRK → OTE → KOD → TG
-// · Entry always on 5 minutes: TS + SMT + Model #1 (+ purge hour, 1H key level, profile)
-// · The 5m engine runs inside request.security(…, "5"), so signals show on every timeframe.
-// · Non-repainting: signals are set only on confirmed 5m bars.
-indicator("TET Profile Model — XAUUSD", "TET PM", overlay = true, max_boxes_count = 200, max_lines_count = 200, max_labels_count = 300)
+// TET Profile Model — XAUUSD  v4.0
+// Rules: research/DECISIONS.md D1–D20 (approved preview: claude.ai/artifact/NkFSSA9sJ5p1wR84xUzJLs)
+// Profiles (D17/D19): A+ D→7H→1H→5m · A+ D→1H→5m · A D→4H→1H→5m · A D→4H→15m · B 7H→1H→5m
+// 1H TSQ: TS → #1 → BRK → OTE → KOD → TG. Entry = TS + SMT + Model #1 (+ purge hour + key level).
+// Engines run inside request.security("5") and ("15"), so signals show on every timeframe.
+// Non-repainting: signals are set only on confirmed bars of the entry timeframe.
+indicator("TET Profile Model — XAUUSD", "TET PM", overlay = true, max_boxes_count = 200, max_lines_count = 400, max_labels_count = 400)
 
 const float RR = 3.0                        // D2: fixed 1:3
 
@@ -19,35 +19,40 @@ useAsia  = input.bool(true, "Asia: purge 8/9/10 PM · entries 8 PM–12 AM", gro
 useLon   = input.bool(true, "London: purge 2/3/4 AM · entries 2–5 AM", group = grpP)
 useNY    = input.bool(true, "New York: purge 8/9/10 AM · entries 8 AM–12 PM", group = grpP)
 
-grpPr    = "Profiles — D15"
-useP1    = input.bool(true, "P1: Daily + 7H + 1H", group = grpPr)
-useP2    = input.bool(true, "P2: 7H + 4H", group = grpPr)
-useP3    = input.bool(true, "P3: Daily + 4H (or 7H)", group = grpPr)
-useP4    = input.bool(true, "P4: Daily + 1H + 7H", group = grpPr)
-useP5    = input.bool(true, "P5: Weekly + 4H", group = grpPr)
+grpPr    = "Profiles — D19"
+useA1    = input.bool(true, "A+  Daily → 7H → 1H → 5m", group = grpPr)
+useA2    = input.bool(true, "A+  Daily → 1H → 5m", group = grpPr)
+useA3    = input.bool(true, "A   Daily → 4H → 1H → 5m", group = grpPr)
+useA4    = input.bool(true, "A   Daily → 4H → 15m", group = grpPr)
+useB1    = input.bool(true, "B   7H → 1H → 5m", group = grpPr)
 
-grpK     = "1H key levels — D5"
+grpK     = "Key levels — D5"
 useFVG   = input.bool(true, "Fair Value Gap", group = grpK)
 useOB    = input.bool(true, "Order Block", group = grpK)
 useBRK   = input.bool(true, "Breaker Block (broken OB)", group = grpK)
 
-grpS     = "SMT (required) / PSP — D12–D14"
+grpS     = "SMT (required) / PSP (HTF) — D12–D14, D20"
 sym1     = input.symbol("OANDA:XAUEUR", "Pair 1", group = grpS)
 sym2     = input.symbol("OANDA:XAUGBP", "Pair 2", group = grpS)
 sym3     = input.symbol("OANDA:XAGUSD", "Pair 3", group = grpS)
 minFail  = input.int(1, "Min pairs failing to sweep", minval = 1, maxval = 3, group = grpS)
-pivLen   = input.int(3, "5m SMT swing length", minval = 2, maxval = 10, group = grpS)
+pivLen   = input.int(3, "Entry-TF SMT swing length", minval = 2, maxval = 10, group = grpS)
 
 grpR     = "Risk — D1/D2"
 slBuf    = input.float(0.0, "SL buffer beyond TS wick (price)", minval = 0, group = grpR)
-maxDay   = input.int(3, "Max signals per day", minval = 1, maxval = 10, group = grpR)
-expiry   = input.int(36, "Setup expiry (5m bars after sweep)", minval = 6, maxval = 144, group = grpR)
+maxDay   = input.int(5, "Max signals per day (per engine)", minval = 1, maxval = 20, group = grpR)
+expiry   = input.int(36, "Setup expiry (bars after sweep)", minval = 6, maxval = 144, group = grpR)
 
-grpV     = "Visuals"
-showPos  = input.bool(true, "Show SL / TP boxes", group = grpV)
-showKL   = input.bool(true, "Show the key level the TS touched", group = grpV)
-showTSQ  = input.bool(true, "Show 1H TSQ labels (TS / BRK / TG)", group = grpV)
-showTbl  = input.bool(true, "Show bias table", group = grpV)
+grpV     = "Visuals — D18"
+showPos  = input.bool(true, "SL / TP boxes", group = grpV)
+showKL   = input.bool(true, "Key level box (the one the TS touched)", group = grpV)
+showSMT  = input.bool(true, "SMT lines", group = grpV)
+showTSQ  = input.bool(true, "TSQ lines (TS / #1 / BRK / OTE / KOD / TG)", group = grpV)
+showTbl  = input.bool(true, "Bias table", group = grpV)
+cLine    = input.color(color.black, "Line / text colour", group = grpV)
+cBox     = input.color(color.new(#9e9e9e, 75), "Key level box", group = grpV)
+cSL      = input.color(color.new(#9e9e9e, 78), "SL box", group = grpV)
+cTP      = input.color(color.new(#4caf50, 82), "TP box", group = grpV)
 
 // ───────────────────────── Types ─────────────────────────
 type Agg
@@ -66,8 +71,6 @@ type Agg
     bool  hasPrev = false
     bool  pend = false
     int   of = 0
-    bool  invBear = false
-    bool  invBull = false
 
 method roll(Agg a, bool isNew, float o_, float h_, float l_, float c_, int t_) =>
     if isNew
@@ -83,8 +86,6 @@ method roll(Agg a, bool isNew, float o_, float h_, float l_, float c_, int t_) =
                 a.pc := a.c
                 a.pt := a.t
                 a.hasPrev := true
-                a.invBear := false
-                a.invBull := false
                 if not na(a.pph)
                     if a.pc > a.pph
                         a.of := 1
@@ -105,18 +106,6 @@ method roll(Agg a, bool isNew, float o_, float h_, float l_, float c_, int t_) =
             a.l := math.min(a.l, l_)
             a.c := c_
     true
-
-method eqCheck(Agg a, float c1h) =>
-    if a.hasPrev and not na(c1h)
-        float eq = (a.ph + a.pl) / 2
-        if c1h > eq
-            a.invBear := true
-        if c1h < eq
-            a.invBull := true
-    true
-
-method bias(Agg a) =>
-    a.of == -1 and not a.invBear ? -1 : a.of == 1 and not a.invBull ? 1 : 0
 
 type Zone
     float top
@@ -144,6 +133,7 @@ klFind(array<Zone> zs, int d, float hi, float lo) =>
     float zt = na
     float zb = na
     int   zt0 = na
+    int   zk = na
     if zs.size() > 0
         for z in zs
             if z.dir == d and hi >= z.bot and lo <= z.top and not hit
@@ -151,15 +141,16 @@ klFind(array<Zone> zs, int d, float hi, float lo) =>
                 zt := z.top
                 zb := z.bot
                 zt0 := z.t0
-    [hit, zt, zb, zt0]
+                zk := z.kind
+    [hit, zt, zb, zt0, zk]
 
-fail1H(Agg p, bool bear) =>
+failAgg(Agg p, bool bear) =>
     int r = 0
     if p.hasPrev and not na(p.h)
         r := bear ? (p.h <= p.ph ? 1 : 0) : (p.l >= p.pl ? 1 : 0)
     r
 
-fail5(float pHi, float pLo, float pivH, float pivL, bool bear) =>
+failPiv(float pHi, float pLo, float pivH, float pivL, bool bear) =>
     int r = 0
     if bear and not na(pHi) and not na(pivH)
         r := pHi <= pivH ? 1 : 0
@@ -167,50 +158,72 @@ fail5(float pHi, float pLo, float pivH, float pivL, bool bear) =>
         r := pLo >= pivL ? 1 : 0
     r
 
-pspHit(Agg x, Agg p, bool bear) =>
+// PSP on a closed HTF candle (D20): XAUUSD closed one way, the pair the other way
+psp(Agg x, Agg p, bool bear) =>
     bool r = false
-    if p.hasPrev and x.hasPrev and not na(p.pc)
+    if p.hasPrev and x.hasPrev and not na(p.pc) and not na(x.pc)
         r := bear ? (x.pc < x.po and p.pc > p.po) : (x.pc > x.po and p.pc < p.po)
     r
 
-// ───────────────────────── 5m engine ─────────────────────────
-engine() =>
+// ───────────────────────── Engine ─────────────────────────
+// mode 0: 5m entries, structure TF = 1H   ·   mode 1: 15m entries, structure TF = 4H (A: D → 4H → 15m)
+engine(int mode) =>
     hNY = hour(time, tz)
     tShift = time + 7 * 3600000
-    newDay  = na(hNY[1]) or dayofmonth(tShift, tz) != dayofmonth(tShift[1], tz)
-    newWeek = na(hNY[1]) or weekofyear(tShift, tz) != weekofyear(tShift[1], tz)
-    newH1   = na(hNY[1]) or hNY != hNY[1]
+    newDay = na(hNY[1]) or dayofmonth(tShift, tz) != dayofmonth(tShift[1], tz)
+    newH1  = na(hNY[1]) or hNY != hNY[1]
     b4 = f4H(hNY)
     b7 = f7H(hNY)
     new4 = na(b4[1]) or b4 != b4[1]
     new7 = na(b7[1]) or b7 != b7[1]
+    bool newS = mode == 0 ? newH1 : new4      // structure candle boundary
 
-    [o1, hi1, lo1, c1] = request.security(sym1, "5", [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
-    [o2, hi2, lo2, c2] = request.security(sym2, "5", [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
-    [o3, hi3, lo3, c3] = request.security(sym3, "5", [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+    [o1, hi1, lo1, c1] = request.security(sym1, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+    [o2, hi2, lo2, c2] = request.security(sym2, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+    [o3, hi3, lo3, c3] = request.security(sym3, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
 
-    var Agg wk = Agg.new()
     var Agg dy = Agg.new()
     var Agg s7 = Agg.new()
     var Agg f4 = Agg.new()
     var Agg h1 = Agg.new()
-    var Agg q1 = Agg.new()
-    var Agg q2 = Agg.new()
-    var Agg q3 = Agg.new()
-    wk.roll(newWeek, open, high, low, close, time)
+    var Agg d1 = Agg.new()
+    var Agg d2 = Agg.new()
+    var Agg d3 = Agg.new()
+    var Agg e1 = Agg.new()
+    var Agg e2 = Agg.new()
+    var Agg e3 = Agg.new()
+    var Agg g1 = Agg.new()
+    var Agg g2 = Agg.new()
+    var Agg g3 = Agg.new()
+    var Agg k1 = Agg.new()
+    var Agg k2 = Agg.new()
+    var Agg k3 = Agg.new()
     dy.roll(newDay, open, high, low, close, time)
     s7.roll(new7, open, high, low, close, time)
     f4.roll(new4, open, high, low, close, time)
     h1.roll(newH1, open, high, low, close, time)
-    q1.roll(newH1, o1, hi1, lo1, c1, time)
-    q2.roll(newH1, o2, hi2, lo2, c2, time)
-    q3.roll(newH1, o3, hi3, lo3, c3, time)
+    d1.roll(newDay, o1, hi1, lo1, c1, time)
+    d2.roll(newDay, o2, hi2, lo2, c2, time)
+    d3.roll(newDay, o3, hi3, lo3, c3, time)
+    e1.roll(new7, o1, hi1, lo1, c1, time)
+    e2.roll(new7, o2, hi2, lo2, c2, time)
+    e3.roll(new7, o3, hi3, lo3, c3, time)
+    g1.roll(new4, o1, hi1, lo1, c1, time)
+    g2.roll(new4, o2, hi2, lo2, c2, time)
+    g3.roll(new4, o3, hi3, lo3, c3, time)
+    k1.roll(newH1, o1, hi1, lo1, c1, time)
+    k2.roll(newH1, o2, hi2, lo2, c2, time)
+    k3.roll(newH1, o3, hi3, lo3, c3, time)
+    Agg st = mode == 0 ? h1 : f4             // structure candle (key levels, TS reference)
+    Agg sp1 = mode == 0 ? k1 : g1
+    Agg sp2 = mode == 0 ? k2 : g2
+    Agg sp3 = mode == 0 ? k3 : g3
 
     var int sigToday = 0
     if newDay
         sigToday := 0
 
-    // 5m swings for 5m SMT
+    // entry-TF swings for SMT
     var float xPH = na
     var float xPL = na
     var float aPH = na
@@ -244,7 +257,7 @@ engine() =>
     if not na(tpl3)
         cPL := tpl3
 
-    // 1H key levels + 1H structure (built from closed 1H candles)
+    // key levels + structure orderflow, built from closed structure candles
     var array<Zone>  zs = array.new<Zone>()
     var array<float> hO = array.new<float>()
     var array<float> hH = array.new<float>()
@@ -253,9 +266,9 @@ engine() =>
     var array<int>   hT = array.new<int>()
     var float swH = na
     var float swL = na
-    var int   of1H = 0
-    if newH1 and h1.hasPrev
-        float cc = h1.pc
+    var int   ofS = 0
+    if newS and st.hasPrev
+        float cc = st.pc
         if zs.size() > 0
             for i = zs.size() - 1 to 0
                 Zone z = zs.get(i)
@@ -266,11 +279,11 @@ engine() =>
                         z.dir := -z.dir
                     else
                         zs.remove(i)
-        hO.push(h1.po)
-        hH.push(h1.ph)
-        hL.push(h1.pl)
-        hC.push(h1.pc)
-        hT.push(h1.pt)
+        hO.push(st.po)
+        hH.push(st.ph)
+        hL.push(st.pl)
+        hC.push(st.pc)
+        hT.push(st.pt)
         if hO.size() > 3
             hO.shift()
             hH.shift()
@@ -303,112 +316,127 @@ engine() =>
             while zs.size() > 40
                 zs.shift()
         if not na(swL) and cc < swL
-            of1H := -1
+            ofS := -1
         if not na(swH) and cc > swH
-            of1H := 1
-        wk.eqCheck(cc)
-        dy.eqCheck(cc)
-        s7.eqCheck(cc)
-        f4.eqCheck(cc)
+            ofS := 1
 
-    // Profiles (D15) — conflict = no trade (D16)
-    int bW  = wk.bias()
-    int bD  = dy.bias()
-    int b7H = s7.bias()
-    int b4H = f4.bias()
-    int b1H = of1H
-    int pS = useP1 and bD == -1 and b7H == -1 and b1H == -1 ? 1 : useP2 and b7H == -1 and b4H == -1 ? 2 : useP3 and bD == -1 and (b4H == -1 or b7H == -1) ? 3 : useP4 and bD == -1 and b1H == -1 and b7H == -1 ? 4 : useP5 and bW == -1 and b4H == -1 ? 5 : 0
-    int pB = useP1 and bD == 1 and b7H == 1 and b1H == 1 ? 1 : useP2 and b7H == 1 and b4H == 1 ? 2 : useP3 and bD == 1 and (b4H == 1 or b7H == 1) ? 3 : useP4 and bD == 1 and b1H == 1 and b7H == 1 ? 4 : useP5 and bW == 1 and b4H == 1 ? 5 : 0
-    int profS = pB > 0 ? 0 : pS
-    int profB = pS > 0 ? 0 : pB
+    // ── profiles (D17, D19). Conflict sell/buy = no trade (D16)
+    int bD  = dy.of
+    int b7H = s7.of
+    int b4H = f4.of
+    int b1H = mode == 0 ? ofS : 0
+    string gS = ""
+    string gB = ""
+    if mode == 0
+        gS := useA1 and bD == -1 and b7H == -1 and b1H == -1 ? "A+" : useA2 and bD == -1 and b1H == -1 ? "A+" : useA3 and bD == -1 and b4H == -1 and b1H == -1 ? "A" : useB1 and b7H == -1 and b1H == -1 ? "B" : ""
+        gB := useA1 and bD == 1 and b7H == 1 and b1H == 1 ? "A+" : useA2 and bD == 1 and b1H == 1 ? "A+" : useA3 and bD == 1 and b4H == 1 and b1H == 1 ? "A" : useB1 and b7H == 1 and b1H == 1 ? "B" : ""
+    else
+        gS := useA4 and bD == -1 and b4H == -1 ? "A" : ""
+        gB := useA4 and bD == 1 and b4H == 1 ? "A" : ""
+    string gradeS = gB != "" ? "" : gS
+    string gradeB = gS != "" ? "" : gB
 
-    // SMT on this 5m bar
-    bool smtS = (h1.hasPrev and high > h1.ph and (fail1H(q1, true) + fail1H(q2, true) + fail1H(q3, true)) >= minFail) or (not na(xPH) and high > xPH and (fail5(hi1, lo1, aPH, aPL, true) + fail5(hi2, lo2, bPH, bPL, true) + fail5(hi3, lo3, cPH, cPL, true)) >= minFail)
-    bool smtB = (h1.hasPrev and low < h1.pl and (fail1H(q1, false) + fail1H(q2, false) + fail1H(q3, false)) >= minFail) or (not na(xPL) and low < xPL and (fail5(hi1, lo1, aPH, aPL, false) + fail5(hi2, lo2, bPH, bPL, false) + fail5(hi3, lo3, cPH, cPL, false)) >= minFail)
+    // ── SMT on this bar (structure candle or entry-TF swing)
+    bool smtS = (st.hasPrev and high > st.ph and (failAgg(sp1, true) + failAgg(sp2, true) + failAgg(sp3, true)) >= minFail) or (not na(xPH) and high > xPH and (failPiv(hi1, lo1, aPH, aPL, true) + failPiv(hi2, lo2, bPH, bPL, true) + failPiv(hi3, lo3, cPH, cPL, true)) >= minFail)
+    bool smtB = (st.hasPrev and low < st.pl and (failAgg(sp1, false) + failAgg(sp2, false) + failAgg(sp3, false)) >= minFail) or (not na(xPL) and low < xPL and (failPiv(hi1, lo1, aPH, aPL, false) + failPiv(hi2, lo2, bPH, bPL, false) + failPiv(hi3, lo3, cPH, cPL, false)) >= minFail)
 
-    // ── 1H TSQ state (one active sequence at a time)
-    var int   qDir = 0            // -1 sell TSQ, +1 buy TSQ
-    var int   qProf = 0
-    var float qTS = na            // TS extreme
-    var float qBrkLvl = na        // low (sell) / high (buy) of the 1H candle that made the TS
-    var bool  qBrk = false
-    var int   qStage = 0          // entries taken: 1 = TS, 2 = OTE, 3 = KOD
-    var float qTG = na
-    var int   evT = na
-    var float evP = na
+    // ── TSQ state
+    var int    qDir = 0
+    var string qGrade = ""
+    var float  qTS = na
+    var float  qBrkLvl = na
+    var int    qBrkT0 = na
+    var bool   qBrk = false
+    var int    qStage = 0
+    var float  qTG = na
+    var int    qT0 = na
+    var int    evT = na
+    var int    evT0 = na
+    var float  evP = na
     var string evTag = ""
-
-    // TSQ end: TG reached, or close beyond the TS
     if qDir == -1 and (low <= qTG or close > qTS)
-        evT := time
-        evP := low <= qTG ? qTG : close
-        evTag := low <= qTG ? "TG" : "TSQ invalid"
+        if low <= qTG
+            evT := time
+            evT0 := qT0
+            evP := qTG
+            evTag := "TG"
         qDir := 0
     if qDir == 1 and (high >= qTG or close < qTS)
-        evT := time
-        evP := high >= qTG ? qTG : close
-        evTag := high >= qTG ? "TG" : "TSQ invalid"
+        if high >= qTG
+            evT := time
+            evT0 := qT0
+            evP := qTG
+            evTag := "TG"
         qDir := 0
-    // BRK on a closed 1H candle
-    if newH1 and h1.hasPrev and qDir != 0 and not qBrk
-        if (qDir == -1 and h1.pc < qBrkLvl) or (qDir == 1 and h1.pc > qBrkLvl)
+    if newS and st.hasPrev and qDir != 0 and not qBrk
+        if (qDir == -1 and st.pc < qBrkLvl) or (qDir == 1 and st.pc > qBrkLvl)
             qBrk := true
-            evT := h1.pt
+            evT := st.pt
+            evT0 := qBrkT0
             evP := qBrkLvl
             evTag := "BRK"
 
-    // ── 5m setup (TS → SMT → Model #1), mirrored for both directions
-    var float sX = na             // sweep extreme
-    var float sRef = na           // swept 1H level
+    // ── setup: TS → SMT → Model #1 (mirrored)
+    var float sX = na
+    var float sRef = na
+    var int   sRefT = na
     var bool  sOn = false
-    var bool  sIn = false         // closed back inside
+    var bool  sIn = false
     var bool  sPg = false
     var bool  sKL = false
     var bool  sSmt = false
     var int   sSmtN = 0
-    var float sM1 = na            // Model #1 line (open of last opposite candle)
+    var int   sSmt1T = na
+    var float sSmt1P = na
+    var float sM1 = na
+    var int   sM1T = na
     var int   sBar = na
     var int   sTm = na
     var int   sDir = 0
     var float sKt = na
     var float sKb = na
     var int   sK0 = na
+    var int   sKk = na
 
-    // the direction we look for: an active TSQ keeps its own direction, otherwise the profile's
-    int want = qDir != 0 ? qDir : profS > 0 ? -1 : profB > 0 ? 1 : 0
+    int want = qDir != 0 ? qDir : gradeS != "" ? -1 : gradeB != "" ? 1 : 0
     if sOn and (sDir != want or bar_index - sBar > expiry)
         sOn := false
 
-    if want != 0 and h1.hasPrev
-        float ext  = want == -1 ? high : low
-        float lvl  = want == -1 ? h1.ph : h1.pl
-        bool  swept = want == -1 ? ext > lvl : ext < lvl
-        bool  further = not sOn or (want == -1 ? ext > sX : ext < sX)
-        // in an active TSQ after BRK, the sweep must stay below the TS (sell) / above it (buy)
-        bool  inTsq = qDir != 0 and (want == -1 ? ext < qTS : ext > qTS)
-        bool  allowNew = qDir == 0 or (qBrk and inTsq and qStage < 3)
+    if want != 0 and st.hasPrev
+        float ext = want == -1 ? high : low
+        float lvl = want == -1 ? st.ph : st.pl
+        bool swept = want == -1 ? ext > lvl : ext < lvl
+        bool further = not sOn or (want == -1 ? ext > sX : ext < sX)
+        bool inTsq = qDir != 0 and (want == -1 ? ext < qTS : ext > qTS)
+        bool allowNew = qDir == 0 or (qBrk and inTsq)
         if swept and further and allowNew
             if not sOn
                 sRef := lvl
+                sRefT := st.pt
                 sSmtN := 0
                 sKL := false
                 sSmt := false
+                sSmt1T := na
             sX := ext
             sBar := bar_index
             sTm := time
             sDir := want
             sPg := isPurge(hNY)
             if qDir == 0
-                [kh, kt, kb, k0] = klFind(zs, want, want == -1 ? ext : sRef, want == -1 ? sRef : ext)
+                [kh, kt, kb, k0, kk] = klFind(zs, want, want == -1 ? ext : sRef, want == -1 ? sRef : ext)
                 if kh and not sKL
                     sKL := true
                     sKt := kt
                     sKb := kb
                     sK0 := k0
+                    sKk := kk
             else
-                sKL := true       // inside an active TSQ the 1H key level is the TSQ itself
+                sKL := true
             bool smtNow = want == -1 ? smtS : smtB
             if smtNow
+                if not sSmt
+                    sSmt1T := time
+                    sSmt1P := ext
                 sSmt := true
                 sSmtN += 1
             sM1 := na
@@ -421,10 +449,10 @@ engine() =>
                 sIn := false
             if want == -1 ? close > open : close < open
                 sM1 := open
+                sM1T := time
 
     // ── trade bookkeeping
     var int   tDir = 0
-    var float tE = na
     var float tSL = na
     var float tTP = na
     var int   tBar = na
@@ -446,82 +474,124 @@ engine() =>
                 wins += 1
                 tDir := 0
 
-    var int   sigT = na
-    var int   sigDir = 0
-    var float sigE = na
-    var float sigSL = na
-    var float sigTP = na
+    var int    sigT = na
+    var int    sigDir = 0
+    var float  sigE = na
+    var float  sigSL = na
+    var float  sigTP = na
     var string sigTag = ""
-    var float klTop = na
-    var float klBot = na
-    var int   klT0 = na
-    var int   tsT = na
-    var float tsP = na
+    var string sigStage = ""
+    var int    oRefT = na
+    var float  oRef = na
+    var int    oXT = na
+    var float  oX = na
+    var int    oM1T = na
+    var float  oM1 = na
+    var float  klTop = na
+    var float  klBot = na
+    var int    klT0 = na
+    var string klName = ""
+    var int    smtT1 = na
+    var float  smtP1 = na
+    var bool   smt2 = false
 
     bool m1Break = sOn and not na(sM1) and (sDir == -1 ? close < sM1 and close < open : close > sM1 and close > open)
     bool fire = barstate.isconfirmed and sOn and sIn and sPg and sKL and sSmt and m1Break and inSession(hNY) and sigToday < maxDay and tDir == 0
     if fire
         int stg = qDir == 0 ? 1 : qStage + 1
-        int pf  = qDir == 0 ? (sDir == -1 ? profS : profB) : qProf
-        bool psp = pspHit(h1, q1, sDir == -1) or pspHit(h1, q2, sDir == -1) or pspHit(h1, q3, sDir == -1)
-        string stName = stg == 1 ? "" : stg == 2 ? " OTE" : " KOD"
+        string gr = qDir == 0 ? (sDir == -1 ? gradeS : gradeB) : qGrade
+        bool bear = sDir == -1
+        bool pp = psp(dy, d1, bear) or psp(dy, d2, bear) or psp(dy, d3, bear) or psp(s7, e1, bear) or psp(s7, e2, bear) or psp(s7, e3, bear) or psp(f4, g1, bear) or psp(f4, g2, bear) or psp(f4, g3, bear) or psp(h1, k1, bear) or psp(h1, k2, bear) or psp(h1, k3, bear)
+        sigStage := stg == 1 ? "TS" : stg == 2 ? "OTE" : "KOD"
         sigT := time
         sigDir := sDir
         sigE := close
-        sigSL := sDir == -1 ? sX + slBuf : sX - slBuf
+        sigSL := bear ? sX + slBuf : sX - slBuf
         sigTP := close + sDir * RR * math.abs(close - sigSL)
-        sigTag := "P" + str.tostring(pf) + stName + (sDir == -1 ? " SELL" : " BUY") + (psp ? " +PSP" : "") + (sSmtN >= 2 ? " +2SSMT" : "")
-        tsT := sTm
-        tsP := sX
+        sigTag := gr + (bear ? " SELL" : " BUY") + (pp ? " +PSP" : "") + (sSmtN >= 2 ? " +2SSMT" : "")
+        oRefT := sRefT
+        oRef := sRef
+        oXT := sTm
+        oX := sX
+        oM1T := sM1T
+        oM1 := sM1
+        smtT1 := sSmt1T
+        smtP1 := sSmt1P
+        smt2 := sSmtN >= 2
         tDir := sDir
-        tE := sigE
         tSL := sigSL
         tTP := sigTP
         tBar := bar_index
         sigToday += 1
         if qDir == 0
             qDir := sDir
-            qProf := pf
+            qGrade := gr
             qTS := sX
-            qBrkLvl := sDir == -1 ? h1.l : h1.h
+            qBrkLvl := bear ? st.l : st.h
+            qBrkT0 := st.t
             qBrk := false
             qStage := 1
-            qTG := sDir == -1 ? ((pf == 2 or pf == 5) ? f4.pl : dy.pl) : ((pf == 2 or pf == 5) ? f4.ph : dy.ph)
+            qTG := bear ? dy.pl : dy.ph
+            qT0 := time
             klTop := sKt
             klBot := sKb
             klT0 := sK0
+            klName := sKk == 0 ? "FVG" : sKk == 1 ? "OB" : "BRK"
         else
             qStage := stg
         sOn := false
 
-    [sigT, sigDir, sigE, sigSL, sigTP, sigTag, tsT, tsP, klTop, klBot, klT0, evT, evP, evTag, bW, bD, b7H, b4H, b1H, profS, profB, wins, losses]
+    [sigT, sigDir, sigE, sigSL, sigTP, sigTag, sigStage, oRefT, oRef, oXT, oX, oM1T, oM1, klTop, klBot, klT0, klName, smtT1, smtP1, smt2, evT, evT0, evP, evTag, bD, b7H, b4H, b1H, gradeS, gradeB, wins, losses]
 
-[sigT, sigDir, sigE, sigSL, sigTP, sigTag, tsT, tsP, klTop, klBot, klT0, evT, evP, evTag, bW, bD, b7H, b4H, b1H, profS, profB, wins, losses] = request.security(syminfo.tickerid, "5", engine(), lookahead = barmerge.lookahead_off)
+[sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, sm20, eT0, eTs0, eP0, eTag0, bD, b7H, b4H, b1H, gS0, gB0, w0, l0] = request.security(syminfo.tickerid, "5", engine(0), lookahead = barmerge.lookahead_off)
+[sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, sm21, eT1, eTs1, eP1, eTag1, _bD1, _b7H1, _b4H1, _b1H1, gS1, gB1, w1, l1] = request.security(syminfo.tickerid, "15", engine(1), lookahead = barmerge.lookahead_off)
 
-// ───────────────────────── Drawing (any timeframe) ─────────────────────────
-bool newSig = not na(sigT) and (na(sigT[1]) or sigT != sigT[1])
-bool newEv  = not na(evT) and (na(evT[1]) or evT != evT[1] or evTag != evTag[1])
-int  span   = 3 * 3600000
+// ───────────────────────── Drawing (any timeframe, D18) ─────────────────────────
+lineLbl(int t0, int t1, float p, string txt, int st) =>
+    line.new(t0, p, t1, p, xloc = xloc.bar_time, color = cLine, width = 1, style = st)
+    if txt != ""
+        label.new(t1, p, txt, xloc = xloc.bar_time, style = label.style_label_lower_right, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
+    true
 
-if newSig
-    bool isSell = sigDir == -1
-    color cs = isSell ? color.new(color.red, 15) : color.new(color.green, 15)
+drawSig(int sT, int sD, float sE, float sSL, float sTP, string sTag, string sStg, int rT, float rP, int xT, float xP, int mT, float mP, float kTop, float kBot, int kT0, string kNm, int smT, float smP, bool sm2, string tfTxt) =>
+    int span = 3 * 3600000
     if showPos
-        box.new(sigT, sigSL, sigT + span, sigE, xloc = xloc.bar_time, bgcolor = color.new(color.red, 82), border_color = color.new(color.red, 60))
-        box.new(sigT, sigE, sigT + span, sigTP, xloc = xloc.bar_time, bgcolor = color.new(color.green, 82), border_color = color.new(color.green, 60))
-    label.new(sigT, sigE, sigTag, xloc = xloc.bar_time, style = isSell ? label.style_label_down : label.style_label_up, color = cs, textcolor = color.white, size = size.small)
-    if showTSQ and not na(tsT)
-        label.new(tsT, tsP, "TS", xloc = xloc.bar_time, style = isSell ? label.style_label_down : label.style_label_up, color = color.new(color.gray, 40), textcolor = color.white, size = size.tiny)
-    line.new(sigT - span / 6, sigE, sigT + span / 6, sigE, xloc = xloc.bar_time, color = color.new(color.gray, 20), width = 1)
-    if showKL and not na(klTop) and not na(klT0)
-        box.new(klT0, klTop, sigT, klBot, xloc = xloc.bar_time, bgcolor = color.new(color.blue, 88), border_color = color.new(color.blue, 60), text = "KL", text_size = size.tiny, text_halign = text.align_left, text_color = color.gray)
-    alert("TET " + sigTag + " " + syminfo.ticker + " | Entry " + str.tostring(sigE, format.mintick) + " | SL " + str.tostring(sigSL, format.mintick) + " | TP " + str.tostring(sigTP, format.mintick), alert.freq_once_per_bar_close)
+        box.new(sT, sSL, sT + span, sE, xloc = xloc.bar_time, bgcolor = cSL, border_color = color.new(cSL, 100))
+        box.new(sT, sE, sT + span, sTP, xloc = xloc.bar_time, bgcolor = cTP, border_color = color.new(cTP, 100))
+    lineLbl(sT, sT + span, sE, sTag + " · " + tfTxt, line.style_solid)
+    if showTSQ
+        if sStg == "TS"
+            lineLbl(rT, sT, rP, "TS", line.style_solid)
+        else
+            lineLbl(xT, sT, xP, sStg, line.style_solid)
+        if not na(mT)
+            lineLbl(mT, sT, mP, "#1", line.style_solid)
+    if showSMT and not na(smT)
+        line.new(rT, rP, smT, smP, xloc = xloc.bar_time, color = cLine, style = line.style_dashed, width = 1)
+        label.new(smT, smP, "smt", xloc = xloc.bar_time, style = sD == -1 ? label.style_label_lower_left : label.style_label_upper_left, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
+        if sm2 and xT != smT
+            line.new(smT, smP, xT, xP, xloc = xloc.bar_time, color = cLine, style = line.style_solid, width = 1)
+    if showKL and sStg == "TS" and not na(kTop) and not na(kT0)
+        box.new(kT0, kTop, sT, kBot, xloc = xloc.bar_time, bgcolor = cBox, border_color = color.new(cBox, 100), text = kNm, text_size = size.small, text_halign = text.align_right, text_valign = text.align_center, text_color = cLine)
+    alert("TET " + sTag + " (" + sStg + ", " + tfTxt + ") " + syminfo.ticker + " | Entry " + str.tostring(sE, format.mintick) + " | SL " + str.tostring(sSL, format.mintick) + " | TP " + str.tostring(sTP, format.mintick), alert.freq_once_per_bar_close)
+    true
 
-if newEv and showTSQ
-    label.new(evT, evP, evTag, xloc = xloc.bar_time, style = label.style_label_left, color = color.new(color.gray, 70), textcolor = chart.fg_color, size = size.tiny)
+bool new0 = not na(sT0) and (na(sT0[1]) or sT0 != sT0[1])
+bool new1 = not na(sT1) and (na(sT1[1]) or sT1 != sT1[1])
+if new0
+    drawSig(sT0, sD0, sE0, sSL0, sTP0, sTag0, sStg0, rT0, rP0, xT0, xP0, mT0, mP0, kTop0, kBot0, kT00, kNm0, smT0, smP0, sm20, "5m")
+if new1
+    drawSig(sT1, sD1, sE1, sSL1, sTP1, sTag1, sStg1, rT1, rP1, xT1, xP1, mT1, mP1, kTop1, kBot1, kT01, kNm1, smT1, smP1, sm21, "15m")
 
-alertcondition(newSig and sigDir == -1, "TET Sell", "TET SELL on {{ticker}}")
-alertcondition(newSig and sigDir == 1, "TET Buy", "TET BUY on {{ticker}}")
+bool ev0 = not na(eT0) and (na(eT0[1]) or eT0 != eT0[1] or eTag0 != eTag0[1])
+bool ev1 = not na(eT1) and (na(eT1[1]) or eT1 != eT1[1] or eTag1 != eTag1[1])
+if ev0 and showTSQ and not na(eTs0)
+    lineLbl(eTs0, eT0, eP0, eTag0, line.style_solid)
+if ev1 and showTSQ and not na(eTs1)
+    lineLbl(eTs1, eT1, eP1, eTag1, line.style_solid)
+
+alertcondition((new0 and sD0 == -1) or (new1 and sD1 == -1), "TET Sell", "TET SELL on {{ticker}}")
+alertcondition((new0 and sD0 == 1) or (new1 and sD1 == 1), "TET Buy", "TET BUY on {{ticker}}")
 
 // ───────────────────────── Bias table ─────────────────────────
 bTxt(int b) =>
@@ -530,24 +600,25 @@ bTxt(int b) =>
 bCol(int b) =>
     b == 1 ? color.new(color.green, 30) : b == -1 ? color.new(color.red, 30) : color.new(color.gray, 60)
 
-var table tb = table.new(position.top_right, 2, 9, bgcolor = color.new(color.black, 80), border_width = 1)
+var table tb = table.new(position.top_right, 2, 8, bgcolor = color.new(color.black, 80), border_width = 1)
 if showTbl and barstate.islast
+    int wins = w0 + w1
+    int losses = l0 + l1
     int tot = wins + losses
-    table.cell(tb, 0, 0, "Weekly", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 0, bTxt(bW), bgcolor = bCol(bW), text_color = color.white, text_size = size.small)
-    table.cell(tb, 0, 1, "Daily", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 1, bTxt(bD), bgcolor = bCol(bD), text_color = color.white, text_size = size.small)
-    table.cell(tb, 0, 2, "7H", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 2, bTxt(b7H), bgcolor = bCol(b7H), text_color = color.white, text_size = size.small)
-    table.cell(tb, 0, 3, "4H", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 3, bTxt(b4H), bgcolor = bCol(b4H), text_color = color.white, text_size = size.small)
-    table.cell(tb, 0, 4, "1H", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 4, bTxt(b1H), bgcolor = bCol(b1H), text_color = color.white, text_size = size.small)
-    table.cell(tb, 0, 5, "Profile", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 5, profS > 0 ? "P" + str.tostring(profS) + " Sell" : profB > 0 ? "P" + str.tostring(profB) + " Buy" : "None", text_color = color.white, text_size = size.small)
-    table.cell(tb, 0, 6, "Wins / Losses", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 6, str.tostring(wins) + " / " + str.tostring(losses), text_color = color.white, text_size = size.small)
-    table.cell(tb, 0, 7, "Win rate", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 7, tot > 0 ? str.tostring(100.0 * wins / tot, "#.#") + "%" : "-", text_color = color.white, text_size = size.small)
-    table.cell(tb, 0, 8, "Net R (1:3)", text_color = color.white, text_size = size.small)
-    table.cell(tb, 1, 8, str.tostring(wins * RR - losses, "#.#") + "R", text_color = color.white, text_size = size.small)
+    string prof = gS0 != "" ? gS0 + " Sell (5m)" : gB0 != "" ? gB0 + " Buy (5m)" : gS1 != "" ? gS1 + " Sell (15m)" : gB1 != "" ? gB1 + " Buy (15m)" : "None"
+    table.cell(tb, 0, 0, "Daily", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 0, bTxt(bD), bgcolor = bCol(bD), text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 1, "7H", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 1, bTxt(b7H), bgcolor = bCol(b7H), text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 2, "4H", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 2, bTxt(b4H), bgcolor = bCol(b4H), text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 3, "1H", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 3, bTxt(b1H), bgcolor = bCol(b1H), text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 4, "Profile", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 4, prof, text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 5, "Wins / Losses", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 5, str.tostring(wins) + " / " + str.tostring(losses), text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 6, "Win rate", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 6, tot > 0 ? str.tostring(100.0 * wins / tot, "#.#") + "%" : "-", text_color = color.white, text_size = size.small)
+    table.cell(tb, 0, 7, "Net R (1:3)", text_color = color.white, text_size = size.small)
+    table.cell(tb, 1, 7, str.tostring(wins * RR - losses, "#.#") + "R", text_color = color.white, text_size = size.small)
