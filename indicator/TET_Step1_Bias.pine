@@ -10,12 +10,15 @@
 //   Daily chart: line at PDL (bear) / PDH (bull) · 7H chart: line at the 7H candle low / high.
 //   Other timeframes: nothing, unless "All timeframes" is on.  Table: D / 7H / Bias.
 // Non-repainting: only closed Daily / 7H candles are used ([1] + lookahead_on).
+// D29: the 7H NY-PM candle (2 PM, 3 h) is never a bias candle — after it closes 7H = None;
+//      it is only "candle 1" (the liquidity Asia takes). 7H bias is decided when a candle CLOSES.
 indicator("TET Step 1 — Daily + 7H Bias", "TET S1", overlay = true, max_lines_count = 50)
 
 swLen   = input.int(5, "Major swing: candles on each side", minval = 2, maxval = 20)
 showAll = input.bool(false, "All timeframes")
 showTbl = input.bool(true, "Table")
 cLine   = input.color(color.black, "Line colour")
+pmHour  = input.int(14, "7H NY PM candle start hour (NY) — 14 Forex/CFD, 15 Indices", minval = 0, maxval = 23)
 
 type Zone
     float top
@@ -113,7 +116,11 @@ biasCtx() =>
     [b[1], high[1], low[1], time[1], time]
 
 [dB, dH, dL, dT, dT2] = request.security(syminfo.tickerid, "D", biasCtx(), lookahead = barmerge.lookahead_on)
-[sB, sH, sL, sT, sT2] = request.security(syminfo.tickerid, "420", biasCtx(), lookahead = barmerge.lookahead_on)
+[sB0, sH, sL, sT, sT2] = request.security(syminfo.tickerid, "420", biasCtx(), lookahead = barmerge.lookahead_on)
+// D29: last closed 7H candle = NY PM (2 PM) -> None
+// (also caught by its length: the session's short last 7H candle is <= 4 h)
+bool lastIsPM = not na(sT) and (hour(sT, "America/New_York") == pmHour or (sT2 - sT) <= 4 * 3600000)
+int sB = lastIsPM ? 0 : sB0
 
 // ───────── Drawing: short lines, no text ─────────
 var line dLn = na
