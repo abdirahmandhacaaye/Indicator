@@ -1,0 +1,547 @@
+//@version=6
+// TET — Step 1 + Step 2: Daily/7H bias · SMT · 2SSMT · PSP · 1H TSQ (step-by-step rebuild, D23–D31)
+// Rules (research/PASS2/SUMMARY.md, lessons 04 / 18 / 19):
+//   last CLOSED candle vs the candle before it
+//   close below prev low  -> Bear (continuation)   · close above prev high -> Bull (continuation)
+//   wick above prev high + close inside -> Bear (CRT reversal)  — only if the wick reached a key level
+//   wick below prev low  + close inside -> Bull (CRT reversal)     (Daily/Weekly OB or FVG) or took
+//   major liquidity (previous week high/low or an untaken major swing high/low)          — D26
+// Drawing (D23/D25/D26): short lines only, no text, no boxes.
+//   Daily chart: line at PDL (bear) / PDH (bull) · 7H chart: line at the 7H candle low / high.
+//   Other timeframes: nothing, unless "All timeframes" is on.  Table: D / 7H / Bias.
+// Non-repainting: only closed Daily / 7H candles are used ([1] + lookahead_on).
+// D29: the 7H NY-PM candle (2 PM, 3 h) is never a bias candle — after it closes 7H = None;
+//      it is only "candle 1" (the liquidity Asia takes). 7H bias is decided when a candle CLOSES.
+indicator("TET Step 2 — Bias + SMT / PSP / 1H TSQ", "TET S2 v1", overlay = true, max_lines_count = 500, max_labels_count = 500)
+
+swLen   = input.int(5, "Major swing: candles on each side", minval = 2, maxval = 20)
+showAll = input.bool(false, "All timeframes")
+showTbl = input.bool(true, "Table")
+cLine   = input.color(color.black, "Line colour")
+pmHour  = input.int(14, "7H NY PM candle start hour (NY) — 14 Forex/CFD, 15 Indices", minval = 0, maxval = 23)
+
+type Zone
+    float top
+    float bot
+
+// Active key levels (FVG + Order Block) on the timeframe this runs on.
+// Returns the nearest bearish zone bottom above the close and the nearest bullish zone top below the close.
+nearZones() =>
+    var array<Zone> bear = array.new<Zone>()
+    var array<Zone> bull = array.new<Zone>()
+    if bar_index >= 2
+        if low[2] > high
+            bear.push(Zone.new(low[2], high))          // bearish FVG
+        if high[2] < low
+            bull.push(Zone.new(low, high[2]))          // bullish FVG
+        if close[1] > open[1] and close < low[1]
+            bear.push(Zone.new(high[1], open[1]))      // bearish OB (last up candle)
+        if close[1] < open[1] and close > high[1]
+            bull.push(Zone.new(open[1], low[1]))       // bullish OB (last down candle)
+    if bear.size() > 0
+        for i = bear.size() - 1 to 0
+            if close > bear.get(i).top
+                bear.remove(i)
+    if bull.size() > 0
+        for i = bull.size() - 1 to 0
+            if close < bull.get(i).bot
+                bull.remove(i)
+    while bear.size() > 40
+        bear.shift()
+    while bull.size() > 40
+        bull.shift()
+    float bBot = na
+    float uTop = na
+    for z in bear
+        if z.bot > close and (na(bBot) or z.bot < bBot)
+            bBot := z.bot
+    for z in bull
+        if z.top < close and (na(uTop) or z.top > uTop)
+            uTop := z.top
+    [bBot, uTop]
+
+// Weekly zones as they stood at the end of the last completed week
+wZones() =>
+    [a, b] = nearZones()
+    [a[1], b[1]]
+
+// Bias of the last closed candle of the timeframe this runs on
+// needKL = true  -> Daily: CRT reversal needs a key level or major liquidity (D26/D27)
+// needKL = false -> 7H: taking the previous session's high / low IS the liquidity (D30: London / Asia / NY reversal)
+biasCtx(bool needKL) =>
+    [zBear, zBull] = nearZones()
+    [wBear, wBull] = request.security(syminfo.tickerid, "W", wZones(), lookahead = barmerge.lookahead_on)
+    // previous week high / low
+    var float wkH = na
+    var float wkL = na
+    var float pwH = na
+    var float pwL = na
+    if timeframe.change("W")
+        pwH := wkH
+        pwL := wkL
+        wkH := high
+        wkL := low
+    else
+        wkH := math.max(nz(wkH, high), high)
+        wkL := math.min(nz(wkL, low), low)
+    // major swing high / low not yet taken
+    var float swH = na
+    var float swL = na
+    float ph = ta.pivothigh(high, swLen, swLen)
+    float pl = ta.pivotlow(low, swLen, swLen)
+    bool tookSwH = not na(swH) and high > swH
+    bool tookSwL = not na(swL) and low < swL
+    if tookSwH
+        swH := na
+    if tookSwL
+        swL := na
+    if not na(ph)
+        swH := ph
+    if not na(pl)
+        swL := pl
+    bool keyBear = (not na(zBear[1]) and high >= zBear[1]) or (not na(wBear) and high >= wBear)
+    bool keyBull = (not na(zBull[1]) and low <= zBull[1]) or (not na(wBull) and low <= wBull)
+    bool liqBear = tookSwH or (not na(pwH) and high > pwH)
+    bool liqBull = tookSwL or (not na(pwL) and low < pwL)
+    int b = 0
+    if close < low[1]
+        b := -1
+    else if close > high[1]
+        b := 1
+    else
+        bool upW = high > high[1]
+        bool dnW = low < low[1]
+        if upW and not dnW and (not needKL or keyBear or liqBear)
+            b := -1
+        else if dnW and not upW and (not needKL or keyBull or liqBull)
+            b := 1
+    [b[1], high[1], low[1], time[1], time]
+
+[dB, dH, dL, dT, dT2] = request.security(syminfo.tickerid, "D", biasCtx(true), lookahead = barmerge.lookahead_on)
+[sB0, sH, sL, sT, sT2] = request.security(syminfo.tickerid, "420", biasCtx(false), lookahead = barmerge.lookahead_on)
+// D29: last closed 7H candle = NY PM (2 PM) -> None
+// (also caught by its length: the session's short last 7H candle is <= 4 h)
+bool lastIsPM = not na(sT) and (hour(sT, "America/New_York") == pmHour or (sT2 - sT) <= 4 * 3600000)
+int sB = lastIsPM ? 0 : sB0
+
+// ───────── Drawing: short lines, no text ─────────
+var line dLn = na
+var line sLn = na
+bool onD = timeframe.isdaily
+bool on7 = timeframe.period == "420"
+if barstate.islast
+    line.delete(dLn)
+    line.delete(sLn)
+    if (onD or showAll) and dB != 0 and not na(dT)
+        float p = dB == -1 ? dL : dH
+        dLn := line.new(dT, p, dT2 + (dT2 - dT), p, xloc = xloc.bar_time, color = cLine, width = 1)
+    if (on7 or showAll) and sB != 0 and not na(sT)
+        float q = sB == -1 ? sL : sH
+        sLn := line.new(sT, q, sT2 + (sT2 - sT), q, xloc = xloc.bar_time, color = cLine, width = 1)
+
+// ═════════════════════════ STEP 2: SMT · 2SSMT · PSP · 1H TSQ (D30–D31) ═════════════════════════
+// SMT  : XAUUSD takes its previous swing high (low) — swing = 3 candles each side — and at least one
+//        pair (XAUEUR / XAUGBP / XAGUSD) fails to take its own swing high (low). Diagonal line + pair name.
+// 2SSMT: XAUUSD takes the first SMT extreme again and a pair fails again (within 24 candles) -> "2s".
+// PSP  : 1H candle at a key level (FVG / OB) where XAUUSD and a pair close opposite colours -> "psp name".
+// 1H TSQ: Ts (sweep + close back) -> OB (Model 1, body edge) -> BRK (structure broken) -> two key levels
+//        disrespected = ACTIVE. Then OTE (first sweep), KOD (next sweep), E = nearest liquidity
+//        (PDL/PDH · PWL/PWH · PML/PMH · untaken swing lows/highs incl. equal lows/highs) — IRL -> ERL.
+// Everything is computed on closed 1H candles (non-repainting) and drawn on the 1H chart
+// (other timeframes only with "All timeframes").
+grp2   = "Step 2 — SMT / PSP / 1H TSQ"
+sym1   = input.symbol("OANDA:XAUEUR", "Pair 1", group = grp2)
+sym2   = input.symbol("OANDA:XAUGBP", "Pair 2", group = grp2)
+sym3   = input.symbol("OANDA:XAGUSD", "Pair 3", group = grp2)
+nm1    = input.string("euro", "Pair 1 label", group = grp2)
+nm2    = input.string("gbp", "Pair 2 label", group = grp2)
+nm3    = input.string("silver", "Pair 3 label", group = grp2)
+pvLen  = input.int(3, "Swing: candles on each side", minval = 2, maxval = 10, group = grp2)
+show2  = input.bool(true, "Show SMT / PSP / TSQ", group = grp2)
+
+type KZ
+    float top
+    float bot
+    int   dir     // -1 resistance (bearish key level) · +1 support (bullish key level)
+
+pairNames(bool a, bool b, bool c) =>
+    string r = ""
+    if a
+        r := nm1
+    if b
+        r := r == "" ? nm2 : r + "/" + nm2
+    if c
+        r := r == "" ? nm3 : r + "/" + nm3
+    r
+
+eng1h() =>
+    [o1, h1, l1, c1] = request.security(sym1, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+    [o2, h2, l2, c2] = request.security(sym2, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+    [o3, h3, l3, c3] = request.security(sym3, timeframe.period, [open, high, low, close], lookahead = barmerge.lookahead_off, ignore_invalid_symbol = true)
+    // ── swings (XAUUSD + pairs)
+    float ph  = ta.pivothigh(high, pvLen, pvLen)
+    float pl  = ta.pivotlow(low, pvLen, pvLen)
+    float ph1 = ta.pivothigh(h1, pvLen, pvLen)
+    float pl1 = ta.pivotlow(l1, pvLen, pvLen)
+    float ph2 = ta.pivothigh(h2, pvLen, pvLen)
+    float pl2 = ta.pivotlow(l2, pvLen, pvLen)
+    float ph3 = ta.pivothigh(h3, pvLen, pvLen)
+    float pl3 = ta.pivotlow(l3, pvLen, pvLen)
+    var float swH = na
+    var int   swHT = na
+    var float swL = na
+    var int   swLT = na
+    var float aH = na
+    var float aL = na
+    var float bH = na
+    var float bL = na
+    var float cH = na
+    var float cL = na
+    if not na(ph)
+        swH := ph
+        swHT := time[pvLen]
+    if not na(pl)
+        swL := pl
+        swLT := time[pvLen]
+    if not na(ph1)
+        aH := ph1
+    if not na(pl1)
+        aL := pl1
+    if not na(ph2)
+        bH := ph2
+    if not na(pl2)
+        bL := pl2
+    if not na(ph3)
+        cH := ph3
+    if not na(pl3)
+        cL := pl3
+    // untaken swing highs / lows (liquidity, incl. equal highs / lows)
+    var array<float> upLiq = array.new<float>()
+    var array<float> dnLiq = array.new<float>()
+    if not na(ph)
+        upLiq.push(ph)
+    if not na(pl)
+        dnLiq.push(pl)
+    if upLiq.size() > 0
+        for i = upLiq.size() - 1 to 0
+            if high > upLiq.get(i)
+                upLiq.remove(i)
+    if dnLiq.size() > 0
+        for i = dnLiq.size() - 1 to 0
+            if low < dnLiq.get(i)
+                dnLiq.remove(i)
+    while upLiq.size() > 30
+        upLiq.shift()
+    while dnLiq.size() > 30
+        dnLiq.shift()
+    // previous day / week / month high-low
+    var float dHh = na
+    var float dLl = na
+    var float pdH = na
+    var float pdL = na
+    if timeframe.change("D")
+        pdH := dHh
+        pdL := dLl
+        dHh := high
+        dLl := low
+    else
+        dHh := math.max(nz(dHh, high), high)
+        dLl := math.min(nz(dLl, low), low)
+    var float wHh = na
+    var float wLl = na
+    var float pwH = na
+    var float pwL = na
+    if timeframe.change("W")
+        pwH := wHh
+        pwL := wLl
+        wHh := high
+        wLl := low
+    else
+        wHh := math.max(nz(wHh, high), high)
+        wLl := math.min(nz(wLl, low), low)
+    var float mHh = na
+    var float mLl = na
+    var float pmH = na
+    var float pmL = na
+    if timeframe.change("M")
+        pmH := mHh
+        pmL := mLl
+        mHh := high
+        mLl := low
+    else
+        mHh := math.max(nz(mHh, high), high)
+        mLl := math.min(nz(mLl, low), low)
+    // ── 1H key levels (FVG + OB) and how many get disrespected this candle
+    var array<KZ> kz = array.new<KZ>()
+    int brokenBull = 0
+    int brokenBear = 0
+    if kz.size() > 0
+        for i = kz.size() - 1 to 0
+            KZ z = kz.get(i)
+            if z.dir == 1 and close < z.bot
+                brokenBull += 1
+                kz.remove(i)
+            else if z.dir == -1 and close > z.top
+                brokenBear += 1
+                kz.remove(i)
+    bool atBear = false
+    bool atBull = false
+    for z in kz
+        if z.dir == -1 and high >= z.bot and close <= z.top
+            atBear := true
+        if z.dir == 1 and low <= z.top and close >= z.bot
+            atBull := true
+    if bar_index >= 2
+        if low[2] > high
+            kz.push(KZ.new(low[2], high, -1))
+        if high[2] < low
+            kz.push(KZ.new(low, high[2], 1))
+        if close[1] > open[1] and close < low[1]
+            kz.push(KZ.new(high[1], open[1], -1))
+        if close[1] < open[1] and close > high[1]
+            kz.push(KZ.new(open[1], low[1], 1))
+    while kz.size() > 60
+        kz.shift()
+    // ── SMT / 2SSMT
+    var int    smT0 = na
+    var float  smP0 = na
+    var int    smT1 = na
+    var float  smP1 = na
+    var string smTx = ""
+    var int    stDir = 0
+    var int    stBar = na
+    var float  stP = na
+    var int    stT = na
+    var float  stA = na
+    var float  stB = na
+    var float  stC = na
+    bool takeH = not na(swH) and high > swH and high[1] <= swH
+    bool takeL = not na(swL) and low < swL and low[1] >= swL
+    if takeH
+        string n = pairNames(not na(aH) and h1 <= aH, not na(bH) and h2 <= bH, not na(cH) and h3 <= cH)
+        if n != ""
+            smT0 := swHT
+            smP0 := swH
+            smT1 := time
+            smP1 := high
+            smTx := n
+            stDir := -1
+            stBar := bar_index
+            stP := high
+            stT := time
+            stA := math.max(nz(aH, h1), h1)
+            stB := math.max(nz(bH, h2), h2)
+            stC := math.max(nz(cH, h3), h3)
+    if takeL
+        string n = pairNames(not na(aL) and l1 >= aL, not na(bL) and l2 >= bL, not na(cL) and l3 >= cL)
+        if n != ""
+            smT0 := swLT
+            smP0 := swL
+            smT1 := time
+            smP1 := low
+            smTx := n
+            stDir := 1
+            stBar := bar_index
+            stP := low
+            stT := time
+            stA := math.min(nz(aL, l1), l1)
+            stB := math.min(nz(bL, l2), l2)
+            stC := math.min(nz(cL, l3), l3)
+    if stDir == -1 and not takeH and bar_index - stBar <= 24 and high > stP and high[1] <= stP
+        if h1 <= stA or h2 <= stB or h3 <= stC
+            smT0 := stT
+            smP0 := stP
+            smT1 := time
+            smP1 := high
+            smTx := "2s"
+            stDir := 0
+    if stDir == 1 and not takeL and bar_index - stBar <= 24 and low < stP and low[1] >= stP
+        if l1 >= stA or l2 >= stB or l3 >= stC
+            smT0 := stT
+            smP0 := stP
+            smT1 := time
+            smP1 := low
+            smTx := "2s"
+            stDir := 0
+    // ── PSP at a key level (opposite closes)
+    var int    psT = na
+    var float  psP = na
+    var string psTx = ""
+    bool upX = close > open
+    string pn = pairNames(not na(c1) and (c1 > o1) != upX, not na(c2) and (c2 > o2) != upX, not na(c3) and (c3 > o3) != upX)
+    if pn != "" and (atBear or atBull)
+        psT := time
+        psP := atBear ? high : low
+        psTx := "psp " + pn
+    // ── 1H TSQ
+    var int   qd = 0
+    var int   qStep = 0
+    var bool  qAct = false
+    var float tsP = na
+    var int   tsT0 = na
+    var int   tsT1 = na
+    var float tsExt = na
+    var int   tsBar = na
+    var float strP = na
+    var int   strT = na
+    var int   disr = 0
+    var int   sweeps = 0
+    var float obP = na
+    var int   obT = na
+    var int   brT0 = na
+    var int   brT1 = na
+    var float brP = na
+    var int   oteT0 = na
+    var int   oteT1 = na
+    var float oteP = na
+    var int   kodT0 = na
+    var int   kodT1 = na
+    var float kodP = na
+    var int   eT = na
+    var float eP = na
+    var float upO = na
+    var int   upT = na
+    var float dnO = na
+    var int   dnT = na
+    bool tsBear = not na(swH) and high > swH and close < swH
+    bool tsBull = not na(swL) and low < swL and close > swL
+    if not qAct and tsBear and (qd != -1 or high > tsExt)
+        qd := -1
+        qStep := 1
+        tsP := swH
+        tsT0 := swHT
+        tsT1 := time
+        tsExt := high
+        tsBar := bar_index
+        strP := swL
+        strT := swLT
+        disr := 0
+    else if not qAct and tsBull and (qd != 1 or low < tsExt)
+        qd := 1
+        qStep := 1
+        tsP := swL
+        tsT0 := swLT
+        tsT1 := time
+        tsExt := low
+        tsBar := bar_index
+        strP := swH
+        strT := swHT
+        disr := 0
+    else if qd != 0
+        disr += qd == -1 ? brokenBull : brokenBear
+        if qStep == 1 and qd == -1 and not na(upO) and close < upO and close < open
+            qStep := 2
+            obP := upO
+            obT := upT
+        else if qStep == 1 and qd == 1 and not na(dnO) and close > dnO and close > open
+            qStep := 2
+            obP := dnO
+            obT := dnT
+        else if qStep == 2 and not na(strP) and (qd == -1 ? close < strP : close > strP)
+            qStep := 3
+            brP := strP
+            brT0 := strT
+            brT1 := time
+        if qStep == 3 and not qAct and disr >= 2
+            qAct := true
+            sweeps := 0
+            float tgt = na
+            if qd == -1
+                for v in dnLiq
+                    if v < close and (na(tgt) or v > tgt)
+                        tgt := v
+                if not na(pdL) and pdL < close and (na(tgt) or pdL > tgt)
+                    tgt := pdL
+                if not na(pwL) and pwL < close and (na(tgt) or pwL > tgt)
+                    tgt := pwL
+                if not na(pmL) and pmL < close and (na(tgt) or pmL > tgt)
+                    tgt := pmL
+            else
+                for v in upLiq
+                    if v > close and (na(tgt) or v < tgt)
+                        tgt := v
+                if not na(pdH) and pdH > close and (na(tgt) or pdH < tgt)
+                    tgt := pdH
+                if not na(pwH) and pwH > close and (na(tgt) or pwH < tgt)
+                    tgt := pwH
+                if not na(pmH) and pmH > close and (na(tgt) or pmH < tgt)
+                    tgt := pmH
+            eP := tgt
+            eT := time
+        else if qAct
+            bool sw = qd == -1 ? (high > high[1] and close < high[1] and high < tsExt) : (low < low[1] and close > low[1] and low > tsExt)
+            if sw and sweeps < 2
+                sweeps += 1
+                if sweeps == 1
+                    oteT0 := time[1]
+                    oteT1 := time
+                    oteP := qd == -1 ? high[1] : low[1]
+                else
+                    kodT0 := time[1]
+                    kodT1 := time
+                    kodP := qd == -1 ? high[1] : low[1]
+        bool done = qAct and not na(eP) and (qd == -1 ? low <= eP : high >= eP)
+        bool inval = qd == -1 ? close > tsExt : close < tsExt
+        bool stale = not qAct and bar_index - tsBar > 48
+        if done or inval or stale
+            qd := 0
+            qStep := 0
+            qAct := false
+    if close > open
+        upO := open
+        upT := time
+    if close < open
+        dnO := open
+        dnT := time
+    int tsqDir = qAct ? qd : 0
+    [smT0[1], smP0[1], smT1[1], smP1[1], smTx[1], psT[1], psP[1], psTx[1], tsP[1], tsT0[1], tsT1[1], obP[1], obT[1], brP[1], brT0[1], brT1[1], oteP[1], oteT0[1], oteT1[1], kodP[1], kodT0[1], kodT1[1], eP[1], eT[1], tsqDir[1]]
+
+[gT0, gP0, gT1, gP1, gTx, pT, pP, pTx, kTsP, kTsT0, kTsT1, kObP, kObT, kBrP, kBrT0, kBrT1, kOteP, kOteT0, kOteT1, kKodP, kKodT0, kKodT1, kEP, kET, kDir] = request.security(syminfo.tickerid, "60", eng1h(), lookahead = barmerge.lookahead_on)
+
+lineLbl(int t0, int t1, float p, string txt, string st) =>
+    line.new(t0, p, t1, p, xloc = xloc.bar_time, color = cLine, width = 1, style = st)
+    if txt != ""
+        label.new(t1, p, txt, xloc = xloc.bar_time, style = label.style_label_lower_right, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
+    true
+
+const int HR = 3600000
+bool on1H = timeframe.period == "60"
+bool draw2 = show2 and (on1H or showAll)
+if draw2
+    if not na(gT1) and gT1 != gT1[1]
+        line.new(gT0, gP0, gT1, gP1, xloc = xloc.bar_time, color = cLine, width = 1)
+        label.new(int(math.avg(gT0, gT1)), math.avg(gP0, gP1), gTx, xloc = xloc.bar_time, style = gP1 > gP0 ? label.style_label_lower_right : label.style_label_upper_right, color = color.new(color.white, 100), textcolor = cLine, size = size.small)
+    if not na(pT) and pT != pT[1]
+        lineLbl(pT, pT + 3 * HR, pP, pTx, line.style_dotted)
+    if not na(kTsT1) and kTsT1 != kTsT1[1]
+        lineLbl(kTsT0, kTsT1 + HR, kTsP, "Ts", line.style_solid)
+    if not na(kObT) and kObT != kObT[1]
+        lineLbl(kObT, kObT + 2 * HR, kObP, "OB", line.style_solid)
+    if not na(kBrT1) and kBrT1 != kBrT1[1]
+        lineLbl(kBrT0, kBrT1 + HR, kBrP, "BRK", line.style_solid)
+    if not na(kOteT1) and kOteT1 != kOteT1[1]
+        lineLbl(kOteT0, kOteT1 + HR, kOteP, "OTE", line.style_solid)
+    if not na(kKodT1) and kKodT1 != kKodT1[1]
+        lineLbl(kKodT0, kKodT1 + HR, kKodP, "KOD", line.style_solid)
+    if not na(kET) and kET != kET[1] and not na(kEP)
+        lineLbl(kET, kET + 12 * HR, kEP, "E", line.style_dashed)
+
+
+// ───────── Table: D / 7H / Bias / TSQ ─────────
+bTxt(int b) =>
+    b == 1 ? "Bull" : b == -1 ? "Bear" : "None"
+
+bCol(int b) =>
+    b == 1 ? color.new(color.green, 20) : b == -1 ? color.new(color.red, 20) : color.new(color.gray, 40)
+
+int bias = dB != 0 and dB == sB ? dB : 0
+var table tb = table.new(position.top_right, 2, 4, border_width = 1)
+if showTbl and barstate.islast
+    table.cell(tb, 0, 0, "D", text_color = color.white, bgcolor = color.new(color.black, 20), text_size = size.small)
+    table.cell(tb, 1, 0, bTxt(dB), text_color = color.white, bgcolor = bCol(dB), text_size = size.small)
+    table.cell(tb, 0, 1, "7H", text_color = color.white, bgcolor = color.new(color.black, 20), text_size = size.small)
+    table.cell(tb, 1, 1, bTxt(sB), text_color = color.white, bgcolor = bCol(sB), text_size = size.small)
+    table.cell(tb, 0, 2, "Bias", text_color = color.white, bgcolor = color.new(color.black, 20), text_size = size.small)
+    table.cell(tb, 1, 2, bias == -1 ? "SELL" : bias == 1 ? "BUY" : "None", text_color = color.white, bgcolor = bCol(bias), text_size = size.small)
+    table.cell(tb, 0, 3, "TSQ", text_color = color.white, bgcolor = color.new(color.black, 20), text_size = size.small)
+    table.cell(tb, 1, 3, kDir == -1 ? "Sell" : kDir == 1 ? "Buy" : "—", text_color = color.white, bgcolor = bCol(kDir), text_size = size.small)
