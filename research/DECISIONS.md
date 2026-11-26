@@ -6,6 +6,7 @@ Halkan waxaa ku qoran xeerarka uu user-ku si cad u ansixiyay, iyo xeerarka casha
 
 | # | Taariikh | Mawduuc | Go'aan | Isha |
 |---|---|---|---|---|
+| D32 | 2026-11-26 | 1H TSQ vs purge hours | **1H TSQ wuxuu bilaabmi karaa waqti kasta** (marka suuqu joogo HTF key level / major liquidity); **kuma xirna purge hours**. **Purge hours (8/9/10 PM · 2/3/4 AM · 8/9/10 AM) = xiliga entry-ga la trade-gareeyo** (5m, tallaabada dambe). Step 2 TSQ saacad ma filtareeyo ✅. | User |
 | D31 | 2026-11-26 | Tallaabada 2 (SMT · 2SSMT · PSP · 1H TSQ) | (1) SMT swing = **3 candle** dhinac kasta. (2) **PSP waxaa la calaamadeeyaa oo keliya marka price-ku joogo key level**. (3) 2SSMT = pair-ku laba jeer oo isku xiga ayuu fashilmay ✅. (4) **Target (E)** = liquidity-ga ugu dhow: **PWL/PWH, PML/PMH, PDL/PDH, equal lows/highs**, meesha key level-ka laga soo tagay (swing), **IRL → ERL**. | User |
 | D30 | 2026-11-22 | 7H CRT reversal | **7H CRT reversal** (wick dhaafay high/low-ga candle-kii hore ee session-ka + close gudaha) **waa ansax iyadoo aan key level dheeraad ah loo baahnayn** — qaadista high/low-ga session-kii hore (Asia → London, 2 PM → Asia, London → NY) **waa liquidity-ga** (PDF bog 8–11 profiles). Tusaale: London waxay qaadday high-ga 5 PM, gudaha ayay ku xirantay → **7H Bear (London reversal)**. Daily wuxuu weli u baahan yahay KL / major LQ (D26/D27). | User (IMG_0988–0991) |
 | D29 | 2026-11-22 | 7H bias + 2 PM candle | (1) Candle-ka **2 PM (NY PM)** bias ma bixiyo: marka uu xirmo → **7H = None**; wuxuu kaliya yahay **candle 1** (liquidity-ga Asia qaaddo). (2) **7H bias waxaa la go'aamiyaa marka candle-ku xirmo** (haddii Asia qaaddo labada high iyo low-ga 2 PM, close-ka ayaa go'aamiya). (3) **Entry-ga (step dambe)**: Asia (5 PM) oo socota marka ay qaaddo 2 PM high/low **oo gaarto 7H key level** → 1H: TSQ / SMT / PSP / 2SSMT + 1H key level → 5m entry (rules). Daily: 2 candle, close / body dhaafay shalay. | User |
@@ -120,3 +121,4 @@ User-ku wuxuu go'aamiyay (2026-11-21) in jawaabaha laga helo casharrada inta aan
 - 2026-11-22: D29 — 2 PM 7H candle = None; 7H bias at close; Asia sweep of 2 PM H/L into 7H KL = entry setup (later step).
 - 2026-11-22: D30 — 7H CRT valid on previous-session sweep (no extra KL).
 - 2026-11-26: D31 — step 2 rules; TET_Step2.pine v1 (step 1 + SMT/2SSMT/PSP/1H TSQ).
+- 2026-11-26: D32 — TSQ any time; purge hours = entry window only.
